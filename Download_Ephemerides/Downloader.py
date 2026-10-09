@@ -135,7 +135,7 @@ def spkmerge_source():
 
 def merge_de441(dest_dir, keep_parts):
     final = dest_dir / "de441.bsp"
-    merged = dest_dir / "de441_merged.bsp"
+    merged = dest_dir / "de441.bsp"
     setup = dest_dir / "de441_merge_setup.txt"
     parts = [dest_dir / n for n in DE441_PARTS]
 
