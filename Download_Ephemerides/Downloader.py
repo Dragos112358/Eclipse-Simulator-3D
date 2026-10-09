@@ -34,6 +34,7 @@ from pathlib import Path
 MB = 1024 * 1024
 NAIF = "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/"
 NAIF_UTILS = "https://naif.jpl.nasa.gov/pub/naif/utilities/"
+LSK_URL = "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/lsk/naif0012.tls"
 
 # file name -> (url, minimum expected size in MB, used to detect truncated files)
 FILES = {
@@ -158,9 +159,18 @@ def merge_de441(dest_dir, keep_parts):
             return False
         exe.chmod(exe.stat().st_mode | stat.S_IXUSR | stat.S_IXGRP | stat.S_IXOTH)
 
+        # spkmerge always requires a LEAPSECONDS_KERNEL command. Kept next to the
+        # output (relative name, avoids path-length limits) and removed afterwards.
+        lsk = dest_dir / "naif0012.tls"
+        lsk_existed = lsk.exists()
+        print("Downloading leapseconds kernel...")
+        if not download(LSK_URL, lsk, 0.001):
+            return False
+
         merged.unlink(missing_ok=True)  # spkmerge refuses to overwrite
-        # No BODIES / BEGIN_TIME / END_TIME => all bodies, full coverage (no LSK needed).
+        # No BODIES / BEGIN_TIME / END_TIME => all bodies, full coverage.
         setup.write_text(
+            f"LEAPSECONDS_KERNEL = {lsk.name}\n"
             f"SPK_KERNEL = {merged.name}\n"
             + "".join(f"SOURCE_SPK_KERNEL = {p.name}\n" for p in parts)
         )
@@ -170,6 +180,8 @@ def merge_de441(dest_dir, keep_parts):
                                  capture_output=True, text=True)
         finally:
             setup.unlink(missing_ok=True)
+            if not lsk_existed:
+                lsk.unlink(missing_ok=True)
 
     expected = sum(p.stat().st_size for p in parts)
     if res.returncode != 0 or not merged.exists() or merged.stat().st_size < 0.95 * expected:
