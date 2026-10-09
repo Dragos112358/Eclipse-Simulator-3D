@@ -1,0 +1,13 @@
+# Eclipse Simulator 3D - backend (Server.py)
+# Installation: pip install -r requirements.txt
+
+# CPU-only PyTorch (~200 MB instead of ~2.5 GB with CUDA)
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+numpy>=1.24
+skyfield>=1.49      # includes jplephem, sgp4, certifi
+geopy>=2.4
+torch>=2.2
+
+# Only needed to build Server.exe (not required when running from source):
+# pyinstaller>=6.0
