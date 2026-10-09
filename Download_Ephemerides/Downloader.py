@@ -1,33 +1,39 @@
 #!/usr/bin/env python3
 """
 Download the ephemeris / Earth-orientation files required by Server.exe
-(3D Eclipse Simulator backend).
+(3D Eclipse Simulator backend) and build a single de441.bsp.
 
-By default the files go into <project>/Content/Encoder:
-  - if this script lives in Content/Encoder, that folder is used;
-  - otherwise (script in the project root) <script folder>/Content/Encoder
-    is used and created if missing.
+Files go into <project>/Content/Encoder (found automatically by walking up
+from this script; created next to the project root if missing).
 
-Usage (Linux / WSL / Windows):
-    python3 download_ephemerides.py                 # -> Content/Encoder
-    python3 download_ephemerides.py --dir /path/to/Content/Encoder
-    python3 download_ephemerides.py --skip-de441    # only the small files
+Usage (Linux / WSL / Windows / macOS):
+    python3 Downloader.py                 # download + merge -> Content/Encoder
+    python3 Downloader.py --dir /path/to/Content/Encoder
+    python3 Downloader.py --skip-de441    # only the small files
+    python3 Downloader.py --keep-parts    # keep de441_part-*.bsp after merging
 
-WSL example (project on the Windows drive):
-    cd /mnt/c/Users/<you>/Desktop/Eclipse-Simulator-3D
-    python3 download_ephemerides.py
+de441: NAIF only publishes de441_part-1.bsp and de441_part-2.bsp. This script
+downloads both, downloads NAIF's `spkmerge` utility (to a temp folder), merges
+the parts into de441.bsp and deletes the parts (unless --keep-parts).
+If de441.bsp already exists nothing is downloaded or merged for it.
 
 Features: standard library only (no pip install), skips files that are
 already complete, resumes interrupted downloads (.part files).
 """
 import argparse
+import platform
 import shutil
+import stat
+import subprocess
 import sys
+import tempfile
 import urllib.error
 import urllib.request
 from pathlib import Path
 
+MB = 1024 * 1024
 NAIF = "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/"
+NAIF_UTILS = "https://naif.jpl.nasa.gov/pub/naif/utilities/"
 
 # file name -> (url, minimum expected size in MB, used to detect truncated files)
 FILES = {
@@ -37,14 +43,15 @@ FILES = {
     "nep097.bsp": (NAIF + "satellites/nep097.bsp", 90),
 }
 
-# The merged de441.bsp (~3.2 GB) is NOT published by NASA NAIF; they only
-# provide de441_part-1.bsp and de441_part-2.bsp. If you host your merged
-# file somewhere (Zenodo, Hugging Face, ...), put the direct link here:
-DE441_URL = ""  # <- fill in
+# Optional: direct link to an already merged de441.bsp (Zenodo, Hugging Face...).
+# If set, it is used instead of downloading the parts + merging.
+DE441_URL = ""
+DE441_MIN_MB = 2500
 DE441_PARTS = {
     "de441_part-1.bsp": NAIF + "planets/de441_part-1.bsp",
     "de441_part-2.bsp": NAIF + "planets/de441_part-2.bsp",
 }
+DE441_PART_MIN_MB = 1400
 
 CHUNK = 1024 * 1024
 HEADERS = {"User-Agent": "EclipseSimulator-ephemeris-downloader/1.0"}
@@ -57,13 +64,13 @@ def default_dir():
     for p in (here, *here.parents):
         if (p / "Content" / "Encoder").is_dir():
             return p / "Content" / "Encoder"
-    # fallback: scriptul e într-un subfolder al proiectului
+    # fallback: script is in a subfolder of the project
     return here.parent / "Content" / "Encoder"
 
 
 def download(url, dest, min_mb):
     name = dest.name
-    min_bytes = min_mb * 1024 * 1024
+    min_bytes = min_mb * MB
 
     if dest.exists() and dest.stat().st_size >= min_bytes:
         print(f"[ok] {name} already present")
@@ -110,21 +117,96 @@ def download(url, dest, min_mb):
     return True
 
 
+def spkmerge_source():
+    """(url, local file name) of NAIF's spkmerge for this platform, or None."""
+    system = platform.system()
+    machine = platform.machine().lower()
+    if system == "Windows":
+        return NAIF_UTILS + "PC_Windows_64bit/spkmerge.exe", "spkmerge.exe"
+    if system == "Darwin":
+        folder = ("MacM1_OSX_AppleC_64bit" if machine in ("arm64", "aarch64")
+                  else "MacIntel_OSX_AppleC_64bit")
+        return NAIF_UTILS + folder + "/spkmerge", "spkmerge"
+    if system == "Linux" and machine in ("x86_64", "amd64"):
+        return NAIF_UTILS + "PC_Linux_64bit/spkmerge", "spkmerge"
+    return None
+
+
+def merge_de441(dest_dir, keep_parts):
+    final = dest_dir / "de441.bsp"
+    merged = dest_dir / "de441_merged.bsp"
+    setup = dest_dir / "de441_merge_setup.txt"
+    parts = [dest_dir / n for n in DE441_PARTS]
+
+    for p in parts:
+        if not p.exists() or p.stat().st_size < DE441_PART_MIN_MB * MB:
+            print(f"[error] {p.name} missing or incomplete, cannot merge.")
+            return False
+
+    src = spkmerge_source()
+    if src is None:
+        print(f"[error] no spkmerge build for {platform.system()} {platform.machine()}.")
+        print("Get it from https://naif.jpl.nasa.gov/naif/utilities.html and merge manually.")
+        return False
+    url, exe_name = src
+
+    # spkmerge goes in a temp dir (on WSL /tmp supports the exec bit, /mnt/c may not).
+    with tempfile.TemporaryDirectory(prefix="spkmerge_") as td:
+        exe = Path(td) / exe_name
+        print("Downloading spkmerge...")
+        if not download(url, exe, 0.1):
+            return False
+        exe.chmod(exe.stat().st_mode | stat.S_IXUSR | stat.S_IXGRP | stat.S_IXOTH)
+
+        merged.unlink(missing_ok=True)  # spkmerge refuses to overwrite
+        # No BODIES / BEGIN_TIME / END_TIME => all bodies, full coverage (no LSK needed).
+        setup.write_text(
+            f"SPK_KERNEL = {merged.name}\n"
+            + "".join(f"SOURCE_SPK_KERNEL = {p.name}\n" for p in parts)
+        )
+        print("Merging de441 parts with spkmerge (can take several minutes)...")
+        try:
+            res = subprocess.run([str(exe), setup.name], cwd=dest_dir,
+                                 capture_output=True, text=True)
+        finally:
+            setup.unlink(missing_ok=True)
+
+    expected = sum(p.stat().st_size for p in parts)
+    if res.returncode != 0 or not merged.exists() or merged.stat().st_size < 0.95 * expected:
+        print("[error] merge failed.")
+        print((res.stdout + res.stderr).strip()[-1500:])
+        merged.unlink(missing_ok=True)
+        return False
+
+    merged.replace(final)
+    print(f"[ok] de441.bsp ({final.stat().st_size / 1e9:.2f} GB)")
+    if not keep_parts:
+        for p in parts:
+            p.unlink(missing_ok=True)
+        print("Removed de441_part-*.bsp (use --keep-parts to keep them).")
+    return True
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--dir", type=Path, default=default_dir(),
                     help="destination folder (default: <project>/Content/Encoder)")
     ap.add_argument("--skip-de441", action="store_true",
-                    help="do not download de441 (the ~3 GB planetary ephemeris)")
+                    help="do not download/merge de441 (the ~3 GB planetary ephemeris)")
+    ap.add_argument("--keep-parts", action="store_true",
+                    help="keep de441_part-*.bsp after a successful merge")
     args = ap.parse_args()
 
     dest_dir = args.dir.expanduser().resolve()
     dest_dir.mkdir(parents=True, exist_ok=True)
     print(f"Destination: {dest_dir}")
 
+    de441 = dest_dir / "de441.bsp"
+    de441_present = de441.exists() and de441.stat().st_size >= DE441_MIN_MB * MB
+
     free_gb = shutil.disk_usage(dest_dir).free / 1e9
-    need_gb = 2 if args.skip_de441 else 6
+    need_gb = 2 if (args.skip_de441 or de441_present) else 9  # parts + merged + small files
     if free_gb < need_gb:
         print(f"[warning] only {free_gb:.1f} GB free, about {need_gb} GB recommended.")
 
@@ -133,19 +215,19 @@ def main():
         ok &= download(url, dest_dir / name, min_mb)
 
     if not args.skip_de441:
-        if (dest_dir / "de441.bsp").exists():
+        if de441_present:
             print("[ok] de441.bsp already present")
         elif DE441_URL:
-            ok &= download(DE441_URL, dest_dir / "de441.bsp", 3000)
+            ok &= download(DE441_URL, de441, DE441_MIN_MB)
         else:
-            print("\n[note] de441.bsp is missing and DE441_URL is not set.")
-            print("Downloading the two official NAIF parts instead. Server.exe expects a")
-            print("single de441.bsp, so merge them (spkmerge) or host your merged file")
-            print("and set DE441_URL in this script.")
+            parts_ok = True
             for name, url in DE441_PARTS.items():
-                ok &= download(url, dest_dir / name, 1400)
+                parts_ok &= download(url, dest_dir / name, DE441_PART_MIN_MB)
+            ok &= parts_ok
+            if parts_ok:
+                ok &= merge_de441(dest_dir, args.keep_parts)
 
-    print("\nDone." if ok else "\nSome files failed, run the script again.")
+    print("\nDone." if ok else "\nSome steps failed, run the script again.")
     sys.exit(0 if ok else 1)
 
 
