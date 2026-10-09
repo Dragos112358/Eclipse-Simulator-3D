@@ -1,0 +1,37 @@
+# --- Ignorate la cererea ta ---
+latex/
+html/
+Diverse_cod/
+Test/
+Doxyfile
+Eclipsa1.mp4
+Europa.png
+
+# --- Unreal Engine / Visual Studio (se regenerează) ---
+Binaries/
+Intermediate/
+DerivedDataCache/
+Saved/
+.vs/
+*.sln
+*.suo
+*.VC.db
+*.VC.opendb
+*.ipch
+*.sdf
+
+# --- Cache și loguri ---
+cesium-request-cache.sqlite
+*.sqlite
+*.log
+server_jurnal*
+
+# --- Date mari: se descarcă separat ---
+*.bsp
+finals2000A.all
+Content/Encoder/ffmpeg.exe
+Content/Textures/lroc_color_poles_16k.uasset
+
+# --- Backend compilat: merge în GitHub Releases ---
+Content/Encoder/Server.exe
+Content/Encoder/_internal/
