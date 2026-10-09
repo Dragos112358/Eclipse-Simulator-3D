@@ -52,9 +52,13 @@ HEADERS = {"User-Agent": "EclipseSimulator-ephemeris-downloader/1.0"}
 
 def default_dir():
     here = Path(__file__).resolve().parent
-    if here.name == "Encoder":  # script already inside Content/Encoder
+    if here.name == "Encoder":
         return here
-    return here / "Content" / "Encoder"  # script in the project root
+    for p in (here, *here.parents):
+        if (p / "Content" / "Encoder").is_dir():
+            return p / "Content" / "Encoder"
+    # fallback: scriptul e într-un subfolder al proiectului
+    return here.parent / "Content" / "Encoder"
 
 
 def download(url, dest, min_mb):
