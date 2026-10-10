@@ -54,6 +54,10 @@ DE441_PARTS = {
 }
 DE441_PART_MIN_MB = 1400
 
+TEXTURE_NAME = "lroc_color_poles_16k.uasset"
+TEXTURE_URL = "https://github.com/Dragos112358/Eclipse-Simulator-3D/releases/download/v1.0/lroc_color_poles_16k.uasset"
+TEXTURE_MIN_MB = 150
+
 CHUNK = 1024 * 1024
 HEADERS = {"User-Agent": "EclipseSimulator-ephemeris-downloader/1.0"}
 
@@ -198,6 +202,28 @@ def merge_de441(dest_dir, keep_parts):
         print("Removed de441_part-*.bsp (use --keep-parts to keep them).")
     return True
 
+def install_texture(dest_dir):
+    """Put lroc_color_poles_16k.uasset in <project>/Content/Textures."""
+    content_dir = dest_dir.parent                 # dest_dir = <project>/Content/Encoder
+    target_dir = content_dir / "Textures"
+    target = target_dir / TEXTURE_NAME
+    root_copy = content_dir.parent / TEXTURE_NAME  # optional: file placed in project root
+    min_bytes = TEXTURE_MIN_MB * MB
+
+    if target.exists() and target.stat().st_size >= min_bytes:
+        print(f"[ok] {TEXTURE_NAME} already in Content/Textures")
+        return True
+
+    target_dir.mkdir(parents=True, exist_ok=True)
+
+    # If the file was copied manually into the project root, just move it.
+    if root_copy.exists() and root_copy.stat().st_size >= min_bytes:
+        root_copy.replace(target)
+        print(f"[ok] moved {TEXTURE_NAME} from project root to Content/Textures")
+        return True
+
+    return download(TEXTURE_URL, target, TEXTURE_MIN_MB)
+
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__,
@@ -238,6 +264,8 @@ def main():
             ok &= parts_ok
             if parts_ok:
                 ok &= merge_de441(dest_dir, args.keep_parts)
+    
+    ok &= install_texture(dest_dir)
 
     print("\nDone." if ok else "\nSome steps failed, run the script again.")
     sys.exit(0 if ok else 1)
