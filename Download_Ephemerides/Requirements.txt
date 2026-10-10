@@ -1,5 +1,69 @@
-skyfield>=1.49
-jplephem>=2.21
-numpy>=1.26
-sgp4>=2.23
-certifi
+# =====================================================================
+# 3D Eclipse Simulator - requirements
+# =====================================================================
+# Python 3.8+ (Downloader.py uses Path.unlink(missing_ok=True)).
+# Tested layout: Windows 64-bit; also WSL/Linux x86_64 and macOS for Downloader.py.
+#
+# Install the backend libraries with:
+#     pip install -r requirements.txt
+#
+# NOTE: Downloader.py itself needs NO pip packages (standard library only).
+# The libraries below are needed only if you run Server.py from source.
+# If you use the prebuilt Server.exe (PyInstaller build), you do NOT need them.
+# =====================================================================
+
+# --- Astronomy core -------------------------------------------------
+# Positions of Sun/Moon/planets/moons from the JPL ephemerides (DE441, jup365,
+# sat441, nep097), time scales, ITRS frames. Also pulls in jplephem, sgp4,
+# certifi automatically.
+skyfield
+
+# --- Numerics -------------------------------------------------------
+# Vector math: shadow cone / ellipsoid intersection, city visibility, etc.
+numpy
+
+# --- Geocoding ------------------------------------------------------
+# Nominatim reverse geocoding ("you are near Luxor, Egypt"). Needs internet
+# at runtime; if offline, the app falls back to showing GPS coordinates.
+geopy
+
+# --- Machine learning (lunar limb correction) -----------------------
+# Loads the SIREN/hash-grid model lunar_altitude_contact_bands_fp16_finetuned.pt.
+# The CPU-only build is enough (smaller download):
+#     pip install torch --index-url https://download.pytorch.org/whl/cpu
+torch
+
+# =====================================================================
+# FILES REQUIRED NEXT TO THE SERVER AT RUNTIME (not pip packages)
+# =====================================================================
+#   lunar_altitude_contact_bands_fp16_finetuned.pt   (limb model, ships with the repo/zip)
+#   CountryPoints.csv                                (city list, ships with the repo/zip)
+#   de441.bsp, jup365.bsp, sat441.bsp, nep097.bsp    (ephemerides - run Downloader.py)
+#   finals2000A.all                                  (Earth orientation / delta T - run Downloader.py)
+#   lroc_color_poles_16k.uasset in Content/Textures  (lunar texture - run Downloader.py)
+#
+# =====================================================================
+# INTERNET ACCESS NEEDED (first run of Downloader.py, then it is cached)
+# =====================================================================
+#   naif.jpl.nasa.gov     DE441 parts (~3 GB), jup365 (~1.1 GB), sat441 (~0.6 GB),
+#                         nep097 (~0.1 GB), spkmerge utility, leap-seconds kernel
+#   datacenter.iers.org   finals2000A.all (Earth Orientation Parameters)
+#   github.com            lunar texture from the GitHub Release (~180 MB);
+#                         the repository and release must be PUBLIC, otherwise 404
+#   nominatim.openstreetmap.org   (runtime, optional) place names via geopy
+#
+# =====================================================================
+# DISK SPACE
+# =====================================================================
+#   ~9 GB free during the first Downloader.py run (DE441 parts + merged file),
+#   ~6 GB used afterwards (parts are deleted after a successful merge).
+#
+# =====================================================================
+# KNOWN LIMITS
+# =====================================================================
+#   jup365 / sat441 / nep097 cover only a few centuries around the present, not
+#   the full 13,000 BC - 17,000 AD range. Moon positions for Jupiter/Saturn/
+#   Neptune outside their coverage are returned as zeros.
+#   DE441 is delivered by NAIF in two segments (before / after 1969-07-29);
+#   both must be present in the merged file for the full range to work.
+# =====================================================================
