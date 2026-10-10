@@ -1,13 +1,90 @@
-# Eclipse Simulator 3D - backend (Server.py)
-# Installation: pip install -r requirements.txt
+# =============================================================================
+# requirements.txt - Eclipse Simulation Server (UDP -> Unreal Engine)
+# =============================================================================
+# Instalare:
+#     pip install -r requirements.txt
+#
+# Recomandat: Python 3.10 - 3.12 (necesar pentru PyTorch si NumPy 1.26+/2.x)
+# Creeaza un mediu virtual inainte:
+#     python -m venv venv
+#     venv\Scripts\activate        (Windows)
+#     source venv/bin/activate     (Linux / macOS)
+#
+# Modulele din biblioteca standard Python (NU se instaleaza cu pip):
+#     os, sys, time, socket, struct, math, threading, traceback, csv
+# =============================================================================
 
-# CPU-only PyTorch (~200 MB instead of ~2.5 GB with CUDA)
---extra-index-url https://download.pytorch.org/whl/cpu
 
+# -----------------------------------------------------------------------------
+# CALCUL NUMERIC
+# -----------------------------------------------------------------------------
+# NumPy: toate calculele vectorizate - vectori ECEF/ITRS ai orasenlor, cautarea
+# ternara pentru contactele orasenesti, interpolarea traseului umbrei (np.interp),
+# produse vectoriale pentru latimea benzii de totalitate etc.
 numpy>=1.24
-skyfield>=1.49      # includes jplephem, sgp4, certifi
-geopy>=2.4
-torch>=2.2
 
-# Only needed to build Server.exe (not required when running from source):
+
+# -----------------------------------------------------------------------------
+# ASTRONOMIE / EFEMERIDE
+# -----------------------------------------------------------------------------
+# Skyfield: nucleul astronomic al serverului. Foloseste:
+#   - Loader / timescale (ts.utc, ts.tt_jd, Delta T din IERS finals2000A.all)
+#   - wgs84 (pozitia observatorului pe elipsoid)
+#   - almanac (faze lunare, rasarit/apus)
+#   - framelib.itrs (coordonate fixe pe Pamant), positionlib.Geocentric
+#   - constants.AU_KM, errors.EphemerisRangeError
+# Descarca automat (langa executabil) fisierele:
+#   de441.bsp (planete + Luna), finals2000A.all (IERS),
+#   jup365.bsp, sat441.bsp, nep097.bsp (sateliti Jupiter/Saturn/Neptun).
+# NOTA: de441.bsp este MARE (~3 GB); jup365 / sat441 / nep097 au sute de MB.
+skyfield>=1.46
+
+# Skyfield depinde si de "jplephem" (citirea fisierelor .bsp) si "sgp4".
+# Se instaleaza automat, dar il listam explicit pentru claritate / reproductibilitate.
+jplephem>=2.18
+sgp4>=2.20
+
+
+# -----------------------------------------------------------------------------
+# GEOLOCATIE (reverse geocoding: lat/lon -> nume localitate)
+# -----------------------------------------------------------------------------
+# geopy: foloseste serviciul Nominatim (OpenStreetMap) in get_location_name().
+# Necesita conexiune la internet; la esec, serverul revine pe "GPS (lat, lon)".
+geopy>=2.4
+
+
+# -----------------------------------------------------------------------------
+# RETEA NEURALA - CORECTIA DE LIMB LUNAR (relief LOLA)
+# -----------------------------------------------------------------------------
+# PyTorch: ruleaza modelul LunarAltitudeNet (hash-grid encoding + MLP) incarcat din
+# "lunar_altitude_contact_bands_fp16_finetuned.pt". Se foloseste DOAR pe CPU
+# (device="cpu"), deci versiunea CPU-only este suficienta si mult mai mica.
+#
+# Pentru varianta CPU-only (recomandat, ~200 MB in loc de ~2.5 GB), instaleaza manual:
+#     pip install torch --index-url https://download.pytorch.org/whl/cpu
+# Linia de mai jos functioneaza oricum (descarca varianta standard).
+torch>=2.1
+
+
+# -----------------------------------------------------------------------------
+# OPTIONAL - impachetare ca executabil (.exe)
+# -----------------------------------------------------------------------------
+# Codul verifica `sys.frozen`, deci este gandit sa ruleze si ca executabil.
+# Decomenteaza daca vrei sa compilezi serverul:
 # pyinstaller>=6.0
+
+
+# =============================================================================
+# FISIERE NECESARE LANGA SCRIPT (nu se instaleaza cu pip)
+# =============================================================================
+#   - lunar_altitude_contact_bands_fp16_finetuned.pt   (modelul neural)
+#   - CountryPoints.csv                                (baza de date orase:
+#                                                       tara, nume, lat, lon, alt)
+#   - de441.bsp, finals2000A.all, jup365.bsp, sat441.bsp, nep097.bsp
+#       -> se descarca automat la prima rulare (necesita internet + mult spatiu)
+#
+# PORTURI UDP FOLOSITE (localhost 127.0.0.1):
+#   5000 - intrare date de la Unreal Engine
+#   5001 - iesire raspuns catre Unreal Engine
+#   5002 - cereri pentru lista de orase
+# =============================================================================
