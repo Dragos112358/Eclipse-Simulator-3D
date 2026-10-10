@@ -16,9 +16,9 @@ Built with **Unreal Engine 5**, **Cesium** photorealistic terrain and a **Python
 [![Skyfield](https://img.shields.io/badge/Skyfield-DE441-orange)](https://rhodesmill.org/skyfield/)
 [![Cesium](https://img.shields.io/badge/Cesium-for%20Unreal-6CADDF)](https://cesium.com/)
 [![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?logo=windows)](#-requirements)
-[![License](https://img.shields.io/badge/License-LICENSE__NAME-green)](LICENSE)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
-**[▶ Demo 1](YOUTUBE_LINK_1)** · **[▶ Demo 2](YOUTUBE_LINK_2)** · **[⬇ Gumroad](GUMROAD_LINK)** · **[🎮 itch.io](ITCH_LINK)**
+**[▶ Demo 1](https://www.youtube.com/watch?v=sYdvDpyHnCw)** · **[▶ Demo 2](https://www.youtube.com/watch?v=clGfikjfNSE)** · **[⬇ Gumroad](https://gabyboncan.gumroad.com/l/txlkbg)** · **[🎮 itch.io](https://dragosboncan.itch.io/3d-eclipse-simulator)**
 
 </div>
 
@@ -32,7 +32,7 @@ Built with **Unreal Engine 5**, **Cesium** photorealistic terrain and a **Python
 
 ## 📖 Contents
 
-[Why](#-why-this-project) · [Features](#-features) · [Gallery](#-gallery) · [Demos](#-demo-videos) · [Download](#-download) · [Build from source](#-getting-started-build-from-source) · [How it works](#-how-it-works) · [Eclipse types](#-eclipse-types) · [Case studies](#-case-studies) · [Validation](#-validation--accuracy) · [Comparison](#-comparison-with-other-tools) · [Limitations](#-limitations) · [FAQ](#-faq) · [Roadmap](#-roadmap) · [Timeline](#-project-timeline) · [Credits](#-credits--acknowledgements) · [Cite](#-how-to-cite) · [License](#-license)
+[Why](#-why-this-project) · [Features](#-features) · [Gallery](#-gallery) · [Demos](#-demo-videos) · [Download](#-download) · [Controls](#-controls--first-run) · [Build from source](#-getting-started-build-from-source) · [How it works](#-how-it-works) · [Eclipse types](#-eclipse-types) · [Case studies](#-case-studies) · [Validation](#-validation--accuracy) · [Comparison](#-comparison-with-other-tools) · [Limitations](#-limitations) · [FAQ](#-faq) · [Roadmap](#-roadmap) · [Timeline](#-project-timeline) · [Credits](#-credits--acknowledgements) · [Cite](#-how-to-cite) · [License](#-license)
 
 ---
 
@@ -63,8 +63,8 @@ It started as my Bachelor's thesis, *"Real Shadow Cones Produced During the Cent
 - 🔺 **True 3D umbra & penumbra cones**, with the Earth modeled as a **WGS84 ellipsoid** (not a sphere), so the equatorial bulge — which measurably shifts where the shadow meets the surface, especially near the poles — is accounted for.
 - 🛣️ **Path of totality / annularity rendered as a real 3D band** on Cesium terrain, not a flat 2D overlay.
 - ⏱️ **Precise contact times C1–C4** with altitude and azimuth for each, computed by iterative root-finding. Edge cases are handled too, e.g. an extra **"Sunset"** row when the Sun sets before C4.
-- 📚 **71,264 solar eclipses** (13,000 BC → 17,000 AD) built on the John Irwin 2021 catalogue, with a searchable / filterable / sortable catalogue browser, plus lunar eclipse support.
-- 🪐 **Beyond Earth–Moon**: planets and major moons (Galilean moons, Titan, Triton…) tracked with the same DE441 ephemerides.
+- 📚 **71,264 solar eclipses** and **72,272 lunar eclipses**  (13,000 BC → 17,000 AD) built on the John Irwin 2021 catalogue, with a searchable / filterable / sortable catalogue browser.
+- 🪐 **Beyond Earth–Moon**: planets and major moons (Galilean moons, Titan, Triton) tracked with the same DE441 ephemerides.
 
 **Experience**
 - 🚁 **Drone camera & free flight** — from orbit to street level with no loading interruptions.
@@ -100,8 +100,8 @@ It started as my Bachelor's thesis, *"Real Shadow Cones Produced During the Cent
 
 | | |
 |---|---|
-| **Demo 1 — TITLE** | [![Demo 1](https://img.youtube.com/vi/YOUTUBE_ID_1/maxresdefault.jpg)](YOUTUBE_LINK_1) |
-| **Demo 2 — TITLE** | [![Demo 2](https://img.youtube.com/vi/YOUTUBE_ID_2/maxresdefault.jpg)](YOUTUBE_LINK_2) |
+| **Demo 1 — TITLE** | [![Demo 1](https://www.youtube.com/watch?v=sYdvDpyHnCw)](YOUTUBE_LINK_1) |
+| **Demo 2 — TITLE** | [![Demo 2](https://www.youtube.com/watch?v=clGfikjfNSE)](YOUTUBE_LINK_2) |
 
 <details>
 <summary><b>🎞️ What the demos walk through</b></summary>
@@ -128,18 +128,69 @@ Don't want to build from source? Grab a ready-to-run build:
 
 | 🛒 Gumroad | 🎮 itch.io |
 |---|---|
-| [**Download on Gumroad**](GUMROAD_LINK) | [**Download on itch.io**](ITCH_LINK) |
+| [**Download on Gumroad**](https://gabyboncan.gumroad.com/l/txlkbg) | [**Download on itch.io**](https://dragosboncan.itch.io/3d-eclipse-simulator) |
 
 ---
+
+## 🎮 Controls & first run
+
+Press **F10** at any time to open the in-app **Basic Manual**.
+
+### 🔑 First run: Cesium API key (3D terrain)
+
+The photorealistic global terrain needs a free Cesium ion token. This is required only once, to download the terrain at maximum resolution.
+
+1. Go to [ion.cesium.com](https://ion.cesium.com) and create a free account.
+2. Open **Access Tokens** in the left menu.
+3. Click **Create Token**, or copy the **Default Token**.
+4. In the simulator, open **Settings** and paste the key in the **Cesium API Key** field.
+5. Click **Apply**.
+
+### 🚁 Flight (drone)
+
+| Key | Action |
+|---|---|
+| `W` `A` `S` `D` | Movement |
+| `Q` / `E` | Up / down |
+| `Z` / `X` | Rotate left / right (yaw) |
+| Mouse scroll | Optical zoom in / out |
+| Right click (hold) | Move the camera freely |
+
+### 🗺️ Global map
+
+| Key | Action |
+|---|---|
+| `M` | Open / close the top-down global map |
+| `W` `S` | Move up / down (latitude) |
+| `A` `D` | Move left / right (longitude) |
+| `Q` `E` | Rotate around the current point |
+| Left click + drag | Drag the globe to explore |
+| Left click | Instant teleport to that location |
+
+### ⏱️ Hotkeys & quick buttons
+
+| Key / button | Action |
+|---|---|
+| `F10` | Open the manual |
+| `P` · ▶/⏸ button | Pause / resume simulation time |
+| `C` | Halve simulation speed |
+| `V` | Double simulation speed |
+| `N` · ☁ button | Show / hide clouds |
+| 🌐 button | Toggle global map ↔ normal flight (same as `M`) |
+| 🌘 button | Open the contact-time table (C1–C4, with sunrise and sunset) for the current location |
+
+### 🌑 Jumping to an eclipse
+
+Open the **Eclipse Catalog**, pick **Sun** or **Moon**, filter or sort, then click **VIEW**. The simulator sets the time and coordinates of the maximum phase automatically.
 
 ## 🚀 Getting started (build from source)
 
 ### 🧰 Requirements
 
 - Windows 10/11 with a DirectX 12-capable GPU
-- **Unreal Engine 5** (VERSION) with the **Cesium for Unreal** plugin
+- **Unreal Engine 5** (I coded this application using 5.7 version) with the **Cesium for Unreal** plugin
 - **Visual Studio** with the *Game development with C++* workload
-- **Python 3.x**
+- **Python 3.13**
 - ~5 GB free disk space for the ephemerides (`de441.bsp` alone is 3.2 GB)
 - A free **Cesium ion** access token (the app asks for it on first run)
 
@@ -157,7 +208,7 @@ cd Eclipse-Simulator-3D
 Open the [**Releases**](https://github.com/Dragos112358/Eclipse-Simulator-3D/releases) page, download
 [`Eclipse-Simulator-Encoder-win64.zip`](https://github.com/Dragos112358/Eclipse-Simulator-3D/releases/download/v1.0.0/Eclipse-Simulator-Encoder-win64.zip),
 unzip it and copy its contents into the **repository root**.
-This creates the `Content/Encoder/_internal` folder, which is required for the server to run correctly.
+This creates the `Content/Encoder/_internal` folder and a beautiful moon texture, which are required for the application to run correctly.
 
 **3️⃣ Download the ephemerides**
 
@@ -185,7 +236,13 @@ The Python backend lives in [`Server/`](Server):
 pip install -r Server/requirements.txt
 ```
 
-<!-- TODO: add the exact command that starts the server (e.g. python Server/main.py) -->
+The Python backend can run **standalone**, independently of the Unreal project. To do so, run the server **from `Content/Encoder`** (the folder that contains the `_internal` runtime from step 2):
+
+```bash
+cd Content/Encoder
+python3 Server.py
+```
+
 
 ### 📂 Repository layout
 
@@ -195,7 +252,7 @@ pip install -r Server/requirements.txt
 | `Content/` | Unreal assets (and `Encoder/_internal` after step 2) |
 | `Config/` | Unreal project configuration |
 | `Server/` | Python backend (Skyfield, geometry, UDP server) |
-| `Download_Ephemerides/` | Script that fetches DE441 and the Moon texture |
+| `Download_Ephemerides/` | Script that fetches DE441 and other ephemerides for Jupiter, Saturn, Neptune and the Moon texture |
 | `Proiect_Eclipsa.uproject` | Unreal Engine project file |
 
 ---
@@ -244,12 +301,31 @@ A fixed binary layout (instead of JSON) lets Unreal read every field directly by
 
 ## 🌓 Eclipse types
 
+The catalogue browser has a **☀️ Sun / 🌙 Moon** switch, so both solar and lunar eclipses can be searched, filtered, sorted by year and opened in the simulator.
+
+### ☀️ Solar eclipses
+
 | Type | Geometry | Example in the thesis |
 |---|---|---|
 | **Total** | The Moon's umbra reaches the Earth's surface and completely blocks the Sun | 21 Aug 2017, USA |
 | **Annular** | Moon near apogee — the umbra falls short of the surface; a "ring of fire" remains | 1 Jun 2030, Istanbul |
 | **Hybrid** | Because of Earth's curvature, the eclipse is total along part of its path and annular along another (~11 per century on average) | 25 Nov 2049, Sumatra |
 | **Partial** | Only the penumbra sweeps over the observer | 14 Jan 2029, Vancouver |
+
+### 🌙 Lunar eclipses
+
+Lunar eclipses are catalogued in five classes, each with a magnitude shown in the browser (**Pmag** = penumbral magnitude, **Umag** = umbral magnitude):
+
+| Type | Geometry | Magnitude shown |
+|---|---|---|
+| **Penumbral Partial** | Only part of the Moon enters Earth's penumbra; the umbra is never touched | Pmag |
+| **Penumbral Total** | The whole Moon lies inside the penumbra, but still never enters the umbra | Pmag |
+| **Umbral Partial** | Part of the Moon enters Earth's umbra | Umag |
+| **Umbral Total** | The whole Moon is inside the umbra | Umag |
+| **Umbral Central** | A total umbral eclipse in which the Moon passes through the central part of the umbra, close to the shadow axis | Umag |
+
+Every entry has **View** (jump to the event in 3D), **View Saros Cycle** and **Details** buttons. In **Details**, you can see all the cities where you can see that eclipse. For solar eclipses, those cities are sorted by **eclipse magnitude**.
+
 
 ---
 
@@ -303,7 +379,6 @@ Across the supported range, deviations versus the Jubier reference are **0.1 s �
 Documented, quantifiable limitations — not open questions:
 
 - **ΔT extrapolation.** The Espenak & Meeus model is an empirical fit to the past few millennia. Near 13,000 BC or 17,000 AD it is an extrapolation, and the real uncertainty in Earth's rotation is measured in **hours**. Results there are *geometrically consistent*, but not validated to the sub-second precision of the 2026/2027 cases.
-- **Lunar limb.** A smooth lunar limb is assumed in the base model; real mountains and valleys on the limb can shift contact times by a few seconds and make totality begin slightly earlier or later depending on location.
 - **Ephemeris range.** DE441 comfortably covers the whole span, but its own integration uncertainty grows modestly toward both ends.
 
 ---
@@ -356,42 +431,77 @@ Yes — the geometry is largely symmetric (the Moon passes through Earth's shado
 
 | When | Milestone |
 |---|---|
-| DATE | Project started — first Skyfield ↔ Unreal UDP prototype |
-| DATE | 3D umbra/penumbra cones and WGS84 intersection |
-| DATE | Cesium integration, 3D totality band |
-| DATE | Eclipse catalogue (71,264 events) and browser UI |
-| DATE | Solar-system expansion, sky overlays, weather effects |
+| **9 Jan 2026** | Project started — first Skyfield ↔ Unreal UDP prototype |
+| **21 Feb 2026** | Cesium integration, 3D totality band |
+| **10 Mar 2026** | 3D umbra/penumbra cones and WGS84 intersection |
+| **17 Mar 2026** | Eclipse catalogue (71,264 events) and browser UI |
+| **April 2026** | Solar-system expansion, sky overlays, weather effects |
 | **May 2026** | Presented at a student scientific session — **honorable mention** |
 | **Jul 2026** | Bachelor's thesis completed |
-| **12 Aug 2026** | Total eclipse over Iceland & Spain — validation and personal photography |
-| **DATE** | Open-source release |
+| **12 Aug 2026** | Total eclipse over Iceland & Spain — validated using 3D Eclipse Simulator |
+| **11 Oct 2026** | Open-source release |
 | **2 Aug 2027** | Next total eclipse — Luxor, 6 min 20 s 🌑 |
 
 ---
 
 ## 🙏 Credits & acknowledgements
 
-**Author:** Boncan Dragoș-Eduard-Gabriel — [@Dragos112358](https://github.com/Dragos112358)
+### 👤 Development
 
-**Scientific advisors:** Assoc. Prof. **Victor-Iosif Asavei**, Lecturer **Florin-Cătălin Tudose**, astronomer **Cătălin Beldea**.
-
-**Data, libraries & tools**
-
-| | |
+| Role | Name |
 |---|---|
-| 📜 **John Irwin** | *Thirty Millennium Catalog of Solar and Lunar Eclipses*, 3rd ed., 2021 — [catalogue](http://www.jir1667.plus.com/eclipse/eclipsecats3/index.html) |
-| ✅ **Xavier Jubier** | Interactive eclipse maps for [2026](http://xjubier.free.fr/en/site_pages/solar_eclipses/TSE_2026_GoogleMapFull.html) and [2027](http://xjubier.free.fr/en/site_pages/solar_eclipses/TSE_2027_GoogleMapFull.html), used as the validation reference |
-| 🌐 [**Skyfield**](https://rhodesmill.org/skyfield/) | High-precision astronomy in Python |
-| 🪐 **JPL DE441** | NASA Jet Propulsion Laboratory planetary & lunar ephemerides |
+| **Developer** | Dragoș-Eduard-Gabriel Boncan — [@Dragos112358](https://github.com/Dragos112358) |
+| **Thesis supervisor** | Assoc. Prof. Victor-Iosif Asavei, PhD |
+| **Thesis supervisor** | Lect. Florin-Cătălin Tudose, PhD |
+| **Scientific coordinator** | Astronomer Cătălin Beldea |
+
+### 🛠️ Software & astronomy engine
+
+| | Used for |
+|---|---|
+| 🎮 [**Unreal Engine 5**](https://www.unrealengine.com/) — Epic Games | Real-time rendering engine |
+| 🗺️ [**Cesium for Unreal**](https://cesium.com/) | Photorealistic 3D globe and terrain |
+| 🌐 [**Skyfield**](https://rhodesmill.org/skyfield/) — Brandon Rhodes | Astronomical calculations |
+| 🪐 [**NASA JPL DE441**](https://naif.jpl.nasa.gov/) and SPICE kernels — NASA NAIF | Planetary and lunar ephemerides |
+| 🛰️ **JPL satellite kernels** `jup365.bsp`, `sat441.bsp`, `nep097.bsp` — NASA NAIF | Jupiter, Saturn and Neptune moon systems |
+| 📜 [**John Irwin**](http://www.jir1667.plus.com/eclipse/eclipsecats3/index.html) | *Thirty Millennium Catalog of Solar and Lunar Eclipses* (13,000 BC – 17,000 AD), 3rd ed., 2021 |
+| 🌍 [**IERS**](https://www.iers.org/IERS/EN/DataProducts/EarthOrientationData/eop.html) | `finals2000A.all` Earth rotation data |
 | 🧮 **Espenak & Meeus** | ΔT polynomials |
-| ⭐ **HYG 4.2** | Star database |
-| 🗺️ [**Cesium for Unreal**](https://cesium.com/platform/cesium-for-unreal/) | Photorealistic 3D geospatial terrain |
-| 🎮 [**Unreal Engine 5**](https://www.unrealengine.com/) | Epic Games |
-| 📍 **GeoPy** | Coordinates → location names |
-| 🔭 Benchmarked against | Stellarium, Celestia, SpaceEngine, The Photographer's Ephemeris |
+| ⭐ [**HYG Database**](https://www.astronexus.com/hyg) — David Nash / Astronexus (CC BY-SA 4.0) | Background star catalogue (HYG 4.2) |
+| 🎞️ [**FFmpeg**](http://ffmpeg.org) (GPLv3.0) | Video processing. This software uses code of FFmpeg; source code is available on the official website. |
+| 📍 [**Nominatim**](https://www.openstreetmap.org/copyright) — data © OpenStreetMap contributors | Geocoding service |
+| 🏙️ [**GeoNames**](https://www.geonames.org/) (CC BY 4.0) | City and country data (`cities5000`, `countryInfo`) used to generate `CountryPoints.csv` |
+| 🐍 [**Python**](https://www.python.org/) — © Python Software Foundation | Backend server |
+| 🔢 [**NumPy**](https://numpy.org/) (BSD License) | Scientific computing |
+| 📌 [**GeoPy**](https://geopy.readthedocs.io/) (MIT License) | Geocoding client |
 
-<!-- Add Moon texture / constellation artwork / other asset credits here -->
+### 🎨 Visual content (textures & 3D models)
 
+| Asset | Source & license |
+|---|---|
+| Earth 2D texture | [NASA Scientific Visualization Studio](https://svs.gsfc.nasa.gov/2915) (public domain) |
+| Moon texture | [NASA Scientific Visualization Studio](https://svs.gsfc.nasa.gov/4720/) (public domain) |
+| Total solar eclipse photo | [NASA Science](https://science.nasa.gov/solar-system/skywatching/april-8-total-solar-eclipse-through-the-eyes-of-nasa/) (public domain) |
+| Planetary textures | [SolarSystemScope.com](https://www.solarsystemscope.com/textures/) (CC BY 4.0) |
+| Europa texture | [USGS Astrogeology Science Center](https://astrogeology.usgs.gov/search/map/europa_voyager_galileo_ssi_global_mosaic_500m) (public domain) |
+| Io texture | [USGS Astrogeology Science Center](https://astrogeology.usgs.gov/search/map/io_galileo_ssi_voyager_color_merged_global_mosaic_1km) (public domain) |
+| Ganymede texture | [NASA Science 3D Resources](https://science.nasa.gov/3d-resources/jupiter-ganymede/) (public domain) |
+| Callisto texture | By Askaniy via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Callisto_map_by_Askaniy.png) (CC BY-SA) |
+| Triton texture | By Askaniy via [DeviantArt](https://www.deviantart.com/askaniy/art/Triton-Texture-Map-14K-761940736) (CC BY-SA) |
+| Titan atmosphere texture | Based on original radar work by FarGetaNik ([Celestia Motherlode](http://www.celestiamotherlode.net/addon/addon_1675.html)), processed under CC BY-SA |
+| 3D drone model | ["DJI FPV by SDC"](https://sketchfab.com/3d-models/dji-fpv-by-sdc-high-performance-drone-d471ea8c6235457b8e131842e2cf3783) by SDC PERFORMANCE (CC BY 4.0) |
+| Constellation illustrations | [Western skycultures from Stellarium](https://github.com/Stellarium/stellarium-skycultures/tree/master/western/illustrations) (GPL) |
+
+### 🔬 Research & inspiration
+
+- ✅ **Xavier Jubier** — eclipse geometry and concepts are inspired by his work; his interactive eclipse maps for [2026](http://xjubier.free.fr/en/site_pages/solar_eclipses/TSE_2026_GoogleMapFull.html) and [2027](http://xjubier.free.fr/en/site_pages/solar_eclipses/TSE_2027_GoogleMapFull.html) were used as the validation reference.
+- 🔭 Benchmarked against: Stellarium, Celestia, SpaceEngine, The Photographer's Ephemeris.
+
+### ⚖️ Legal notes
+
+- This software requires an active internet connection to fetch updated ephemeris data.
+- Eclipse Simulator 3D uses the Unreal® Engine. Unreal® is a trademark or registered trademark of Epic Games, Inc. in the United States of America and elsewhere. Unreal® Engine, Copyright 1998 – 2026, Epic Games, Inc. All rights reserved.
+- All textures and 3D models are used in accordance with their respective licenses. All rights to astronomical data belong to the mentioned sources.
 ---
 
 ## 📑 How to cite
@@ -412,10 +522,9 @@ If you use this project in academic work, please cite:
 
 ## 📄 License
 
-<!-- Choose a license and add a LICENSE file, e.g. MIT -->
-Distributed under the **LICENSE_NAME** license. See [`LICENSE`](LICENSE) for details.
-
-Third-party data and assets (Irwin catalogue, HYG, DE441, Cesium, Unreal Engine) are subject to their own licenses and terms.
+The source code of Eclipse Simulator 3D is released under the **Apache License 2.0**. See [`LICENSE`](LICENSE) and [`NOTICE`](NOTICE) for details.
+Copyright © 2026 Dragoș-Eduard-Gabriel Boncan.
+Third-party software, data and assets (Unreal Engine, Cesium, Irwin catalogue, HYG, JPL ephemerides, textures, 3D models, FFmpeg, Stellarium illustrations…) are **not** covered by this license and remain under their own licenses and terms — see [Credits](#-credits--acknowledgements).
 
 ---
 
@@ -423,6 +532,6 @@ Third-party data and assets (Irwin catalogue, HYG, DE441, Cesium, Unreal Engine)
 
 ⭐ If you like this project, please **star the repo** and share it with fellow eclipse chasers! ⭐
 
-**[⬇ Gumroad](GUMROAD_LINK)** · **[🎮 itch.io](ITCH_LINK)** · **[▶ YouTube](YOUTUBE_LINK_1)**
+**[⬇ Gumroad](https://gabyboncan.gumroad.com/l/txlkbg)** · **[🎮 itch.io](https://dragosboncan.itch.io/3d-eclipse-simulator)** · **[▶ YouTube](https://www.youtube.com/watch?v=sYdvDpyHnCw)**
 
 </div>
