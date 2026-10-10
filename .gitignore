@@ -34,4 +34,4 @@ Content/Textures/lroc_color_poles_16k.uasset
 
 # --- Backend compilat: merge în GitHub Releases ---
 Content/Encoder/Server.exe
-Content/Encoder/_internal/
+Content/Encoder/_internal/*.mp4
