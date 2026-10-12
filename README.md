@@ -15,7 +15,7 @@ Built with **Unreal Engine 5**, **Cesium** photorealistic terrain and a **Python
 [![Python](https://img.shields.io/badge/Python-backend-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![Skyfield](https://img.shields.io/badge/Skyfield-DE441-orange)](https://rhodesmill.org/skyfield/)
 [![Cesium](https://img.shields.io/badge/Cesium-for%20Unreal-6CADDF)](https://cesium.com/)
-[![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?logo=windows)](#-requirements)
+[![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?logo=windows)](#-getting-started-build-from-source)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
 **[▶ Demo 1](https://www.youtube.com/watch?v=sYdvDpyHnCw)** · **[▶ Demo 2](https://www.youtube.com/watch?v=clGfikjfNSE)** · **[⬇ Gumroad](https://gabyboncan.gumroad.com/l/txlkbg)** · **[🎮 itch.io](https://dragosboncan.itch.io/3d-eclipse-simulator)**
@@ -26,13 +26,13 @@ Built with **Unreal Engine 5**, **Cesium** photorealistic terrain and a **Python
 
 | 🕰️ **30,000 years** | ☀️ **71,264 solar eclipses** | ⏱️ **≤ 1.5 s** vs. reference | ⭐ **5,079 stars** | 🎞️ **~60 FPS** |
 |:---:|:---:|:---:|:---:|:---:|
-| 13,000 BC → 17,000 AD | Irwin 2021 catalogue | C1–C4 contact times | HYG 4.2, magnitude < 6 | photorealistic terrain |
+| 13,000 BC → 17,000 AD | Irwin 2021 catalogue | C1–C4 contact times | HYG 4.2, magnitude < 6 | real-time, with Cesium terrain |
 
 ---
 
 ## 📖 Contents
 
-[Why](#-why-this-project) · [Features](#-features) · [Gallery](#-gallery) · [Demos](#-demo-videos) · [Download](#-download) · [Controls](#-controls--first-run) · [Build from source](#-getting-started-build-from-source) · [How it works](#-how-it-works) · [Eclipse types](#-eclipse-types) · [Case studies](#-case-studies) · [Validation](#-validation--accuracy) · [Comparison](#-comparison-with-other-tools) · [Limitations](#-limitations) · [FAQ](#-faq) · [Troubleshooting](#-troubleshooting) · [Roadmap](#-roadmap) · [Timeline](#-project-timeline) · [Credits](#-credits--acknowledgements) · [Cite](#-how-to-cite) · [License](#-license)
+[Why](#-why-this-project) · [Features](#-features) · [Gallery](#-gallery) · [Demos](#-demo-videos) · [Download](#-download) · [Controls](#-controls--first-run) · [Build from source](#-getting-started-build-from-source) · [How it works](#-how-it-works) · [How Cesium is used](#-how-cesium-is-used) · [Lunar limb](#-lunar-limb-a-neural-elevation-model) · [Eclipse types](#-eclipse-types) · [Case studies](#-case-studies) · [Validation](#-validation--accuracy) · [Comparison](#-comparison-with-other-tools) · [Limitations](#-limitations) · [FAQ](#-faq) · [Troubleshooting](#-troubleshooting) · [Roadmap](#-roadmap) · [Timeline](#-project-timeline) · [Credits](#-credits--acknowledgements) · [Cite](#-how-to-cite) · [License](#-license)
 
 ---
 
@@ -52,7 +52,7 @@ It started as my Bachelor's thesis, *"Real Shadow Cones Produced During the Cent
 
 | 🎓 Educators, students, planetariums | 📷 Eclipse chasers & photographers |
 |---|---|
-| A fully immersive 3D alternative to static 2D maps. Simulate an eclipse from **any point on Earth, at any moment in 30 millennia**, and understand *why* it looks the way it does. Designed with integration into modern planetariums in mind. | Detailed calculations for **every eclipse** in the range, plus shadow geometry and **azimuth / altitude** for each contact — directly useful for positioning and calibrating optical equipment. |
+| A fully immersive 3D alternative to static 2D maps. Simulate an eclipse from **any point on Earth, at any moment in 30 millennia**, and understand *why* it looks the way it does. Designed with future planetarium integration in mind. | Detailed calculations for **every eclipse** in the range, plus shadow geometry and **azimuth / altitude** for each contact — directly useful for positioning and calibrating optical equipment. |
 
 ---
 
@@ -68,7 +68,7 @@ It started as my Bachelor's thesis, *"Real Shadow Cones Produced During the Cent
 - 🪐 **Beyond Earth–Moon**: planets and major moons (Galilean moons, Titan, Triton) tracked with the same DE441 ephemerides.
 
 **Experience**
-- 🚁 **Drone camera & free flight** — from orbit to street level with no loading interruptions.
+- 🚁 **Drone camera & free flight** — from orbit to street level in one continuous flight, with terrain streaming in as you go.
 - ⭐ **Accurate night sky** — 5,079 naked-eye stars (HYG 4.2), constellation lines & names, and optional mythological constellation artwork.
 - 📡 **Live telemetry** — Earth–Sun / Earth–Moon distance, angular size, azimuth, altitude, magnitude, light time, solar elongation, coverage and status ("totality inside"…).
 - 🕒 **Time Control panel** — calendar, UTC / solar time, play, pause, rewind, speed multipliers.
@@ -101,8 +101,8 @@ It started as my Bachelor's thesis, *"Real Shadow Cones Produced During the Cent
 
 | | |
 |---|---|
-| **Demo 1 — TITLE** | [![Demo 1](https://www.youtube.com/watch?v=sYdvDpyHnCw)](YOUTUBE_LINK_1) |
-| **Demo 2 — TITLE** | [![Demo 2](https://www.youtube.com/watch?v=clGfikjfNSE)](YOUTUBE_LINK_2) |
+| **Demo 1 — Thriller for 3D Solar Eclipse Simulator using Unreal Engine 5** | [![Demo 1](https://img.youtube.com/vi/sYdvDpyHnCw/hqdefault.jpg)](https://www.youtube.com/watch?v=sYdvDpyHnCw) |
+| **Demo 2 — 3D Eclipse Simulator Demo** | [![Demo 2](https://img.youtube.com/vi/clGfikjfNSE/hqdefault.jpg)](https://www.youtube.com/watch?v=clGfikjfNSE) |
 
 <details>
 <summary><b>🎞️ What the demos walk through</b></summary>
@@ -137,15 +137,21 @@ Don't want to build from source? Grab a ready-to-run build:
 
 Press **F10** at any time to open the in-app **Basic Manual**.
 
-### 🔑 First run: Cesium API key (3D terrain)
+### 🔑 First run: Cesium ion access token (bring your own key)
 
-The photorealistic global terrain needs a free Cesium ion token. This is required only once, to download the terrain at maximum resolution.
+The photorealistic global terrain is streamed live from Cesium ion. The simulator
+follows a **bring-your-own-key (BYOK)** model: you use your own free Cesium ion
+token, so terrain streaming counts against your own Cesium account and no shared
+key is bundled with the app.
 
 1. Go to [ion.cesium.com](https://ion.cesium.com) and create a free account.
 2. Open **Access Tokens** in the left menu.
 3. Click **Create Token**, or copy the **Default Token**.
 4. In the simulator, open **Settings** and paste the key in the **Cesium API Key** field.
 5. Click **Apply**.
+
+You only need to enter the token once; the app remembers it for later sessions.
+An internet connection is required whenever terrain is streamed.
 
 ### 🚁 Flight (drone)
 
@@ -209,7 +215,7 @@ cd Eclipse-Simulator-3D
 Open the [**Releases**](https://github.com/Dragos112358/Eclipse-Simulator-3D/releases) page, download
 [`Eclipse-Simulator-Encoder-win64.zip`](https://github.com/Dragos112358/Eclipse-Simulator-3D/releases/download/v1.0.0/Eclipse-Simulator-Encoder-win64.zip),
 unzip it and copy its contents into the **repository root**.
-This creates the `Content/Encoder/_internal` folder and a beautiful moon texture, which are required for the application to run correctly.
+This creates the `Content/Encoder/_internal` folder and a high-resolution moon texture, which are required for the application to run correctly.
 
 **3️⃣ Download the ephemerides**
 
@@ -271,16 +277,30 @@ python3 Server.py
 ### Two-tier architecture
 
 ```
-┌──────────────────────────────┐    UDP · 80 B request / frame     ┌────────────────────────────────┐
-│  Unreal Engine 5  (frontend) │ ────────────────────────────────▶ │  Python  (computational backend)│
-│  Rendering · UI · Cesium     │                                   │  Skyfield · DE441 · GeoPy       │
-│  Drone camera · VFX · HUD    │ ◀──────────────────────────────── │  Multithreaded                  │
-└──────────────────────────────┘    UDP · 3,700 B response / frame └────────────────────────────────┘
+┌──────────────────────────────┐   :5000  UDP · 80 B request / frame      ┌─────────────────────────────────┐
+│  Unreal Engine 5  (frontend) │ ───────────────────────────────────────▶ │  Python  (computational backend) │
+│  Rendering · UI · Cesium     │                                          │  Skyfield · DE441 · GeoPy        │
+│  Drone camera · VFX · HUD    │ ◀─────────────────────────────────────── │  Multithreaded                   │
+│                              │   :5001  UDP · 3,856 B response / frame  │                                  │
+│                              │                                          │                                  │
+│  Eclipse Catalog → Details   │ ───────────────────────────────────────▶ │  City visibility solver          │
+│                              │   :5002  UDP · 8 B request (JD TT)       │  (vectorized, ternary search)    │
+│                              │ ◀─────────────────────────────────────── │                                  │
+└──────────────────────────────┘   :5002  UDP · chunks of 500 cities      └─────────────────────────────────┘
+                                          (12 B header + 20 B / city)
 ```
+
+
+| Port | Direction | Purpose |
+|---|---|---|
+| `5000` | Unreal → Python | Per-frame request: date/time, observer position, language |
+| `5001` | Python → Unreal | Per-frame response: body positions, shadow path, report text |
+| `5002` | Unreal ↔ Python | On-demand city list for the catalogue **Details** view; the reply goes back to the sender in chunks of 500 cities |
 
 **Why UDP?** The backend streams fresh celestial positions every frame. If a packet is dropped, the next one — a few milliseconds later — already supersedes it, so TCP's retransmission and ordering would only add latency. UDP also keeps the door open for running the backend remotely (e.g. offloading heavy computations to a server) without a rewrite.
 
-**Why multithreaded?** The *main thread* computes body positions every frame and must never block. A *secondary thread* handles heavy or high-latency work — iterative contact-time root-finding and GeoPy location lookups — so the render loop never stutters.
+**Why multithreaded?** The *main thread* answers every frame: it computes body positions and the live HUD values and must never block. A *secondary thread* runs the heavy work: contact-time root-finding, the global shadow path and band width, the lunar-limb correction, the report table and GeoPy lookups. It is triggered only when the location, date or language changes (at most once per second) and is deferred while the simulation is fast-forwarding, so the render loop never stutters.
+
 
 ### Computation pipeline
 
@@ -291,20 +311,49 @@ python3 Server.py
 | 3 | **Shadow vector** | The cone axis `z_dir` is derived from the apparent Sun/Moon coordinates after transforming them into **ITRS** (Earth-fixed), so the shadow can be projected on the *rotating* Earth. |
 | 4 | **Intersection modeling** | Given the axis and the umbra/penumbra angular radii, a **quadratic equation** gives the entry and exit points of the cone on the **WGS84 ellipsoid**. |
 | 5 | **Contact times** | C1–C4 are found by iterative root-finding on the secondary thread. |
+| 6 | **Path & band width** | The cone axis is intersected with the WGS84 ellipsoid at 100 time steps; the band width at each point comes from projecting the umbra cross-section onto the tangent plane, using the shadow's ground velocity and the Sun's altitude. |
+| 7 | **Lunar-limb correction** | For each contact: libration (l, b) and axis angle → selenographic point on the limb → neural elevation → corrected Moon radius → contact time re-solved by bisection. Also yields the corrected maximum (MAXL) and totality duration. |
+| 8 | **City visibility** | For the catalogue **Details** view: all cities in `CountryPoints.csv` are evaluated in a vectorized pass over a coarse time grid, then refined to sub-second with a ternary search (magnitude, offset, UTC time, total/annular flag). |
+| 9 | **Reports** | Contact table with both geometric (C1–C4) and limb-corrected (C1L–C4L, MAXL) rows, plus sunrise/sunset, Sun's constellation and visible planets. |
 
 ### Fixed-layout binary packets
 
 | Direction | `struct` format | Size | Content |
 |---|---|---|---|
-| **Python → Unreal** | `350d900s` | **3,700 B** | Sun & Moon positions, coverage & magnitude, sidereal time (56 B) · planets (168 B) and major satellites (144 B) · **200 lat/lon path points** (1,600 B) + path width at each point (800 B) · live shadow position (16 B) · 900-byte UTF-8 report text (location names, contact times…) |
+| **Python → Unreal** | `357d1000s` | **3,856 B** | 8 doubles: Sun & Moon XYZ (ITRS, km), live magnitude, GAST (64 B) · 7 planets (168 B) · 6 moons (144 B) · **path block** (2,408 B): point count + 100 lon/lat pairs + 100 band widths · live shadow lat/lon + ΔT (24 B) · Sun/Moon center-to-center vectors (48 B) · 1,000-byte UTF-8 report text (location names, contact times…) |
 | **Unreal → Python** | `10d` | **80 B** | Year, month, day, hour, minute, precise seconds · observer latitude, longitude, altitude (WGS84) · language flag (`0` = Romanian, `1` = English) |
 
-A fixed binary layout (instead of JSON) lets Unreal read every field directly by byte offset — no allocation or parsing, sixty times a second. The path-width array is what lets Unreal render the totality band as a **curved 3D mesh** instead of a fixed-width strip.
+A fixed binary layout (instead of JSON) lets Unreal read every field directly by byte offset: no allocation or parsing, sixty times a second. The path-width array is what lets Unreal render the totality band as a **curved 3D mesh** instead of a fixed-width strip.
 
 ### Time scale & calendars
 
 - **ΔT** uses the **Espenak & Meeus** piecewise polynomials, implemented identically in Python and C++ to avoid round-trip timing errors for ancient dates.
-- **Calendar reconciliation:** Skyfield uses the *proleptic Gregorian* calendar, while the Irwin catalogue reports ancient dates in the *Julian* calendar. The two diverge by a growing number of days the further back you go; left unhandled, an ancient eclipse is silently mis-dated and its computed path lands in the wrong place. This is handled explicitly.
+- **Calendar reconciliation.** Skyfield works internally in the *proleptic Gregorian* calendar, while the
+  Irwin catalogue reports ancient dates in the *Julian* calendar, the one actually in use at the time.
+  The two drift apart by a growing number of days the further back you go. Left unhandled, an ancient
+  eclipse is silently mis-dated by days, which is enough to put the whole computed path in the wrong
+  place relative to the historical record. The server therefore builds the time scale explicitly:
+  - dates up to 1582 are converted to a Julian Date with the **Julian** calendar formula, later dates
+    with the Gregorian one;
+  - outside 1900–2100 the **Espenak & Meeus** ΔT polynomial is applied directly (UT → TT), instead of
+    letting Skyfield extrapolate its own model;
+  - the same formula is used in reverse when displaying contact times (TT → UT), so the two
+    conversions cancel exactly and the shown UTC matches the catalogue date;
+  - the search window for the eclipse maximum widens with distance from the present, to absorb the
+    larger ΔT uncertainty of ancient dates.
+
+  The 13,000 BC case study is the stress test for this logic.
+
+---
+
+## 🌍 How Cesium is used
+
+- **Terrain & imagery streaming** from Cesium ion through Cesium for Unreal (3D Tiles),
+  from orbit down to street level.
+- **Georeferencing**: the shadow path computed on the WGS84 ellipsoid in Python is
+  placed on the Cesium globe, so the band of totality is drawn directly on terrain.
+- **Atmosphere and weather effects** (clouds, fog, rain, snow) rendered over Cesium terrain.
+- **Bring-your-own-key** model: each user streams with their own Cesium ion token.
 
 ---
 
@@ -313,10 +362,12 @@ A fixed binary layout (instead of JSON) lets Unreal read every field directly by
 The apparent edge of the Moon is not a perfect circle: mountains and craters along the limb shift
 the contact times C1–C4 and produce the Baily's beads seen at totality. To model this, I trained a
 **neural network that maps selenographic coordinates (longitude, latitude) to surface elevation**,
-fitted on a high-resolution lunar DEM.
+fitted on the **NASA LRO / LOLA global lunar elevation model** (LDEM, 118 m/pixel,
+March 2014 release, distributed by the USGS Astrogeology Science Center), in Simple
+Cylindrical projection with elevations relative to the 1,737.4 km lunar reference sphere.
 
-**Why a neural model instead of the raw DEM?** The full-resolution DEM is tens of gigabytes. The
-network compresses the region that matters into a **≤ 128 MB** model that can be queried in
+**Why a neural model instead of the raw DEM?** The full-resolution DEM is around 8 GB. The
+network compresses the region that matters into a **64 MB** model that can be queried in
 real time, at any point, with no tiling or loading.
 
 **Architecture**
@@ -326,6 +377,21 @@ real time, at any point, with no tiling or loading.
 | Encoding | Multi-resolution **hash grid**, 20 levels × 2 features, table size 2²², finest resolution 46,080 cells in latitude (~118 m on the lunar surface) |
 | Decoder | MLP, 3 hidden layers × 256, **GELU** activations |
 | Storage | fp16 embeddings for deployment, fp32 for training |
+
+The finest hash-grid level (46,080 cells in latitude) matches the native resolution of
+the DEM (256 pixels per degree), so no detail present in the source data is discarded
+by the encoding grid.
+
+**Design note: hash grid instead of SIREN.**
+The first design iteration used a SIREN (sinusoidal-activation MLP) to represent
+lunar elevation. It reached a validation RMSE of about 42 m against the DEM,
+which was too coarse for limb-profile work, where contact-time corrections depend
+on elevation differences of tens of metres. I therefore switched to a
+multi-resolution hash-grid encoding + small MLP: the high-resolution levels capture
+fine local detail (craters, ridges) while the MLP stays small and fast to query.
+The final model reaches a validation RMSE of 12.57 m, roughly 3.3× lower, at the
+cost of a larger deployed size (64 MB in fp16) than a purely sinusoidal network
+would need.
 
 **Training domain.** Contact points during an eclipse lie near the lunar limb, i.e. around
 **±90° selenographic longitude**. Only two longitude bands of ±10° around those meridians
@@ -346,7 +412,8 @@ limb profile actually matters.
 |---|:---:|
 | Validation RMSE vs. lunar surface DEM | **12.57 m** |
 
-For scale, the Moon's radius is 1,737.4 km, so the error is about 0.0007 % of the radius, far below
+- **Where it shows up.** The correction is applied to every contact (C1–C4 → C1L–C4L), to the moment of maximum (MAXL) and to the totality duration, which the report shows as **Lunar Limb Duration**.
+- For scale, the Moon's radius is 1,737.4 km, so the error is about 0.0007 % of the radius, far below
 what is visible in the limb profile at the angular resolution of the simulation.
 
 ## 🌓 Eclipse types
@@ -374,7 +441,7 @@ Lunar eclipses are catalogued in five classes, each with a magnitude shown in th
 | **Umbral Total** | The whole Moon is inside the umbra | Umag |
 | **Umbral Central** | A total umbral eclipse in which the Moon passes through the central part of the umbra, close to the shadow axis | Umag |
 
-Every entry has **View** (jump to the event in 3D), **View Saros Cycle** and **Details** buttons. In **Details**, you can see all the cities where you can see that eclipse. For solar eclipses, those cities are sorted by **eclipse magnitude**.
+Every entry has **View** (jump to the event in 3D), **View Saros Cycle** and **Details** buttons. In **Details**, you can see all the cities where you can see that eclipse. The list can be exported as CSV or TXT. For solar eclipses, those cities are sorted by **eclipse magnitude**.
 
 
 ---
@@ -384,7 +451,7 @@ Every entry has **View** (jump to the event in 3D), **View Saros Cycle** and **D
 | Eclipse | Location | Coordinates | Notes |
 |---|---|---|---|
 | **11 Jul 2010** | Puerto Natales, Chile | 49.049° S, 74.516° W | Totality path, ground shadow projection |
-| **12 Aug 2026** | Iceland → northern Spain | — | Validated against Jubier (≤ 1 s); shadow cone viewed in 3D; 30 km over Tunis at 18:33:49 UTC |
+| **12 Aug 2026** | Iceland → northern Spain | 41.649° N, 0.889° W, Zaragoza | Validated against Jubier (≤ 1 s); shadow cone viewed in 3D; 30 km over Tunis at 18:33:49 UTC |
 | **2 Aug 2027** | Luxor, Egypt | 25.635° N, 32.594° E | Record **6 min 20 s** totality; validated against Jubier (≤ 1.5 s) |
 | **1 May 2079** | Queens, USA | 40.759° N, 73.944° W | 10:09 UTC — far-future stability test |
 | **10 Oct 13,000 BC** | Canada | 58.262° N, 136.364° W | 18:55 UTC — lower edge of the range; calendar-reconciliation stress test |
@@ -403,7 +470,7 @@ Contact times were compared with **Xavier Jubier's** interactive eclipse maps, t
 | Total — **12 August 2026** | **≤ 1 s** |
 | Total — **2 August 2027** (Luxor) | **≤ 1.5 s** |
 
-Across the supported range, deviations versus the Jubier reference are **0.1 s – 20 s** depending on how far the eclipse is from the present. For scale, Stellarium is off by about **8 minutes** for the 2017 US eclipse.
+Across the supported range, deviations versus the Jubier reference are **0.1 s – 2 s** depending on how far the eclipse is from the present. For scale, Stellarium is off by about **8 minutes** for the 2017 US eclipse.
 
 **Catalogue cross-check.** A standalone Besselian-elements script run over the same 71,264-event catalogue found **719 eclipses** whose umbra/antumbra touched Romania in 30,000 years (plus ~13,000 partial-only), and independently reproduced the documented track of the **11 Aug 1999** eclipse — two different geometric formulations converging on the same result.
 
@@ -413,7 +480,7 @@ Across the supported range, deviations versus the Jubier reference are **0.1 s �
 
 | Metric | Stellarium | Celestia | SpaceEngine | TPE | Jubier | **This project** |
 |---|---|---|---|---|---|---|
-| **Temporal accuracy** | 8 min offset for the 2017 US total eclipse | Low | Low | Good | Reference | **0.1 s – 20 s vs. Jubier** |
+| **Temporal accuracy** | 8 min offset for the 2017 US total eclipse | Low | Low | Good | Reference | **0.1 s – 2 s vs. Jubier** |
 | **Real geographic data** | ❌ | ❌ | ❌ | ✅ | ✅ | ✅ |
 | **Umbra & penumbra cones rendered** | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
 | **Free flight** | ❌ | ✅ | ✅ | ❌ | ❌ | ✅ |
@@ -430,6 +497,18 @@ Documented, quantifiable limitations — not open questions:
 
 - **ΔT extrapolation.** The Espenak & Meeus model is an empirical fit to the past few millennia. Near 13,000 BC or 17,000 AD it is an extrapolation, and the real uncertainty in Earth's rotation is measured in **hours**. Results there are *geometrically consistent*, but not validated to the sub-second precision of the 2026/2027 cases.
 - **Ephemeris range.** DE441 comfortably covers the whole span, but its own integration uncertainty grows modestly toward both ends.
+- **Limb model coverage.** The elevation model covers only two ±10° longitude bands around ±90° selenographic longitude; a contact that falls outside them (extreme libration) is outside the trained domain.
+- **Lunar eclipses.** The catalogue, 3D view and city visibility are supported, but the city list uses one global umbral magnitude per eclipse and a "Moon above the horizon" test; there are no per-city lunar contact times.
+- **Date range.** The server ignores requests outside 13,000 BC – 17,000 AD.
+- **Network.** The astronomical backend (Skyfield + DE441) runs fully offline once the
+  ephemerides are downloaded, and can be used standalone. The full 3D application,
+  however, needs an internet connection: Cesium terrain and imagery tiles are streamed
+  live from Cesium ion, and location names are resolved through Nominatim (with a
+  GPS-coordinate fallback). Without a connection the astronomical data and contact
+  times keep working, but the photorealistic terrain does not load.
+- **Limb model vs. ground truth.** The 12.57 m RMSE is measured against the gridded
+  LOLA DEM (118 m/pixel), not against the true lunar surface. Features smaller than the
+  DEM resolution, and any interpolated gaps in the DEM, are not represented.
 
 ---
 
@@ -445,6 +524,16 @@ For each catalogue event, the Besselian elements (x, y, d, μ and cone radii L�
 <summary><b>Skyfield does the astronomy and Unreal does the rendering — what's the actual contribution?</b></summary>
 
 Skyfield only provides raw ephemeris positions; it does not compute shadow cones, contact times or eclipse classification. Everything on top is this project: the shadow vector, the cone–ellipsoid intersection, the C1–C4 root-finding pipeline, ΔT and calendar reconciliation, the real-time bridge into Unreal, and the multithreaded design that keeps it from blocking the render loop.
+</details>
+
+<details>
+<summary><b>Why UDP if both processes run on the same machine? Wouldn't shared memory or a single process be simpler?</b></summary>
+
+Locally the overhead is negligible either way, so the choice is about design headroom:
+
+- **Remote-ready.** The backend can later run on a server (e.g. offloading heavy contact-time and city-visibility computations) while the frontend stays lightweight on a client, with no rewrite.
+- **Loss is harmless.** The backend streams fresh positions every frame. A dropped packet is superseded by the next one a few milliseconds later, so TCP's handshaking, retransmission and ordering would only add latency by redelivering stale data.
+- **Process isolation.** The Python backend can run standalone (see *Backend server*), be restarted independently, and be tested without launching Unreal.
 </details>
 
 <details>
@@ -464,24 +553,27 @@ Yes — the geometry is largely symmetric (the Moon passes through Earth's shado
 ## 🛠️ Troubleshooting
 
 <details>
+<summary><b>The globe is empty / terrain never loads</b></summary>
+
+Terrain is streamed from Cesium ion. Check that you have an internet connection and
+that a valid token is entered in **Settings → Cesium API Key**. Eclipse data and
+contact times do not depend on this and keep working without it.
+</details>
+
+<details>
 <summary><b>The simulator shows no data / the sky and eclipse info never update</b></summary>
 
 Unreal and the Python backend talk over **UDP on localhost**:
 
 | Direction | Port | Protocol |
 |---|---|---|
-| Unreal → Python (requests) | `<PORT>` | UDP |
-| Python → Unreal (responses) | `<PORT>` | UDP |
+| Unreal → Python (per-frame request) | `5000` | UDP |
+| Python → Unreal (per-frame response) | `5001` | UDP |
+| Unreal ↔ Python (city list for **Details**) | `5002` | UDP |
 
-If a firewall blocks these ports, the frontend renders but receives no updates. On Windows, allow them
-(run PowerShell as Administrator):
-
-```powershell
-netsh advfirewall firewall add rule name="Eclipse Sim UDP in"  dir=in  action=allow protocol=UDP localport=<PORT>
-netsh advfirewall firewall add rule name="Eclipse Sim UDP out" dir=out action=allow protocol=UDP localport=<PORT>
-```
-
-Also check that no other program is already using the port, and that the Python server is actually running.
+Make sure only **one** Python server is running and that ports 5000–5002 are free
+(`netstat -ano | findstr "5000 5001 5002"`). Kill any leftover `Server` / `python` process and restart.
+Only if you use a security suite that filters loopback traffic, allow UDP 5000–5002 for `127.0.0.1`.
 </details>
 
 <details>
@@ -509,16 +601,20 @@ and `nep097.bsp` are all present and that you have enough free disk space. An in
 - [x] Solar-system expansion (planets & moons)
 - [x] Lunar eclipse support
 - [x] Lunar limb (topographic profile) modeling
-- [ ] Live weather / cloud-cover forecasts for eclipse-trip planning
 - [ ] Optimal route planning for eclipse chasers
 - [ ] Virtual-reality headset deployment
 - [ ] Planetarium integration
+- [ ] Tutorial: connecting Cesium for Unreal to a Python astronomy backend
+- [ ] Education mode: redesigned interface and guided lessons for classrooms and planetariums
+- [ ] Weather along the path of totality (ERA5-based climatology driving Cesium clouds)
 
 ---
 
 ## 🕰️ Project timeline
 
 <!-- Fill in the dates you are comfortable sharing -->
+> Calendar dates below; development was part-time and not continuous (exams, thesis
+> work and breaks), so the span is longer than the actual working time.
 
 | When | Milestone |
 |---|---|
@@ -565,6 +661,7 @@ and `nep097.bsp` are all present and that you have enough free disk space. An in
 | 🐍 [**Python**](https://www.python.org/) — © Python Software Foundation | Backend server |
 | 🔢 [**NumPy**](https://numpy.org/) (BSD License) | Scientific computing |
 | 📌 [**GeoPy**](https://geopy.readthedocs.io/) (MIT License) | Geocoding client |
+| 🌙 [**NASA LRO / LOLA**](https://astrogeology.usgs.gov/search/map/moon_lro_lola_dem_118m) LDEM 118 m — via USGS Astrogeology Science Center | Lunar elevation model used to train the limb model |
 
 ### 🎨 Visual content (textures & 3D models)
 
@@ -590,7 +687,8 @@ and `nep097.bsp` are all present and that you have enough free disk space. An in
 
 ### ⚖️ Legal notes
 
-- This software requires an active internet connection to fetch updated ephemeris data.
+- This software requires an active internet connection to stream Cesium terrain and
+  imagery (and to download the ephemeris data on first setup).
 - Eclipse Simulator 3D uses the Unreal® Engine. Unreal® is a trademark or registered trademark of Epic Games, Inc. in the United States of America and elsewhere. Unreal® Engine, Copyright 1998 – 2026, Epic Games, Inc. All rights reserved.
 - All textures and 3D models are used in accordance with their respective licenses. All rights to astronomical data belong to the mentioned sources.
 ---
