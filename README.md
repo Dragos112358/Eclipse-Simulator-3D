@@ -32,7 +32,7 @@ Built with **Unreal Engine 5**, **Cesium** photorealistic terrain and a **Python
 
 ## 📖 Contents
 
-[Why](#-why-this-project) · [Features](#-features) · [Gallery](#-gallery) · [Demos](#-demo-videos) · [Download](#-download) · [Controls](#-controls--first-run) · [Build from source](#-getting-started-build-from-source) · [How it works](#-how-it-works) · [Eclipse types](#-eclipse-types) · [Case studies](#-case-studies) · [Validation](#-validation--accuracy) · [Comparison](#-comparison-with-other-tools) · [Limitations](#-limitations) · [FAQ](#-faq) · [Roadmap](#-roadmap) · [Timeline](#-project-timeline) · [Credits](#-credits--acknowledgements) · [Cite](#-how-to-cite) · [License](#-license)
+[Why](#-why-this-project) · [Features](#-features) · [Gallery](#-gallery) · [Demos](#-demo-videos) · [Download](#-download) · [Controls](#-controls--first-run) · [Build from source](#-getting-started-build-from-source) · [How it works](#-how-it-works) · [Eclipse types](#-eclipse-types) · [Case studies](#-case-studies) · [Validation](#-validation--accuracy) · [Comparison](#-comparison-with-other-tools) · [Limitations](#-limitations) · [FAQ](#-faq) · [Troubleshooting](#-troubleshooting) · [Roadmap](#-roadmap) · [Timeline](#-project-timeline) · [Credits](#-credits--acknowledgements) · [Cite](#-how-to-cite) · [License](#-license)
 
 ---
 
@@ -64,6 +64,7 @@ It started as my Bachelor's thesis, *"Real Shadow Cones Produced During the Cent
 - 🛣️ **Path of totality / annularity rendered as a real 3D band** on Cesium terrain, not a flat 2D overlay.
 - ⏱️ **Precise contact times C1–C4** with altitude and azimuth for each, computed by iterative root-finding. Edge cases are handled too, e.g. an extra **"Sunset"** row when the Sun sets before C4.
 - 📚 **71,264 solar eclipses** and **72,272 lunar eclipses**  (13,000 BC → 17,000 AD) built on the John Irwin 2021 catalogue, with a searchable / filterable / sortable catalogue browser.
+- 🔁 **Saros cycles** — from any catalogue entry, **View Saros Cycle** opens the series of eclipses related to it (a Saros repeats every ~18 years 11 days), so you can follow how the geometry evolves from one eclipse to the next.
 - 🪐 **Beyond Earth–Moon**: planets and major moons (Galilean moons, Titan, Triton) tracked with the same DE441 ephemerides.
 
 **Experience**
@@ -191,7 +192,7 @@ Open the **Eclipse Catalog**, pick **Sun** or **Moon**, filter or sort, then cli
 - **Unreal Engine 5** (I coded this application using 5.7 version) with the **Cesium for Unreal** plugin
 - **Visual Studio** with the *Game development with C++* workload
 - **Python 3.13**
-- ~5 GB free disk space for the ephemerides (`de441.bsp` alone is 3.2 GB)
+- ~6 GB free disk space for the ephemerides (`de441.bsp` alone is 3.2 GB; the Jupiter, Saturn and Neptune satellite kernels add the rest)
 - A free **Cesium ion** access token (the app asks for it on first run)
 
 ### 📦 Installation
@@ -216,9 +217,17 @@ This creates the `Content/Encoder/_internal` folder and a beautiful moon texture
 python3 Download_Ephemerides/Downloader.py
 ```
 
-> ⏳ `de441.bsp` is **3.2 GB**, so it is downloaded in **two parts** and then merged with `spkmerge`.
-> This can take **up to an hour**, depending on your machine and internet connection.
-> The script also downloads a high-quality Moon texture.
+The script downloads:
+
+| File | Content |
+|---|---|
+| `de441.bsp` | Sun, Moon, Earth and planetary barycenters (**3.2 GB**, downloaded in two parts and merged with `spkmerge`) |
+| `jup365.bsp` | Jupiter and the Galilean moons |
+| `sat441.bsp` | Saturn and Titan |
+| `nep097.bsp` | Neptune and Triton |
+| Moon texture | High-quality lunar surface texture |
+
+> ⏳ In total this is roughly **5–6 GB** and can take **up to an hour**, depending on your machine and connection.
 
 **4️⃣ Generate the Visual Studio project files**
 
@@ -298,6 +307,47 @@ A fixed binary layout (instead of JSON) lets Unreal read every field directly by
 - **Calendar reconciliation:** Skyfield uses the *proleptic Gregorian* calendar, while the Irwin catalogue reports ancient dates in the *Julian* calendar. The two diverge by a growing number of days the further back you go; left unhandled, an ancient eclipse is silently mis-dated and its computed path lands in the wrong place. This is handled explicitly.
 
 ---
+
+### 🌙 Lunar limb: a neural elevation model
+
+The apparent edge of the Moon is not a perfect circle: mountains and craters along the limb shift
+the contact times C1–C4 and produce the Baily's beads seen at totality. To model this, I trained a
+**neural network that maps selenographic coordinates (longitude, latitude) to surface elevation**,
+fitted on a high-resolution lunar DEM.
+
+**Why a neural model instead of the raw DEM?** The full-resolution DEM is tens of gigabytes. The
+network compresses the region that matters into a **≤ 128 MB** model that can be queried in
+real time, at any point, with no tiling or loading.
+
+**Architecture**
+
+| Component | Choice |
+|---|---|
+| Encoding | Multi-resolution **hash grid**, 20 levels × 2 features, table size 2²², finest resolution 46,080 cells in latitude (~118 m on the lunar surface) |
+| Decoder | MLP, 3 hidden layers × 256, **GELU** activations |
+| Storage | fp16 embeddings for deployment, fp32 for training |
+
+**Training domain.** Contact points during an eclipse lie near the lunar limb, i.e. around
+**±90° selenographic longitude**. Only two longitude bands of ±10° around those meridians
+(≈ 5.6 % of the surface) are modeled, which concentrates the whole parameter budget where the
+limb profile actually matters.
+
+**Training details**
+- **Coarse-to-fine schedule** — hash-grid levels are activated progressively, which stabilizes convergence.
+- **Curvature-weighted loss** — peaks and ridges contribute up to 5× more than flat terrain.
+- **Curvature-biased sampling** — up to 60 % of each batch is drawn from high-curvature regions.
+- **Gradient (slope) loss** — predicted slopes are compared with the DEM's real slopes via finite
+  differences, with metric scale correction and a cos(lat) correction for longitude.
+- **Training:** Adam with cosine annealing, mixed precision (AMP), 2,000 epochs × 2 M samples.
+
+**Result**
+
+| Metric | Value |
+|---|:---:|
+| Validation RMSE vs. lunar surface DEM | **12.57 m** |
+
+For scale, the Moon's radius is 1,737.4 km, so the error is about 0.0007 % of the radius, far below
+what is visible in the limb profile at the angular resolution of the simulation.
 
 ## 🌓 Eclipse types
 
@@ -410,6 +460,47 @@ Yes — the geometry is largely symmetric (the Moon passes through Earth's shado
 </details>
 
 ---
+
+## 🛠️ Troubleshooting
+
+<details>
+<summary><b>The simulator shows no data / the sky and eclipse info never update</b></summary>
+
+Unreal and the Python backend talk over **UDP on localhost**:
+
+| Direction | Port | Protocol |
+|---|---|---|
+| Unreal → Python (requests) | `<PORT>` | UDP |
+| Python → Unreal (responses) | `<PORT>` | UDP |
+
+If a firewall blocks these ports, the frontend renders but receives no updates. On Windows, allow them
+(run PowerShell as Administrator):
+
+```powershell
+netsh advfirewall firewall add rule name="Eclipse Sim UDP in"  dir=in  action=allow protocol=UDP localport=<PORT>
+netsh advfirewall firewall add rule name="Eclipse Sim UDP out" dir=out action=allow protocol=UDP localport=<PORT>
+```
+
+Also check that no other program is already using the port, and that the Python server is actually running.
+</details>
+
+<details>
+<summary><b>The app or server fails to start: <code>_internal</code> folder missing</b></summary>
+
+`Content/Encoder/_internal` is not part of the git repository. It comes from the release archive
+`Eclipse-Simulator-Encoder-win64.zip` (see **step 2** of the installation). Download it from
+[Releases](https://github.com/Dragos112358/Eclipse-Simulator-3D/releases), unzip it **into the repository
+root**, and make sure the path `Content/Encoder/_internal` exists. Without it the encoder/video features and
+the standalone `Server.py` cannot run.
+</details>
+
+<details>
+<summary><b>Ephemeris errors or very slow first start</b></summary>
+
+Re-run `python3 Download_Ephemerides/Downloader.py` and check that `de441.bsp`, `jup365.bsp`, `sat441.bsp`
+and `nep097.bsp` are all present and that you have enough free disk space. An interrupted download of
+`de441.bsp` (two parts + merge) is the most common cause.
+</details>
 
 ## 🗺️ Roadmap
 
