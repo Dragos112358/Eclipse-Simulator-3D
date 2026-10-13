@@ -1,28 +1,23 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
-title: "3D Eclipse Simulator"
 type: software
+title: "3D Eclipse Simulator"
 authors:
-  - family-names: "Boncan"
-    given-names: "Dragoș-Eduard-Gabriel"
-repository-code: "https://github.com/Dragos112358/Eclipse-Simulator-3D"
+  - family-names: Boncan
+    given-names: Dragoș-Eduard-Gabriel
+version: 1.0.0
+date-released: 2026-10-11
 license: Apache-2.0
-date-released: "2026-10-11"
-abstract: "Real-time 3D solar and lunar eclipse simulator that renders the umbra and penumbra as physical cones over a WGS84 Earth, built with Unreal Engine 5, Cesium for Unreal and a Python/Skyfield backend using JPL DE441 ephemerides."
-keywords:
-  - solar eclipse
-  - Unreal Engine
-  - Cesium
-  - Skyfield
-  - astronomy
-preferred-citation:
-  type: thesis
-  title: "Real Shadow Cones Produced During the Central Solar Eclipse (Total Solar Eclipse and Annular Solar Eclipse)"
-  authors:
-    - family-names: "Boncan"
-      given-names: "Dragoș-Eduard-Gabriel"
-  thesis-type: "Bachelor's thesis"
-  institution:
-    name: "National University of Science and Technology Politehnica Bucharest"
-  year: 2026
-  url: "https://github.com/Dragos112358/Eclipse-Simulator-3D"
+repository-code: "https://github.com/Dragos112358/Eclipse-Simulator-3D"
+references:
+  - type: thesis
+    thesis-type: "Bachelor's thesis"
+    title: "Real Shadow Cones Produced During the Central Solar Eclipse (Total Solar Eclipse and Annular Solar Eclipse)"
+    authors:
+      - family-names: Boncan
+        given-names: Dragoș-Eduard-Gabriel
+    year: 2026
+    institution:
+      name: "National University of Science and Technology Politehnica Bucharest"
+      city: Bucharest
+      country: RO
