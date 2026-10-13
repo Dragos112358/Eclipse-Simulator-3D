@@ -208,14 +208,18 @@ Open the **Eclipse Catalog**, pick **Sun** or **Moon**, filter or sort, then cli
 
 ### 💻 Hardware & performance
 
-| | Minimum | Tested / recommended |
+| | Minimum | Recommended |
 |---|---|---|
-| **GPU** | **[FILL: minimum GPU]** | **[FILL: GPU you tested on]** |
-| **RAM** | **[FILL]** | **[FILL]** |
-| **Disk** | **[FILL: size of the built project]** + ~6 GB ephemerides | |
-| **OS** | Windows 10/11, DirectX 12 | |
+| **CPU** | Intel Core i5 or equivalent | Intel Core i9 or equivalent |
+| **GPU** | Integrated, 2 GB, DirectX 12 | Dedicated, 8 GB VRAM or more |
+| **RAM** | 12 GB | 32 GB |
+| **Disk** | ~10.2 GB (4.6 GB installer + 5.6 GB application), SSD | ~12 GB, SSD |
+| **Network** | Internet connection (Cesium terrain streaming) | Internet connection |
+| **OS** | Windows 10 | Windows 11 |
 
-The **~60 FPS** figure was measured on **[FILL: GPU, CPU, resolution, quality settings]**, with Cesium terrain streaming. Frame rate depends on the GPU and on network speed for terrain tiles; the astronomical backend never blocks the render loop (see [How it works](#-how-it-works)).
+The packaged application is about 6 GB. Building from source needs about **12 GB** with the development environment, plus ~6 GB for the ephemerides (see [Installation](#-installation)). The minimum configuration is an estimate of what the application needs to run; expect a much lower frame rate than on the recommended one.
+
+The **~60 FPS** figure was measured on a laptop with an **NVIDIA RTX 5070 Ti Laptop GPU (12 GB VRAM)**, **32 GB RAM**, **AI 9 Ultra**, at **2560*1600**, **quality: Epic**, with Cesium terrain streaming. Frame rate depends on the GPU and on network speed for terrain tiles; the astronomical backend never blocks the render loop (see [How it works](#-how-it-works)).
 
 
 ### 📦 Installation
@@ -308,8 +312,8 @@ python3 Server.py
 | `Download_Ephemerides/` | Script that fetches DE441 and other ephemerides for Jupiter, Saturn, Neptune and the Moon texture |
 | `Proiect_Eclipsa.uproject` | Unreal Engine project file |
 | `validation/` | Besselian-elements script, comparison data and the validation method (see [Validation](#-validation--accuracy)) |
-| **[FILL: path]** | Lunar limb model weights (64 MB, fp16) and, if included, the training script |
-| **[FILL: path]** | `CountryPoints.csv` (city list used by the catalogue **Details** view) |
+| **`Lunar_AI/`** | Lunar limb model weights (64 MB, fp16) and, if included, the training script |
+| **`Content/Encoder`** | `CountryPoints.csv` (city list used by the catalogue **Details** view) |
 | `docs/` | Images and third-party licences (`docs/THIRD_PARTY.md`) |
 | `LICENSE`, `NOTICE` | Apache 2.0 licence and notices |
 | `CONTRIBUTING.md`, `CITATION.cff` | How to contribute; citation metadata |
@@ -397,7 +401,7 @@ A fixed binary layout (instead of JSON) lets Unreal read every field directly by
   placed on the Cesium globe, so the band of totality is drawn directly on terrain.
 - **Atmosphere and weather effects** (clouds, fog, rain, snow) rendered over Cesium terrain.
 - **Bring-your-own-key** model: each user streams with their own Cesium ion token.
-- **Data attribution.** Cesium World Terrain and the imagery layers come from third-party data providers whose credits must be shown. **[FILL: confirm that the app shows the Cesium ion on-screen credits, and say where.]** The providers are listed in [`docs/THIRD_PARTY.md`](docs/THIRD_PARTY.md).
+- **Data attribution.** Cesium World Terrain and the imagery layers come from third-party data providers whose credits must be shown.  The providers are listed in [`docs/THIRD_PARTY.md`](docs/THIRD_PARTY.md).
 
 ---
 
@@ -414,7 +418,7 @@ Cylindrical projection with elevations relative to the 1,737.4 km lunar referenc
 network compresses the region that matters into a **64 MB** model that can be queried in
 real time, at any point, with no tiling or loading.
 
-**Model and code in this repository.** The trained weights (64 MB, fp16) are in **[FILL: path/filename]** and are loaded by the backend **[FILL: when / by which function]**. The training script is **[FILL: in `path/` / not included in this repository]**; the LDEM source file is available from the USGS link in [`docs/THIRD_PARTY.md`](docs/THIRD_PARTY.md).
+**Model and code in this repository.** The trained weights (64 MB, fp16) are in `Content/Encoder/lunar_altitude_contact_bands_fp16_finetuned.pt`. They are loaded once, when the backend starts, by `load()` in `Server.py` (`torch.load`, CPU), and the network is converted to fp32 for inference. The training script is **[in `Lunar_AI/`]**; the LDEM source file is available from the USGS link in [`docs/THIRD_PARTY.md`](docs/THIRD_PARTY.md).
 
 
 **Architecture**
@@ -514,7 +518,7 @@ The same model — same ΔT polynomial, same DE441 propagation, same cone-inters
 
 Contact times (C1–C4) were compared with **Xavier Jubier's** interactive eclipse maps, the community's reference for high-accuracy 2D eclipse computation, at the same observer coordinates for each eclipse.
 
-- **Reference data.** Jubier's published contact times for the **12 August 2026** and **2 August 2027** eclipses, read on **[FILL: date of retrieval]** with **[FILL: his ΔT setting and limb-profile setting]**.
+- **Reference data.** Jubier's published contact times for the **12 August 2026** and **2 August 2027** eclipses, read on **10 March 2026** from his [2026](http://xjubier.free.fr/en/site_pages/solar_eclipses/TSE_2026_GoogleMapFull.html) and [2027](http://xjubier.free.fr/en/site_pages/solar_eclipses/TSE_2027_GoogleMapFull.html) interactive maps, using his ΔT of **2026: 69.1 s / 2027: 69.3 s**.
 - **Compared quantity.** The geometric contact times C1–C4 in UTC, to the second, with the same ΔT convention on both sides. The limb-corrected C1L–C4L are reported separately.
 - **Reproducibility.** The comparison script, the inputs and the per-contact tables are in [`validation/`](validation/).
 
@@ -669,7 +673,6 @@ and `nep097.bsp` are all present and that you have enough free disk space. An in
 
 ## 🕰️ Project timeline
 
-<!-- Fill in the dates you are comfortable sharing -->
 > Calendar dates below; development was part-time and not continuous (exams, thesis
 > work and breaks), so the span is longer than the actual working time.
 
@@ -760,7 +763,7 @@ If you use this project in academic work, please cite it (GitHub's **Cite this r
 
 ```bibtex
 @software{boncan2026eclipse_simulator,
-  author  = {Boncan, Dragoș-Eduard-Gabriel},
+  author  = {Boncan Dragoș-Eduard-Gabriel},
   title   = {3D Eclipse Simulator},
   year    = {2026},
   version = {1.0.0},
