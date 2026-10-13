@@ -8,7 +8,7 @@
 ### See the geometry of an eclipse — not just a shaded band on a map.
 
 A real-time **3D solar eclipse simulator** that renders the **umbra and penumbra as physical cones** sweeping across a geographically accurate Earth.
-Built with **Unreal Engine 5**, **Cesium** photorealistic terrain and a **Python / Skyfield** backend driven by **JPL DE441** ephemerides.
+Built with **Unreal Engine 5**, **Cesium World Terrain** and a **Python / Skyfield** backend driven by **JPL DE441** ephemerides.
 
 [![Unreal Engine](https://img.shields.io/badge/Unreal%20Engine-5-black?logo=unrealengine)](https://www.unrealengine.com/)
 [![C++](https://img.shields.io/badge/C%2B%2B-frontend-00599C?logo=cplusplus&logoColor=white)](#-how-it-works)
@@ -24,7 +24,7 @@ Built with **Unreal Engine 5**, **Cesium** photorealistic terrain and a **Python
 
 <br>
 
-| 🕰️ **30,000 years** | ☀️ **71,264 solar eclipses** | ⏱️ **≤ 1.5 s** vs. reference | ⭐ **5,079 stars** | 🎞️ **~60 FPS** |
+| 🕰️ **30,000 years** | ☀️ **71,264 solar eclipses** | ⏱️ **0.1 - 2 s** vs. reference | ⭐ **5,079 stars** | 🎞️ **~60 FPS** |
 |:---:|:---:|:---:|:---:|:---:|
 | 13,000 BC → 17,000 AD | Irwin 2021 catalogue | C1–C4 contact times | HYG 4.2, magnitude < 6 | real-time, with Cesium terrain |
 
@@ -32,7 +32,7 @@ Built with **Unreal Engine 5**, **Cesium** photorealistic terrain and a **Python
 
 ## 📖 Contents
 
-[Why](#-why-this-project) · [Features](#-features) · [Gallery](#-gallery) · [Demos](#-demo-videos) · [Download](#-download) · [Controls](#-controls--first-run) · [Build from source](#-getting-started-build-from-source) · [How it works](#-how-it-works) · [How Cesium is used](#-how-cesium-is-used) · [Lunar limb](#-lunar-limb-a-neural-elevation-model) · [Eclipse types](#-eclipse-types) · [Case studies](#-case-studies) · [Validation](#-validation--accuracy) · [Comparison](#-comparison-with-other-tools) · [Limitations](#-limitations) · [FAQ](#-faq) · [Troubleshooting](#-troubleshooting) · [Roadmap](#-roadmap) · [Timeline](#-project-timeline) · [Credits](#-credits--acknowledgements) · [Cite](#-how-to-cite) · [License](#-license)
+[Why](#-why-this-project) · [Features](#-features) · [Gallery](#-gallery) · [Demos](#-demo-videos) · [Download](#-download) · [Controls](#-controls--first-run) · [Build from source](#-getting-started-build-from-source) · [Hardware](#-hardware--performance) · [How it works](#-how-it-works) · [How Cesium is used](#-how-cesium-is-used) · [Lunar limb](#-lunar-limb-a-neural-elevation-model) · [Eclipse types](#-eclipse-types) · [Case studies](#-case-studies) · [Validation](#-validation--accuracy) · [Comparison](#-comparison-with-other-tools) · [Limitations](#-limitations) · [FAQ](#-faq) · [Troubleshooting](#-troubleshooting) · [Roadmap](#-roadmap) · [Timeline](#-project-timeline) · [Contributing](#-contributing) · [Credits](#-credits--acknowledgements) · [Cite](#-how-to-cite) · [License](#-license)
 
 ---
 
@@ -43,7 +43,7 @@ If you look at the tools available to researchers, educators and eclipse chasers
 3D Eclipse Simulator combines, to the best of my knowledge for the first time in this form:
 
 1. the real-time graphics of **Unreal Engine 5**,
-2. geospatial, photorealistic terrain from **Cesium**,
+2. geospatial terrain and imagery from **Cesium** (Cesium World Terrain),
 3. the astronomical precision of the **JPL DE441** ephemerides.
 
 It started as my Bachelor's thesis, *"Real Shadow Cones Produced During the Central Solar Eclipse (Total Solar Eclipse and Annular Solar Eclipse)"*, at the **Faculty of Automatic Control and Computers, National University of Science and Technology Politehnica Bucharest**, and is now released as open source.
@@ -86,8 +86,7 @@ It started as my Bachelor's thesis, *"Real Shadow Cones Produced During the Cent
 ## 🖼️ Gallery
 
 <!-- Put your images in docs/images/ and update the file names below -->
-
-| Shadow cone in 3D (12 Aug 2026) | Inside the umbra, 30 km over Tunis |
+| Shadow cone in 3D (12 Aug 2026) | Inside the umbra, camera at 30 km altitude (12 Aug 2026) |
 |---|---|
 | <img src="docs/images/cone-3d.png" width="100%"> | <img src="docs/images/inside-umbra.png" width="100%"> |
 | **3D globe with totality band** | **Catalogue browser** |
@@ -143,7 +142,7 @@ Press **F10** at any time to open the in-app **Basic Manual**.
 
 ### 🔑 First run: Cesium ion access token (bring your own key)
 
-The photorealistic global terrain is streamed live from Cesium ion. The simulator
+The global terrain and imagery are streamed live from Cesium ion. The simulator
 follows a **bring-your-own-key (BYOK)** model: you use your own free Cesium ion
 token, so terrain streaming counts against your own Cesium account and no shared
 key is bundled with the app.
@@ -198,12 +197,26 @@ Open the **Eclipse Catalog**, pick **Sun** or **Moon**, filter or sort, then cli
 
 ### 🧰 Requirements
 
-- Windows 10/11 with a DirectX 12-capable GPU
-- Unreal Engine 5 (developed with 5.7) and the Cesium for Unreal plugin v2.22.1 (installed from Fab, see below).
+- Windows 10/11 with a DirectX 12-capable GPU (see [Hardware & performance](#-hardware--performance))
+- Unreal Engine 5 (developed with 5.7) and the Cesium for Unreal plugin v2.22.1 (installed from Fab, see step 4).
 - **Visual Studio** with the *Game development with C++* workload
 - **Python 3.13**
 - ~6 GB free disk space for the ephemerides (`de441.bsp` alone is 3.2 GB; the Jupiter, Saturn and Neptune satellite kernels add the rest)
 - A free **Cesium ion** access token (the app asks for it on first run)
+
+
+
+### 💻 Hardware & performance
+
+| | Minimum | Tested / recommended |
+|---|---|---|
+| **GPU** | **[FILL: minimum GPU]** | **[FILL: GPU you tested on]** |
+| **RAM** | **[FILL]** | **[FILL]** |
+| **Disk** | **[FILL: size of the built project]** + ~6 GB ephemerides | |
+| **OS** | Windows 10/11, DirectX 12 | |
+
+The **~60 FPS** figure was measured on **[FILL: GPU, CPU, resolution, quality settings]**, with Cesium terrain streaming. Frame rate depends on the GPU and on network speed for terrain tiles; the astronomical backend never blocks the render loop (see [How it works](#-how-it-works)).
+
 
 ### 📦 Installation
 
@@ -226,6 +239,7 @@ This creates the `Content/Encoder/_internal` folder and a high-resolution moon t
 ```bash
 python3 Download_Ephemerides/Downloader.py
 ```
+(On Windows you can also use `py` instead of `python` or `python3`.)
 
 The script downloads:
 
@@ -268,7 +282,7 @@ verify the plugin under `Edit → Plugins → Geospatial → Cesium for Unreal`.
 
 ### 🐍 Backend server
 
-The Python backend lives in [`Server/`](Server):
+The Python backend source lives in [`Server/`](Server). `Content/Encoder/` is the folder the backend runs from: it holds the packaged `Server.exe` (built with PyInstaller), the `_internal` runtime from step 2 and the backend's data files. **[`Content/Encoder/Server.py` is the same script as `Server/Server.py`]**
 
 ```bash
 pip install -r Server/requirements.txt
@@ -280,7 +294,7 @@ The Python backend can run **standalone**, independently of the Unreal project. 
 cd Content/Encoder
 python3 Server.py
 ```
-
+(On Windows you can also use `py` instead of `python` or `python3`.)
 
 ### 📂 Repository layout
 
@@ -288,10 +302,17 @@ python3 Server.py
 |---|---|
 | `Source/` | Unreal Engine C++ source (frontend, UI, drone camera, rendering) |
 | `Content/` | Unreal assets (and `Encoder/_internal` after step 2) |
+| `Content/Encoder/` | Working folder of the backend: packaged `Server.exe`, `_internal` runtime, data files |
 | `Config/` | Unreal project configuration |
 | `Server/` | Python backend (Skyfield, geometry, UDP server) |
 | `Download_Ephemerides/` | Script that fetches DE441 and other ephemerides for Jupiter, Saturn, Neptune and the Moon texture |
 | `Proiect_Eclipsa.uproject` | Unreal Engine project file |
+| `validation/` | Besselian-elements script, comparison data and the validation method (see [Validation](#-validation--accuracy)) |
+| **[FILL: path]** | Lunar limb model weights (64 MB, fp16) and, if included, the training script |
+| **[FILL: path]** | `CountryPoints.csv` (city list used by the catalogue **Details** view) |
+| `docs/` | Images and third-party licences (`docs/THIRD_PARTY.md`) |
+| `LICENSE`, `NOTICE` | Apache 2.0 licence and notices |
+| `CONTRIBUTING.md`, `CITATION.cff` | How to contribute; citation metadata |
 
 ---
 
@@ -371,12 +392,12 @@ A fixed binary layout (instead of JSON) lets Unreal read every field directly by
 
 ## 🌍 How Cesium is used
 
-- **Terrain & imagery streaming** from Cesium ion through Cesium for Unreal (3D Tiles),
-  from orbit down to street level.
+- **Terrain & imagery streaming** from Cesium ion (Cesium World Terrain) through Cesium for Unreal (3D Tiles),
 - **Georeferencing**: the shadow path computed on the WGS84 ellipsoid in Python is
   placed on the Cesium globe, so the band of totality is drawn directly on terrain.
 - **Atmosphere and weather effects** (clouds, fog, rain, snow) rendered over Cesium terrain.
 - **Bring-your-own-key** model: each user streams with their own Cesium ion token.
+- **Data attribution.** Cesium World Terrain and the imagery layers come from third-party data providers whose credits must be shown. **[FILL: confirm that the app shows the Cesium ion on-screen credits, and say where.]** The providers are listed in [`docs/THIRD_PARTY.md`](docs/THIRD_PARTY.md).
 
 ---
 
@@ -392,6 +413,9 @@ Cylindrical projection with elevations relative to the 1,737.4 km lunar referenc
 **Why a neural model instead of the raw DEM?** The full-resolution DEM is around 8 GB. The
 network compresses the region that matters into a **64 MB** model that can be queried in
 real time, at any point, with no tiling or loading.
+
+**Model and code in this repository.** The trained weights (64 MB, fp16) are in **[FILL: path/filename]** and are loaded by the backend **[FILL: when / by which function]**. The training script is **[FILL: in `path/` / not included in this repository]**; the LDEM source file is available from the USGS link in [`docs/THIRD_PARTY.md`](docs/THIRD_PARTY.md).
+
 
 **Architecture**
 
@@ -474,8 +498,8 @@ Every entry has **View** (jump to the event in 3D), **View Saros Cycle** and **D
 | Eclipse | Location | Coordinates | Notes |
 |---|---|---|---|
 | **11 Jul 2010** | Puerto Natales, Chile | 49.049° S, 74.516° W | Totality path, ground shadow projection |
-| **12 Aug 2026** | Iceland → northern Spain | 41.649° N, 0.889° W, Zaragoza | Validated against Jubier (≤ 1 s); shadow cone viewed in 3D; 30 km over Tunis at 18:33:49 UTC |
-| **2 Aug 2027** | Luxor, Egypt | 25.635° N, 32.594° E | **6 min 20 s**, which is a very long totality; validated against Jubier (≤ 1.5 s) |
+| **12 Aug 2026** | Iceland → northern Spain | 41.649° N, 0.889° W, Zaragoza | Validated against Jubier (≤ 1.5 s); shadow cone viewed in 3D from 30 km altitude (18:33:49 UTC) |
+| **2 Aug 2027** | Luxor, Egypt | 25.635° N, 32.594° E | **6 min 20 s**, which is a very long totality; validated against Jubier (≤ 2 s) |
 | **1 May 2079** | Queens, USA | 40.759° N, 73.944° W | 10:09 UTC — far-future stability test |
 | **10 Oct 13,000 BC** | Canada | 58.262° N, 136.364° W | 18:55 UTC — lower edge of the range; calendar-reconciliation stress test |
 | **25 Jul 16,995 AD** | South Hamilton, Australia | 32.934° S, 151.736° E | 14:30:53 UTC — upper edge of the range |
@@ -486,14 +510,20 @@ The same model — same ΔT polynomial, same DE441 propagation, same cone-inters
 
 ## ✅ Validation & accuracy
 
-Contact times were compared with **Xavier Jubier's** interactive eclipse maps, the community's reference for high-accuracy 2D eclipse computation:
+### Method
+
+Contact times (C1–C4) were compared with **Xavier Jubier's** interactive eclipse maps, the community's reference for high-accuracy 2D eclipse computation, at the same observer coordinates for each eclipse.
+
+- **Reference data.** Jubier's published contact times for the **12 August 2026** and **2 August 2027** eclipses, read on **[FILL: date of retrieval]** with **[FILL: his ΔT setting and limb-profile setting]**.
+- **Compared quantity.** The geometric contact times C1–C4 in UTC, to the second, with the same ΔT convention on both sides. The limb-corrected C1L–C4L are reported separately.
+- **Reproducibility.** The comparison script, the inputs and the per-contact tables are in [`validation/`](validation/).
 
 | Eclipse | Max. difference on C1–C4 |
 |---|:---:|
 | Total — **12 August 2026** | **≤ 1 s** |
 | Total — **2 August 2027** (Luxor) | **≤ 1.5 s** |
 
-Across the supported range, deviations versus the Jubier reference are **0.1 s – 2 s** depending on how far the eclipse is from the present. Xavier Jubier covers only eclipses from 1990 to 2040 (public data on his site). For scale, Stellarium is off by about **8 minutes** for the 2017 US eclipse.
+**What 0.1–2 s means.** It is the largest absolute difference between this project's contact times and Jubier's published times, at the locations compared, for eclipses between **1990 and 2040**. Jubier's data cover only that interval, so **outside 1990–2040 there is no independent reference**: for earlier and later eclipses accuracy is supported by consistency checks and the Irwin catalogue, not by a measured error (see [Limitations](#-limitations)).
 
 **Catalogue cross-check.** A standalone Besselian-elements script run over the same 71,264-event catalogue found **719 eclipses** whose umbra/antumbra touched Romania in 30,000 years (plus ~13,000 partial-only), and independently reproduced the documented track of the **11 Aug 1999** eclipse — two different geometric formulations converging on the same result.
 
@@ -503,14 +533,14 @@ Across the supported range, deviations versus the Jubier reference are **0.1 s �
 
 | Metric | Stellarium | Celestia | SpaceEngine | TPE | Jubier | **This project** |
 |---|---|---|---|---|---|---|
-| **Temporal accuracy** | 8 min offset for the 2017 US total eclipse | Low | Low | Good | Reference | **0.1 s – 2 s vs. Jubier** |
+| **Temporal accuracy** | 8 min offset for the 2017 US total eclipse | Not designed for eclipse timing | Not designed for eclipse timing | Good | Reference | **0.1–2 s vs. Jubier (1990–2040)** |
 | **Real geographic data** | ❌ | ❌ | ❌ | ✅ | ✅ | ✅ |
 | **Umbra & penumbra cones rendered** | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
 | **Free flight** | ❌ | ✅ | ✅ | ❌ | ❌ | ✅ |
 | **Time range** | 12,000 yr (acceptable accuracy) | 10,000 yr (acceptable accuracy) | Unlimited | 2007–2026 (19 yr, free plan) | 1990–2040 | **13,000 BC – 17,000 AD** |
 | **Rendering mode** | Semi-2D | 3D | 3D | 2D | 2D | **3D** |
 
-*TPE = The Photographer's Ephemeris.*
+*TPE = The Photographer's Ephemeris. Comparison based on my own testing and the public documentation of each tool, **[FILL: month/year]**; versions tested: Stellarium **[FILL]**, Celestia **[FILL]**, SpaceEngine **[FILL]**. Tools change; please open an issue if an entry is out of date.*
 
 ---
 
@@ -519,6 +549,7 @@ Across the supported range, deviations versus the Jubier reference are **0.1 s �
 Documented, quantifiable limitations — not open questions:
 
 - **ΔT extrapolation.** The Espenak & Meeus model is an empirical fit to the past few millennia. Near 13,000 BC or 17,000 AD it is an extrapolation, and the real uncertainty in Earth's rotation is measured in **hours**. Results there are *geometrically consistent*, but not validated to the sub-second precision of the 2026/2027 cases.
+- **Validation range.** Independent validation against Jubier covers 1990–2040 only; see [Validation](#-validation--accuracy).
 - **Ephemeris range.** DE441 comfortably covers the whole span, but its own integration uncertainty grows modestly toward both ends.
 - **Limb model coverage.** The elevation model covers only two ±10° longitude bands around ±90° selenographic longitude; a contact that falls outside them (extreme libration) is outside the trained domain.
 - **Lunar eclipses.** The catalogue, 3D view and city visibility are supported, but the city list uses one global umbral magnitude per eclipse and a "Moon above the horizon" test; there are no per-city lunar contact times.
@@ -529,6 +560,7 @@ Documented, quantifiable limitations — not open questions:
   live from Cesium ion, and location names are resolved through Nominatim (with a
   GPS-coordinate fallback). Without a connection the astronomical data and contact
   times keep working, but the photorealistic terrain does not load.
+  - **Geocoding (Nominatim).** Location names are looked up on the public OpenStreetMap Nominatim service, whose usage policy asks for at most one request per second, an identifying User-Agent and caching of results.
 - **Limb model vs. ground truth.** The 12.57 m RMSE is measured against the gridded
   LOLA DEM (118 m/pixel), not against the true lunar surface. Features smaller than the
   DEM resolution, and any interpolated gaps in the DEM, are not represented.
@@ -612,7 +644,7 @@ the standalone `Server.py` cannot run.
 <details>
 <summary><b>Ephemeris errors or very slow first start</b></summary>
 
-Re-run `python3 Download_Ephemerides/Downloader.py` and check that `de441.bsp`, `jup365.bsp`, `sat441.bsp`
+Re-run `python3 Download_Ephemerides/Downloader.py` (or `python Download_Ephemerides/Downloader.py`) and check that `de441.bsp`, `jup365.bsp`, `sat441.bsp`
 and `nep097.bsp` are all present and that you have enough free disk space. An interrupted download of
 `de441.bsp` (two parts + merge) is the most common cause.
 </details>
@@ -624,8 +656,8 @@ and `nep097.bsp` are all present and that you have enough free disk space. An in
 - [x] Solar-system expansion (planets & moons)
 - [x] Lunar eclipse support
 - [x] Lunar limb (topographic profile) modeling
-- [X] Shadow cones for solar and lunar eclipses
-- [X] Bookmark system to save different places and times
+- [x] Shadow cones for solar and lunar eclipses
+- [x] Bookmark system to save different places and times
 - [ ] Optimal route planning for eclipse chasers
 - [ ] VR planetarium mode (OpenXR)
 - [ ] Planetarium integration
@@ -655,6 +687,10 @@ and `nep097.bsp` are all present and that you have enough free disk space. An in
 | **2 Aug 2027** | Next total eclipse — Luxor, 6 min 20 s 🌑 |
 
 ---
+
+## 🤝 Contributing
+
+Bug reports, ideas and pull requests are welcome. Please read [`CONTRIBUTING.md`](CONTRIBUTING.md) first: it explains how to report a bug (include your Unreal Engine and Cesium for Unreal versions, the eclipse and date you were viewing, and the backend console output) and how to propose changes. Questions and feature ideas can go in GitHub Issues.
 
 ## 🙏 Credits & acknowledgements
 
@@ -715,12 +751,12 @@ and `nep097.bsp` are all present and that you have enough free disk space. An in
 - This software requires an active internet connection to stream Cesium terrain and
   imagery (and to download the ephemeris data on first setup).
 - 3D Eclipse Simulator uses the Unreal® Engine. Unreal® is a trademark or registered trademark of Epic Games, Inc. in the United States of America and elsewhere. Unreal® Engine, Copyright 1998 – 2026, Epic Games, Inc. All rights reserved.
-- All textures and 3D models are used in accordance with their respective licenses. All rights to astronomical data belong to the mentioned sources.
+- All textures and 3D models are used in accordance with their respective licenses (see [`docs/THIRD_PARTY.md`](docs/THIRD_PARTY.md)). All rights to astronomical data belong to the mentioned sources.
 ---
 
 ## 📑 How to cite
 
-If you use this project in academic work, please cite:
+If you use this project in academic work, please cite it (GitHub's **Cite this repository** button uses [`CITATION.cff`](CITATION.cff)):
 
 ```bibtex
 @bachelorsthesis{boncan2026eclipse,
@@ -738,7 +774,7 @@ If you use this project in academic work, please cite:
 
 The source code of 3D Eclipse Simulator is released under the **Apache License 2.0**. See [`LICENSE`](LICENSE) and [`NOTICE`](NOTICE) for details.
 Copyright © 2026 Dragoș-Eduard-Gabriel Boncan.
-Third-party software, data and assets (Unreal Engine, Cesium, Irwin catalogue, HYG, JPL ephemerides, textures, 3D models, FFmpeg, Stellarium illustrations…) are **not** covered by this license and remain under their own licenses and terms — see [Credits](#-credits--acknowledgements).
+Third-party software, data and assets (Unreal Engine, Cesium, Irwin catalogue, HYG, JPL ephemerides, textures, 3D models, FFmpeg, Stellarium illustrations…) are **not** covered by this license and remain under their own licenses and terms — see [Credits](#-credits--acknowledgements) and [`docs/THIRD_PARTY.md`](docs/THIRD_PARTY.md).
 
 ---
 
