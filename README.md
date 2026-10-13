@@ -1,9 +1,9 @@
 <div align="center">
 
 <!-- Replace with your best screenshot / GIF: the shadow cone over Earth -->
-<img src="docs/images/hero.png" alt="Eclipse Simulator 3D — umbra and penumbra cones over a WGS84 Earth" width="100%">
+<img src="docs/images/hero.png" alt="3D Eclipse Simulator — umbra and penumbra cones over a WGS84 Earth" width="100%">
 
-# 🌑 Eclipse Simulator 3D
+# 🌑 3D Eclipse Simulator
 
 ### See the geometry of an eclipse — not just a shaded band on a map.
 
@@ -40,7 +40,7 @@ Built with **Unreal Engine 5**, **Cesium** photorealistic terrain and a **Python
 
 If you look at the tools available to researchers, educators and eclipse chasers, most of them are limited to **2D visualizations** (maps with shaded bands) or output **tabular data** (contact times, coordinates, durations). What is largely missing is a way to *see* the geometry of an eclipse: the umbra and penumbra as three-dimensional cones sweeping across a real Earth.
 
-Eclipse Simulator 3D combines, to the best of my knowledge for the first time in this form:
+3D Eclipse Simulator combines, to the best of my knowledge for the first time in this form:
 
 1. the real-time graphics of **Unreal Engine 5**,
 2. geospatial, photorealistic terrain from **Cesium**,
@@ -76,6 +76,10 @@ It started as my Bachelor's thesis, *"Real Shadow Cones Produced During the Cent
 - 🎨 **Visual effects & atmosphere** — bloom, star brightness, corona, exposure, clouds, fog, rain and snow, all independent of the astronomical computation.
 - 🖍️ **Customizable overlays** — stars, planets, names, constellation lines, 2D ground projection or full 3D cones, with custom umbra / penumbra colors.
 - 🌐 **Bilingual** reports and UI: English and Romanian.
+
+---
+
+
 
 ---
 
@@ -195,7 +199,7 @@ Open the **Eclipse Catalog**, pick **Sun** or **Moon**, filter or sort, then cli
 ### 🧰 Requirements
 
 - Windows 10/11 with a DirectX 12-capable GPU
-- **Unreal Engine 5** (I coded this application using 5.7 version) with the **Cesium for Unreal** plugin
+- Unreal Engine 5 (developed with 5.7) and the Cesium for Unreal plugin v2.22.1 (installed from Fab, see below).
 - **Visual Studio** with the *Game development with C++* workload
 - **Python 3.13**
 - ~6 GB free disk space for the ephemerides (`de441.bsp` alone is 3.2 GB; the Jupiter, Saturn and Neptune satellite kernels add the rest)
@@ -235,13 +239,32 @@ The script downloads:
 
 > ⏳ In total this is roughly **5–6 GB** and can take **up to an hour**, depending on your machine and connection.
 
-**4️⃣ Generate the Visual Studio project files**
+**4️⃣ Install the Cesium for Unreal plugin**
+
+The project depends on the **Cesium for Unreal** plugin (tested with
+**v2.22.1** on Unreal Engine **5.7**). It is not included in this repository.
+
+1. Open **Fab** (inside the Epic Games Launcher, or at fab.com) and search for
+   *Cesium for Unreal*. Click **Add to Library**, then **Install to Engine**
+   and choose UE 5.7.
+2. Make sure the plugin is installed. Unreal will enable it automatically from the `.uproject`.
+
+Alternatively, download the build matching your engine version from
+[Cesium for Unreal releases](https://github.com/CesiumGS/cesium-unreal/releases)
+and unzip it into `Plugins/CesiumForUnreal/` inside the project.
+
+A different plugin version may work, but only **v2.22.1** was tested.
+
+**5️⃣ Generate the Visual Studio project files**
 
 Right-click **`Proiect_Eclipsa.uproject`** → **Generate Visual Studio project files**.
 
-**5️⃣ Build & edit**
+**6️⃣ Build & open the project**
 
-Open the generated **`.sln`** file in Visual Studio to build, modify and edit the code.
+Open the generated **`.sln`** file in Visual Studio and build the project.
+Then open `Proiect_Eclipsa.uproject` (or launch it from Visual Studio). If Unreal asks
+to rebuild modules, accept; the first build can take several minutes. You can
+verify the plugin under `Edit → Plugins → Geospatial → Cesium for Unreal`.
 
 ### 🐍 Backend server
 
@@ -374,7 +397,7 @@ real time, at any point, with no tiling or loading.
 
 | Component | Choice |
 |---|---|
-| Encoding | Multi-resolution **hash grid**, 20 levels × 2 features, table size 2²², finest resolution 46,080 cells in latitude (~118 m on the lunar surface) |
+| Encoding | Multi-resolution **hash grid**, 16 levels × 2 features, table size 2²¹, finest resolution 46,080 cells in latitude (~118 m on the lunar surface) |
 | Decoder | MLP, 3 hidden layers × 256, **GELU** activations |
 | Storage | fp16 embeddings for deployment, fp32 for training |
 
@@ -395,7 +418,7 @@ would need.
 
 **Training domain.** Contact points during an eclipse lie near the lunar limb, i.e. around
 **±90° selenographic longitude**. Only two longitude bands of ±10° around those meridians
-(≈ 5.6 % of the surface) are modeled, which concentrates the whole parameter budget where the
+(≈ 11.1 % of the surface) are modeled, which concentrates the whole parameter budget where the
 limb profile actually matters.
 
 **Training details**
@@ -452,7 +475,7 @@ Every entry has **View** (jump to the event in 3D), **View Saros Cycle** and **D
 |---|---|---|---|
 | **11 Jul 2010** | Puerto Natales, Chile | 49.049° S, 74.516° W | Totality path, ground shadow projection |
 | **12 Aug 2026** | Iceland → northern Spain | 41.649° N, 0.889° W, Zaragoza | Validated against Jubier (≤ 1 s); shadow cone viewed in 3D; 30 km over Tunis at 18:33:49 UTC |
-| **2 Aug 2027** | Luxor, Egypt | 25.635° N, 32.594° E | Record **6 min 20 s** totality; validated against Jubier (≤ 1.5 s) |
+| **2 Aug 2027** | Luxor, Egypt | 25.635° N, 32.594° E | **6 min 20 s**, which is a very long totality; validated against Jubier (≤ 1.5 s) |
 | **1 May 2079** | Queens, USA | 40.759° N, 73.944° W | 10:09 UTC — far-future stability test |
 | **10 Oct 13,000 BC** | Canada | 58.262° N, 136.364° W | 18:55 UTC — lower edge of the range; calendar-reconciliation stress test |
 | **25 Jul 16,995 AD** | South Hamilton, Australia | 32.934° S, 151.736° E | 14:30:53 UTC — upper edge of the range |
@@ -470,7 +493,7 @@ Contact times were compared with **Xavier Jubier's** interactive eclipse maps, t
 | Total — **12 August 2026** | **≤ 1 s** |
 | Total — **2 August 2027** (Luxor) | **≤ 1.5 s** |
 
-Across the supported range, deviations versus the Jubier reference are **0.1 s – 2 s** depending on how far the eclipse is from the present. For scale, Stellarium is off by about **8 minutes** for the 2017 US eclipse.
+Across the supported range, deviations versus the Jubier reference are **0.1 s – 2 s** depending on how far the eclipse is from the present. Xavier Jubier covers only eclipses from 1990 to 2040 (public data on his site). For scale, Stellarium is off by about **8 minutes** for the 2017 US eclipse.
 
 **Catalogue cross-check.** A standalone Besselian-elements script run over the same 71,264-event catalogue found **719 eclipses** whose umbra/antumbra touched Romania in 30,000 years (plus ~13,000 partial-only), and independently reproduced the documented track of the **11 Aug 1999** eclipse — two different geometric formulations converging on the same result.
 
@@ -601,8 +624,10 @@ and `nep097.bsp` are all present and that you have enough free disk space. An in
 - [x] Solar-system expansion (planets & moons)
 - [x] Lunar eclipse support
 - [x] Lunar limb (topographic profile) modeling
+- [X] Shadow cones for solar and lunar eclipses
+- [X] Bookmark system to save different places and times
 - [ ] Optimal route planning for eclipse chasers
-- [ ] Virtual-reality headset deployment
+- [ ] VR planetarium mode (OpenXR)
 - [ ] Planetarium integration
 - [ ] Tutorial: connecting Cesium for Unreal to a Python astronomy backend
 - [ ] Education mode: redesigned interface and guided lessons for classrooms and planetariums
@@ -677,7 +702,7 @@ and `nep097.bsp` are all present and that you have enough free disk space. An in
 | Callisto texture | By Askaniy via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Callisto_map_by_Askaniy.png) (CC BY-SA) |
 | Triton texture | By Askaniy via [DeviantArt](https://www.deviantart.com/askaniy/art/Triton-Texture-Map-14K-761940736) (CC BY-SA) |
 | Titan atmosphere texture | Based on original radar work by FarGetaNik ([Celestia Motherlode](http://www.celestiamotherlode.net/addon/addon_1675.html)), processed under CC BY-SA |
-| 3D drone model | ["DJI FPV by SDC"](https://sketchfab.com/3d-models/dji-fpv-by-sdc-high-performance-drone-d471ea8c6235457b8e131842e2cf3783) by SDC PERFORMANCE (CC BY 4.0) |
+| 3D drone model | ["DJI FPV by SDC"](https://sketchfab.com/3d-models/dji-fpv-by-sdc-high-performance-drone-d471ea8c6235457b8e131842e2cf3783) by SDC PERFORMANCE (Lambo_SC04), licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Modified: changed its original color. |
 | Constellation illustrations | [Western skycultures from Stellarium](https://github.com/Stellarium/stellarium-skycultures/tree/master/western/illustrations) (GPL) |
 
 ### 🔬 Research & inspiration
@@ -689,7 +714,7 @@ and `nep097.bsp` are all present and that you have enough free disk space. An in
 
 - This software requires an active internet connection to stream Cesium terrain and
   imagery (and to download the ephemeris data on first setup).
-- Eclipse Simulator 3D uses the Unreal® Engine. Unreal® is a trademark or registered trademark of Epic Games, Inc. in the United States of America and elsewhere. Unreal® Engine, Copyright 1998 – 2026, Epic Games, Inc. All rights reserved.
+- 3D Eclipse Simulator uses the Unreal® Engine. Unreal® is a trademark or registered trademark of Epic Games, Inc. in the United States of America and elsewhere. Unreal® Engine, Copyright 1998 – 2026, Epic Games, Inc. All rights reserved.
 - All textures and 3D models are used in accordance with their respective licenses. All rights to astronomical data belong to the mentioned sources.
 ---
 
@@ -711,7 +736,7 @@ If you use this project in academic work, please cite:
 
 ## 📄 License
 
-The source code of Eclipse Simulator 3D is released under the **Apache License 2.0**. See [`LICENSE`](LICENSE) and [`NOTICE`](NOTICE) for details.
+The source code of 3D Eclipse Simulator is released under the **Apache License 2.0**. See [`LICENSE`](LICENSE) and [`NOTICE`](NOTICE) for details.
 Copyright © 2026 Dragoș-Eduard-Gabriel Boncan.
 Third-party software, data and assets (Unreal Engine, Cesium, Irwin catalogue, HYG, JPL ephemerides, textures, 3D models, FFmpeg, Stellarium illustrations…) are **not** covered by this license and remain under their own licenses and terms — see [Credits](#-credits--acknowledgements).
 
