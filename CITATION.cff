@@ -2,13 +2,26 @@ cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 type: software
 title: "3D Eclipse Simulator"
+abstract: "Real-time 3D solar eclipse simulator that renders the umbra and penumbra as physical cones over a WGS84 Earth with Cesium terrain, driven by a Python/Skyfield backend using JPL DE441 ephemerides. Covers 71,264 solar eclipses from 13,000 BC to 17,000 AD."
 authors:
   - family-names: Boncan
     given-names: Dragoș-Eduard-Gabriel
+    affiliation: "National University of Science and Technology Politehnica Bucharest"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"
 version: 1.0.0
 date-released: 2026-10-11
 license: Apache-2.0
 repository-code: "https://github.com/Dragos112358/Eclipse-Simulator-3D"
+repository-artifact: "https://github.com/Dragos112358/Eclipse-Simulator-3D/releases/tag/v1.0.0"
+url: "https://dragosboncan.itch.io/3d-eclipse-simulator"
+keywords:
+  - solar eclipse
+  - Unreal Engine
+  - Cesium
+  - Skyfield
+  - JPL DE441
+  - astronomy
+  - visualization
 references:
   - type: thesis
     thesis-type: "Bachelor's thesis"

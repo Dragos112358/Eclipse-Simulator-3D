@@ -80,9 +80,6 @@ It started as my Bachelor's thesis, *"Real Shadow Cones Produced During the Cent
 ---
 
 
-
----
-
 ## 🖼️ Gallery
 
 <!-- Put your images in docs/images/ and update the file names below -->
@@ -219,7 +216,7 @@ Open the **Eclipse Catalog**, pick **Sun** or **Moon**, filter or sort, then cli
 
 The packaged application is about 6 GB. Building from source needs about **12 GB** with the development environment, plus ~6 GB for the ephemerides (see [Installation](#-installation)). The minimum configuration is an estimate of what the application needs to run; expect a much lower frame rate than on the recommended one.
 
-The **~60 FPS** figure was measured on a laptop with an **NVIDIA RTX 5070 Ti Laptop GPU (12 GB VRAM)**, **32 GB RAM**, **AI 9 Ultra**, at **2560*1600**, **quality: Epic**, with Cesium terrain streaming. Frame rate depends on the GPU and on network speed for terrain tiles; the astronomical backend never blocks the render loop (see [How it works](#-how-it-works)).
+The **~60 FPS** figure was measured on a laptop with an **NVIDIA RTX 5070 Ti Laptop GPU (12 GB VRAM)**, **32 GB RAM**, **Intel Core Ultra 9 275HX**, at **2560x1600**, **quality: Epic**, with Cesium terrain streaming. Frame rate depends on the GPU and on network speed for terrain tiles; the astronomical backend never blocks the render loop (see [How it works](#-how-it-works)).
 
 
 ### 📦 Installation
@@ -312,7 +309,7 @@ python3 Server.py
 | `Download_Ephemerides/` | Script that fetches DE441 and other ephemerides for Jupiter, Saturn, Neptune and the Moon texture |
 | `Proiect_Eclipsa.uproject` | Unreal Engine project file |
 | `validation/` | Besselian-elements script, comparison data and the validation method (see [Validation](#-validation--accuracy)) |
-| **`Lunar_AI/`** | Lunar limb model weights (64 MB, fp16) and, if included, the training script |
+| **`Content/Encoder/`** | Lunar limb model weights (67 MB, fp16) and, if included, the training script |
 | **`Content/Encoder`** | `CountryPoints.csv` (city list used by the catalogue **Details** view) |
 | `docs/` | Images and third-party licences (`docs/THIRD_PARTY.md`) |
 | `LICENSE`, `NOTICE` | Apache 2.0 licence and notices |
@@ -415,17 +412,17 @@ March 2014 release, distributed by the USGS Astrogeology Science Center), in Sim
 Cylindrical projection with elevations relative to the 1,737.4 km lunar reference sphere.
 
 **Why a neural model instead of the raw DEM?** The full-resolution DEM is around 8 GB. The
-network compresses the region that matters into a **64 MB** model that can be queried in
+network compresses the region that matters into a **67 MB** model that can be queried in
 real time, at any point, with no tiling or loading.
 
-**Model and code in this repository.** The trained weights (64 MB, fp16) are in `Content/Encoder/lunar_altitude_contact_bands_fp16_finetuned.pt`. They are loaded once, when the backend starts, by `load()` in `Server.py` (`torch.load`, CPU), and the network is converted to fp32 for inference. The training script is **[in `Lunar_AI/`]**; the LDEM source file is available from the USGS link in [`docs/THIRD_PARTY.md`](docs/THIRD_PARTY.md).
+**Model and code in this repository.** The trained weights (67 MB, fp16) are in `Content/Encoder/lunar_altitude_contact_bands_fp16_finetuned.pt`. They are loaded once, when the backend starts, by `load()` in `Server.py` (`torch.load`, CPU), and the network is converted to fp32 for inference. The training script is **[in `Content/Encoder`]**; the LDEM source file is available from the USGS link in [`docs/THIRD_PARTY.md`](docs/THIRD_PARTY.md).
 
 
 **Architecture**
 
 | Component | Choice |
 |---|---|
-| Encoding | Multi-resolution **hash grid**, 16 levels × 2 features, table size 2²¹, finest resolution 46,080 cells in latitude (~118 m on the lunar surface) |
+| Encoding | Multi-resolution **hash grid**, 20 levels × 2 features, table size 2²¹, finest resolution 46,080 cells in latitude (~118 m on the lunar surface) |
 | Decoder | MLP, 3 hidden layers × 256, **GELU** activations |
 | Storage | fp16 embeddings for deployment, fp32 for training |
 
@@ -441,7 +438,7 @@ on elevation differences of tens of metres. I therefore switched to a
 multi-resolution hash-grid encoding + small MLP: the high-resolution levels capture
 fine local detail (craters, ridges) while the MLP stays small and fast to query.
 The final model reaches a validation RMSE of 12.57 m, roughly 3.3× lower, at the
-cost of a larger deployed size (64 MB in fp16) than a purely sinusoidal network
+cost of a larger deployed size (67 MB in fp16) than a purely sinusoidal network
 would need.
 
 **Training domain.** Contact points during an eclipse lie near the lunar limb, i.e. around
@@ -544,8 +541,7 @@ Contact times (C1–C4) were compared with **Xavier Jubier's** interactive eclip
 | **Time range** | 12,000 yr (acceptable accuracy) | 10,000 yr (acceptable accuracy) | Unlimited | 2007–2026 (19 yr, free plan) | 1990–2040 | **13,000 BC – 17,000 AD** |
 | **Rendering mode** | Semi-2D | 3D | 3D | 2D | 2D | **3D** |
 
-*TPE = The Photographer's Ephemeris. Comparison based on my own testing and the public documentation of each tool, **[FILL: month/year]**; versions tested: Stellarium **[FILL]**, Celestia **[FILL]**, SpaceEngine **[FILL]**. Tools change; please open an issue if an entry is out of date.*
-
+*TPE = The Photographer's Ephemeris. Comparison are based on my own testing.
 ---
 
 ## ⚠️ Limitations
