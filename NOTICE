@@ -1,0 +1,14 @@
+3D Eclipse Simulator
+Copyright 2026 Dragoș-Eduard-Gabriel Boncan
+
+This product includes software developed by Dragoș-Eduard-Gabriel Boncan
+(https://github.com/Dragos112358/Eclipse-Simulator-3D).
+
+Third-party software, data and assets (Unreal Engine, Cesium for Unreal,
+Skyfield, JPL ephemerides, Irwin eclipse catalogue, HYG database, GeoNames,
+NASA LRO/LOLA data, textures, 3D models, FFmpeg, Stellarium illustrations)
+are not covered by the Apache License 2.0 and remain under their own
+licenses. See docs/THIRD_PARTY.md for the full list.
+
+This software uses FFmpeg (GPLv3), distributed as a separate executable.
+FFmpeg source code is available from https://ffmpeg.org.
