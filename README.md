@@ -282,7 +282,7 @@ verify the plugin under `Edit → Plugins → Geospatial → Cesium for Unreal`.
 
 ### 🐍 Backend server
 
-The Python backend source lives in [`Server/`](Server). `Content/Encoder/` is the folder the backend runs from: it holds the packaged `Server.exe` (built with PyInstaller), the `_internal` runtime from step 2 and the backend's data files. **[`Content/Encoder/Server.py` is the same script as `Server/Server.py`]**
+The Python backend source lives in [`Server/`](Server). `Content/Encoder/` is the folder the backend runs from: it holds the packaged `Server.exe` (built with PyInstaller), the `_internal` runtime from step 2 and the backend's data files. **`Content/Encoder/Server.py` is the same script as `Server/Server.py`.**
 
 ```bash
 pip install -r Server/requirements.txt
@@ -520,8 +520,8 @@ Contact times (C1–C4) were compared with **Xavier Jubier's** interactive eclip
 
 | Eclipse | Max. difference on C1–C4 |
 |---|:---:|
-| Total — **12 August 2026** | **≤ 1 s** |
-| Total — **2 August 2027** (Luxor) | **≤ 1.5 s** |
+| Total — **12 August 2026** | **≤ 1.5 s** |
+| Total — **2 August 2027** (Luxor) | **≤ 2 s** |
 
 **What 0.1–2 s means.** It is the largest absolute difference between this project's contact times and Jubier's published times, at the locations compared, for eclipses between **1990 and 2040**. Jubier's data cover only that interval, so **outside 1990–2040 there is no independent reference**: for earlier and later eclipses accuracy is supported by consistency checks and the Irwin catalogue, not by a measured error (see [Limitations](#-limitations)).
 
@@ -559,7 +559,7 @@ Documented, quantifiable limitations — not open questions:
   however, needs an internet connection: Cesium terrain and imagery tiles are streamed
   live from Cesium ion, and location names are resolved through Nominatim (with a
   GPS-coordinate fallback). Without a connection the astronomical data and contact
-  times keep working, but the photorealistic terrain does not load.
+  times keep working, but the Cesium World Terrain does not load.
   - **Geocoding (Nominatim).** Location names are looked up on the public OpenStreetMap Nominatim service, whose usage policy asks for at most one request per second, an identifying User-Agent and caching of results.
 - **Limb model vs. ground truth.** The 12.57 m RMSE is measured against the gridded
   LOLA DEM (118 m/pixel), not against the true lunar surface. Features smaller than the
@@ -698,7 +698,7 @@ Bug reports, ideas and pull requests are welcome. Please read [`CONTRIBUTING.md`
 
 | Role | Name |
 |---|---|
-| **Developer** | Dragoș-Eduard-Gabriel Boncan — [@Dragos112358](https://github.com/Dragos112358) |
+| **Developer** | Boncan Dragoș-Eduard-Gabriel — [@Dragos112358](https://github.com/Dragos112358) |
 | **Thesis supervisor** | Assoc. Prof. Victor-Iosif Asavei, PhD |
 | **Thesis supervisor** | Lect. Florin-Cătălin Tudose, PhD |
 | **Scientific coordinator** | Astronomer Cătălin Beldea |
@@ -708,7 +708,7 @@ Bug reports, ideas and pull requests are welcome. Please read [`CONTRIBUTING.md`
 | | Used for |
 |---|---|
 | 🎮 [**Unreal Engine 5**](https://www.unrealengine.com/) — Epic Games | Real-time rendering engine |
-| 🗺️ [**Cesium for Unreal**](https://cesium.com/) | Photorealistic 3D globe and terrain |
+| 🗺️ [**Cesium for Unreal**](https://cesium.com/) | Cesium World Terrain 3D globe and terrain |
 | 🌐 [**Skyfield**](https://rhodesmill.org/skyfield/) — Brandon Rhodes | Astronomical calculations |
 | 🪐 [**NASA JPL DE441**](https://naif.jpl.nasa.gov/) and SPICE kernels — NASA NAIF | Planetary and lunar ephemerides |
 | 🛰️ **JPL satellite kernels** `jup365.bsp`, `sat441.bsp`, `nep097.bsp` — NASA NAIF | Jupiter, Saturn and Neptune moon systems |
@@ -759,12 +759,13 @@ Bug reports, ideas and pull requests are welcome. Please read [`CONTRIBUTING.md`
 If you use this project in academic work, please cite it (GitHub's **Cite this repository** button uses [`CITATION.cff`](CITATION.cff)):
 
 ```bibtex
-@bachelorsthesis{boncan2026eclipse,
-  author = {Boncan, Dragoș-Eduard-Gabriel},
-  title  = {Real Shadow Cones Produced During the Central Solar Eclipse},
-  school = {National University of Science and Technology Politehnica Bucharest},
-  year   = {2026},
-  url    = {https://github.com/Dragos112358/Eclipse-Simulator-3D}
+@software{boncan2026eclipse_simulator,
+  author  = {Boncan, Dragoș-Eduard-Gabriel},
+  title   = {3D Eclipse Simulator},
+  year    = {2026},
+  version = {1.0.0},
+  url     = {https://github.com/Dragos112358/Eclipse-Simulator-3D},
+  license = {Apache-2.0}
 }
 ```
 
@@ -773,7 +774,7 @@ If you use this project in academic work, please cite it (GitHub's **Cite this r
 ## 📄 License
 
 The source code of 3D Eclipse Simulator is released under the **Apache License 2.0**. See [`LICENSE`](LICENSE) and [`NOTICE`](NOTICE) for details.
-Copyright © 2026 Dragoș-Eduard-Gabriel Boncan.
+Copyright © 2026 Boncan Dragoș-Eduard-Gabriel.
 Third-party software, data and assets (Unreal Engine, Cesium, Irwin catalogue, HYG, JPL ephemerides, textures, 3D models, FFmpeg, Stellarium illustrations…) are **not** covered by this license and remain under their own licenses and terms — see [Credits](#-credits--acknowledgements) and [`docs/THIRD_PARTY.md`](docs/THIRD_PARTY.md).
 
 ---
