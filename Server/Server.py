@@ -218,7 +218,7 @@ load = Loader(application_path, verbose=False)
 if not load.exists('finals2000A.all'):
     load.download('finals2000A.all')
 
-ts = load.timescale()
+ts = load.timescale(builtin= False)
 planets = load('de441.bsp')
 earth, sun, moon = planets['earth'], planets['sun'], planets['moon']
 
