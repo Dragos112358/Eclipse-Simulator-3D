@@ -94,9 +94,9 @@ class LunarAltitudeNet(nn.Module):
         super().__init__()
         self.encoding = _Encoding(recommended_lon_cells)
         self.mlp = nn.Sequential(
-            nn.Linear(N_LEVELS * N_FEATURES, hidden), nn.GELU(inplace=True),
-            nn.Linear(hidden, hidden), nn.GELU(inplace=True),
-            nn.Linear(hidden, hidden), nn.GELU(inplace=True),
+            nn.Linear(N_LEVELS * N_FEATURES, hidden), nn.GELU(),
+            nn.Linear(hidden, hidden), nn.GELU(),
+            nn.Linear(hidden, hidden), nn.GELU(),
             nn.Linear(hidden, 1),
         )
 
