@@ -1,0 +1,1606 @@
+C:\Users\Gaby\Desktop\AI_Lunar\.venv\Scripts\python.exe C:\Users\Gaby\Desktop\AI_Lunar\Antrenare_model.py 
+Device: cuda
+[info] DEM nativ: 92160x46080 px (~0.00391°/pixel). FINEST_RESOLUTION recomandat ≈ 29338.
+Epoch 1/800: 100%|██████████| 122/122 [00:22<00:00,  5.46it/s]
+Epoch 1: train RMSE=1660.88 m | val RMSE=14310.56 m | gap=12649.68 m | active_frac=0.00
+Epoch 2/800: 100%|██████████| 122/122 [00:16<00:00,  7.51it/s]
+Epoch 2: train RMSE=1110.48 m | val RMSE=8073.63 m | gap=6963.15 m | active_frac=0.01
+Epoch 3/800: 100%|██████████| 122/122 [00:13<00:00,  8.82it/s]
+Epoch 3: train RMSE=1063.46 m | val RMSE=5560.84 m | gap=4497.38 m | active_frac=0.01
+Epoch 4/800: 100%|██████████| 122/122 [00:14<00:00,  8.21it/s]
+Epoch 4: train RMSE=1045.91 m | val RMSE=4176.40 m | gap=3130.50 m | active_frac=0.01
+Epoch 5/800: 100%|██████████| 122/122 [00:12<00:00,  9.63it/s]
+Epoch 5: train RMSE=1037.13 m | val RMSE=3451.63 m | gap=2414.50 m | active_frac=0.02
+Epoch 6/800: 100%|██████████| 122/122 [00:12<00:00, 10.00it/s]
+Epoch 6: train RMSE=1033.36 m | val RMSE=2875.42 m | gap=1842.06 m | active_frac=0.02
+Epoch 7/800: 100%|██████████| 122/122 [00:11<00:00, 10.30it/s]
+Epoch 7: train RMSE=1030.95 m | val RMSE=2483.54 m | gap=1452.60 m | active_frac=0.02
+Epoch 8/800: 100%|██████████| 122/122 [00:11<00:00, 10.24it/s]
+Epoch 8: train RMSE=1028.08 m | val RMSE=2183.37 m | gap=1155.29 m | active_frac=0.03
+Epoch 9/800: 100%|██████████| 122/122 [00:11<00:00, 10.21it/s]
+Epoch 9: train RMSE=1026.26 m | val RMSE=1867.23 m | gap=840.97 m | active_frac=0.03
+Epoch 10/800: 100%|██████████| 122/122 [00:11<00:00, 10.33it/s]
+Epoch 10: train RMSE=1022.94 m | val RMSE=1680.56 m | gap=657.62 m | active_frac=0.03
+Epoch 11/800: 100%|██████████| 122/122 [00:11<00:00, 10.25it/s]
+Epoch 11: train RMSE=1021.98 m | val RMSE=1493.00 m | gap=471.03 m | active_frac=0.03
+Epoch 12/800: 100%|██████████| 122/122 [00:11<00:00, 10.24it/s]
+Epoch 12: train RMSE=1017.86 m | val RMSE=1345.65 m | gap=327.79 m | active_frac=0.04
+Epoch 13/800: 100%|██████████| 122/122 [00:09<00:00, 12.59it/s]
+Epoch 13: train RMSE=1015.83 m | val RMSE=1246.64 m | gap=230.82 m | active_frac=0.04
+Epoch 14/800: 100%|██████████| 122/122 [00:09<00:00, 12.62it/s]
+Epoch 14: train RMSE=1011.73 m | val RMSE=1163.09 m | gap=151.36 m | active_frac=0.04
+Epoch 15/800: 100%|██████████| 122/122 [00:09<00:00, 12.60it/s]
+Epoch 15: train RMSE=1005.22 m | val RMSE=1100.80 m | gap=95.57 m | active_frac=0.05
+Epoch 16/800: 100%|██████████| 122/122 [00:09<00:00, 12.74it/s]
+Epoch 16: train RMSE=990.31 m | val RMSE=1046.39 m | gap=56.08 m | active_frac=0.05
+Epoch 17/800: 100%|██████████| 122/122 [00:09<00:00, 12.76it/s]
+Epoch 17: train RMSE=974.86 m | val RMSE=1002.13 m | gap=27.27 m | active_frac=0.05
+Epoch 18/800: 100%|██████████| 122/122 [00:09<00:00, 12.78it/s]
+Epoch 18: train RMSE=963.70 m | val RMSE=968.00 m | gap=4.30 m | active_frac=0.06
+Epoch 19/800: 100%|██████████| 122/122 [00:09<00:00, 12.31it/s]
+Epoch 19: train RMSE=952.63 m | val RMSE=951.91 m | gap=-0.71 m | active_frac=0.06
+Epoch 20/800: 100%|██████████| 122/122 [00:09<00:00, 12.71it/s]
+Epoch 20: train RMSE=948.45 m | val RMSE=944.71 m | gap=-3.74 m | active_frac=0.06
+Epoch 21/800: 100%|██████████| 122/122 [00:09<00:00, 12.62it/s]
+Epoch 21: train RMSE=914.16 m | val RMSE=5132.10 m | gap=4217.95 m | active_frac=0.07
+Epoch 22/800: 100%|██████████| 122/122 [00:09<00:00, 12.74it/s]
+Epoch 22: train RMSE=879.18 m | val RMSE=4094.32 m | gap=3215.14 m | active_frac=0.07
+Epoch 23/800: 100%|██████████| 122/122 [00:09<00:00, 12.64it/s]
+Epoch 23: train RMSE=861.15 m | val RMSE=3398.16 m | gap=2537.01 m | active_frac=0.07
+Epoch 24/800: 100%|██████████| 122/122 [00:09<00:00, 12.60it/s]
+Epoch 24: train RMSE=847.85 m | val RMSE=2979.23 m | gap=2131.38 m | active_frac=0.07
+Epoch 25/800: 100%|██████████| 122/122 [00:09<00:00, 12.62it/s]
+Epoch 25: train RMSE=835.93 m | val RMSE=2607.05 m | gap=1771.12 m | active_frac=0.08
+Epoch 26/800: 100%|██████████| 122/122 [00:09<00:00, 12.70it/s]
+Epoch 26: train RMSE=826.02 m | val RMSE=2330.30 m | gap=1504.29 m | active_frac=0.08
+Epoch 27/800: 100%|██████████| 122/122 [00:09<00:00, 12.66it/s]
+Epoch 27: train RMSE=814.93 m | val RMSE=2097.13 m | gap=1282.20 m | active_frac=0.08
+Epoch 28/800: 100%|██████████| 122/122 [00:09<00:00, 12.25it/s]
+Epoch 28: train RMSE=805.95 m | val RMSE=1859.60 m | gap=1053.65 m | active_frac=0.09
+Epoch 29/800: 100%|██████████| 122/122 [00:10<00:00, 11.82it/s]
+Epoch 29: train RMSE=797.86 m | val RMSE=1700.74 m | gap=902.88 m | active_frac=0.09
+Epoch 30/800: 100%|██████████| 122/122 [00:10<00:00, 11.77it/s]
+Epoch 30: train RMSE=790.30 m | val RMSE=1524.98 m | gap=734.68 m | active_frac=0.09
+Epoch 31/800: 100%|██████████| 122/122 [00:10<00:00, 11.99it/s]
+Epoch 31: train RMSE=783.04 m | val RMSE=1383.44 m | gap=600.40 m | active_frac=0.10
+Epoch 32/800: 100%|██████████| 122/122 [00:10<00:00, 12.17it/s]
+Epoch 32: train RMSE=775.12 m | val RMSE=1217.45 m | gap=442.33 m | active_frac=0.10
+Epoch 33/800: 100%|██████████| 122/122 [00:09<00:00, 12.23it/s]
+Epoch 33: train RMSE=769.89 m | val RMSE=1109.30 m | gap=339.41 m | active_frac=0.10
+Epoch 34/800: 100%|██████████| 122/122 [00:09<00:00, 12.22it/s]
+Epoch 34: train RMSE=764.29 m | val RMSE=1006.79 m | gap=242.50 m | active_frac=0.11
+Epoch 35/800: 100%|██████████| 122/122 [00:09<00:00, 12.24it/s]
+Epoch 35: train RMSE=757.17 m | val RMSE=920.11 m | gap=162.94 m | active_frac=0.11
+Epoch 36/800: 100%|██████████| 122/122 [00:09<00:00, 12.22it/s]
+Epoch 36: train RMSE=753.19 m | val RMSE=848.59 m | gap=95.40 m | active_frac=0.11
+Epoch 37/800: 100%|██████████| 122/122 [00:10<00:00, 12.12it/s]
+Epoch 37: train RMSE=748.31 m | val RMSE=798.30 m | gap=49.99 m | active_frac=0.12
+Epoch 38/800: 100%|██████████| 122/122 [00:09<00:00, 12.61it/s]
+Epoch 38: train RMSE=743.68 m | val RMSE=762.07 m | gap=18.39 m | active_frac=0.12
+Epoch 39/800: 100%|██████████| 122/122 [00:09<00:00, 12.61it/s]
+Epoch 39: train RMSE=741.20 m | val RMSE=746.26 m | gap=5.06 m | active_frac=0.12
+Epoch 40/800: 100%|██████████| 122/122 [00:09<00:00, 12.65it/s]
+Epoch 40: train RMSE=737.35 m | val RMSE=735.53 m | gap=-1.83 m | active_frac=0.12
+Epoch 41/800: 100%|██████████| 122/122 [00:09<00:00, 12.65it/s]
+Epoch 41: train RMSE=715.37 m | val RMSE=5316.61 m | gap=4601.24 m | active_frac=0.13
+Epoch 42/800: 100%|██████████| 122/122 [00:09<00:00, 12.22it/s]
+Epoch 42: train RMSE=693.17 m | val RMSE=3849.07 m | gap=3155.90 m | active_frac=0.13
+Epoch 43/800: 100%|██████████| 122/122 [00:09<00:00, 12.26it/s]
+Epoch 43: train RMSE=674.86 m | val RMSE=3080.21 m | gap=2405.35 m | active_frac=0.13
+Epoch 44/800: 100%|██████████| 122/122 [00:09<00:00, 12.23it/s]
+Epoch 44: train RMSE=666.41 m | val RMSE=2541.43 m | gap=1875.02 m | active_frac=0.14
+Epoch 45/800: 100%|██████████| 122/122 [00:09<00:00, 12.26it/s]
+Epoch 45: train RMSE=657.88 m | val RMSE=2094.73 m | gap=1436.84 m | active_frac=0.14
+Epoch 46/800: 100%|██████████| 122/122 [00:09<00:00, 12.22it/s]
+Epoch 46: train RMSE=649.10 m | val RMSE=1772.84 m | gap=1123.74 m | active_frac=0.14
+Epoch 47/800: 100%|██████████| 122/122 [00:09<00:00, 12.24it/s]
+Epoch 47: train RMSE=641.42 m | val RMSE=1571.57 m | gap=930.16 m | active_frac=0.15
+Epoch 48/800: 100%|██████████| 122/122 [00:09<00:00, 12.22it/s]
+Epoch 48: train RMSE=630.03 m | val RMSE=1379.18 m | gap=749.15 m | active_frac=0.15
+Epoch 49/800: 100%|██████████| 122/122 [00:09<00:00, 12.23it/s]
+Epoch 49: train RMSE=622.17 m | val RMSE=1200.25 m | gap=578.07 m | active_frac=0.15
+Epoch 50/800: 100%|██████████| 122/122 [00:10<00:00, 12.14it/s]
+Epoch 50: train RMSE=615.07 m | val RMSE=1080.57 m | gap=465.50 m | active_frac=0.16
+Epoch 51/800: 100%|██████████| 122/122 [00:09<00:00, 12.22it/s]
+Epoch 51: train RMSE=608.87 m | val RMSE=968.36 m | gap=359.48 m | active_frac=0.16
+Epoch 52/800: 100%|██████████| 122/122 [00:09<00:00, 12.58it/s]
+Epoch 52: train RMSE=608.03 m | val RMSE=872.48 m | gap=264.46 m | active_frac=0.16
+Epoch 53/800: 100%|██████████| 122/122 [00:10<00:00, 12.06it/s]
+Epoch 53: train RMSE=602.43 m | val RMSE=786.69 m | gap=184.25 m | active_frac=0.17
+Epoch 54/800: 100%|██████████| 122/122 [00:10<00:00, 11.91it/s]
+Epoch 54: train RMSE=593.15 m | val RMSE=740.43 m | gap=147.28 m | active_frac=0.17
+Epoch 55/800: 100%|██████████| 122/122 [00:10<00:00, 11.72it/s]
+Epoch 55: train RMSE=593.12 m | val RMSE=678.11 m | gap=84.99 m | active_frac=0.17
+Epoch 56/800: 100%|██████████| 122/122 [00:10<00:00, 11.51it/s]
+Epoch 56: train RMSE=585.14 m | val RMSE=637.86 m | gap=52.73 m | active_frac=0.17
+Epoch 57/800: 100%|██████████| 122/122 [00:10<00:00, 11.63it/s]
+Epoch 57: train RMSE=581.68 m | val RMSE=613.27 m | gap=31.59 m | active_frac=0.18
+Epoch 58/800: 100%|██████████| 122/122 [00:10<00:00, 11.81it/s]
+Epoch 58: train RMSE=579.68 m | val RMSE=586.60 m | gap=6.92 m | active_frac=0.18
+Epoch 59/800: 100%|██████████| 122/122 [00:10<00:00, 11.96it/s]
+Epoch 59: train RMSE=577.21 m | val RMSE=580.69 m | gap=3.47 m | active_frac=0.18
+Epoch 60/800: 100%|██████████| 122/122 [00:10<00:00, 12.03it/s]
+Epoch 60: train RMSE=572.85 m | val RMSE=566.90 m | gap=-5.95 m | active_frac=0.19
+Epoch 61/800: 100%|██████████| 122/122 [00:10<00:00, 12.09it/s]
+Epoch 61: train RMSE=559.96 m | val RMSE=3816.95 m | gap=3256.99 m | active_frac=0.19
+Epoch 62/800: 100%|██████████| 122/122 [00:09<00:00, 12.24it/s]
+Epoch 62: train RMSE=537.57 m | val RMSE=2863.91 m | gap=2326.34 m | active_frac=0.19
+Epoch 63/800: 100%|██████████| 122/122 [00:10<00:00, 11.45it/s]
+Epoch 63: train RMSE=523.10 m | val RMSE=2270.41 m | gap=1747.32 m | active_frac=0.20
+Epoch 64/800: 100%|██████████| 122/122 [00:10<00:00, 11.98it/s]
+Epoch 64: train RMSE=511.98 m | val RMSE=1882.58 m | gap=1370.60 m | active_frac=0.20
+Epoch 65/800: 100%|██████████| 122/122 [00:10<00:00, 11.92it/s]
+Epoch 65: train RMSE=535.67 m | val RMSE=1618.44 m | gap=1082.77 m | active_frac=0.20
+Epoch 66/800: 100%|██████████| 122/122 [00:10<00:00, 11.96it/s]
+Epoch 66: train RMSE=494.30 m | val RMSE=1426.63 m | gap=932.33 m | active_frac=0.21
+Epoch 67/800: 100%|██████████| 122/122 [00:10<00:00, 11.81it/s]
+Epoch 67: train RMSE=488.19 m | val RMSE=1263.16 m | gap=774.97 m | active_frac=0.21
+Epoch 68/800: 100%|██████████| 122/122 [00:10<00:00, 11.86it/s]
+Epoch 68: train RMSE=481.37 m | val RMSE=1132.21 m | gap=650.84 m | active_frac=0.21
+Epoch 69/800: 100%|██████████| 122/122 [00:10<00:00, 12.03it/s]
+Epoch 69: train RMSE=474.28 m | val RMSE=992.41 m | gap=518.13 m | active_frac=0.22
+Epoch 70/800: 100%|██████████| 122/122 [00:10<00:00, 12.15it/s]
+Epoch 70: train RMSE=466.98 m | val RMSE=879.57 m | gap=412.59 m | active_frac=0.22
+Epoch 71/800: 100%|██████████| 122/122 [00:10<00:00, 11.79it/s]
+Epoch 71: train RMSE=464.48 m | val RMSE=787.90 m | gap=323.42 m | active_frac=0.22
+Epoch 72/800: 100%|██████████| 122/122 [00:10<00:00, 11.92it/s]
+Epoch 72: train RMSE=458.27 m | val RMSE=697.48 m | gap=239.21 m | active_frac=0.23
+Epoch 73/800: 100%|██████████| 122/122 [00:10<00:00, 12.01it/s]
+Epoch 73: train RMSE=454.22 m | val RMSE=634.51 m | gap=180.29 m | active_frac=0.23
+Epoch 74/800: 100%|██████████| 122/122 [00:10<00:00, 12.10it/s]
+Epoch 74: train RMSE=451.75 m | val RMSE=569.17 m | gap=117.42 m | active_frac=0.23
+Epoch 75/800: 100%|██████████| 122/122 [00:09<00:00, 12.21it/s]
+Epoch 75: train RMSE=447.12 m | val RMSE=523.95 m | gap=76.83 m | active_frac=0.23
+Epoch 76/800: 100%|██████████| 122/122 [00:09<00:00, 12.57it/s]
+Epoch 76: train RMSE=444.36 m | val RMSE=504.40 m | gap=60.04 m | active_frac=0.24
+Epoch 77/800: 100%|██████████| 122/122 [00:09<00:00, 12.61it/s]
+Epoch 77: train RMSE=441.23 m | val RMSE=459.22 m | gap=17.99 m | active_frac=0.24
+Epoch 78/800: 100%|██████████| 122/122 [00:10<00:00, 12.19it/s]
+Epoch 78: train RMSE=438.85 m | val RMSE=443.05 m | gap=4.20 m | active_frac=0.24
+Epoch 79/800: 100%|██████████| 122/122 [00:10<00:00, 12.05it/s]
+Epoch 79: train RMSE=435.97 m | val RMSE=477.50 m | gap=41.52 m | active_frac=0.25
+Epoch 80/800: 100%|██████████| 122/122 [00:09<00:00, 12.27it/s]
+Epoch 80: train RMSE=468.09 m | val RMSE=431.90 m | gap=-36.19 m | active_frac=0.25
+Epoch 81/800: 100%|██████████| 122/122 [00:11<00:00, 10.24it/s]
+Epoch 81: train RMSE=426.33 m | val RMSE=2342.72 m | gap=1916.39 m | active_frac=0.25
+Epoch 82/800: 100%|██████████| 122/122 [00:11<00:00, 10.37it/s]
+Epoch 82: train RMSE=409.42 m | val RMSE=1781.14 m | gap=1371.71 m | active_frac=0.26
+Epoch 83/800: 100%|██████████| 122/122 [00:11<00:00, 10.22it/s]
+Epoch 83: train RMSE=397.62 m | val RMSE=1435.95 m | gap=1038.33 m | active_frac=0.26
+Epoch 84/800: 100%|██████████| 122/122 [00:10<00:00, 11.48it/s]
+Epoch 84: train RMSE=390.25 m | val RMSE=1182.61 m | gap=792.36 m | active_frac=0.26
+Epoch 85/800: 100%|██████████| 122/122 [00:10<00:00, 12.08it/s]
+Epoch 85: train RMSE=381.94 m | val RMSE=1033.99 m | gap=652.05 m | active_frac=0.27
+Epoch 86/800: 100%|██████████| 122/122 [00:11<00:00, 10.36it/s]
+Epoch 86: train RMSE=375.47 m | val RMSE=896.64 m | gap=521.16 m | active_frac=0.27
+Epoch 87/800: 100%|██████████| 122/122 [00:11<00:00, 10.46it/s]
+Epoch 87: train RMSE=368.67 m | val RMSE=787.48 m | gap=418.82 m | active_frac=0.27
+Epoch 88/800: 100%|██████████| 122/122 [00:11<00:00, 10.25it/s]
+Epoch 88: train RMSE=363.97 m | val RMSE=704.80 m | gap=340.83 m | active_frac=0.28
+Epoch 89/800: 100%|██████████| 122/122 [00:11<00:00, 10.37it/s]
+Epoch 89: train RMSE=359.43 m | val RMSE=617.17 m | gap=257.74 m | active_frac=0.28
+Epoch 90/800: 100%|██████████| 122/122 [00:11<00:00, 10.25it/s]
+Epoch 90: train RMSE=353.87 m | val RMSE=545.44 m | gap=191.57 m | active_frac=0.28
+Epoch 91/800: 100%|██████████| 122/122 [00:11<00:00, 10.20it/s]
+Epoch 91: train RMSE=350.36 m | val RMSE=497.60 m | gap=147.24 m | active_frac=0.28
+Epoch 92/800: 100%|██████████| 122/122 [00:11<00:00, 10.30it/s]
+Epoch 92: train RMSE=346.95 m | val RMSE=465.58 m | gap=118.64 m | active_frac=0.29
+Epoch 93/800: 100%|██████████| 122/122 [00:11<00:00, 10.23it/s]
+Epoch 93: train RMSE=345.70 m | val RMSE=426.55 m | gap=80.85 m | active_frac=0.29
+Epoch 94/800: 100%|██████████| 122/122 [00:11<00:00, 10.18it/s]
+Epoch 94: train RMSE=340.99 m | val RMSE=398.60 m | gap=57.61 m | active_frac=0.29
+Epoch 95/800: 100%|██████████| 122/122 [00:11<00:00, 10.35it/s]
+Epoch 95: train RMSE=339.28 m | val RMSE=375.98 m | gap=36.70 m | active_frac=0.30
+Epoch 96/800: 100%|██████████| 122/122 [00:11<00:00, 10.25it/s]
+Epoch 96: train RMSE=336.95 m | val RMSE=370.84 m | gap=33.89 m | active_frac=0.30
+Epoch 97/800: 100%|██████████| 122/122 [00:11<00:00, 10.39it/s]
+Epoch 97: train RMSE=335.01 m | val RMSE=343.93 m | gap=8.92 m | active_frac=0.30
+Epoch 98/800: 100%|██████████| 122/122 [00:11<00:00, 10.19it/s]
+Epoch 98: train RMSE=332.57 m | val RMSE=336.71 m | gap=4.14 m | active_frac=0.31
+Epoch 99/800: 100%|██████████| 122/122 [00:11<00:00, 10.42it/s]
+Epoch 99: train RMSE=330.55 m | val RMSE=338.22 m | gap=7.67 m | active_frac=0.31
+Epoch 100/800: 100%|██████████| 122/122 [00:11<00:00, 10.33it/s]
+Epoch 100: train RMSE=329.63 m | val RMSE=326.50 m | gap=-3.12 m | active_frac=0.31
+Epoch 101/800: 100%|██████████| 122/122 [00:12<00:00, 10.16it/s]
+Epoch 101: train RMSE=324.65 m | val RMSE=1251.29 m | gap=926.64 m | active_frac=0.32
+Epoch 102/800: 100%|██████████| 122/122 [00:11<00:00, 10.31it/s]
+Epoch 102: train RMSE=313.26 m | val RMSE=1084.37 m | gap=771.11 m | active_frac=0.32
+Epoch 103/800: 100%|██████████| 122/122 [00:11<00:00, 10.29it/s]
+Epoch 103: train RMSE=302.54 m | val RMSE=905.56 m | gap=603.02 m | active_frac=0.32
+Epoch 104/800: 100%|██████████| 122/122 [00:11<00:00, 10.25it/s]
+Epoch 104: train RMSE=296.96 m | val RMSE=775.48 m | gap=478.52 m | active_frac=0.33
+Epoch 105/800: 100%|██████████| 122/122 [00:11<00:00, 10.95it/s]
+Epoch 105: train RMSE=291.20 m | val RMSE=683.60 m | gap=392.40 m | active_frac=0.33
+Epoch 106/800: 100%|██████████| 122/122 [00:09<00:00, 12.22it/s]
+Epoch 106: train RMSE=284.89 m | val RMSE=590.00 m | gap=305.11 m | active_frac=0.33
+Epoch 107/800: 100%|██████████| 122/122 [00:10<00:00, 12.20it/s]
+Epoch 107: train RMSE=280.45 m | val RMSE=529.19 m | gap=248.74 m | active_frac=0.33
+Epoch 108/800: 100%|██████████| 122/122 [00:10<00:00, 12.12it/s]
+Epoch 108: train RMSE=276.67 m | val RMSE=472.67 m | gap=196.00 m | active_frac=0.34
+Epoch 109/800: 100%|██████████| 122/122 [00:10<00:00, 12.13it/s]
+Epoch 109: train RMSE=273.57 m | val RMSE=421.49 m | gap=147.92 m | active_frac=0.34
+Epoch 110/800: 100%|██████████| 122/122 [00:09<00:00, 12.59it/s]
+Epoch 110: train RMSE=270.60 m | val RMSE=396.13 m | gap=125.53 m | active_frac=0.34
+Epoch 111/800: 100%|██████████| 122/122 [00:10<00:00, 12.17it/s]
+Epoch 111: train RMSE=267.87 m | val RMSE=358.01 m | gap=90.14 m | active_frac=0.35
+Epoch 112/800: 100%|██████████| 122/122 [00:10<00:00, 12.16it/s]
+Epoch 112: train RMSE=265.17 m | val RMSE=330.60 m | gap=65.43 m | active_frac=0.35
+Epoch 113/800: 100%|██████████| 122/122 [00:10<00:00, 12.19it/s]
+Epoch 113: train RMSE=263.39 m | val RMSE=310.32 m | gap=46.93 m | active_frac=0.35
+Epoch 114/800: 100%|██████████| 122/122 [00:09<00:00, 12.61it/s]
+Epoch 114: train RMSE=261.86 m | val RMSE=299.23 m | gap=37.37 m | active_frac=0.36
+Epoch 115/800: 100%|██████████| 122/122 [00:10<00:00, 12.16it/s]
+Epoch 115: train RMSE=259.37 m | val RMSE=280.87 m | gap=21.50 m | active_frac=0.36
+Epoch 116/800: 100%|██████████| 122/122 [00:09<00:00, 12.51it/s]
+Epoch 116: train RMSE=258.80 m | val RMSE=268.94 m | gap=10.14 m | active_frac=0.36
+Epoch 117/800: 100%|██████████| 122/122 [00:09<00:00, 12.64it/s]
+Epoch 117: train RMSE=255.56 m | val RMSE=263.33 m | gap=7.77 m | active_frac=0.37
+Epoch 118/800: 100%|██████████| 122/122 [00:09<00:00, 12.56it/s]
+Epoch 118: train RMSE=254.21 m | val RMSE=260.14 m | gap=5.93 m | active_frac=0.37
+Epoch 119/800: 100%|██████████| 122/122 [00:09<00:00, 12.56it/s]
+Epoch 119: train RMSE=253.88 m | val RMSE=250.12 m | gap=-3.75 m | active_frac=0.37
+Epoch 120/800: 100%|██████████| 122/122 [00:10<00:00, 12.18it/s]
+Epoch 120: train RMSE=252.23 m | val RMSE=256.65 m | gap=4.42 m | active_frac=0.38
+Epoch 121/800: 100%|██████████| 122/122 [00:09<00:00, 12.21it/s]
+Epoch 121: train RMSE=250.14 m | val RMSE=538.06 m | gap=287.92 m | active_frac=0.38
+Epoch 122/800: 100%|██████████| 122/122 [00:09<00:00, 12.63it/s]
+Epoch 122: train RMSE=243.78 m | val RMSE=604.48 m | gap=360.69 m | active_frac=0.38
+Epoch 123/800: 100%|██████████| 122/122 [00:09<00:00, 12.64it/s]
+Epoch 123: train RMSE=236.70 m | val RMSE=559.15 m | gap=322.45 m | active_frac=0.38
+Epoch 124/800: 100%|██████████| 122/122 [00:09<00:00, 12.27it/s]
+Epoch 124: train RMSE=231.09 m | val RMSE=502.03 m | gap=270.95 m | active_frac=0.39
+Epoch 125/800: 100%|██████████| 122/122 [00:10<00:00, 12.18it/s]
+Epoch 125: train RMSE=225.38 m | val RMSE=455.05 m | gap=229.67 m | active_frac=0.39
+Epoch 126/800: 100%|██████████| 122/122 [00:09<00:00, 12.23it/s]
+Epoch 126: train RMSE=221.66 m | val RMSE=400.95 m | gap=179.29 m | active_frac=0.39
+Epoch 127/800: 100%|██████████| 122/122 [00:09<00:00, 12.22it/s]
+Epoch 127: train RMSE=219.16 m | val RMSE=357.13 m | gap=137.97 m | active_frac=0.40
+Epoch 128/800: 100%|██████████| 122/122 [00:09<00:00, 12.61it/s]
+Epoch 128: train RMSE=216.52 m | val RMSE=330.94 m | gap=114.42 m | active_frac=0.40
+Epoch 129/800: 100%|██████████| 122/122 [00:09<00:00, 12.70it/s]
+Epoch 129: train RMSE=213.68 m | val RMSE=308.62 m | gap=94.94 m | active_frac=0.40
+Epoch 130/800: 100%|██████████| 122/122 [00:09<00:00, 12.67it/s]
+Epoch 130: train RMSE=211.17 m | val RMSE=281.97 m | gap=70.80 m | active_frac=0.41
+Epoch 131/800: 100%|██████████| 122/122 [00:09<00:00, 12.59it/s]
+Epoch 131: train RMSE=209.20 m | val RMSE=265.91 m | gap=56.71 m | active_frac=0.41
+Epoch 132/800: 100%|██████████| 122/122 [00:09<00:00, 12.52it/s]
+Epoch 132: train RMSE=207.65 m | val RMSE=249.01 m | gap=41.35 m | active_frac=0.41
+Epoch 133/800: 100%|██████████| 122/122 [00:09<00:00, 12.56it/s]
+Epoch 133: train RMSE=206.28 m | val RMSE=231.90 m | gap=25.63 m | active_frac=0.42
+Epoch 134/800: 100%|██████████| 122/122 [00:09<00:00, 12.55it/s]
+Epoch 134: train RMSE=205.06 m | val RMSE=223.79 m | gap=18.73 m | active_frac=0.42
+Epoch 135/800: 100%|██████████| 122/122 [00:10<00:00, 12.15it/s]
+Epoch 135: train RMSE=202.93 m | val RMSE=215.21 m | gap=12.28 m | active_frac=0.42
+Epoch 136/800: 100%|██████████| 122/122 [00:09<00:00, 12.20it/s]
+Epoch 136: train RMSE=201.44 m | val RMSE=208.98 m | gap=7.54 m | active_frac=0.42
+Epoch 137/800: 100%|██████████| 122/122 [00:10<00:00, 12.20it/s]
+Epoch 137: train RMSE=200.93 m | val RMSE=203.37 m | gap=2.44 m | active_frac=0.43
+Epoch 138/800: 100%|██████████| 122/122 [00:09<00:00, 12.61it/s]
+Epoch 138: train RMSE=199.13 m | val RMSE=201.47 m | gap=2.33 m | active_frac=0.43
+Epoch 139/800: 100%|██████████| 122/122 [00:10<00:00, 12.15it/s]
+Epoch 139: train RMSE=198.49 m | val RMSE=199.39 m | gap=0.91 m | active_frac=0.43
+Epoch 140/800: 100%|██████████| 122/122 [00:09<00:00, 12.51it/s]
+Epoch 140: train RMSE=196.83 m | val RMSE=194.96 m | gap=-1.87 m | active_frac=0.44
+Epoch 141/800: 100%|██████████| 122/122 [00:09<00:00, 12.55it/s]
+Epoch 141: train RMSE=196.46 m | val RMSE=209.95 m | gap=13.49 m | active_frac=0.44
+Epoch 142/800: 100%|██████████| 122/122 [00:10<00:00, 12.13it/s]
+Epoch 142: train RMSE=193.41 m | val RMSE=334.34 m | gap=140.93 m | active_frac=0.44
+Epoch 143/800: 100%|██████████| 122/122 [00:10<00:00, 11.29it/s]
+Epoch 143: train RMSE=189.22 m | val RMSE=328.66 m | gap=139.44 m | active_frac=0.45
+Epoch 144/800: 100%|██████████| 122/122 [00:11<00:00, 10.24it/s]
+Epoch 144: train RMSE=184.69 m | val RMSE=311.56 m | gap=126.87 m | active_frac=0.45
+Epoch 145/800: 100%|██████████| 122/122 [00:11<00:00, 10.25it/s]
+Epoch 145: train RMSE=181.71 m | val RMSE=296.90 m | gap=115.19 m | active_frac=0.45
+Epoch 146/800: 100%|██████████| 122/122 [00:11<00:00, 10.25it/s]
+Epoch 146: train RMSE=177.91 m | val RMSE=274.52 m | gap=96.60 m | active_frac=0.46
+Epoch 147/800: 100%|██████████| 122/122 [00:11<00:00, 10.24it/s]
+Epoch 147: train RMSE=175.86 m | val RMSE=250.25 m | gap=74.39 m | active_frac=0.46
+Epoch 148/800: 100%|██████████| 122/122 [00:11<00:00, 10.22it/s]
+Epoch 148: train RMSE=173.96 m | val RMSE=236.50 m | gap=62.54 m | active_frac=0.46
+Epoch 149/800: 100%|██████████| 122/122 [00:11<00:00, 10.39it/s]
+Epoch 149: train RMSE=172.12 m | val RMSE=225.71 m | gap=53.59 m | active_frac=0.47
+Epoch 150/800: 100%|██████████| 122/122 [00:09<00:00, 12.48it/s]
+Epoch 150: train RMSE=170.72 m | val RMSE=210.08 m | gap=39.36 m | active_frac=0.47
+Epoch 151/800: 100%|██████████| 122/122 [00:11<00:00, 10.17it/s]
+Epoch 151: train RMSE=169.31 m | val RMSE=199.21 m | gap=29.90 m | active_frac=0.47
+Epoch 152/800: 100%|██████████| 122/122 [00:11<00:00, 10.21it/s]
+Epoch 152: train RMSE=167.79 m | val RMSE=188.80 m | gap=21.00 m | active_frac=0.47
+Epoch 153/800: 100%|██████████| 122/122 [00:11<00:00, 10.35it/s]
+Epoch 153: train RMSE=166.45 m | val RMSE=182.59 m | gap=16.14 m | active_frac=0.48
+Epoch 154/800: 100%|██████████| 122/122 [00:11<00:00, 10.37it/s]
+Epoch 154: train RMSE=165.61 m | val RMSE=176.72 m | gap=11.12 m | active_frac=0.48
+Epoch 155/800: 100%|██████████| 122/122 [00:11<00:00, 10.18it/s]
+Epoch 155: train RMSE=163.87 m | val RMSE=171.78 m | gap=7.91 m | active_frac=0.48
+Epoch 156/800: 100%|██████████| 122/122 [00:11<00:00, 10.26it/s]
+Epoch 156: train RMSE=163.25 m | val RMSE=168.75 m | gap=5.50 m | active_frac=0.49
+Epoch 157/800: 100%|██████████| 122/122 [00:11<00:00, 10.55it/s]
+Epoch 157: train RMSE=162.63 m | val RMSE=163.46 m | gap=0.84 m | active_frac=0.49
+Epoch 158/800: 100%|██████████| 122/122 [00:10<00:00, 11.65it/s]
+Epoch 158: train RMSE=162.20 m | val RMSE=161.28 m | gap=-0.92 m | active_frac=0.49
+Epoch 159/800: 100%|██████████| 122/122 [00:11<00:00, 10.35it/s]
+Epoch 159: train RMSE=161.01 m | val RMSE=159.75 m | gap=-1.27 m | active_frac=0.50
+Epoch 160/800: 100%|██████████| 122/122 [00:11<00:00, 10.37it/s]
+Epoch 160: train RMSE=160.62 m | val RMSE=159.59 m | gap=-1.03 m | active_frac=0.50
+Epoch 161/800: 100%|██████████| 122/122 [00:11<00:00, 10.29it/s]
+Epoch 161: train RMSE=159.69 m | val RMSE=161.80 m | gap=2.11 m | active_frac=0.50
+Epoch 162/800: 100%|██████████| 122/122 [00:11<00:00, 10.27it/s]
+Epoch 162: train RMSE=158.32 m | val RMSE=158.39 m | gap=0.08 m | active_frac=0.51
+Epoch 163/800: 100%|██████████| 122/122 [00:12<00:00, 10.16it/s]
+Epoch 163: train RMSE=157.79 m | val RMSE=169.03 m | gap=11.24 m | active_frac=0.51
+Epoch 164/800: 100%|██████████| 122/122 [00:11<00:00, 10.24it/s]
+Epoch 164: train RMSE=156.15 m | val RMSE=173.60 m | gap=17.44 m | active_frac=0.51
+Epoch 165/800: 100%|██████████| 122/122 [00:12<00:00, 10.13it/s]
+Epoch 165: train RMSE=155.37 m | val RMSE=171.04 m | gap=15.67 m | active_frac=0.52
+Epoch 166/800: 100%|██████████| 122/122 [00:11<00:00, 10.38it/s]
+Epoch 166: train RMSE=153.80 m | val RMSE=169.41 m | gap=15.61 m | active_frac=0.52
+Epoch 167/800: 100%|██████████| 122/122 [00:11<00:00, 10.24it/s]
+Epoch 167: train RMSE=153.19 m | val RMSE=166.59 m | gap=13.40 m | active_frac=0.52
+Epoch 168/800: 100%|██████████| 122/122 [00:11<00:00, 10.30it/s]
+Epoch 168: train RMSE=152.45 m | val RMSE=161.59 m | gap=9.15 m | active_frac=0.53
+Epoch 169/800: 100%|██████████| 122/122 [00:11<00:00, 10.30it/s]
+Epoch 169: train RMSE=150.97 m | val RMSE=160.63 m | gap=9.65 m | active_frac=0.53
+Epoch 170/800: 100%|██████████| 122/122 [00:12<00:00, 10.16it/s]
+Epoch 170: train RMSE=150.51 m | val RMSE=154.89 m | gap=4.38 m | active_frac=0.53
+Epoch 171/800: 100%|██████████| 122/122 [00:11<00:00, 10.25it/s]
+Epoch 171: train RMSE=150.08 m | val RMSE=153.17 m | gap=3.09 m | active_frac=0.53
+Epoch 172/800: 100%|██████████| 122/122 [00:11<00:00, 10.30it/s]
+Epoch 172: train RMSE=148.91 m | val RMSE=152.08 m | gap=3.17 m | active_frac=0.54
+Epoch 173/800: 100%|██████████| 122/122 [00:11<00:00, 10.21it/s]
+Epoch 173: train RMSE=148.03 m | val RMSE=151.27 m | gap=3.24 m | active_frac=0.54
+Epoch 174/800: 100%|██████████| 122/122 [00:11<00:00, 10.23it/s]
+Epoch 174: train RMSE=147.29 m | val RMSE=148.12 m | gap=0.82 m | active_frac=0.54
+Epoch 175/800: 100%|██████████| 122/122 [00:11<00:00, 10.32it/s]
+Epoch 175: train RMSE=145.78 m | val RMSE=145.88 m | gap=0.10 m | active_frac=0.55
+Epoch 176/800: 100%|██████████| 122/122 [00:10<00:00, 11.25it/s]
+Epoch 176: train RMSE=145.41 m | val RMSE=150.19 m | gap=4.78 m | active_frac=0.55
+Epoch 177/800: 100%|██████████| 122/122 [00:10<00:00, 12.14it/s]
+Epoch 177: train RMSE=145.38 m | val RMSE=144.59 m | gap=-0.80 m | active_frac=0.55
+Epoch 178/800: 100%|██████████| 122/122 [00:10<00:00, 12.16it/s]
+Epoch 178: train RMSE=144.87 m | val RMSE=143.69 m | gap=-1.18 m | active_frac=0.56
+Epoch 179/800: 100%|██████████| 122/122 [00:10<00:00, 12.10it/s]
+Epoch 179: train RMSE=144.44 m | val RMSE=143.18 m | gap=-1.26 m | active_frac=0.56
+Epoch 180/800: 100%|██████████| 122/122 [00:09<00:00, 12.56it/s]
+Epoch 180: train RMSE=144.35 m | val RMSE=144.13 m | gap=-0.22 m | active_frac=0.56
+Epoch 181/800: 100%|██████████| 122/122 [00:09<00:00, 12.62it/s]
+Epoch 181: train RMSE=143.21 m | val RMSE=143.96 m | gap=0.75 m | active_frac=0.57
+Epoch 182/800: 100%|██████████| 122/122 [00:09<00:00, 12.64it/s]
+Epoch 182: train RMSE=143.35 m | val RMSE=145.64 m | gap=2.30 m | active_frac=0.57
+Epoch 183/800: 100%|██████████| 122/122 [00:09<00:00, 12.68it/s]
+Epoch 183: train RMSE=143.00 m | val RMSE=144.65 m | gap=1.65 m | active_frac=0.57
+Epoch 184/800: 100%|██████████| 122/122 [00:09<00:00, 12.67it/s]
+Epoch 184: train RMSE=143.07 m | val RMSE=143.89 m | gap=0.82 m | active_frac=0.57
+Epoch 185/800: 100%|██████████| 122/122 [00:09<00:00, 12.70it/s]
+Epoch 185: train RMSE=142.37 m | val RMSE=142.55 m | gap=0.17 m | active_frac=0.58
+Epoch 186/800: 100%|██████████| 122/122 [00:09<00:00, 12.54it/s]
+Epoch 186: train RMSE=142.13 m | val RMSE=145.35 m | gap=3.22 m | active_frac=0.58
+Epoch 187/800: 100%|██████████| 122/122 [00:09<00:00, 12.65it/s]
+Epoch 187: train RMSE=141.68 m | val RMSE=142.55 m | gap=0.86 m | active_frac=0.58
+Epoch 188/800: 100%|██████████| 122/122 [00:09<00:00, 12.26it/s]
+Epoch 188: train RMSE=140.99 m | val RMSE=142.70 m | gap=1.71 m | active_frac=0.59
+Epoch 189/800: 100%|██████████| 122/122 [00:09<00:00, 12.23it/s]
+Epoch 189: train RMSE=141.06 m | val RMSE=141.77 m | gap=0.71 m | active_frac=0.59
+Epoch 190/800: 100%|██████████| 122/122 [00:09<00:00, 12.43it/s]
+Epoch 190: train RMSE=140.05 m | val RMSE=140.79 m | gap=0.74 m | active_frac=0.59
+Epoch 191/800: 100%|██████████| 122/122 [00:10<00:00, 12.18it/s]
+Epoch 191: train RMSE=140.06 m | val RMSE=140.43 m | gap=0.36 m | active_frac=0.60
+Epoch 192/800: 100%|██████████| 122/122 [00:09<00:00, 12.54it/s]
+Epoch 192: train RMSE=139.62 m | val RMSE=140.34 m | gap=0.73 m | active_frac=0.60
+Epoch 193/800: 100%|██████████| 122/122 [00:09<00:00, 12.36it/s]
+Epoch 193: train RMSE=139.63 m | val RMSE=139.33 m | gap=-0.31 m | active_frac=0.60
+Epoch 194/800: 100%|██████████| 122/122 [00:09<00:00, 12.63it/s]
+Epoch 194: train RMSE=139.45 m | val RMSE=139.61 m | gap=0.16 m | active_frac=0.61
+Epoch 195/800: 100%|██████████| 122/122 [00:09<00:00, 12.21it/s]
+Epoch 195: train RMSE=139.55 m | val RMSE=138.52 m | gap=-1.03 m | active_frac=0.61
+Epoch 196/800: 100%|██████████| 122/122 [00:09<00:00, 12.35it/s]
+Epoch 196: train RMSE=138.51 m | val RMSE=138.38 m | gap=-0.13 m | active_frac=0.61
+Epoch 197/800: 100%|██████████| 122/122 [00:09<00:00, 12.56it/s]
+Epoch 197: train RMSE=138.65 m | val RMSE=138.76 m | gap=0.11 m | active_frac=0.62
+Epoch 198/800: 100%|██████████| 122/122 [00:09<00:00, 12.64it/s]
+Epoch 198: train RMSE=138.15 m | val RMSE=136.99 m | gap=-1.17 m | active_frac=0.62
+Epoch 199/800: 100%|██████████| 122/122 [00:09<00:00, 12.55it/s]
+Epoch 199: train RMSE=138.47 m | val RMSE=140.76 m | gap=2.30 m | active_frac=0.62
+Epoch 200/800: 100%|██████████| 122/122 [00:09<00:00, 12.51it/s]
+Epoch 200: train RMSE=138.48 m | val RMSE=139.86 m | gap=1.38 m | active_frac=0.62
+Epoch 201/800: 100%|██████████| 122/122 [00:09<00:00, 12.36it/s]
+Epoch 201: train RMSE=137.99 m | val RMSE=136.75 m | gap=-1.24 m | active_frac=0.63
+Epoch 202/800: 100%|██████████| 122/122 [00:10<00:00, 12.13it/s]
+Epoch 202: train RMSE=137.41 m | val RMSE=140.45 m | gap=3.04 m | active_frac=0.63
+Epoch 203/800: 100%|██████████| 122/122 [00:10<00:00, 12.18it/s]
+Epoch 203: train RMSE=137.28 m | val RMSE=138.85 m | gap=1.56 m | active_frac=0.63
+Epoch 204/800: 100%|██████████| 122/122 [00:09<00:00, 12.57it/s]
+Epoch 204: train RMSE=137.44 m | val RMSE=137.29 m | gap=-0.15 m | active_frac=0.64
+Epoch 205/800: 100%|██████████| 122/122 [00:09<00:00, 12.61it/s]
+Epoch 205: train RMSE=137.09 m | val RMSE=136.50 m | gap=-0.59 m | active_frac=0.64
+Epoch 206/800: 100%|██████████| 122/122 [00:09<00:00, 12.61it/s]
+Epoch 206: train RMSE=137.08 m | val RMSE=140.65 m | gap=3.57 m | active_frac=0.64
+Epoch 207/800: 100%|██████████| 122/122 [00:09<00:00, 12.60it/s]
+Epoch 207: train RMSE=136.71 m | val RMSE=136.45 m | gap=-0.26 m | active_frac=0.65
+Epoch 208/800: 100%|██████████| 122/122 [00:09<00:00, 12.55it/s]
+Epoch 208: train RMSE=136.56 m | val RMSE=136.14 m | gap=-0.42 m | active_frac=0.65
+Epoch 209/800: 100%|██████████| 122/122 [00:09<00:00, 12.53it/s]
+Epoch 209: train RMSE=136.95 m | val RMSE=135.33 m | gap=-1.62 m | active_frac=0.65
+Epoch 210/800: 100%|██████████| 122/122 [00:09<00:00, 12.54it/s]
+Epoch 210: train RMSE=135.90 m | val RMSE=135.78 m | gap=-0.12 m | active_frac=0.66
+Epoch 211/800: 100%|██████████| 122/122 [00:09<00:00, 12.63it/s]
+Epoch 211: train RMSE=136.39 m | val RMSE=134.99 m | gap=-1.40 m | active_frac=0.66
+Epoch 212/800: 100%|██████████| 122/122 [00:09<00:00, 12.68it/s]
+Epoch 212: train RMSE=135.84 m | val RMSE=136.37 m | gap=0.53 m | active_frac=0.66
+Epoch 213/800: 100%|██████████| 122/122 [00:09<00:00, 12.68it/s]
+Epoch 213: train RMSE=135.85 m | val RMSE=135.11 m | gap=-0.74 m | active_frac=0.67
+Epoch 214/800: 100%|██████████| 122/122 [00:09<00:00, 12.61it/s]
+Epoch 214: train RMSE=135.72 m | val RMSE=134.68 m | gap=-1.04 m | active_frac=0.67
+Epoch 215/800: 100%|██████████| 122/122 [00:09<00:00, 12.73it/s]
+Epoch 215: train RMSE=135.29 m | val RMSE=134.62 m | gap=-0.67 m | active_frac=0.67
+Epoch 216/800: 100%|██████████| 122/122 [00:09<00:00, 12.63it/s]
+Epoch 216: train RMSE=135.44 m | val RMSE=135.44 m | gap=-0.00 m | active_frac=0.68
+Epoch 217/800: 100%|██████████| 122/122 [00:09<00:00, 12.69it/s]
+Epoch 217: train RMSE=135.33 m | val RMSE=135.08 m | gap=-0.25 m | active_frac=0.68
+Epoch 218/800: 100%|██████████| 122/122 [00:09<00:00, 12.24it/s]
+Epoch 218: train RMSE=134.92 m | val RMSE=135.80 m | gap=0.88 m | active_frac=0.68
+Epoch 219/800: 100%|██████████| 122/122 [00:09<00:00, 12.48it/s]
+Epoch 219: train RMSE=134.67 m | val RMSE=135.09 m | gap=0.42 m | active_frac=0.68
+Epoch 220/800: 100%|██████████| 122/122 [00:09<00:00, 12.69it/s]
+Epoch 220: train RMSE=134.87 m | val RMSE=133.56 m | gap=-1.31 m | active_frac=0.69
+Epoch 221/800: 100%|██████████| 122/122 [00:09<00:00, 12.72it/s]
+Epoch 221: train RMSE=134.51 m | val RMSE=133.70 m | gap=-0.81 m | active_frac=0.69
+Epoch 222/800: 100%|██████████| 122/122 [00:09<00:00, 12.72it/s]
+Epoch 222: train RMSE=134.85 m | val RMSE=134.52 m | gap=-0.33 m | active_frac=0.69
+Epoch 223/800: 100%|██████████| 122/122 [00:09<00:00, 12.73it/s]
+Epoch 223: train RMSE=134.22 m | val RMSE=133.26 m | gap=-0.96 m | active_frac=0.70
+Epoch 224/800: 100%|██████████| 122/122 [00:09<00:00, 12.80it/s]
+Epoch 224: train RMSE=134.18 m | val RMSE=133.40 m | gap=-0.78 m | active_frac=0.70
+Epoch 225/800: 100%|██████████| 122/122 [00:09<00:00, 12.73it/s]
+Epoch 225: train RMSE=133.72 m | val RMSE=133.16 m | gap=-0.56 m | active_frac=0.70
+Epoch 226/800: 100%|██████████| 122/122 [00:09<00:00, 12.68it/s]
+Epoch 226: train RMSE=134.21 m | val RMSE=135.06 m | gap=0.86 m | active_frac=0.71
+Epoch 227/800: 100%|██████████| 122/122 [00:09<00:00, 12.50it/s]
+Epoch 227: train RMSE=133.61 m | val RMSE=133.40 m | gap=-0.21 m | active_frac=0.71
+Epoch 228/800: 100%|██████████| 122/122 [00:09<00:00, 12.75it/s]
+Epoch 228: train RMSE=133.52 m | val RMSE=132.85 m | gap=-0.67 m | active_frac=0.71
+Epoch 229/800: 100%|██████████| 122/122 [00:09<00:00, 12.69it/s]
+Epoch 229: train RMSE=133.51 m | val RMSE=132.69 m | gap=-0.81 m | active_frac=0.72
+Epoch 230/800: 100%|██████████| 122/122 [00:09<00:00, 12.69it/s]
+Epoch 230: train RMSE=133.06 m | val RMSE=134.94 m | gap=1.88 m | active_frac=0.72
+Epoch 231/800: 100%|██████████| 122/122 [00:09<00:00, 12.40it/s]
+Epoch 231: train RMSE=133.20 m | val RMSE=131.34 m | gap=-1.86 m | active_frac=0.72
+Epoch 232/800: 100%|██████████| 122/122 [00:09<00:00, 12.72it/s]
+Epoch 232: train RMSE=132.89 m | val RMSE=132.63 m | gap=-0.26 m | active_frac=0.72
+Epoch 233/800: 100%|██████████| 122/122 [00:09<00:00, 12.76it/s]
+Epoch 233: train RMSE=132.83 m | val RMSE=132.21 m | gap=-0.62 m | active_frac=0.73
+Epoch 234/800: 100%|██████████| 122/122 [00:09<00:00, 12.73it/s]
+Epoch 234: train RMSE=132.84 m | val RMSE=134.22 m | gap=1.37 m | active_frac=0.73
+Epoch 235/800: 100%|██████████| 122/122 [00:09<00:00, 12.71it/s]
+Epoch 235: train RMSE=132.56 m | val RMSE=131.91 m | gap=-0.65 m | active_frac=0.73
+Epoch 236/800: 100%|██████████| 122/122 [00:09<00:00, 12.70it/s]
+Epoch 236: train RMSE=132.44 m | val RMSE=133.55 m | gap=1.11 m | active_frac=0.74
+Epoch 237/800: 100%|██████████| 122/122 [00:09<00:00, 12.76it/s]
+Epoch 237: train RMSE=132.50 m | val RMSE=131.62 m | gap=-0.88 m | active_frac=0.74
+Epoch 238/800: 100%|██████████| 122/122 [00:09<00:00, 12.77it/s]
+Epoch 238: train RMSE=132.06 m | val RMSE=131.54 m | gap=-0.52 m | active_frac=0.74
+Epoch 239/800: 100%|██████████| 122/122 [00:09<00:00, 12.73it/s]
+Epoch 239: train RMSE=132.58 m | val RMSE=131.24 m | gap=-1.33 m | active_frac=0.75
+Epoch 240/800: 100%|██████████| 122/122 [00:09<00:00, 12.66it/s]
+Epoch 240: train RMSE=132.29 m | val RMSE=131.70 m | gap=-0.58 m | active_frac=0.75
+Epoch 241/800: 100%|██████████| 122/122 [00:09<00:00, 12.74it/s]
+Epoch 241: train RMSE=131.82 m | val RMSE=133.84 m | gap=2.02 m | active_frac=0.75
+Epoch 242/800: 100%|██████████| 122/122 [00:09<00:00, 12.72it/s]
+Epoch 242: train RMSE=131.57 m | val RMSE=131.47 m | gap=-0.09 m | active_frac=0.76
+Epoch 243/800: 100%|██████████| 122/122 [00:09<00:00, 12.76it/s]
+Epoch 243: train RMSE=131.49 m | val RMSE=131.34 m | gap=-0.15 m | active_frac=0.76
+Epoch 244/800: 100%|██████████| 122/122 [00:09<00:00, 12.67it/s]
+Epoch 244: train RMSE=131.52 m | val RMSE=131.99 m | gap=0.47 m | active_frac=0.76
+Epoch 245/800: 100%|██████████| 122/122 [00:09<00:00, 12.77it/s]
+Epoch 245: train RMSE=131.71 m | val RMSE=132.51 m | gap=0.80 m | active_frac=0.77
+Epoch 246/800: 100%|██████████| 122/122 [00:09<00:00, 12.72it/s]
+Epoch 246: train RMSE=130.71 m | val RMSE=129.92 m | gap=-0.79 m | active_frac=0.77
+Epoch 247/800: 100%|██████████| 122/122 [00:09<00:00, 12.76it/s]
+Epoch 247: train RMSE=131.21 m | val RMSE=131.66 m | gap=0.45 m | active_frac=0.77
+Epoch 248/800: 100%|██████████| 122/122 [00:09<00:00, 12.75it/s]
+Epoch 248: train RMSE=131.14 m | val RMSE=131.04 m | gap=-0.10 m | active_frac=0.78
+Epoch 249/800: 100%|██████████| 122/122 [00:09<00:00, 12.76it/s]
+Epoch 249: train RMSE=130.77 m | val RMSE=130.57 m | gap=-0.20 m | active_frac=0.78
+Epoch 250/800: 100%|██████████| 122/122 [00:09<00:00, 12.74it/s]
+Epoch 250: train RMSE=131.37 m | val RMSE=130.46 m | gap=-0.91 m | active_frac=0.78
+Epoch 251/800: 100%|██████████| 122/122 [00:09<00:00, 12.74it/s]
+Epoch 251: train RMSE=130.26 m | val RMSE=130.62 m | gap=0.36 m | active_frac=0.78
+Epoch 252/800: 100%|██████████| 122/122 [00:09<00:00, 12.73it/s]
+Epoch 252: train RMSE=130.40 m | val RMSE=130.32 m | gap=-0.08 m | active_frac=0.79
+Epoch 253/800: 100%|██████████| 122/122 [00:09<00:00, 12.68it/s]
+Epoch 253: train RMSE=130.38 m | val RMSE=130.02 m | gap=-0.37 m | active_frac=0.79
+Epoch 254/800: 100%|██████████| 122/122 [00:09<00:00, 12.75it/s]
+Epoch 254: train RMSE=130.50 m | val RMSE=129.89 m | gap=-0.62 m | active_frac=0.79
+Epoch 255/800: 100%|██████████| 122/122 [00:09<00:00, 12.73it/s]
+Epoch 255: train RMSE=129.82 m | val RMSE=131.32 m | gap=1.50 m | active_frac=0.80
+Epoch 256/800: 100%|██████████| 122/122 [00:09<00:00, 12.75it/s]
+Epoch 256: train RMSE=129.87 m | val RMSE=129.75 m | gap=-0.12 m | active_frac=0.80
+Epoch 257/800: 100%|██████████| 122/122 [00:09<00:00, 12.75it/s]
+Epoch 257: train RMSE=130.08 m | val RMSE=128.62 m | gap=-1.46 m | active_frac=0.80
+Epoch 258/800: 100%|██████████| 122/122 [00:09<00:00, 12.73it/s]
+Epoch 258: train RMSE=129.73 m | val RMSE=132.42 m | gap=2.69 m | active_frac=0.81
+Epoch 259/800: 100%|██████████| 122/122 [00:09<00:00, 12.77it/s]
+Epoch 259: train RMSE=130.05 m | val RMSE=129.46 m | gap=-0.58 m | active_frac=0.81
+Epoch 260/800: 100%|██████████| 122/122 [00:09<00:00, 12.72it/s]
+Epoch 260: train RMSE=129.56 m | val RMSE=128.85 m | gap=-0.72 m | active_frac=0.81
+Epoch 261/800: 100%|██████████| 122/122 [00:09<00:00, 12.72it/s]
+Epoch 261: train RMSE=129.11 m | val RMSE=130.04 m | gap=0.93 m | active_frac=0.82
+Epoch 262/800: 100%|██████████| 122/122 [00:09<00:00, 12.77it/s]
+Epoch 262: train RMSE=129.26 m | val RMSE=128.29 m | gap=-0.97 m | active_frac=0.82
+Epoch 263/800: 100%|██████████| 122/122 [00:09<00:00, 12.65it/s]
+Epoch 263: train RMSE=128.89 m | val RMSE=128.75 m | gap=-0.14 m | active_frac=0.82
+Epoch 264/800: 100%|██████████| 122/122 [00:09<00:00, 12.73it/s]
+Epoch 264: train RMSE=128.91 m | val RMSE=128.63 m | gap=-0.29 m | active_frac=0.82
+Epoch 265/800: 100%|██████████| 122/122 [00:09<00:00, 12.22it/s]
+Epoch 265: train RMSE=129.01 m | val RMSE=129.63 m | gap=0.62 m | active_frac=0.83
+Epoch 266/800: 100%|██████████| 122/122 [00:09<00:00, 12.72it/s]
+Epoch 266: train RMSE=128.86 m | val RMSE=127.49 m | gap=-1.37 m | active_frac=0.83
+Epoch 267/800: 100%|██████████| 122/122 [00:09<00:00, 12.71it/s]
+Epoch 267: train RMSE=128.33 m | val RMSE=131.37 m | gap=3.04 m | active_frac=0.83
+Epoch 268/800: 100%|██████████| 122/122 [00:09<00:00, 12.71it/s]
+Epoch 268: train RMSE=128.58 m | val RMSE=128.51 m | gap=-0.07 m | active_frac=0.84
+Epoch 269/800: 100%|██████████| 122/122 [00:09<00:00, 12.64it/s]
+Epoch 269: train RMSE=128.16 m | val RMSE=127.75 m | gap=-0.41 m | active_frac=0.84
+Epoch 270/800: 100%|██████████| 122/122 [00:09<00:00, 12.66it/s]
+Epoch 270: train RMSE=128.13 m | val RMSE=129.59 m | gap=1.46 m | active_frac=0.84
+Epoch 271/800: 100%|██████████| 122/122 [00:09<00:00, 12.66it/s]
+Epoch 271: train RMSE=128.09 m | val RMSE=127.47 m | gap=-0.62 m | active_frac=0.85
+Epoch 272/800: 100%|██████████| 122/122 [00:09<00:00, 12.71it/s]
+Epoch 272: train RMSE=128.05 m | val RMSE=128.04 m | gap=-0.01 m | active_frac=0.85
+Epoch 273/800: 100%|██████████| 122/122 [00:09<00:00, 12.77it/s]
+Epoch 273: train RMSE=127.38 m | val RMSE=127.02 m | gap=-0.36 m | active_frac=0.85
+Epoch 274/800: 100%|██████████| 122/122 [00:09<00:00, 12.73it/s]
+Epoch 274: train RMSE=127.98 m | val RMSE=127.30 m | gap=-0.68 m | active_frac=0.86
+Epoch 275/800: 100%|██████████| 122/122 [00:09<00:00, 12.72it/s]
+Epoch 275: train RMSE=127.70 m | val RMSE=127.02 m | gap=-0.68 m | active_frac=0.86
+Epoch 276/800: 100%|██████████| 122/122 [00:09<00:00, 12.77it/s]
+Epoch 276: train RMSE=127.55 m | val RMSE=130.44 m | gap=2.89 m | active_frac=0.86
+Epoch 277/800: 100%|██████████| 122/122 [00:09<00:00, 12.76it/s]
+Epoch 277: train RMSE=127.45 m | val RMSE=126.44 m | gap=-1.00 m | active_frac=0.87
+Epoch 278/800: 100%|██████████| 122/122 [00:09<00:00, 12.71it/s]
+Epoch 278: train RMSE=127.12 m | val RMSE=127.70 m | gap=0.58 m | active_frac=0.87
+Epoch 279/800: 100%|██████████| 122/122 [00:09<00:00, 12.67it/s]
+Epoch 279: train RMSE=127.13 m | val RMSE=126.96 m | gap=-0.17 m | active_frac=0.87
+Epoch 280/800: 100%|██████████| 122/122 [00:09<00:00, 12.73it/s]
+Epoch 280: train RMSE=127.06 m | val RMSE=127.90 m | gap=0.84 m | active_frac=0.88
+Epoch 281/800: 100%|██████████| 122/122 [00:09<00:00, 12.71it/s]
+Epoch 281: train RMSE=127.11 m | val RMSE=127.09 m | gap=-0.02 m | active_frac=0.88
+Epoch 282/800: 100%|██████████| 122/122 [00:09<00:00, 12.74it/s]
+Epoch 282: train RMSE=126.67 m | val RMSE=126.62 m | gap=-0.05 m | active_frac=0.88
+Epoch 283/800: 100%|██████████| 122/122 [00:09<00:00, 12.74it/s]
+Epoch 283: train RMSE=126.84 m | val RMSE=126.31 m | gap=-0.53 m | active_frac=0.88
+Epoch 284/800: 100%|██████████| 122/122 [00:09<00:00, 12.74it/s]
+Epoch 284: train RMSE=126.55 m | val RMSE=126.77 m | gap=0.21 m | active_frac=0.89
+Epoch 285/800: 100%|██████████| 122/122 [00:09<00:00, 12.73it/s]
+Epoch 285: train RMSE=126.02 m | val RMSE=126.15 m | gap=0.13 m | active_frac=0.89
+Epoch 286/800: 100%|██████████| 122/122 [00:09<00:00, 12.76it/s]
+Epoch 286: train RMSE=126.41 m | val RMSE=125.59 m | gap=-0.82 m | active_frac=0.89
+Epoch 287/800: 100%|██████████| 122/122 [00:09<00:00, 12.77it/s]
+Epoch 287: train RMSE=126.10 m | val RMSE=126.91 m | gap=0.81 m | active_frac=0.90
+Epoch 288/800: 100%|██████████| 122/122 [00:09<00:00, 12.72it/s]
+Epoch 288: train RMSE=125.94 m | val RMSE=125.46 m | gap=-0.47 m | active_frac=0.90
+Epoch 289/800: 100%|██████████| 122/122 [00:09<00:00, 12.70it/s]
+Epoch 289: train RMSE=125.83 m | val RMSE=125.11 m | gap=-0.72 m | active_frac=0.90
+Epoch 290/800: 100%|██████████| 122/122 [00:09<00:00, 12.73it/s]
+Epoch 290: train RMSE=125.64 m | val RMSE=125.62 m | gap=-0.02 m | active_frac=0.91
+Epoch 291/800: 100%|██████████| 122/122 [00:09<00:00, 12.70it/s]
+Epoch 291: train RMSE=125.66 m | val RMSE=125.81 m | gap=0.15 m | active_frac=0.91
+Epoch 292/800: 100%|██████████| 122/122 [00:09<00:00, 12.71it/s]
+Epoch 292: train RMSE=125.38 m | val RMSE=127.17 m | gap=1.79 m | active_frac=0.91
+Epoch 293/800: 100%|██████████| 122/122 [00:09<00:00, 12.77it/s]
+Epoch 293: train RMSE=125.85 m | val RMSE=125.00 m | gap=-0.85 m | active_frac=0.92
+Epoch 294/800: 100%|██████████| 122/122 [00:09<00:00, 12.71it/s]
+Epoch 294: train RMSE=124.82 m | val RMSE=126.01 m | gap=1.18 m | active_frac=0.92
+Epoch 295/800: 100%|██████████| 122/122 [00:09<00:00, 12.70it/s]
+Epoch 295: train RMSE=125.39 m | val RMSE=124.87 m | gap=-0.51 m | active_frac=0.92
+Epoch 296/800: 100%|██████████| 122/122 [00:09<00:00, 12.68it/s]
+Epoch 296: train RMSE=125.03 m | val RMSE=126.56 m | gap=1.53 m | active_frac=0.93
+Epoch 297/800: 100%|██████████| 122/122 [00:09<00:00, 12.74it/s]
+Epoch 297: train RMSE=124.87 m | val RMSE=125.06 m | gap=0.19 m | active_frac=0.93
+Epoch 298/800: 100%|██████████| 122/122 [00:09<00:00, 12.59it/s]
+Epoch 298: train RMSE=125.17 m | val RMSE=124.38 m | gap=-0.79 m | active_frac=0.93
+Epoch 299/800: 100%|██████████| 122/122 [00:09<00:00, 12.59it/s]
+Epoch 299: train RMSE=124.41 m | val RMSE=124.02 m | gap=-0.40 m | active_frac=0.93
+Epoch 300/800: 100%|██████████| 122/122 [00:09<00:00, 12.60it/s]
+Epoch 300: train RMSE=124.45 m | val RMSE=124.41 m | gap=-0.04 m | active_frac=0.94
+Epoch 301/800: 100%|██████████| 122/122 [00:09<00:00, 12.70it/s]
+Epoch 301: train RMSE=124.51 m | val RMSE=124.26 m | gap=-0.25 m | active_frac=0.94
+Epoch 302/800: 100%|██████████| 122/122 [00:12<00:00, 10.05it/s]
+Epoch 302: train RMSE=123.95 m | val RMSE=124.14 m | gap=0.19 m | active_frac=0.94
+Epoch 303/800: 100%|██████████| 122/122 [00:11<00:00, 10.24it/s]
+Epoch 303: train RMSE=124.34 m | val RMSE=123.85 m | gap=-0.50 m | active_frac=0.95
+Epoch 304/800: 100%|██████████| 122/122 [00:12<00:00,  9.51it/s]
+Epoch 304: train RMSE=124.04 m | val RMSE=123.62 m | gap=-0.42 m | active_frac=0.95
+Epoch 305/800: 100%|██████████| 122/122 [00:12<00:00, 10.07it/s]
+Epoch 305: train RMSE=123.82 m | val RMSE=123.47 m | gap=-0.35 m | active_frac=0.95
+Epoch 306/800: 100%|██████████| 122/122 [00:11<00:00, 10.17it/s]
+Epoch 306: train RMSE=123.80 m | val RMSE=123.71 m | gap=-0.09 m | active_frac=0.96
+Epoch 307/800: 100%|██████████| 122/122 [00:11<00:00, 10.40it/s]
+Epoch 307: train RMSE=123.79 m | val RMSE=124.11 m | gap=0.32 m | active_frac=0.96
+Epoch 308/800: 100%|██████████| 122/122 [00:11<00:00, 10.25it/s]
+Epoch 308: train RMSE=123.47 m | val RMSE=123.32 m | gap=-0.15 m | active_frac=0.96
+Epoch 309/800: 100%|██████████| 122/122 [00:11<00:00, 10.19it/s]
+Epoch 309: train RMSE=123.40 m | val RMSE=121.96 m | gap=-1.45 m | active_frac=0.97
+Epoch 310/800: 100%|██████████| 122/122 [00:11<00:00, 10.22it/s]
+Epoch 310: train RMSE=123.56 m | val RMSE=123.03 m | gap=-0.52 m | active_frac=0.97
+Epoch 311/800: 100%|██████████| 122/122 [00:11<00:00, 10.37it/s]
+Epoch 311: train RMSE=123.33 m | val RMSE=123.61 m | gap=0.28 m | active_frac=0.97
+Epoch 312/800: 100%|██████████| 122/122 [00:12<00:00, 10.14it/s]
+Epoch 312: train RMSE=123.04 m | val RMSE=122.52 m | gap=-0.52 m | active_frac=0.97
+Epoch 313/800: 100%|██████████| 122/122 [00:12<00:00, 10.17it/s]
+Epoch 313: train RMSE=123.11 m | val RMSE=124.15 m | gap=1.04 m | active_frac=0.98
+Epoch 314/800: 100%|██████████| 122/122 [00:11<00:00, 10.22it/s]
+Epoch 314: train RMSE=122.84 m | val RMSE=122.97 m | gap=0.13 m | active_frac=0.98
+Epoch 315/800: 100%|██████████| 122/122 [00:11<00:00, 10.28it/s]
+Epoch 315: train RMSE=122.91 m | val RMSE=123.09 m | gap=0.17 m | active_frac=0.98
+Epoch 316/800: 100%|██████████| 122/122 [00:11<00:00, 10.71it/s]
+Epoch 316: train RMSE=122.10 m | val RMSE=122.15 m | gap=0.05 m | active_frac=0.99
+Epoch 317/800: 100%|██████████| 122/122 [00:09<00:00, 12.37it/s]
+Epoch 317: train RMSE=122.65 m | val RMSE=123.30 m | gap=0.65 m | active_frac=0.99
+Epoch 318/800: 100%|██████████| 122/122 [00:09<00:00, 12.61it/s]
+Epoch 318: train RMSE=122.13 m | val RMSE=122.83 m | gap=0.71 m | active_frac=0.99
+Epoch 319/800: 100%|██████████| 122/122 [00:10<00:00, 12.04it/s]
+Epoch 319: train RMSE=122.08 m | val RMSE=121.98 m | gap=-0.10 m | active_frac=1.00
+Epoch 320/800: 100%|██████████| 122/122 [00:10<00:00, 11.21it/s]
+Epoch 320: train RMSE=122.35 m | val RMSE=122.46 m | gap=0.11 m | active_frac=1.00
+Epoch 321/800: 100%|██████████| 122/122 [00:11<00:00, 10.65it/s]
+Epoch 321: train RMSE=121.88 m | val RMSE=121.45 m | gap=-0.43 m | active_frac=1.00
+Epoch 322/800: 100%|██████████| 122/122 [00:12<00:00, 10.05it/s]
+Epoch 322: train RMSE=121.53 m | val RMSE=122.07 m | gap=0.54 m | active_frac=1.00
+Epoch 323/800: 100%|██████████| 122/122 [00:12<00:00, 10.06it/s]
+Epoch 323: train RMSE=121.83 m | val RMSE=121.07 m | gap=-0.76 m | active_frac=1.00
+Epoch 324/800: 100%|██████████| 122/122 [00:12<00:00, 10.06it/s]
+Epoch 324: train RMSE=122.08 m | val RMSE=121.30 m | gap=-0.77 m | active_frac=1.00
+Epoch 325/800: 100%|██████████| 122/122 [00:12<00:00, 10.11it/s]
+Epoch 325: train RMSE=120.90 m | val RMSE=121.80 m | gap=0.91 m | active_frac=1.00
+Epoch 326/800: 100%|██████████| 122/122 [00:11<00:00, 10.18it/s]
+Epoch 326: train RMSE=121.22 m | val RMSE=119.88 m | gap=-1.34 m | active_frac=1.00
+Epoch 327/800: 100%|██████████| 122/122 [00:11<00:00, 10.23it/s]
+Epoch 327: train RMSE=121.36 m | val RMSE=123.20 m | gap=1.84 m | active_frac=1.00
+Epoch 328/800: 100%|██████████| 122/122 [00:11<00:00, 10.26it/s]
+Epoch 328: train RMSE=121.31 m | val RMSE=120.62 m | gap=-0.69 m | active_frac=1.00
+Epoch 329/800: 100%|██████████| 122/122 [00:11<00:00, 10.38it/s]
+Epoch 329: train RMSE=120.63 m | val RMSE=121.30 m | gap=0.67 m | active_frac=1.00
+Epoch 330/800: 100%|██████████| 122/122 [00:11<00:00, 10.24it/s]
+Epoch 330: train RMSE=121.12 m | val RMSE=120.54 m | gap=-0.57 m | active_frac=1.00
+Epoch 331/800: 100%|██████████| 122/122 [00:11<00:00, 10.92it/s]
+Epoch 331: train RMSE=120.59 m | val RMSE=120.36 m | gap=-0.23 m | active_frac=1.00
+Epoch 332/800: 100%|██████████| 122/122 [00:10<00:00, 11.20it/s]
+Epoch 332: train RMSE=120.59 m | val RMSE=120.50 m | gap=-0.09 m | active_frac=1.00
+Epoch 333/800: 100%|██████████| 122/122 [00:12<00:00, 10.02it/s]
+Epoch 333: train RMSE=120.50 m | val RMSE=120.27 m | gap=-0.23 m | active_frac=1.00
+Epoch 334/800: 100%|██████████| 122/122 [00:12<00:00, 10.06it/s]
+Epoch 334: train RMSE=120.33 m | val RMSE=120.16 m | gap=-0.17 m | active_frac=1.00
+Epoch 335/800: 100%|██████████| 122/122 [00:12<00:00,  9.78it/s]
+Epoch 335: train RMSE=119.98 m | val RMSE=120.19 m | gap=0.22 m | active_frac=1.00
+Epoch 336/800: 100%|██████████| 122/122 [00:12<00:00, 10.07it/s]
+Epoch 336: train RMSE=120.62 m | val RMSE=120.07 m | gap=-0.55 m | active_frac=1.00
+Epoch 337/800: 100%|██████████| 122/122 [00:12<00:00, 10.16it/s]
+Epoch 337: train RMSE=119.63 m | val RMSE=120.03 m | gap=0.40 m | active_frac=1.00
+Epoch 338/800: 100%|██████████| 122/122 [00:11<00:00, 10.28it/s]
+Epoch 338: train RMSE=119.62 m | val RMSE=120.56 m | gap=0.94 m | active_frac=1.00
+Epoch 339/800: 100%|██████████| 122/122 [00:11<00:00, 10.37it/s]
+Epoch 339: train RMSE=119.62 m | val RMSE=118.36 m | gap=-1.26 m | active_frac=1.00
+Epoch 340/800: 100%|██████████| 122/122 [00:11<00:00, 10.26it/s]
+Epoch 340: train RMSE=119.31 m | val RMSE=120.16 m | gap=0.85 m | active_frac=1.00
+Epoch 341/800: 100%|██████████| 122/122 [00:11<00:00, 10.17it/s]
+Epoch 341: train RMSE=119.52 m | val RMSE=119.28 m | gap=-0.24 m | active_frac=1.00
+Epoch 342/800: 100%|██████████| 122/122 [00:12<00:00, 10.17it/s]
+Epoch 342: train RMSE=119.36 m | val RMSE=118.90 m | gap=-0.45 m | active_frac=1.00
+Epoch 343/800: 100%|██████████| 122/122 [00:11<00:00, 10.22it/s]
+Epoch 343: train RMSE=118.81 m | val RMSE=118.92 m | gap=0.12 m | active_frac=1.00
+Epoch 344/800: 100%|██████████| 122/122 [00:11<00:00, 10.35it/s]
+Epoch 344: train RMSE=118.88 m | val RMSE=118.74 m | gap=-0.15 m | active_frac=1.00
+Epoch 345/800: 100%|██████████| 122/122 [00:11<00:00, 10.18it/s]
+Epoch 345: train RMSE=119.22 m | val RMSE=118.74 m | gap=-0.47 m | active_frac=1.00
+Epoch 346/800: 100%|██████████| 122/122 [00:11<00:00, 10.21it/s]
+Epoch 346: train RMSE=118.64 m | val RMSE=118.51 m | gap=-0.13 m | active_frac=1.00
+Epoch 347/800: 100%|██████████| 122/122 [00:11<00:00, 10.20it/s]
+Epoch 347: train RMSE=118.39 m | val RMSE=118.26 m | gap=-0.12 m | active_frac=1.00
+Epoch 348/800: 100%|██████████| 122/122 [00:12<00:00, 10.15it/s]
+Epoch 348: train RMSE=118.47 m | val RMSE=118.29 m | gap=-0.18 m | active_frac=1.00
+Epoch 349/800: 100%|██████████| 122/122 [00:11<00:00, 10.42it/s]
+Epoch 349: train RMSE=118.47 m | val RMSE=118.03 m | gap=-0.44 m | active_frac=1.00
+Epoch 350/800: 100%|██████████| 122/122 [00:11<00:00, 10.34it/s]
+Epoch 350: train RMSE=118.06 m | val RMSE=117.96 m | gap=-0.11 m | active_frac=1.00
+Epoch 351/800: 100%|██████████| 122/122 [00:11<00:00, 10.26it/s]
+Epoch 351: train RMSE=118.00 m | val RMSE=118.58 m | gap=0.58 m | active_frac=1.00
+Epoch 352/800: 100%|██████████| 122/122 [00:11<00:00, 10.24it/s]
+Epoch 352: train RMSE=117.84 m | val RMSE=117.51 m | gap=-0.33 m | active_frac=1.00
+Epoch 353/800: 100%|██████████| 122/122 [00:11<00:00, 10.22it/s]
+Epoch 353: train RMSE=117.90 m | val RMSE=117.60 m | gap=-0.30 m | active_frac=1.00
+Epoch 354/800: 100%|██████████| 122/122 [00:11<00:00, 10.37it/s]
+Epoch 354: train RMSE=117.78 m | val RMSE=117.47 m | gap=-0.32 m | active_frac=1.00
+Epoch 355/800: 100%|██████████| 122/122 [00:11<00:00, 10.23it/s]
+Epoch 355: train RMSE=117.40 m | val RMSE=117.24 m | gap=-0.16 m | active_frac=1.00
+Epoch 356/800: 100%|██████████| 122/122 [00:11<00:00, 10.18it/s]
+Epoch 356: train RMSE=117.38 m | val RMSE=116.70 m | gap=-0.68 m | active_frac=1.00
+Epoch 357/800: 100%|██████████| 122/122 [00:11<00:00, 10.20it/s]
+Epoch 357: train RMSE=117.56 m | val RMSE=116.79 m | gap=-0.76 m | active_frac=1.00
+Epoch 358/800: 100%|██████████| 122/122 [00:11<00:00, 10.27it/s]
+Epoch 358: train RMSE=117.18 m | val RMSE=116.49 m | gap=-0.70 m | active_frac=1.00
+Epoch 359/800: 100%|██████████| 122/122 [00:11<00:00, 10.18it/s]
+Epoch 359: train RMSE=117.00 m | val RMSE=116.77 m | gap=-0.23 m | active_frac=1.00
+Epoch 360/800: 100%|██████████| 122/122 [00:10<00:00, 11.23it/s]
+Epoch 360: train RMSE=116.67 m | val RMSE=116.50 m | gap=-0.17 m | active_frac=1.00
+Epoch 361/800: 100%|██████████| 122/122 [00:11<00:00, 10.61it/s]
+Epoch 361: train RMSE=117.01 m | val RMSE=117.81 m | gap=0.80 m | active_frac=1.00
+Epoch 362/800: 100%|██████████| 122/122 [00:11<00:00, 10.26it/s]
+Epoch 362: train RMSE=116.71 m | val RMSE=117.47 m | gap=0.76 m | active_frac=1.00
+Epoch 363/800: 100%|██████████| 122/122 [00:11<00:00, 10.28it/s]
+Epoch 363: train RMSE=116.54 m | val RMSE=116.52 m | gap=-0.02 m | active_frac=1.00
+Epoch 364/800: 100%|██████████| 122/122 [00:11<00:00, 10.18it/s]
+Epoch 364: train RMSE=116.26 m | val RMSE=116.40 m | gap=0.14 m | active_frac=1.00
+Epoch 365/800: 100%|██████████| 122/122 [00:12<00:00, 10.11it/s]
+Epoch 365: train RMSE=116.19 m | val RMSE=116.06 m | gap=-0.13 m | active_frac=1.00
+Epoch 366/800: 100%|██████████| 122/122 [00:11<00:00, 10.26it/s]
+Epoch 366: train RMSE=116.10 m | val RMSE=117.25 m | gap=1.15 m | active_frac=1.00
+Epoch 367/800: 100%|██████████| 122/122 [00:11<00:00, 10.31it/s]
+Epoch 367: train RMSE=116.39 m | val RMSE=114.77 m | gap=-1.61 m | active_frac=1.00
+Epoch 368/800: 100%|██████████| 122/122 [00:11<00:00, 10.41it/s]
+Epoch 368: train RMSE=115.86 m | val RMSE=115.42 m | gap=-0.44 m | active_frac=1.00
+Epoch 369/800: 100%|██████████| 122/122 [00:11<00:00, 10.24it/s]
+Epoch 369: train RMSE=115.41 m | val RMSE=115.08 m | gap=-0.33 m | active_frac=1.00
+Epoch 370/800: 100%|██████████| 122/122 [00:12<00:00, 10.15it/s]
+Epoch 370: train RMSE=115.51 m | val RMSE=115.36 m | gap=-0.15 m | active_frac=1.00
+Epoch 371/800: 100%|██████████| 122/122 [00:11<00:00, 10.19it/s]
+Epoch 371: train RMSE=115.51 m | val RMSE=115.27 m | gap=-0.25 m | active_frac=1.00
+Epoch 372/800: 100%|██████████| 122/122 [00:12<00:00,  9.93it/s]
+Epoch 372: train RMSE=115.18 m | val RMSE=115.57 m | gap=0.38 m | active_frac=1.00
+Epoch 373/800: 100%|██████████| 122/122 [00:11<00:00, 10.83it/s]
+Epoch 373: train RMSE=115.18 m | val RMSE=114.48 m | gap=-0.70 m | active_frac=1.00
+Epoch 374/800: 100%|██████████| 122/122 [00:11<00:00, 10.17it/s]
+Epoch 374: train RMSE=115.09 m | val RMSE=114.95 m | gap=-0.14 m | active_frac=1.00
+Epoch 375/800: 100%|██████████| 122/122 [00:11<00:00, 10.18it/s]
+Epoch 375: train RMSE=114.79 m | val RMSE=114.88 m | gap=0.09 m | active_frac=1.00
+Epoch 376/800: 100%|██████████| 122/122 [00:11<00:00, 10.30it/s]
+Epoch 376: train RMSE=114.83 m | val RMSE=115.81 m | gap=0.98 m | active_frac=1.00
+Epoch 377/800: 100%|██████████| 122/122 [00:11<00:00, 10.28it/s]
+Epoch 377: train RMSE=114.67 m | val RMSE=114.54 m | gap=-0.14 m | active_frac=1.00
+Epoch 378/800: 100%|██████████| 122/122 [00:12<00:00, 10.11it/s]
+Epoch 378: train RMSE=114.49 m | val RMSE=113.94 m | gap=-0.55 m | active_frac=1.00
+Epoch 379/800: 100%|██████████| 122/122 [00:12<00:00, 10.14it/s]
+Epoch 379: train RMSE=114.43 m | val RMSE=114.70 m | gap=0.27 m | active_frac=1.00
+Epoch 380/800: 100%|██████████| 122/122 [00:12<00:00, 10.13it/s]
+Epoch 380: train RMSE=114.49 m | val RMSE=113.72 m | gap=-0.77 m | active_frac=1.00
+Epoch 381/800: 100%|██████████| 122/122 [00:11<00:00, 10.22it/s]
+Epoch 381: train RMSE=113.96 m | val RMSE=114.73 m | gap=0.77 m | active_frac=1.00
+Epoch 382/800: 100%|██████████| 122/122 [00:11<00:00, 10.23it/s]
+Epoch 382: train RMSE=113.93 m | val RMSE=114.39 m | gap=0.46 m | active_frac=1.00
+Epoch 383/800: 100%|██████████| 122/122 [00:11<00:00, 10.50it/s]
+Epoch 383: train RMSE=113.74 m | val RMSE=113.95 m | gap=0.20 m | active_frac=1.00
+Epoch 384/800: 100%|██████████| 122/122 [00:11<00:00, 10.18it/s]
+Epoch 384: train RMSE=113.82 m | val RMSE=114.16 m | gap=0.34 m | active_frac=1.00
+Epoch 385/800: 100%|██████████| 122/122 [00:11<00:00, 10.20it/s]
+Epoch 385: train RMSE=113.54 m | val RMSE=113.15 m | gap=-0.39 m | active_frac=1.00
+Epoch 386/800: 100%|██████████| 122/122 [00:11<00:00, 10.25it/s]
+Epoch 386: train RMSE=113.23 m | val RMSE=112.69 m | gap=-0.54 m | active_frac=1.00
+Epoch 387/800: 100%|██████████| 122/122 [00:11<00:00, 10.34it/s]
+Epoch 387: train RMSE=113.27 m | val RMSE=113.01 m | gap=-0.26 m | active_frac=1.00
+Epoch 388/800: 100%|██████████| 122/122 [00:11<00:00, 10.38it/s]
+Epoch 388: train RMSE=113.31 m | val RMSE=114.09 m | gap=0.78 m | active_frac=1.00
+Epoch 389/800: 100%|██████████| 122/122 [00:11<00:00, 10.38it/s]
+Epoch 389: train RMSE=113.01 m | val RMSE=113.05 m | gap=0.04 m | active_frac=1.00
+Epoch 390/800: 100%|██████████| 122/122 [00:11<00:00, 10.28it/s]
+Epoch 390: train RMSE=112.93 m | val RMSE=112.78 m | gap=-0.15 m | active_frac=1.00
+Epoch 391/800: 100%|██████████| 122/122 [00:12<00:00, 10.09it/s]
+Epoch 391: train RMSE=112.72 m | val RMSE=111.89 m | gap=-0.83 m | active_frac=1.00
+Epoch 392/800: 100%|██████████| 122/122 [00:12<00:00, 10.14it/s]
+Epoch 392: train RMSE=112.63 m | val RMSE=112.32 m | gap=-0.31 m | active_frac=1.00
+Epoch 393/800: 100%|██████████| 122/122 [00:11<00:00, 10.34it/s]
+Epoch 393: train RMSE=112.46 m | val RMSE=113.56 m | gap=1.10 m | active_frac=1.00
+Epoch 394/800: 100%|██████████| 122/122 [00:11<00:00, 10.34it/s]
+Epoch 394: train RMSE=112.49 m | val RMSE=112.30 m | gap=-0.19 m | active_frac=1.00
+Epoch 395/800: 100%|██████████| 122/122 [00:12<00:00, 10.16it/s]
+Epoch 395: train RMSE=112.03 m | val RMSE=111.56 m | gap=-0.47 m | active_frac=1.00
+Epoch 396/800: 100%|██████████| 122/122 [00:11<00:00, 10.35it/s]
+Epoch 396: train RMSE=112.25 m | val RMSE=111.66 m | gap=-0.59 m | active_frac=1.00
+Epoch 397/800: 100%|██████████| 122/122 [00:11<00:00, 10.27it/s]
+Epoch 397: train RMSE=112.11 m | val RMSE=111.95 m | gap=-0.15 m | active_frac=1.00
+Epoch 398/800: 100%|██████████| 122/122 [00:11<00:00, 10.36it/s]
+Epoch 398: train RMSE=111.63 m | val RMSE=111.16 m | gap=-0.47 m | active_frac=1.00
+Epoch 399/800: 100%|██████████| 122/122 [00:11<00:00, 10.33it/s]
+Epoch 399: train RMSE=111.47 m | val RMSE=111.74 m | gap=0.27 m | active_frac=1.00
+Epoch 400/800: 100%|██████████| 122/122 [00:12<00:00, 10.15it/s]
+Epoch 400: train RMSE=111.41 m | val RMSE=111.07 m | gap=-0.34 m | active_frac=1.00
+Epoch 401/800: 100%|██████████| 122/122 [00:10<00:00, 12.13it/s]
+Epoch 401: train RMSE=111.32 m | val RMSE=111.13 m | gap=-0.19 m | active_frac=1.00
+Epoch 402/800: 100%|██████████| 122/122 [00:12<00:00, 10.14it/s]
+Epoch 402: train RMSE=111.09 m | val RMSE=110.76 m | gap=-0.33 m | active_frac=1.00
+Epoch 403/800: 100%|██████████| 122/122 [00:11<00:00, 10.21it/s]
+Epoch 403: train RMSE=111.20 m | val RMSE=110.36 m | gap=-0.84 m | active_frac=1.00
+Epoch 404/800: 100%|██████████| 122/122 [00:11<00:00, 10.21it/s]
+Epoch 404: train RMSE=111.00 m | val RMSE=111.65 m | gap=0.65 m | active_frac=1.00
+Epoch 405/800: 100%|██████████| 122/122 [00:11<00:00, 10.29it/s]
+Epoch 405: train RMSE=110.57 m | val RMSE=110.67 m | gap=0.10 m | active_frac=1.00
+Epoch 406/800: 100%|██████████| 122/122 [00:11<00:00, 10.22it/s]
+Epoch 406: train RMSE=110.84 m | val RMSE=110.48 m | gap=-0.36 m | active_frac=1.00
+Epoch 407/800: 100%|██████████| 122/122 [00:11<00:00, 10.34it/s]
+Epoch 407: train RMSE=110.20 m | val RMSE=109.95 m | gap=-0.24 m | active_frac=1.00
+Epoch 408/800: 100%|██████████| 122/122 [00:11<00:00, 10.40it/s]
+Epoch 408: train RMSE=110.41 m | val RMSE=109.87 m | gap=-0.54 m | active_frac=1.00
+Epoch 409/800: 100%|██████████| 122/122 [00:11<00:00, 10.41it/s]
+Epoch 409: train RMSE=110.28 m | val RMSE=110.30 m | gap=0.02 m | active_frac=1.00
+Epoch 410/800: 100%|██████████| 122/122 [00:11<00:00, 10.34it/s]
+Epoch 410: train RMSE=110.17 m | val RMSE=110.41 m | gap=0.24 m | active_frac=1.00
+Epoch 411/800: 100%|██████████| 122/122 [00:11<00:00, 10.18it/s]
+Epoch 411: train RMSE=109.70 m | val RMSE=109.74 m | gap=0.04 m | active_frac=1.00
+Epoch 412/800: 100%|██████████| 122/122 [00:11<00:00, 10.32it/s]
+Epoch 412: train RMSE=109.99 m | val RMSE=110.04 m | gap=0.04 m | active_frac=1.00
+Epoch 413/800: 100%|██████████| 122/122 [00:11<00:00, 10.29it/s]
+Epoch 413: train RMSE=109.56 m | val RMSE=109.09 m | gap=-0.47 m | active_frac=1.00
+Epoch 414/800: 100%|██████████| 122/122 [00:12<00:00, 10.15it/s]
+Epoch 414: train RMSE=109.43 m | val RMSE=109.31 m | gap=-0.11 m | active_frac=1.00
+Epoch 415/800: 100%|██████████| 122/122 [00:11<00:00, 10.34it/s]
+Epoch 415: train RMSE=109.26 m | val RMSE=110.37 m | gap=1.10 m | active_frac=1.00
+Epoch 416/800: 100%|██████████| 122/122 [00:11<00:00, 10.31it/s]
+Epoch 416: train RMSE=109.31 m | val RMSE=109.26 m | gap=-0.05 m | active_frac=1.00
+Epoch 417/800: 100%|██████████| 122/122 [00:11<00:00, 10.25it/s]
+Epoch 417: train RMSE=109.07 m | val RMSE=109.28 m | gap=0.21 m | active_frac=1.00
+Epoch 418/800: 100%|██████████| 122/122 [00:11<00:00, 10.18it/s]
+Epoch 418: train RMSE=108.79 m | val RMSE=108.15 m | gap=-0.63 m | active_frac=1.00
+Epoch 419/800: 100%|██████████| 122/122 [00:11<00:00, 10.44it/s]
+Epoch 419: train RMSE=108.94 m | val RMSE=109.91 m | gap=0.96 m | active_frac=1.00
+Epoch 420/800: 100%|██████████| 122/122 [00:12<00:00, 10.15it/s]
+Epoch 420: train RMSE=108.39 m | val RMSE=108.84 m | gap=0.44 m | active_frac=1.00
+Epoch 421/800: 100%|██████████| 122/122 [00:11<00:00, 10.34it/s]
+Epoch 421: train RMSE=108.57 m | val RMSE=107.98 m | gap=-0.59 m | active_frac=1.00
+Epoch 422/800: 100%|██████████| 122/122 [00:11<00:00, 10.34it/s]
+Epoch 422: train RMSE=108.40 m | val RMSE=108.21 m | gap=-0.19 m | active_frac=1.00
+Epoch 423/800: 100%|██████████| 122/122 [00:11<00:00, 10.28it/s]
+Epoch 423: train RMSE=108.10 m | val RMSE=108.25 m | gap=0.14 m | active_frac=1.00
+Epoch 424/800: 100%|██████████| 122/122 [00:11<00:00, 10.24it/s]
+Epoch 424: train RMSE=107.98 m | val RMSE=108.13 m | gap=0.15 m | active_frac=1.00
+Epoch 425/800: 100%|██████████| 122/122 [00:11<00:00, 10.19it/s]
+Epoch 425: train RMSE=107.80 m | val RMSE=107.45 m | gap=-0.35 m | active_frac=1.00
+Epoch 426/800: 100%|██████████| 122/122 [00:11<00:00, 10.41it/s]
+Epoch 426: train RMSE=107.74 m | val RMSE=107.01 m | gap=-0.73 m | active_frac=1.00
+Epoch 427/800: 100%|██████████| 122/122 [00:11<00:00, 10.35it/s]
+Epoch 427: train RMSE=107.63 m | val RMSE=108.62 m | gap=0.99 m | active_frac=1.00
+Epoch 428/800: 100%|██████████| 122/122 [00:11<00:00, 10.26it/s]
+Epoch 428: train RMSE=107.47 m | val RMSE=107.13 m | gap=-0.34 m | active_frac=1.00
+Epoch 429/800: 100%|██████████| 122/122 [00:11<00:00, 10.26it/s]
+Epoch 429: train RMSE=107.06 m | val RMSE=106.75 m | gap=-0.31 m | active_frac=1.00
+Epoch 430/800: 100%|██████████| 122/122 [00:12<00:00, 10.15it/s]
+Epoch 430: train RMSE=107.20 m | val RMSE=107.43 m | gap=0.23 m | active_frac=1.00
+Epoch 431/800: 100%|██████████| 122/122 [00:10<00:00, 11.73it/s]
+Epoch 431: train RMSE=106.97 m | val RMSE=106.41 m | gap=-0.56 m | active_frac=1.00
+Epoch 432/800: 100%|██████████| 122/122 [00:11<00:00, 10.25it/s]
+Epoch 432: train RMSE=106.80 m | val RMSE=106.31 m | gap=-0.49 m | active_frac=1.00
+Epoch 433/800: 100%|██████████| 122/122 [00:12<00:00, 10.05it/s]
+Epoch 433: train RMSE=106.41 m | val RMSE=108.15 m | gap=1.74 m | active_frac=1.00
+Epoch 434/800: 100%|██████████| 122/122 [00:12<00:00, 10.14it/s]
+Epoch 434: train RMSE=106.66 m | val RMSE=106.19 m | gap=-0.47 m | active_frac=1.00
+Epoch 435/800: 100%|██████████| 122/122 [00:11<00:00, 10.27it/s]
+Epoch 435: train RMSE=106.39 m | val RMSE=106.38 m | gap=-0.00 m | active_frac=1.00
+Epoch 436/800: 100%|██████████| 122/122 [00:11<00:00, 10.25it/s]
+Epoch 436: train RMSE=106.25 m | val RMSE=106.23 m | gap=-0.02 m | active_frac=1.00
+Epoch 437/800: 100%|██████████| 122/122 [00:11<00:00, 10.20it/s]
+Epoch 437: train RMSE=106.09 m | val RMSE=106.67 m | gap=0.58 m | active_frac=1.00
+Epoch 438/800: 100%|██████████| 122/122 [00:11<00:00, 10.27it/s]
+Epoch 438: train RMSE=105.82 m | val RMSE=105.96 m | gap=0.14 m | active_frac=1.00
+Epoch 439/800: 100%|██████████| 122/122 [00:11<00:00, 10.25it/s]
+Epoch 439: train RMSE=105.67 m | val RMSE=106.77 m | gap=1.10 m | active_frac=1.00
+Epoch 440/800: 100%|██████████| 122/122 [00:11<00:00, 10.44it/s]
+Epoch 440: train RMSE=105.93 m | val RMSE=106.10 m | gap=0.16 m | active_frac=1.00
+Epoch 441/800: 100%|██████████| 122/122 [00:12<00:00, 10.11it/s]
+Epoch 441: train RMSE=105.36 m | val RMSE=104.61 m | gap=-0.74 m | active_frac=1.00
+Epoch 442/800: 100%|██████████| 122/122 [00:11<00:00, 10.24it/s]
+Epoch 442: train RMSE=105.45 m | val RMSE=106.10 m | gap=0.65 m | active_frac=1.00
+Epoch 443/800: 100%|██████████| 122/122 [00:11<00:00, 10.30it/s]
+Epoch 443: train RMSE=105.18 m | val RMSE=104.90 m | gap=-0.28 m | active_frac=1.00
+Epoch 444/800: 100%|██████████| 122/122 [00:12<00:00, 10.16it/s]
+Epoch 444: train RMSE=105.06 m | val RMSE=105.54 m | gap=0.48 m | active_frac=1.00
+Epoch 445/800: 100%|██████████| 122/122 [00:12<00:00, 10.15it/s]
+Epoch 445: train RMSE=104.91 m | val RMSE=104.84 m | gap=-0.07 m | active_frac=1.00
+Epoch 446/800: 100%|██████████| 122/122 [00:12<00:00, 10.14it/s]
+Epoch 446: train RMSE=104.66 m | val RMSE=104.10 m | gap=-0.55 m | active_frac=1.00
+Epoch 447/800: 100%|██████████| 122/122 [00:11<00:00, 10.77it/s]
+Epoch 447: train RMSE=104.69 m | val RMSE=106.74 m | gap=2.05 m | active_frac=1.00
+Epoch 448/800: 100%|██████████| 122/122 [00:11<00:00, 10.24it/s]
+Epoch 448: train RMSE=104.46 m | val RMSE=104.18 m | gap=-0.27 m | active_frac=1.00
+Epoch 449/800: 100%|██████████| 122/122 [00:12<00:00, 10.08it/s]
+Epoch 449: train RMSE=104.18 m | val RMSE=104.26 m | gap=0.08 m | active_frac=1.00
+Epoch 450/800: 100%|██████████| 122/122 [00:12<00:00, 10.12it/s]
+Epoch 450: train RMSE=104.31 m | val RMSE=103.96 m | gap=-0.35 m | active_frac=1.00
+Epoch 451/800: 100%|██████████| 122/122 [00:11<00:00, 10.30it/s]
+Epoch 451: train RMSE=104.04 m | val RMSE=103.93 m | gap=-0.11 m | active_frac=1.00
+Epoch 452/800: 100%|██████████| 122/122 [00:11<00:00, 10.17it/s]
+Epoch 452: train RMSE=103.58 m | val RMSE=103.75 m | gap=0.16 m | active_frac=1.00
+Epoch 453/800: 100%|██████████| 122/122 [00:11<00:00, 10.23it/s]
+Epoch 453: train RMSE=103.83 m | val RMSE=103.64 m | gap=-0.18 m | active_frac=1.00
+Epoch 454/800: 100%|██████████| 122/122 [00:11<00:00, 10.21it/s]
+Epoch 454: train RMSE=103.24 m | val RMSE=103.31 m | gap=0.07 m | active_frac=1.00
+Epoch 455/800: 100%|██████████| 122/122 [00:11<00:00, 10.28it/s]
+Epoch 455: train RMSE=103.38 m | val RMSE=103.43 m | gap=0.06 m | active_frac=1.00
+Epoch 456/800: 100%|██████████| 122/122 [00:12<00:00, 10.03it/s]
+Epoch 456: train RMSE=103.18 m | val RMSE=103.15 m | gap=-0.03 m | active_frac=1.00
+Epoch 457/800: 100%|██████████| 122/122 [00:11<00:00, 10.24it/s]
+Epoch 457: train RMSE=103.06 m | val RMSE=102.78 m | gap=-0.29 m | active_frac=1.00
+Epoch 458/800: 100%|██████████| 122/122 [00:11<00:00, 10.83it/s]
+Epoch 458: train RMSE=102.63 m | val RMSE=102.52 m | gap=-0.10 m | active_frac=1.00
+Epoch 459/800: 100%|██████████| 122/122 [00:11<00:00, 10.98it/s]
+Epoch 459: train RMSE=102.75 m | val RMSE=102.10 m | gap=-0.65 m | active_frac=1.00
+Epoch 460/800: 100%|██████████| 122/122 [00:12<00:00, 10.12it/s]
+Epoch 460: train RMSE=102.34 m | val RMSE=102.89 m | gap=0.54 m | active_frac=1.00
+Epoch 461/800: 100%|██████████| 122/122 [00:11<00:00, 10.22it/s]
+Epoch 461: train RMSE=102.44 m | val RMSE=102.99 m | gap=0.55 m | active_frac=1.00
+Epoch 462/800: 100%|██████████| 122/122 [00:12<00:00, 10.14it/s]
+Epoch 462: train RMSE=102.10 m | val RMSE=101.69 m | gap=-0.42 m | active_frac=1.00
+Epoch 463/800: 100%|██████████| 122/122 [00:11<00:00, 10.27it/s]
+Epoch 463: train RMSE=102.02 m | val RMSE=101.81 m | gap=-0.22 m | active_frac=1.00
+Epoch 464/800: 100%|██████████| 122/122 [00:12<00:00, 10.07it/s]
+Epoch 464: train RMSE=102.01 m | val RMSE=102.07 m | gap=0.06 m | active_frac=1.00
+Epoch 465/800: 100%|██████████| 122/122 [00:12<00:00,  9.91it/s]
+Epoch 465: train RMSE=101.63 m | val RMSE=101.37 m | gap=-0.26 m | active_frac=1.00
+Epoch 466/800: 100%|██████████| 122/122 [00:11<00:00, 10.18it/s]
+Epoch 466: train RMSE=101.51 m | val RMSE=102.13 m | gap=0.61 m | active_frac=1.00
+Epoch 467/800: 100%|██████████| 122/122 [00:11<00:00, 10.19it/s]
+Epoch 467: train RMSE=101.56 m | val RMSE=101.43 m | gap=-0.13 m | active_frac=1.00
+Epoch 468/800: 100%|██████████| 122/122 [00:11<00:00, 10.23it/s]
+Epoch 468: train RMSE=101.36 m | val RMSE=100.88 m | gap=-0.48 m | active_frac=1.00
+Epoch 469/800: 100%|██████████| 122/122 [00:11<00:00, 10.24it/s]
+Epoch 469: train RMSE=101.08 m | val RMSE=101.81 m | gap=0.73 m | active_frac=1.00
+Epoch 470/800: 100%|██████████| 122/122 [00:11<00:00, 10.19it/s]
+Epoch 470: train RMSE=100.81 m | val RMSE=100.61 m | gap=-0.20 m | active_frac=1.00
+Epoch 471/800: 100%|██████████| 122/122 [00:11<00:00, 10.24it/s]
+Epoch 471: train RMSE=101.07 m | val RMSE=100.90 m | gap=-0.17 m | active_frac=1.00
+Epoch 472/800: 100%|██████████| 122/122 [00:11<00:00, 10.34it/s]
+Epoch 472: train RMSE=100.66 m | val RMSE=101.01 m | gap=0.35 m | active_frac=1.00
+Epoch 473/800: 100%|██████████| 122/122 [00:11<00:00, 10.31it/s]
+Epoch 473: train RMSE=100.31 m | val RMSE=100.99 m | gap=0.68 m | active_frac=1.00
+Epoch 474/800: 100%|██████████| 122/122 [00:11<00:00, 10.25it/s]
+Epoch 474: train RMSE=100.32 m | val RMSE=100.72 m | gap=0.39 m | active_frac=1.00
+Epoch 475/800: 100%|██████████| 122/122 [00:12<00:00, 10.16it/s]
+Epoch 475: train RMSE=100.01 m | val RMSE=99.95 m | gap=-0.06 m | active_frac=1.00
+Epoch 476/800: 100%|██████████| 122/122 [00:11<00:00, 10.34it/s]
+Epoch 476: train RMSE=100.14 m | val RMSE=100.00 m | gap=-0.14 m | active_frac=1.00
+Epoch 477/800: 100%|██████████| 122/122 [00:11<00:00, 10.23it/s]
+Epoch 477: train RMSE=99.70 m | val RMSE=99.80 m | gap=0.10 m | active_frac=1.00
+Epoch 478/800: 100%|██████████| 122/122 [00:11<00:00, 10.30it/s]
+Epoch 478: train RMSE=99.53 m | val RMSE=99.08 m | gap=-0.45 m | active_frac=1.00
+Epoch 479/800: 100%|██████████| 122/122 [00:12<00:00, 10.17it/s]
+Epoch 479: train RMSE=99.42 m | val RMSE=99.58 m | gap=0.17 m | active_frac=1.00
+Epoch 480/800: 100%|██████████| 122/122 [00:11<00:00, 10.17it/s]
+Epoch 480: train RMSE=99.33 m | val RMSE=99.24 m | gap=-0.09 m | active_frac=1.00
+Epoch 481/800: 100%|██████████| 122/122 [00:12<00:00, 10.16it/s]
+Epoch 481: train RMSE=99.02 m | val RMSE=98.66 m | gap=-0.35 m | active_frac=1.00
+Epoch 482/800: 100%|██████████| 122/122 [00:11<00:00, 10.41it/s]
+Epoch 482: train RMSE=99.06 m | val RMSE=98.92 m | gap=-0.14 m | active_frac=1.00
+Epoch 483/800: 100%|██████████| 122/122 [00:11<00:00, 10.26it/s]
+Epoch 483: train RMSE=98.87 m | val RMSE=98.53 m | gap=-0.34 m | active_frac=1.00
+Epoch 484/800: 100%|██████████| 122/122 [00:11<00:00, 10.36it/s]
+Epoch 484: train RMSE=98.69 m | val RMSE=98.35 m | gap=-0.34 m | active_frac=1.00
+Epoch 485/800: 100%|██████████| 122/122 [00:11<00:00, 10.18it/s]
+Epoch 485: train RMSE=98.29 m | val RMSE=98.62 m | gap=0.33 m | active_frac=1.00
+Epoch 486/800: 100%|██████████| 122/122 [00:11<00:00, 10.22it/s]
+Epoch 486: train RMSE=98.20 m | val RMSE=98.03 m | gap=-0.16 m | active_frac=1.00
+Epoch 487/800: 100%|██████████| 122/122 [00:11<00:00, 10.35it/s]
+Epoch 487: train RMSE=98.14 m | val RMSE=97.80 m | gap=-0.34 m | active_frac=1.00
+Epoch 488/800: 100%|██████████| 122/122 [00:11<00:00, 10.28it/s]
+Epoch 488: train RMSE=98.05 m | val RMSE=97.78 m | gap=-0.27 m | active_frac=1.00
+Epoch 489/800: 100%|██████████| 122/122 [00:12<00:00, 10.09it/s]
+Epoch 489: train RMSE=97.97 m | val RMSE=97.36 m | gap=-0.61 m | active_frac=1.00
+Epoch 490/800: 100%|██████████| 122/122 [00:12<00:00, 10.05it/s]
+Epoch 490: train RMSE=97.54 m | val RMSE=96.98 m | gap=-0.56 m | active_frac=1.00
+Epoch 491/800: 100%|██████████| 122/122 [00:11<00:00, 10.43it/s]
+Epoch 491: train RMSE=97.69 m | val RMSE=97.33 m | gap=-0.36 m | active_frac=1.00
+Epoch 492/800: 100%|██████████| 122/122 [00:11<00:00, 10.26it/s]
+Epoch 492: train RMSE=97.44 m | val RMSE=97.43 m | gap=-0.00 m | active_frac=1.00
+Epoch 493/800: 100%|██████████| 122/122 [00:11<00:00, 10.33it/s]
+Epoch 493: train RMSE=97.04 m | val RMSE=96.54 m | gap=-0.50 m | active_frac=1.00
+Epoch 494/800: 100%|██████████| 122/122 [00:11<00:00, 10.25it/s]
+Epoch 494: train RMSE=97.14 m | val RMSE=96.70 m | gap=-0.44 m | active_frac=1.00
+Epoch 495/800: 100%|██████████| 122/122 [00:11<00:00, 10.60it/s]
+Epoch 495: train RMSE=97.07 m | val RMSE=96.90 m | gap=-0.17 m | active_frac=1.00
+Epoch 496/800: 100%|██████████| 122/122 [00:12<00:00, 10.10it/s]
+Epoch 496: train RMSE=96.48 m | val RMSE=96.93 m | gap=0.46 m | active_frac=1.00
+Epoch 497/800: 100%|██████████| 122/122 [00:12<00:00, 10.12it/s]
+Epoch 497: train RMSE=96.36 m | val RMSE=97.15 m | gap=0.79 m | active_frac=1.00
+Epoch 498/800: 100%|██████████| 122/122 [00:11<00:00, 10.20it/s]
+Epoch 498: train RMSE=96.30 m | val RMSE=96.03 m | gap=-0.27 m | active_frac=1.00
+Epoch 499/800: 100%|██████████| 122/122 [00:11<00:00, 10.32it/s]
+Epoch 499: train RMSE=95.89 m | val RMSE=95.90 m | gap=0.01 m | active_frac=1.00
+Epoch 500/800: 100%|██████████| 122/122 [00:11<00:00, 10.23it/s]
+Epoch 500: train RMSE=95.82 m | val RMSE=96.53 m | gap=0.71 m | active_frac=1.00
+Epoch 501/800: 100%|██████████| 122/122 [00:11<00:00, 10.27it/s]
+Epoch 501: train RMSE=95.78 m | val RMSE=95.24 m | gap=-0.53 m | active_frac=1.00
+Epoch 502/800: 100%|██████████| 122/122 [00:12<00:00, 10.15it/s]
+Epoch 502: train RMSE=95.51 m | val RMSE=95.68 m | gap=0.17 m | active_frac=1.00
+Epoch 503/800: 100%|██████████| 122/122 [00:11<00:00, 10.28it/s]
+Epoch 503: train RMSE=95.40 m | val RMSE=95.42 m | gap=0.02 m | active_frac=1.00
+Epoch 504/800: 100%|██████████| 122/122 [00:11<00:00, 10.25it/s]
+Epoch 504: train RMSE=95.34 m | val RMSE=95.12 m | gap=-0.22 m | active_frac=1.00
+Epoch 505/800: 100%|██████████| 122/122 [00:11<00:00, 10.17it/s]
+Epoch 505: train RMSE=94.99 m | val RMSE=94.66 m | gap=-0.33 m | active_frac=1.00
+Epoch 506/800: 100%|██████████| 122/122 [00:11<00:00, 10.32it/s]
+Epoch 506: train RMSE=94.97 m | val RMSE=95.45 m | gap=0.48 m | active_frac=1.00
+Epoch 507/800: 100%|██████████| 122/122 [00:11<00:00, 10.54it/s]
+Epoch 507: train RMSE=94.68 m | val RMSE=94.32 m | gap=-0.36 m | active_frac=1.00
+Epoch 508/800: 100%|██████████| 122/122 [00:12<00:00, 10.15it/s]
+Epoch 508: train RMSE=94.30 m | val RMSE=94.37 m | gap=0.07 m | active_frac=1.00
+Epoch 509/800: 100%|██████████| 122/122 [00:12<00:00, 10.16it/s]
+Epoch 509: train RMSE=94.50 m | val RMSE=94.42 m | gap=-0.08 m | active_frac=1.00
+Epoch 510/800: 100%|██████████| 122/122 [00:11<00:00, 10.21it/s]
+Epoch 510: train RMSE=94.20 m | val RMSE=93.87 m | gap=-0.33 m | active_frac=1.00
+Epoch 511/800: 100%|██████████| 122/122 [00:10<00:00, 11.62it/s]
+Epoch 511: train RMSE=93.92 m | val RMSE=93.50 m | gap=-0.42 m | active_frac=1.00
+Epoch 512/800: 100%|██████████| 122/122 [00:11<00:00, 10.34it/s]
+Epoch 512: train RMSE=93.76 m | val RMSE=93.66 m | gap=-0.10 m | active_frac=1.00
+Epoch 513/800: 100%|██████████| 122/122 [00:12<00:00, 10.17it/s]
+Epoch 513: train RMSE=93.61 m | val RMSE=93.52 m | gap=-0.09 m | active_frac=1.00
+Epoch 514/800: 100%|██████████| 122/122 [00:11<00:00, 10.27it/s]
+Epoch 514: train RMSE=93.49 m | val RMSE=94.50 m | gap=1.01 m | active_frac=1.00
+Epoch 515/800: 100%|██████████| 122/122 [00:11<00:00, 10.34it/s]
+Epoch 515: train RMSE=93.41 m | val RMSE=92.39 m | gap=-1.01 m | active_frac=1.00
+Epoch 516/800: 100%|██████████| 122/122 [00:11<00:00, 10.21it/s]
+Epoch 516: train RMSE=93.06 m | val RMSE=92.66 m | gap=-0.40 m | active_frac=1.00
+Epoch 517/800: 100%|██████████| 122/122 [00:11<00:00, 10.24it/s]
+Epoch 517: train RMSE=92.93 m | val RMSE=93.01 m | gap=0.08 m | active_frac=1.00
+Epoch 518/800: 100%|██████████| 122/122 [00:11<00:00, 10.32it/s]
+Epoch 518: train RMSE=92.82 m | val RMSE=92.63 m | gap=-0.19 m | active_frac=1.00
+Epoch 519/800: 100%|██████████| 122/122 [00:11<00:00, 10.36it/s]
+Epoch 519: train RMSE=92.73 m | val RMSE=91.83 m | gap=-0.90 m | active_frac=1.00
+Epoch 520/800: 100%|██████████| 122/122 [00:11<00:00, 10.30it/s]
+Epoch 520: train RMSE=92.45 m | val RMSE=92.69 m | gap=0.24 m | active_frac=1.00
+Epoch 521/800: 100%|██████████| 122/122 [00:11<00:00, 10.44it/s]
+Epoch 521: train RMSE=92.19 m | val RMSE=91.88 m | gap=-0.30 m | active_frac=1.00
+Epoch 522/800: 100%|██████████| 122/122 [00:12<00:00, 10.12it/s]
+Epoch 522: train RMSE=92.07 m | val RMSE=91.97 m | gap=-0.10 m | active_frac=1.00
+Epoch 523/800: 100%|██████████| 122/122 [00:11<00:00, 10.39it/s]
+Epoch 523: train RMSE=91.86 m | val RMSE=91.78 m | gap=-0.08 m | active_frac=1.00
+Epoch 524/800: 100%|██████████| 122/122 [00:11<00:00, 10.30it/s]
+Epoch 524: train RMSE=91.75 m | val RMSE=91.81 m | gap=0.06 m | active_frac=1.00
+Epoch 525/800: 100%|██████████| 122/122 [00:11<00:00, 10.21it/s]
+Epoch 525: train RMSE=91.51 m | val RMSE=91.72 m | gap=0.21 m | active_frac=1.00
+Epoch 526/800: 100%|██████████| 122/122 [00:11<00:00, 10.25it/s]
+Epoch 526: train RMSE=91.52 m | val RMSE=91.43 m | gap=-0.10 m | active_frac=1.00
+Epoch 527/800: 100%|██████████| 122/122 [00:11<00:00, 10.22it/s]
+Epoch 527: train RMSE=91.20 m | val RMSE=90.60 m | gap=-0.60 m | active_frac=1.00
+Epoch 528/800: 100%|██████████| 122/122 [00:12<00:00, 10.15it/s]
+Epoch 528: train RMSE=91.00 m | val RMSE=91.62 m | gap=0.62 m | active_frac=1.00
+Epoch 529/800: 100%|██████████| 122/122 [00:11<00:00, 10.23it/s]
+Epoch 529: train RMSE=90.91 m | val RMSE=90.40 m | gap=-0.51 m | active_frac=1.00
+Epoch 530/800: 100%|██████████| 122/122 [00:11<00:00, 10.20it/s]
+Epoch 530: train RMSE=90.74 m | val RMSE=90.70 m | gap=-0.04 m | active_frac=1.00
+Epoch 531/800: 100%|██████████| 122/122 [00:11<00:00, 10.25it/s]
+Epoch 531: train RMSE=90.27 m | val RMSE=89.47 m | gap=-0.80 m | active_frac=1.00
+Epoch 532/800: 100%|██████████| 122/122 [00:11<00:00, 10.27it/s]
+Epoch 532: train RMSE=90.19 m | val RMSE=89.65 m | gap=-0.54 m | active_frac=1.00
+Epoch 533/800: 100%|██████████| 122/122 [00:11<00:00, 10.31it/s]
+Epoch 533: train RMSE=90.19 m | val RMSE=89.99 m | gap=-0.19 m | active_frac=1.00
+Epoch 534/800: 100%|██████████| 122/122 [00:11<00:00, 10.29it/s]
+Epoch 534: train RMSE=90.04 m | val RMSE=89.52 m | gap=-0.52 m | active_frac=1.00
+Epoch 535/800: 100%|██████████| 122/122 [00:11<00:00, 10.18it/s]
+Epoch 535: train RMSE=89.67 m | val RMSE=89.85 m | gap=0.18 m | active_frac=1.00
+Epoch 536/800: 100%|██████████| 122/122 [00:12<00:00,  9.93it/s]
+Epoch 536: train RMSE=89.40 m | val RMSE=89.43 m | gap=0.02 m | active_frac=1.00
+Epoch 537/800: 100%|██████████| 122/122 [00:11<00:00, 10.21it/s]
+Epoch 537: train RMSE=89.30 m | val RMSE=89.08 m | gap=-0.22 m | active_frac=1.00
+Epoch 538/800: 100%|██████████| 122/122 [00:11<00:00, 10.21it/s]
+Epoch 538: train RMSE=89.16 m | val RMSE=88.86 m | gap=-0.31 m | active_frac=1.00
+Epoch 539/800: 100%|██████████| 122/122 [00:11<00:00, 10.17it/s]
+Epoch 539: train RMSE=89.01 m | val RMSE=88.34 m | gap=-0.66 m | active_frac=1.00
+Epoch 540/800: 100%|██████████| 122/122 [00:11<00:00, 10.26it/s]
+Epoch 540: train RMSE=88.84 m | val RMSE=88.80 m | gap=-0.03 m | active_frac=1.00
+Epoch 541/800: 100%|██████████| 122/122 [00:11<00:00, 10.18it/s]
+Epoch 541: train RMSE=88.50 m | val RMSE=88.09 m | gap=-0.42 m | active_frac=1.00
+Epoch 542/800: 100%|██████████| 122/122 [00:11<00:00, 10.21it/s]
+Epoch 542: train RMSE=88.65 m | val RMSE=87.92 m | gap=-0.73 m | active_frac=1.00
+Epoch 543/800: 100%|██████████| 122/122 [00:11<00:00, 10.22it/s]
+Epoch 543: train RMSE=88.30 m | val RMSE=88.30 m | gap=0.00 m | active_frac=1.00
+Epoch 544/800: 100%|██████████| 122/122 [00:11<00:00, 10.40it/s]
+Epoch 544: train RMSE=87.95 m | val RMSE=87.95 m | gap=0.00 m | active_frac=1.00
+Epoch 545/800: 100%|██████████| 122/122 [00:11<00:00, 10.27it/s]
+Epoch 545: train RMSE=87.92 m | val RMSE=88.04 m | gap=0.12 m | active_frac=1.00
+Epoch 546/800: 100%|██████████| 122/122 [00:11<00:00, 10.22it/s]
+Epoch 546: train RMSE=87.62 m | val RMSE=87.57 m | gap=-0.04 m | active_frac=1.00
+Epoch 547/800: 100%|██████████| 122/122 [00:12<00:00, 10.13it/s]
+Epoch 547: train RMSE=87.38 m | val RMSE=86.84 m | gap=-0.55 m | active_frac=1.00
+Epoch 548/800: 100%|██████████| 122/122 [00:12<00:00, 10.14it/s]
+Epoch 548: train RMSE=87.32 m | val RMSE=87.69 m | gap=0.37 m | active_frac=1.00
+Epoch 549/800: 100%|██████████| 122/122 [00:11<00:00, 10.86it/s]
+Epoch 549: train RMSE=86.96 m | val RMSE=87.66 m | gap=0.70 m | active_frac=1.00
+Epoch 550/800: 100%|██████████| 122/122 [00:11<00:00, 11.05it/s]
+Epoch 550: train RMSE=86.97 m | val RMSE=87.60 m | gap=0.63 m | active_frac=1.00
+Epoch 551/800: 100%|██████████| 122/122 [00:11<00:00, 10.19it/s]
+Epoch 551: train RMSE=86.67 m | val RMSE=86.68 m | gap=0.01 m | active_frac=1.00
+Epoch 552/800: 100%|██████████| 122/122 [00:12<00:00, 10.15it/s]
+Epoch 552: train RMSE=86.50 m | val RMSE=86.52 m | gap=0.02 m | active_frac=1.00
+Epoch 553/800: 100%|██████████| 122/122 [00:12<00:00, 10.11it/s]
+Epoch 553: train RMSE=86.52 m | val RMSE=85.91 m | gap=-0.60 m | active_frac=1.00
+Epoch 554/800: 100%|██████████| 122/122 [00:12<00:00, 10.13it/s]
+Epoch 554: train RMSE=86.13 m | val RMSE=86.14 m | gap=0.01 m | active_frac=1.00
+Epoch 555/800: 100%|██████████| 122/122 [00:11<00:00, 10.23it/s]
+Epoch 555: train RMSE=85.95 m | val RMSE=85.63 m | gap=-0.32 m | active_frac=1.00
+Epoch 556/800: 100%|██████████| 122/122 [00:11<00:00, 10.23it/s]
+Epoch 556: train RMSE=85.97 m | val RMSE=85.07 m | gap=-0.91 m | active_frac=1.00
+Epoch 557/800: 100%|██████████| 122/122 [00:11<00:00, 10.27it/s]
+Epoch 557: train RMSE=85.35 m | val RMSE=85.49 m | gap=0.13 m | active_frac=1.00
+Epoch 558/800: 100%|██████████| 122/122 [00:11<00:00, 10.20it/s]
+Epoch 558: train RMSE=85.41 m | val RMSE=85.42 m | gap=0.00 m | active_frac=1.00
+Epoch 559/800: 100%|██████████| 122/122 [00:11<00:00, 10.23it/s]
+Epoch 559: train RMSE=85.14 m | val RMSE=85.59 m | gap=0.45 m | active_frac=1.00
+Epoch 560/800: 100%|██████████| 122/122 [00:11<00:00, 10.34it/s]
+Epoch 560: train RMSE=85.09 m | val RMSE=85.01 m | gap=-0.07 m | active_frac=1.00
+Epoch 561/800: 100%|██████████| 122/122 [00:11<00:00, 10.44it/s]
+Epoch 561: train RMSE=84.80 m | val RMSE=84.76 m | gap=-0.04 m | active_frac=1.00
+Epoch 562/800: 100%|██████████| 122/122 [00:12<00:00, 10.13it/s]
+Epoch 562: train RMSE=84.79 m | val RMSE=84.99 m | gap=0.19 m | active_frac=1.00
+Epoch 563/800: 100%|██████████| 122/122 [00:11<00:00, 10.28it/s]
+Epoch 563: train RMSE=84.40 m | val RMSE=84.06 m | gap=-0.34 m | active_frac=1.00
+Epoch 564/800: 100%|██████████| 122/122 [00:11<00:00, 10.42it/s]
+Epoch 564: train RMSE=84.23 m | val RMSE=83.87 m | gap=-0.36 m | active_frac=1.00
+Epoch 565/800: 100%|██████████| 122/122 [00:11<00:00, 10.32it/s]
+Epoch 565: train RMSE=83.98 m | val RMSE=83.80 m | gap=-0.18 m | active_frac=1.00
+Epoch 566/800: 100%|██████████| 122/122 [00:11<00:00, 10.18it/s]
+Epoch 566: train RMSE=83.85 m | val RMSE=83.96 m | gap=0.11 m | active_frac=1.00
+Epoch 567/800: 100%|██████████| 122/122 [00:12<00:00, 10.02it/s]
+Epoch 567: train RMSE=83.66 m | val RMSE=83.77 m | gap=0.11 m | active_frac=1.00
+Epoch 568/800: 100%|██████████| 122/122 [00:12<00:00, 10.16it/s]
+Epoch 568: train RMSE=83.50 m | val RMSE=83.56 m | gap=0.07 m | active_frac=1.00
+Epoch 569/800: 100%|██████████| 122/122 [00:12<00:00, 10.14it/s]
+Epoch 569: train RMSE=83.21 m | val RMSE=83.23 m | gap=0.02 m | active_frac=1.00
+Epoch 570/800: 100%|██████████| 122/122 [00:11<00:00, 10.19it/s]
+Epoch 570: train RMSE=83.07 m | val RMSE=82.50 m | gap=-0.57 m | active_frac=1.00
+Epoch 571/800: 100%|██████████| 122/122 [00:11<00:00, 10.21it/s]
+Epoch 571: train RMSE=82.89 m | val RMSE=83.00 m | gap=0.11 m | active_frac=1.00
+Epoch 572/800: 100%|██████████| 122/122 [00:11<00:00, 10.29it/s]
+Epoch 572: train RMSE=82.68 m | val RMSE=82.62 m | gap=-0.06 m | active_frac=1.00
+Epoch 573/800: 100%|██████████| 122/122 [00:11<00:00, 10.26it/s]
+Epoch 573: train RMSE=82.54 m | val RMSE=82.18 m | gap=-0.35 m | active_frac=1.00
+Epoch 574/800: 100%|██████████| 122/122 [00:11<00:00, 10.35it/s]
+Epoch 574: train RMSE=82.42 m | val RMSE=82.01 m | gap=-0.41 m | active_frac=1.00
+Epoch 575/800: 100%|██████████| 122/122 [00:11<00:00, 10.24it/s]
+Epoch 575: train RMSE=82.23 m | val RMSE=82.07 m | gap=-0.16 m | active_frac=1.00
+Epoch 576/800: 100%|██████████| 122/122 [00:12<00:00, 10.05it/s]
+Epoch 576: train RMSE=81.86 m | val RMSE=81.66 m | gap=-0.19 m | active_frac=1.00
+Epoch 577/800: 100%|██████████| 122/122 [00:11<00:00, 10.21it/s]
+Epoch 577: train RMSE=81.74 m | val RMSE=82.32 m | gap=0.58 m | active_frac=1.00
+Epoch 578/800: 100%|██████████| 122/122 [00:11<00:00, 10.31it/s]
+Epoch 578: train RMSE=81.54 m | val RMSE=81.10 m | gap=-0.44 m | active_frac=1.00
+Epoch 579/800: 100%|██████████| 122/122 [00:11<00:00, 10.68it/s]
+Epoch 579: train RMSE=81.33 m | val RMSE=80.92 m | gap=-0.41 m | active_frac=1.00
+Epoch 580/800: 100%|██████████| 122/122 [00:11<00:00, 10.27it/s]
+Epoch 580: train RMSE=81.19 m | val RMSE=80.82 m | gap=-0.37 m | active_frac=1.00
+Epoch 581/800: 100%|██████████| 122/122 [00:11<00:00, 10.31it/s]
+Epoch 581: train RMSE=80.89 m | val RMSE=81.19 m | gap=0.30 m | active_frac=1.00
+Epoch 582/800: 100%|██████████| 122/122 [00:11<00:00, 10.21it/s]
+Epoch 582: train RMSE=80.82 m | val RMSE=80.78 m | gap=-0.04 m | active_frac=1.00
+Epoch 583/800: 100%|██████████| 122/122 [00:11<00:00, 10.33it/s]
+Epoch 583: train RMSE=80.52 m | val RMSE=80.51 m | gap=-0.01 m | active_frac=1.00
+Epoch 584/800: 100%|██████████| 122/122 [00:11<00:00, 10.44it/s]
+Epoch 584: train RMSE=80.26 m | val RMSE=80.72 m | gap=0.45 m | active_frac=1.00
+Epoch 585/800: 100%|██████████| 122/122 [00:11<00:00, 10.26it/s]
+Epoch 585: train RMSE=80.05 m | val RMSE=80.62 m | gap=0.56 m | active_frac=1.00
+Epoch 586/800: 100%|██████████| 122/122 [00:11<00:00, 10.22it/s]
+Epoch 586: train RMSE=79.94 m | val RMSE=80.06 m | gap=0.12 m | active_frac=1.00
+Epoch 587/800: 100%|██████████| 122/122 [00:11<00:00, 10.27it/s]
+Epoch 587: train RMSE=79.71 m | val RMSE=80.19 m | gap=0.48 m | active_frac=1.00
+Epoch 588/800: 100%|██████████| 122/122 [00:11<00:00, 10.34it/s]
+Epoch 588: train RMSE=79.55 m | val RMSE=79.57 m | gap=0.02 m | active_frac=1.00
+Epoch 589/800: 100%|██████████| 122/122 [00:11<00:00, 10.31it/s]
+Epoch 589: train RMSE=79.28 m | val RMSE=79.22 m | gap=-0.06 m | active_frac=1.00
+Epoch 590/800: 100%|██████████| 122/122 [00:11<00:00, 10.26it/s]
+Epoch 590: train RMSE=79.10 m | val RMSE=79.13 m | gap=0.04 m | active_frac=1.00
+Epoch 591/800: 100%|██████████| 122/122 [00:11<00:00, 10.21it/s]
+Epoch 591: train RMSE=79.07 m | val RMSE=78.83 m | gap=-0.24 m | active_frac=1.00
+Epoch 592/800: 100%|██████████| 122/122 [00:11<00:00, 10.24it/s]
+Epoch 592: train RMSE=78.55 m | val RMSE=78.46 m | gap=-0.09 m | active_frac=1.00
+Epoch 593/800: 100%|██████████| 122/122 [00:11<00:00, 10.32it/s]
+Epoch 593: train RMSE=78.61 m | val RMSE=78.81 m | gap=0.20 m | active_frac=1.00
+Epoch 594/800: 100%|██████████| 122/122 [00:11<00:00, 10.25it/s]
+Epoch 594: train RMSE=78.50 m | val RMSE=77.97 m | gap=-0.53 m | active_frac=1.00
+Epoch 595/800: 100%|██████████| 122/122 [00:11<00:00, 10.38it/s]
+Epoch 595: train RMSE=78.02 m | val RMSE=77.99 m | gap=-0.04 m | active_frac=1.00
+Epoch 596/800: 100%|██████████| 122/122 [00:12<00:00, 10.15it/s]
+Epoch 596: train RMSE=77.91 m | val RMSE=78.24 m | gap=0.33 m | active_frac=1.00
+Epoch 597/800: 100%|██████████| 122/122 [00:11<00:00, 10.18it/s]
+Epoch 597: train RMSE=77.76 m | val RMSE=77.34 m | gap=-0.42 m | active_frac=1.00
+Epoch 598/800: 100%|██████████| 122/122 [00:12<00:00, 10.16it/s]
+Epoch 598: train RMSE=77.55 m | val RMSE=77.24 m | gap=-0.32 m | active_frac=1.00
+Epoch 599/800: 100%|██████████| 122/122 [00:11<00:00, 10.26it/s]
+Epoch 599: train RMSE=77.26 m | val RMSE=77.03 m | gap=-0.23 m | active_frac=1.00
+Epoch 600/800: 100%|██████████| 122/122 [00:10<00:00, 12.10it/s]
+Epoch 600: train RMSE=77.17 m | val RMSE=76.76 m | gap=-0.40 m | active_frac=1.00
+Epoch 601/800: 100%|██████████| 122/122 [00:11<00:00, 10.63it/s]
+Epoch 601: train RMSE=76.88 m | val RMSE=77.36 m | gap=0.48 m | active_frac=1.00
+Epoch 602/800: 100%|██████████| 122/122 [00:12<00:00, 10.04it/s]
+Epoch 602: train RMSE=76.57 m | val RMSE=76.62 m | gap=0.05 m | active_frac=1.00
+Epoch 603/800: 100%|██████████| 122/122 [00:12<00:00, 10.12it/s]
+Epoch 603: train RMSE=76.62 m | val RMSE=76.72 m | gap=0.10 m | active_frac=1.00
+Epoch 604/800: 100%|██████████| 122/122 [00:11<00:00, 10.24it/s]
+Epoch 604: train RMSE=76.23 m | val RMSE=76.26 m | gap=0.03 m | active_frac=1.00
+Epoch 605/800: 100%|██████████| 122/122 [00:11<00:00, 10.27it/s]
+Epoch 605: train RMSE=76.19 m | val RMSE=76.12 m | gap=-0.08 m | active_frac=1.00
+Epoch 606/800: 100%|██████████| 122/122 [00:11<00:00, 10.26it/s]
+Epoch 606: train RMSE=75.93 m | val RMSE=75.76 m | gap=-0.17 m | active_frac=1.00
+Epoch 607/800: 100%|██████████| 122/122 [00:11<00:00, 10.25it/s]
+Epoch 607: train RMSE=75.80 m | val RMSE=75.27 m | gap=-0.52 m | active_frac=1.00
+Epoch 608/800: 100%|██████████| 122/122 [00:11<00:00, 10.22it/s]
+Epoch 608: train RMSE=75.48 m | val RMSE=75.10 m | gap=-0.38 m | active_frac=1.00
+Epoch 609/800: 100%|██████████| 122/122 [00:11<00:00, 10.38it/s]
+Epoch 609: train RMSE=75.26 m | val RMSE=74.92 m | gap=-0.35 m | active_frac=1.00
+Epoch 610/800: 100%|██████████| 122/122 [00:11<00:00, 10.29it/s]
+Epoch 610: train RMSE=75.04 m | val RMSE=74.58 m | gap=-0.45 m | active_frac=1.00
+Epoch 611/800: 100%|██████████| 122/122 [00:11<00:00, 10.27it/s]
+Epoch 611: train RMSE=74.95 m | val RMSE=74.79 m | gap=-0.16 m | active_frac=1.00
+Epoch 612/800: 100%|██████████| 122/122 [00:11<00:00, 10.28it/s]
+Epoch 612: train RMSE=74.66 m | val RMSE=74.43 m | gap=-0.24 m | active_frac=1.00
+Epoch 613/800: 100%|██████████| 122/122 [00:11<00:00, 10.25it/s]
+Epoch 613: train RMSE=74.60 m | val RMSE=74.20 m | gap=-0.40 m | active_frac=1.00
+Epoch 614/800: 100%|██████████| 122/122 [00:11<00:00, 10.22it/s]
+Epoch 614: train RMSE=74.38 m | val RMSE=74.10 m | gap=-0.28 m | active_frac=1.00
+Epoch 615/800: 100%|██████████| 122/122 [00:11<00:00, 10.28it/s]
+Epoch 615: train RMSE=74.11 m | val RMSE=73.98 m | gap=-0.13 m | active_frac=1.00
+Epoch 616/800: 100%|██████████| 122/122 [00:11<00:00, 10.26it/s]
+Epoch 616: train RMSE=73.86 m | val RMSE=74.17 m | gap=0.31 m | active_frac=1.00
+Epoch 617/800: 100%|██████████| 122/122 [00:11<00:00, 10.22it/s]
+Epoch 617: train RMSE=73.69 m | val RMSE=73.43 m | gap=-0.26 m | active_frac=1.00
+Epoch 618/800: 100%|██████████| 122/122 [00:11<00:00, 10.22it/s]
+Epoch 618: train RMSE=73.58 m | val RMSE=73.24 m | gap=-0.34 m | active_frac=1.00
+Epoch 619/800: 100%|██████████| 122/122 [00:11<00:00, 10.28it/s]
+Epoch 619: train RMSE=73.34 m | val RMSE=73.23 m | gap=-0.11 m | active_frac=1.00
+Epoch 620/800: 100%|██████████| 122/122 [00:11<00:00, 10.26it/s]
+Epoch 620: train RMSE=72.99 m | val RMSE=72.66 m | gap=-0.33 m | active_frac=1.00
+Epoch 621/800: 100%|██████████| 122/122 [00:11<00:00, 10.19it/s]
+Epoch 621: train RMSE=72.93 m | val RMSE=72.83 m | gap=-0.10 m | active_frac=1.00
+Epoch 622/800: 100%|██████████| 122/122 [00:11<00:00, 10.28it/s]
+Epoch 622: train RMSE=72.70 m | val RMSE=72.46 m | gap=-0.24 m | active_frac=1.00
+Epoch 623/800: 100%|██████████| 122/122 [00:11<00:00, 10.26it/s]
+Epoch 623: train RMSE=72.40 m | val RMSE=72.54 m | gap=0.14 m | active_frac=1.00
+Epoch 624/800: 100%|██████████| 122/122 [00:11<00:00, 10.44it/s]
+Epoch 624: train RMSE=72.25 m | val RMSE=72.08 m | gap=-0.16 m | active_frac=1.00
+Epoch 625/800: 100%|██████████| 122/122 [00:11<00:00, 10.18it/s]
+Epoch 625: train RMSE=72.03 m | val RMSE=72.12 m | gap=0.09 m | active_frac=1.00
+Epoch 626/800: 100%|██████████| 122/122 [00:11<00:00, 10.41it/s]
+Epoch 626: train RMSE=71.87 m | val RMSE=71.85 m | gap=-0.02 m | active_frac=1.00
+Epoch 627/800: 100%|██████████| 122/122 [00:11<00:00, 10.24it/s]
+Epoch 627: train RMSE=71.72 m | val RMSE=71.84 m | gap=0.12 m | active_frac=1.00
+Epoch 628/800: 100%|██████████| 122/122 [00:11<00:00, 10.30it/s]
+Epoch 628: train RMSE=71.47 m | val RMSE=71.49 m | gap=0.02 m | active_frac=1.00
+Epoch 629/800: 100%|██████████| 122/122 [00:11<00:00, 10.53it/s]
+Epoch 629: train RMSE=71.19 m | val RMSE=71.25 m | gap=0.06 m | active_frac=1.00
+Epoch 630/800: 100%|██████████| 122/122 [00:11<00:00, 10.28it/s]
+Epoch 630: train RMSE=70.97 m | val RMSE=70.89 m | gap=-0.08 m | active_frac=1.00
+Epoch 631/800: 100%|██████████| 122/122 [00:11<00:00, 10.37it/s]
+Epoch 631: train RMSE=70.94 m | val RMSE=70.77 m | gap=-0.17 m | active_frac=1.00
+Epoch 632/800: 100%|██████████| 122/122 [00:11<00:00, 10.22it/s]
+Epoch 632: train RMSE=70.56 m | val RMSE=70.50 m | gap=-0.06 m | active_frac=1.00
+Epoch 633/800: 100%|██████████| 122/122 [00:12<00:00, 10.09it/s]
+Epoch 633: train RMSE=70.39 m | val RMSE=70.57 m | gap=0.19 m | active_frac=1.00
+Epoch 634/800: 100%|██████████| 122/122 [00:11<00:00, 10.31it/s]
+Epoch 634: train RMSE=70.24 m | val RMSE=69.72 m | gap=-0.52 m | active_frac=1.00
+Epoch 635/800: 100%|██████████| 122/122 [00:11<00:00, 10.29it/s]
+Epoch 635: train RMSE=70.03 m | val RMSE=70.42 m | gap=0.39 m | active_frac=1.00
+Epoch 636/800: 100%|██████████| 122/122 [00:11<00:00, 10.27it/s]
+Epoch 636: train RMSE=69.68 m | val RMSE=69.54 m | gap=-0.13 m | active_frac=1.00
+Epoch 637/800: 100%|██████████| 122/122 [00:11<00:00, 10.22it/s]
+Epoch 637: train RMSE=69.58 m | val RMSE=69.47 m | gap=-0.11 m | active_frac=1.00
+Epoch 638/800: 100%|██████████| 122/122 [00:11<00:00, 10.27it/s]
+Epoch 638: train RMSE=69.30 m | val RMSE=69.12 m | gap=-0.17 m | active_frac=1.00
+Epoch 639/800: 100%|██████████| 122/122 [00:11<00:00, 10.38it/s]
+Epoch 639: train RMSE=69.21 m | val RMSE=69.27 m | gap=0.06 m | active_frac=1.00
+Epoch 640/800: 100%|██████████| 122/122 [00:11<00:00, 10.40it/s]
+Epoch 640: train RMSE=68.94 m | val RMSE=69.37 m | gap=0.43 m | active_frac=1.00
+Epoch 641/800: 100%|██████████| 122/122 [00:11<00:00, 10.27it/s]
+Epoch 641: train RMSE=68.72 m | val RMSE=68.59 m | gap=-0.13 m | active_frac=1.00
+Epoch 642/800: 100%|██████████| 122/122 [00:11<00:00, 10.22it/s]
+Epoch 642: train RMSE=68.58 m | val RMSE=68.48 m | gap=-0.10 m | active_frac=1.00
+Epoch 643/800: 100%|██████████| 122/122 [00:11<00:00, 10.27it/s]
+Epoch 643: train RMSE=68.23 m | val RMSE=68.41 m | gap=0.18 m | active_frac=1.00
+Epoch 644/800: 100%|██████████| 122/122 [00:11<00:00, 10.20it/s]
+Epoch 644: train RMSE=68.11 m | val RMSE=67.81 m | gap=-0.30 m | active_frac=1.00
+Epoch 645/800: 100%|██████████| 122/122 [00:11<00:00, 10.28it/s]
+Epoch 645: train RMSE=67.90 m | val RMSE=67.78 m | gap=-0.13 m | active_frac=1.00
+Epoch 646/800: 100%|██████████| 122/122 [00:11<00:00, 10.26it/s]
+Epoch 646: train RMSE=67.66 m | val RMSE=67.61 m | gap=-0.04 m | active_frac=1.00
+Epoch 647/800: 100%|██████████| 122/122 [00:11<00:00, 10.22it/s]
+Epoch 647: train RMSE=67.52 m | val RMSE=67.78 m | gap=0.26 m | active_frac=1.00
+Epoch 648/800: 100%|██████████| 122/122 [00:11<00:00, 10.22it/s]
+Epoch 648: train RMSE=67.22 m | val RMSE=67.72 m | gap=0.50 m | active_frac=1.00
+Epoch 649/800: 100%|██████████| 122/122 [00:11<00:00, 10.21it/s]
+Epoch 649: train RMSE=67.14 m | val RMSE=67.00 m | gap=-0.13 m | active_frac=1.00
+Epoch 650/800: 100%|██████████| 122/122 [00:11<00:00, 10.40it/s]
+Epoch 650: train RMSE=66.98 m | val RMSE=66.71 m | gap=-0.27 m | active_frac=1.00
+Epoch 651/800: 100%|██████████| 122/122 [00:11<00:00, 10.40it/s]
+Epoch 651: train RMSE=66.81 m | val RMSE=66.87 m | gap=0.06 m | active_frac=1.00
+Epoch 652/800: 100%|██████████| 122/122 [00:10<00:00, 11.47it/s]
+Epoch 652: train RMSE=66.56 m | val RMSE=66.17 m | gap=-0.39 m | active_frac=1.00
+Epoch 653/800: 100%|██████████| 122/122 [00:11<00:00, 10.89it/s]
+Epoch 653: train RMSE=66.25 m | val RMSE=66.13 m | gap=-0.12 m | active_frac=1.00
+Epoch 654/800: 100%|██████████| 122/122 [00:11<00:00, 10.21it/s]
+Epoch 654: train RMSE=66.03 m | val RMSE=65.84 m | gap=-0.19 m | active_frac=1.00
+Epoch 655/800: 100%|██████████| 122/122 [00:12<00:00, 10.16it/s]
+Epoch 655: train RMSE=65.82 m | val RMSE=65.87 m | gap=0.05 m | active_frac=1.00
+Epoch 656/800: 100%|██████████| 122/122 [00:11<00:00, 10.24it/s]
+Epoch 656: train RMSE=65.72 m | val RMSE=65.43 m | gap=-0.29 m | active_frac=1.00
+Epoch 657/800: 100%|██████████| 122/122 [00:11<00:00, 10.40it/s]
+Epoch 657: train RMSE=65.52 m | val RMSE=65.42 m | gap=-0.10 m | active_frac=1.00
+Epoch 658/800: 100%|██████████| 122/122 [00:11<00:00, 10.36it/s]
+Epoch 658: train RMSE=65.21 m | val RMSE=65.57 m | gap=0.36 m | active_frac=1.00
+Epoch 659/800: 100%|██████████| 122/122 [00:11<00:00, 10.20it/s]
+Epoch 659: train RMSE=65.06 m | val RMSE=65.11 m | gap=0.05 m | active_frac=1.00
+Epoch 660/800: 100%|██████████| 122/122 [00:11<00:00, 10.46it/s]
+Epoch 660: train RMSE=64.89 m | val RMSE=64.82 m | gap=-0.06 m | active_frac=1.00
+Epoch 661/800: 100%|██████████| 122/122 [00:11<00:00, 10.35it/s]
+Epoch 661: train RMSE=64.67 m | val RMSE=64.76 m | gap=0.09 m | active_frac=1.00
+Epoch 662/800: 100%|██████████| 122/122 [00:11<00:00, 10.24it/s]
+Epoch 662: train RMSE=64.55 m | val RMSE=65.45 m | gap=0.90 m | active_frac=1.00
+Epoch 663/800: 100%|██████████| 122/122 [00:11<00:00, 10.37it/s]
+Epoch 663: train RMSE=64.39 m | val RMSE=64.01 m | gap=-0.38 m | active_frac=1.00
+Epoch 664/800: 100%|██████████| 122/122 [00:12<00:00, 10.09it/s]
+Epoch 664: train RMSE=64.13 m | val RMSE=63.63 m | gap=-0.50 m | active_frac=1.00
+Epoch 665/800: 100%|██████████| 122/122 [00:11<00:00, 10.24it/s]
+Epoch 665: train RMSE=63.89 m | val RMSE=63.79 m | gap=-0.10 m | active_frac=1.00
+Epoch 666/800: 100%|██████████| 122/122 [00:12<00:00, 10.15it/s]
+Epoch 666: train RMSE=63.79 m | val RMSE=63.68 m | gap=-0.11 m | active_frac=1.00
+Epoch 667/800: 100%|██████████| 122/122 [00:11<00:00, 10.21it/s]
+Epoch 667: train RMSE=63.47 m | val RMSE=63.53 m | gap=0.06 m | active_frac=1.00
+Epoch 668/800: 100%|██████████| 122/122 [00:11<00:00, 10.23it/s]
+Epoch 668: train RMSE=63.32 m | val RMSE=63.04 m | gap=-0.27 m | active_frac=1.00
+Epoch 669/800: 100%|██████████| 122/122 [00:11<00:00, 10.31it/s]
+Epoch 669: train RMSE=63.12 m | val RMSE=62.98 m | gap=-0.14 m | active_frac=1.00
+Epoch 670/800: 100%|██████████| 122/122 [00:11<00:00, 10.51it/s]
+Epoch 670: train RMSE=63.02 m | val RMSE=63.01 m | gap=-0.02 m | active_frac=1.00
+Epoch 671/800: 100%|██████████| 122/122 [00:11<00:00, 10.45it/s]
+Epoch 671: train RMSE=62.73 m | val RMSE=62.49 m | gap=-0.24 m | active_frac=1.00
+Epoch 672/800: 100%|██████████| 122/122 [00:11<00:00, 10.37it/s]
+Epoch 672: train RMSE=62.39 m | val RMSE=62.22 m | gap=-0.18 m | active_frac=1.00
+Epoch 673/800: 100%|██████████| 122/122 [00:12<00:00, 10.15it/s]
+Epoch 673: train RMSE=62.34 m | val RMSE=62.49 m | gap=0.16 m | active_frac=1.00
+Epoch 674/800: 100%|██████████| 122/122 [00:11<00:00, 10.23it/s]
+Epoch 674: train RMSE=62.16 m | val RMSE=62.17 m | gap=0.01 m | active_frac=1.00
+Epoch 675/800: 100%|██████████| 122/122 [00:11<00:00, 10.32it/s]
+Epoch 675: train RMSE=62.03 m | val RMSE=61.79 m | gap=-0.24 m | active_frac=1.00
+Epoch 676/800: 100%|██████████| 122/122 [00:11<00:00, 10.20it/s]
+Epoch 676: train RMSE=61.79 m | val RMSE=61.85 m | gap=0.07 m | active_frac=1.00
+Epoch 677/800: 100%|██████████| 122/122 [00:11<00:00, 10.25it/s]
+Epoch 677: train RMSE=61.51 m | val RMSE=61.60 m | gap=0.09 m | active_frac=1.00
+Epoch 678/800: 100%|██████████| 122/122 [00:11<00:00, 10.44it/s]
+Epoch 678: train RMSE=61.39 m | val RMSE=61.28 m | gap=-0.11 m | active_frac=1.00
+Epoch 679/800: 100%|██████████| 122/122 [00:11<00:00, 10.28it/s]
+Epoch 679: train RMSE=61.12 m | val RMSE=61.20 m | gap=0.08 m | active_frac=1.00
+Epoch 680/800: 100%|██████████| 122/122 [00:11<00:00, 10.27it/s]
+Epoch 680: train RMSE=60.97 m | val RMSE=60.64 m | gap=-0.33 m | active_frac=1.00
+Epoch 681/800: 100%|██████████| 122/122 [00:11<00:00, 10.45it/s]
+Epoch 681: train RMSE=60.93 m | val RMSE=60.53 m | gap=-0.40 m | active_frac=1.00
+Epoch 682/800: 100%|██████████| 122/122 [00:11<00:00, 10.31it/s]
+Epoch 682: train RMSE=60.61 m | val RMSE=60.42 m | gap=-0.19 m | active_frac=1.00
+Epoch 683/800: 100%|██████████| 122/122 [00:11<00:00, 10.26it/s]
+Epoch 683: train RMSE=60.46 m | val RMSE=60.37 m | gap=-0.09 m | active_frac=1.00
+Epoch 684/800: 100%|██████████| 122/122 [00:11<00:00, 10.37it/s]
+Epoch 684: train RMSE=60.22 m | val RMSE=60.35 m | gap=0.13 m | active_frac=1.00
+Epoch 685/800: 100%|██████████| 122/122 [00:11<00:00, 11.00it/s]
+Epoch 685: train RMSE=60.06 m | val RMSE=60.11 m | gap=0.05 m | active_frac=1.00
+Epoch 686/800: 100%|██████████| 122/122 [00:09<00:00, 12.57it/s]
+Epoch 686: train RMSE=59.84 m | val RMSE=59.78 m | gap=-0.06 m | active_frac=1.00
+Epoch 687/800: 100%|██████████| 122/122 [00:09<00:00, 12.26it/s]
+Epoch 687: train RMSE=59.70 m | val RMSE=59.63 m | gap=-0.08 m | active_frac=1.00
+Epoch 688/800: 100%|██████████| 122/122 [00:10<00:00, 11.22it/s]
+Epoch 688: train RMSE=59.42 m | val RMSE=59.38 m | gap=-0.04 m | active_frac=1.00
+Epoch 689/800: 100%|██████████| 122/122 [00:11<00:00, 10.19it/s]
+Epoch 689: train RMSE=59.31 m | val RMSE=59.42 m | gap=0.11 m | active_frac=1.00
+Epoch 690/800: 100%|██████████| 122/122 [00:11<00:00, 10.21it/s]
+Epoch 690: train RMSE=59.19 m | val RMSE=58.85 m | gap=-0.34 m | active_frac=1.00
+Epoch 691/800: 100%|██████████| 122/122 [00:11<00:00, 10.22it/s]
+Epoch 691: train RMSE=58.96 m | val RMSE=58.84 m | gap=-0.12 m | active_frac=1.00
+Epoch 692/800: 100%|██████████| 122/122 [00:12<00:00, 10.15it/s]
+Epoch 692: train RMSE=58.87 m | val RMSE=58.50 m | gap=-0.37 m | active_frac=1.00
+Epoch 693/800: 100%|██████████| 122/122 [00:11<00:00, 10.34it/s]
+Epoch 693: train RMSE=58.61 m | val RMSE=58.43 m | gap=-0.18 m | active_frac=1.00
+Epoch 694/800: 100%|██████████| 122/122 [00:11<00:00, 10.18it/s]
+Epoch 694: train RMSE=58.39 m | val RMSE=58.64 m | gap=0.25 m | active_frac=1.00
+Epoch 695/800: 100%|██████████| 122/122 [00:11<00:00, 10.38it/s]
+Epoch 695: train RMSE=58.23 m | val RMSE=57.97 m | gap=-0.26 m | active_frac=1.00
+Epoch 696/800: 100%|██████████| 122/122 [00:11<00:00, 10.23it/s]
+Epoch 696: train RMSE=58.01 m | val RMSE=58.03 m | gap=0.02 m | active_frac=1.00
+Epoch 697/800: 100%|██████████| 122/122 [00:12<00:00, 10.11it/s]
+Epoch 697: train RMSE=57.88 m | val RMSE=57.84 m | gap=-0.05 m | active_frac=1.00
+Epoch 698/800: 100%|██████████| 122/122 [00:11<00:00, 10.18it/s]
+Epoch 698: train RMSE=57.70 m | val RMSE=57.87 m | gap=0.18 m | active_frac=1.00
+Epoch 699/800: 100%|██████████| 122/122 [00:11<00:00, 10.28it/s]
+Epoch 699: train RMSE=57.57 m | val RMSE=57.84 m | gap=0.27 m | active_frac=1.00
+Epoch 700/800: 100%|██████████| 122/122 [00:11<00:00, 10.34it/s]
+Epoch 700: train RMSE=57.45 m | val RMSE=57.41 m | gap=-0.05 m | active_frac=1.00
+Epoch 701/800: 100%|██████████| 122/122 [00:11<00:00, 10.29it/s]
+Epoch 701: train RMSE=57.14 m | val RMSE=56.84 m | gap=-0.30 m | active_frac=1.00
+Epoch 702/800: 100%|██████████| 122/122 [00:11<00:00, 10.42it/s]
+Epoch 702: train RMSE=56.98 m | val RMSE=57.19 m | gap=0.21 m | active_frac=1.00
+Epoch 703/800: 100%|██████████| 122/122 [00:12<00:00, 10.16it/s]
+Epoch 703: train RMSE=56.88 m | val RMSE=56.84 m | gap=-0.05 m | active_frac=1.00
+Epoch 704/800: 100%|██████████| 122/122 [00:11<00:00, 10.34it/s]
+Epoch 704: train RMSE=56.61 m | val RMSE=56.67 m | gap=0.06 m | active_frac=1.00
+Epoch 705/800: 100%|██████████| 122/122 [00:11<00:00, 10.17it/s]
+Epoch 705: train RMSE=56.46 m | val RMSE=56.52 m | gap=0.06 m | active_frac=1.00
+Epoch 706/800: 100%|██████████| 122/122 [00:11<00:00, 10.25it/s]
+Epoch 706: train RMSE=56.35 m | val RMSE=56.30 m | gap=-0.06 m | active_frac=1.00
+Epoch 707/800: 100%|██████████| 122/122 [00:11<00:00, 10.35it/s]
+Epoch 707: train RMSE=56.13 m | val RMSE=55.94 m | gap=-0.20 m | active_frac=1.00
+Epoch 708/800: 100%|██████████| 122/122 [00:11<00:00, 10.27it/s]
+Epoch 708: train RMSE=55.88 m | val RMSE=56.14 m | gap=0.26 m | active_frac=1.00
+Epoch 709/800: 100%|██████████| 122/122 [00:11<00:00, 10.31it/s]
+Epoch 709: train RMSE=55.83 m | val RMSE=55.85 m | gap=0.01 m | active_frac=1.00
+Epoch 710/800: 100%|██████████| 122/122 [00:11<00:00, 10.44it/s]
+Epoch 710: train RMSE=55.68 m | val RMSE=55.49 m | gap=-0.19 m | active_frac=1.00
+Epoch 711/800: 100%|██████████| 122/122 [00:11<00:00, 10.23it/s]
+Epoch 711: train RMSE=55.46 m | val RMSE=55.30 m | gap=-0.16 m | active_frac=1.00
+Epoch 712/800: 100%|██████████| 122/122 [00:11<00:00, 10.39it/s]
+Epoch 712: train RMSE=55.38 m | val RMSE=55.35 m | gap=-0.02 m | active_frac=1.00
+Epoch 713/800: 100%|██████████| 122/122 [00:11<00:00, 10.25it/s]
+Epoch 713: train RMSE=55.10 m | val RMSE=55.24 m | gap=0.14 m | active_frac=1.00
+Epoch 714/800: 100%|██████████| 122/122 [00:12<00:00, 10.14it/s]
+Epoch 714: train RMSE=55.05 m | val RMSE=54.72 m | gap=-0.33 m | active_frac=1.00
+Epoch 715/800: 100%|██████████| 122/122 [00:11<00:00, 10.23it/s]
+Epoch 715: train RMSE=54.87 m | val RMSE=54.57 m | gap=-0.30 m | active_frac=1.00
+Epoch 716/800: 100%|██████████| 122/122 [00:11<00:00, 10.31it/s]
+Epoch 716: train RMSE=54.79 m | val RMSE=54.54 m | gap=-0.25 m | active_frac=1.00
+Epoch 717/800: 100%|██████████| 122/122 [00:11<00:00, 10.18it/s]
+Epoch 717: train RMSE=54.53 m | val RMSE=54.83 m | gap=0.30 m | active_frac=1.00
+Epoch 718/800: 100%|██████████| 122/122 [00:11<00:00, 10.17it/s]
+Epoch 718: train RMSE=54.41 m | val RMSE=54.39 m | gap=-0.02 m | active_frac=1.00
+Epoch 719/800: 100%|██████████| 122/122 [00:11<00:00, 10.36it/s]
+Epoch 719: train RMSE=54.27 m | val RMSE=54.35 m | gap=0.08 m | active_frac=1.00
+Epoch 720/800: 100%|██████████| 122/122 [00:11<00:00, 10.36it/s]
+Epoch 720: train RMSE=54.10 m | val RMSE=54.08 m | gap=-0.03 m | active_frac=1.00
+Epoch 721/800: 100%|██████████| 122/122 [00:11<00:00, 10.29it/s]
+Epoch 721: train RMSE=54.00 m | val RMSE=53.78 m | gap=-0.22 m | active_frac=1.00
+Epoch 722/800: 100%|██████████| 122/122 [00:11<00:00, 10.29it/s]
+Epoch 722: train RMSE=53.82 m | val RMSE=53.51 m | gap=-0.31 m | active_frac=1.00
+Epoch 723/800: 100%|██████████| 122/122 [00:11<00:00, 10.38it/s]
+Epoch 723: train RMSE=53.64 m | val RMSE=53.58 m | gap=-0.06 m | active_frac=1.00
+Epoch 724/800: 100%|██████████| 122/122 [00:11<00:00, 10.31it/s]
+Epoch 724: train RMSE=53.55 m | val RMSE=53.29 m | gap=-0.26 m | active_frac=1.00
+Epoch 725/800: 100%|██████████| 122/122 [00:11<00:00, 10.38it/s]
+Epoch 725: train RMSE=53.33 m | val RMSE=53.51 m | gap=0.18 m | active_frac=1.00
+Epoch 726/800: 100%|██████████| 122/122 [00:11<00:00, 10.65it/s]
+Epoch 726: train RMSE=53.21 m | val RMSE=52.85 m | gap=-0.36 m | active_frac=1.00
+Epoch 727/800: 100%|██████████| 122/122 [00:11<00:00, 10.70it/s]
+Epoch 727: train RMSE=53.17 m | val RMSE=53.11 m | gap=-0.06 m | active_frac=1.00
+Epoch 728/800: 100%|██████████| 122/122 [00:11<00:00, 10.39it/s]
+Epoch 728: train RMSE=52.88 m | val RMSE=52.72 m | gap=-0.17 m | active_frac=1.00
+Epoch 729/800: 100%|██████████| 122/122 [00:11<00:00, 10.26it/s]
+Epoch 729: train RMSE=52.83 m | val RMSE=52.67 m | gap=-0.16 m | active_frac=1.00
+Epoch 730/800: 100%|██████████| 122/122 [00:11<00:00, 10.35it/s]
+Epoch 730: train RMSE=52.73 m | val RMSE=52.99 m | gap=0.27 m | active_frac=1.00
+Epoch 731/800: 100%|██████████| 122/122 [00:11<00:00, 10.38it/s]
+Epoch 731: train RMSE=52.58 m | val RMSE=52.35 m | gap=-0.23 m | active_frac=1.00
+Epoch 732/800: 100%|██████████| 122/122 [00:11<00:00, 10.32it/s]
+Epoch 732: train RMSE=52.49 m | val RMSE=52.78 m | gap=0.30 m | active_frac=1.00
+Epoch 733/800: 100%|██████████| 122/122 [00:11<00:00, 10.31it/s]
+Epoch 733: train RMSE=52.37 m | val RMSE=52.38 m | gap=0.02 m | active_frac=1.00
+Epoch 734/800: 100%|██████████| 122/122 [00:11<00:00, 10.44it/s]
+Epoch 734: train RMSE=52.17 m | val RMSE=52.07 m | gap=-0.10 m | active_frac=1.00
+Epoch 735/800: 100%|██████████| 122/122 [00:11<00:00, 10.31it/s]
+Epoch 735: train RMSE=52.14 m | val RMSE=52.05 m | gap=-0.10 m | active_frac=1.00
+Epoch 736/800: 100%|██████████| 122/122 [00:11<00:00, 10.33it/s]
+Epoch 736: train RMSE=52.03 m | val RMSE=52.01 m | gap=-0.03 m | active_frac=1.00
+Epoch 737/800: 100%|██████████| 122/122 [00:11<00:00, 10.23it/s]
+Epoch 737: train RMSE=51.90 m | val RMSE=51.91 m | gap=0.01 m | active_frac=1.00
+Epoch 738/800: 100%|██████████| 122/122 [00:11<00:00, 10.30it/s]
+Epoch 738: train RMSE=51.71 m | val RMSE=51.96 m | gap=0.25 m | active_frac=1.00
+Epoch 739/800: 100%|██████████| 122/122 [00:11<00:00, 10.28it/s]
+Epoch 739: train RMSE=51.63 m | val RMSE=51.54 m | gap=-0.09 m | active_frac=1.00
+Epoch 740/800: 100%|██████████| 122/122 [00:11<00:00, 10.25it/s]
+Epoch 740: train RMSE=51.56 m | val RMSE=51.22 m | gap=-0.34 m | active_frac=1.00
+Epoch 741/800: 100%|██████████| 122/122 [00:11<00:00, 10.39it/s]
+Epoch 741: train RMSE=51.25 m | val RMSE=51.21 m | gap=-0.04 m | active_frac=1.00
+Epoch 742/800: 100%|██████████| 122/122 [00:11<00:00, 10.21it/s]
+Epoch 742: train RMSE=51.32 m | val RMSE=51.83 m | gap=0.52 m | active_frac=1.00
+Epoch 743/800: 100%|██████████| 122/122 [00:11<00:00, 10.18it/s]
+Epoch 743: train RMSE=51.22 m | val RMSE=51.22 m | gap=0.00 m | active_frac=1.00
+Epoch 744/800: 100%|██████████| 122/122 [00:11<00:00, 10.90it/s]
+Epoch 744: train RMSE=50.96 m | val RMSE=50.75 m | gap=-0.21 m | active_frac=1.00
+Epoch 745/800: 100%|██████████| 122/122 [00:11<00:00, 10.32it/s]
+Epoch 745: train RMSE=50.99 m | val RMSE=51.12 m | gap=0.13 m | active_frac=1.00
+Epoch 746/800: 100%|██████████| 122/122 [00:11<00:00, 10.39it/s]
+Epoch 746: train RMSE=50.82 m | val RMSE=50.76 m | gap=-0.06 m | active_frac=1.00
+Epoch 747/800: 100%|██████████| 122/122 [00:11<00:00, 10.38it/s]
+Epoch 747: train RMSE=50.69 m | val RMSE=50.42 m | gap=-0.27 m | active_frac=1.00
+Epoch 748/800: 100%|██████████| 122/122 [00:11<00:00, 10.25it/s]
+Epoch 748: train RMSE=50.61 m | val RMSE=50.62 m | gap=0.01 m | active_frac=1.00
+Epoch 749/800: 100%|██████████| 122/122 [00:11<00:00, 10.36it/s]
+Epoch 749: train RMSE=50.50 m | val RMSE=50.59 m | gap=0.09 m | active_frac=1.00
+Epoch 750/800: 100%|██████████| 122/122 [00:11<00:00, 10.19it/s]
+Epoch 750: train RMSE=50.42 m | val RMSE=50.55 m | gap=0.13 m | active_frac=1.00
+Epoch 751/800: 100%|██████████| 122/122 [00:11<00:00, 10.26it/s]
+Epoch 751: train RMSE=50.35 m | val RMSE=50.19 m | gap=-0.16 m | active_frac=1.00
+Epoch 752/800: 100%|██████████| 122/122 [00:11<00:00, 10.35it/s]
+Epoch 752: train RMSE=50.29 m | val RMSE=50.32 m | gap=0.03 m | active_frac=1.00
+Epoch 753/800: 100%|██████████| 122/122 [00:11<00:00, 10.35it/s]
+Epoch 753: train RMSE=50.20 m | val RMSE=50.22 m | gap=0.02 m | active_frac=1.00
+Epoch 754/800: 100%|██████████| 122/122 [00:11<00:00, 10.44it/s]
+Epoch 754: train RMSE=50.08 m | val RMSE=50.35 m | gap=0.27 m | active_frac=1.00
+Epoch 755/800: 100%|██████████| 122/122 [00:11<00:00, 10.36it/s]
+Epoch 755: train RMSE=50.04 m | val RMSE=50.10 m | gap=0.06 m | active_frac=1.00
+Epoch 756/800: 100%|██████████| 122/122 [00:11<00:00, 10.17it/s]
+Epoch 756: train RMSE=49.90 m | val RMSE=49.81 m | gap=-0.09 m | active_frac=1.00
+Epoch 757/800: 100%|██████████| 122/122 [00:11<00:00, 10.29it/s]
+Epoch 757: train RMSE=50.00 m | val RMSE=49.76 m | gap=-0.24 m | active_frac=1.00
+Epoch 758/800: 100%|██████████| 122/122 [00:11<00:00, 10.28it/s]
+Epoch 758: train RMSE=49.82 m | val RMSE=49.58 m | gap=-0.24 m | active_frac=1.00
+Epoch 759/800: 100%|██████████| 122/122 [00:11<00:00, 10.38it/s]
+Epoch 759: train RMSE=49.79 m | val RMSE=49.71 m | gap=-0.08 m | active_frac=1.00
+Epoch 760/800: 100%|██████████| 122/122 [00:12<00:00, 10.16it/s]
+Epoch 760: train RMSE=49.66 m | val RMSE=50.01 m | gap=0.35 m | active_frac=1.00
+Epoch 761/800: 100%|██████████| 122/122 [00:11<00:00, 10.17it/s]
+Epoch 761: train RMSE=49.62 m | val RMSE=49.77 m | gap=0.15 m | active_frac=1.00
+Epoch 762/800: 100%|██████████| 122/122 [00:11<00:00, 10.28it/s]
+Epoch 762: train RMSE=49.49 m | val RMSE=49.54 m | gap=0.06 m | active_frac=1.00
+Epoch 763/800: 100%|██████████| 122/122 [00:11<00:00, 10.31it/s]
+Epoch 763: train RMSE=49.34 m | val RMSE=49.41 m | gap=0.07 m | active_frac=1.00
+Epoch 764/800: 100%|██████████| 122/122 [00:11<00:00, 10.59it/s]
+Epoch 764: train RMSE=49.41 m | val RMSE=49.12 m | gap=-0.30 m | active_frac=1.00
+Epoch 765/800: 100%|██████████| 122/122 [00:11<00:00, 10.21it/s]
+Epoch 765: train RMSE=49.39 m | val RMSE=49.17 m | gap=-0.21 m | active_frac=1.00
+Epoch 766/800: 100%|██████████| 122/122 [00:11<00:00, 10.42it/s]
+Epoch 766: train RMSE=49.32 m | val RMSE=49.49 m | gap=0.18 m | active_frac=1.00
+Epoch 767/800: 100%|██████████| 122/122 [00:11<00:00, 10.28it/s]
+Epoch 767: train RMSE=49.28 m | val RMSE=49.20 m | gap=-0.08 m | active_frac=1.00
+Epoch 768/800: 100%|██████████| 122/122 [00:11<00:00, 10.29it/s]
+Epoch 768: train RMSE=49.14 m | val RMSE=49.05 m | gap=-0.10 m | active_frac=1.00
+Epoch 769/800: 100%|██████████| 122/122 [00:11<00:00, 10.35it/s]
+Epoch 769: train RMSE=49.09 m | val RMSE=48.95 m | gap=-0.13 m | active_frac=1.00
+Epoch 770/800: 100%|██████████| 122/122 [00:11<00:00, 10.29it/s]
+Epoch 770: train RMSE=49.02 m | val RMSE=49.42 m | gap=0.39 m | active_frac=1.00
+Epoch 771/800: 100%|██████████| 122/122 [00:11<00:00, 10.31it/s]
+Epoch 771: train RMSE=49.00 m | val RMSE=48.94 m | gap=-0.06 m | active_frac=1.00
+Epoch 772/800: 100%|██████████| 122/122 [00:11<00:00, 10.31it/s]
+Epoch 772: train RMSE=48.96 m | val RMSE=48.71 m | gap=-0.25 m | active_frac=1.00
+Epoch 773/800: 100%|██████████| 122/122 [00:11<00:00, 10.21it/s]
+Epoch 773: train RMSE=49.01 m | val RMSE=48.92 m | gap=-0.09 m | active_frac=1.00
+Epoch 774/800: 100%|██████████| 122/122 [00:11<00:00, 10.27it/s]
+Epoch 774: train RMSE=48.90 m | val RMSE=48.55 m | gap=-0.34 m | active_frac=1.00
+Epoch 775/800: 100%|██████████| 122/122 [00:11<00:00, 10.21it/s]
+Epoch 775: train RMSE=48.81 m | val RMSE=48.80 m | gap=-0.01 m | active_frac=1.00
+Epoch 776/800: 100%|██████████| 122/122 [00:11<00:00, 10.38it/s]
+Epoch 776: train RMSE=48.80 m | val RMSE=48.82 m | gap=0.02 m | active_frac=1.00
+Epoch 777/800: 100%|██████████| 122/122 [00:11<00:00, 10.19it/s]
+Epoch 777: train RMSE=48.78 m | val RMSE=48.65 m | gap=-0.13 m | active_frac=1.00
+Epoch 778/800: 100%|██████████| 122/122 [00:11<00:00, 10.83it/s]
+Epoch 778: train RMSE=48.65 m | val RMSE=48.96 m | gap=0.31 m | active_frac=1.00
+Epoch 779/800: 100%|██████████| 122/122 [00:09<00:00, 12.22it/s]
+Epoch 779: train RMSE=48.74 m | val RMSE=48.57 m | gap=-0.17 m | active_frac=1.00
+Epoch 780/800: 100%|██████████| 122/122 [00:10<00:00, 12.17it/s]
+Epoch 780: train RMSE=48.64 m | val RMSE=48.69 m | gap=0.04 m | active_frac=1.00
+Epoch 781/800: 100%|██████████| 122/122 [00:10<00:00, 11.82it/s]
+Epoch 781: train RMSE=48.63 m | val RMSE=48.90 m | gap=0.27 m | active_frac=1.00
+Epoch 782/800: 100%|██████████| 122/122 [00:09<00:00, 12.23it/s]
+Epoch 782: train RMSE=48.64 m | val RMSE=48.50 m | gap=-0.14 m | active_frac=1.00
+Epoch 783/800: 100%|██████████| 122/122 [00:10<00:00, 11.93it/s]
+Epoch 783: train RMSE=48.67 m | val RMSE=48.60 m | gap=-0.07 m | active_frac=1.00
+Epoch 784/800: 100%|██████████| 122/122 [00:09<00:00, 12.36it/s]
+Epoch 784: train RMSE=48.62 m | val RMSE=48.89 m | gap=0.27 m | active_frac=1.00
+Epoch 785/800: 100%|██████████| 122/122 [00:10<00:00, 11.97it/s]
+Epoch 785: train RMSE=48.57 m | val RMSE=48.84 m | gap=0.27 m | active_frac=1.00
+Epoch 786/800: 100%|██████████| 122/122 [00:09<00:00, 12.22it/s]
+Epoch 786: train RMSE=48.60 m | val RMSE=48.21 m | gap=-0.39 m | active_frac=1.00
+Epoch 787/800: 100%|██████████| 122/122 [00:10<00:00, 11.89it/s]
+Epoch 787: train RMSE=48.57 m | val RMSE=48.37 m | gap=-0.20 m | active_frac=1.00
+Epoch 788/800: 100%|██████████| 122/122 [00:10<00:00, 11.16it/s]
+Epoch 788: train RMSE=48.58 m | val RMSE=48.95 m | gap=0.37 m | active_frac=1.00
+Epoch 789/800: 100%|██████████| 122/122 [00:10<00:00, 11.34it/s]
+Epoch 789: train RMSE=48.45 m | val RMSE=48.77 m | gap=0.32 m | active_frac=1.00
+Epoch 790/800: 100%|██████████| 122/122 [00:11<00:00, 10.24it/s]
+Epoch 790: train RMSE=48.45 m | val RMSE=48.48 m | gap=0.03 m | active_frac=1.00
+Epoch 791/800: 100%|██████████| 122/122 [00:12<00:00, 10.10it/s]
+Epoch 791: train RMSE=48.55 m | val RMSE=48.66 m | gap=0.11 m | active_frac=1.00
+Epoch 792/800: 100%|██████████| 122/122 [00:11<00:00, 10.26it/s]
+Epoch 792: train RMSE=48.42 m | val RMSE=48.88 m | gap=0.46 m | active_frac=1.00
+Epoch 793/800: 100%|██████████| 122/122 [00:11<00:00, 10.28it/s]
+Epoch 793: train RMSE=48.60 m | val RMSE=48.66 m | gap=0.06 m | active_frac=1.00
+Epoch 794/800: 100%|██████████| 122/122 [00:11<00:00, 10.35it/s]
+Epoch 794: train RMSE=48.44 m | val RMSE=48.66 m | gap=0.22 m | active_frac=1.00
+Epoch 795/800: 100%|██████████| 122/122 [00:11<00:00, 10.29it/s]
+Epoch 795: train RMSE=48.43 m | val RMSE=48.49 m | gap=0.06 m | active_frac=1.00
+Epoch 796/800: 100%|██████████| 122/122 [00:12<00:00, 10.12it/s]
+Epoch 796: train RMSE=48.54 m | val RMSE=48.16 m | gap=-0.38 m | active_frac=1.00
+Epoch 797/800: 100%|██████████| 122/122 [00:11<00:00, 10.17it/s]
+Epoch 797: train RMSE=48.46 m | val RMSE=48.71 m | gap=0.25 m | active_frac=1.00
+Epoch 798/800: 100%|██████████| 122/122 [00:11<00:00, 10.22it/s]
+Epoch 798: train RMSE=48.44 m | val RMSE=48.55 m | gap=0.10 m | active_frac=1.00
+Epoch 799/800: 100%|██████████| 122/122 [00:12<00:00, 10.15it/s]
+Epoch 799: train RMSE=48.45 m | val RMSE=48.55 m | gap=0.09 m | active_frac=1.00
+Epoch 800/800: 100%|██████████| 122/122 [00:11<00:00, 10.28it/s]
+Epoch 800: train RMSE=48.51 m | val RMSE=48.40 m | gap=-0.10 m | active_frac=1.00
+Model salvat in lunar_altitude_model2.pt (best val RMSE=48.16 m)
+
+Process finished with exit code 0
