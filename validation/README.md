@@ -29,10 +29,10 @@ All four eclipses are **total**. No annular or partial-only location has been va
 
 | Eclipse | Observer (lat, lon) | Altitude (m, simulator = Jubier) | ΔT Jubier | ΔT simulator | Δ ΔT (sim − Jubier) | Reference read on |
 |---|---|---|---|---|---|---|
-| 1999-08-11 | 44.43522° N, 26.04814° E | 82 | 63.7 s | 63.68 s | −0.02 s | 2026-02-05 |
-| 2026-08-12 | 41.64714° N, 0.88565° W | 227 | 69.1 s | 69.10 s | 0.00 s | 2026-03-05 |
-| 2027-08-02 | 25.63483° N, 32.59431° E | 77 | 69.3 s | 69.08 s | −0.22 s | 2026-03-05 |
-| 2038-12-26 | 40.47225° S, 175.23682° E | 3 | 83.9 s | 69.61 s | −14.29 s | 2026-04-05 |
+| 1999-08-11 | 44.43522° N, 26.04814° E | 82 | 63.7 s | 63.68 s | −0.02 s | 2026-10-03 |
+| 2026-08-12 | 41.64714° N, 0.88565° W | 227 | 69.1 s | 69.10 s | 0.00 s | 2026-10-03 |
+| 2027-08-02 | 25.63483° N, 32.59431° E | 77 | 69.3 s | 69.08 s | −0.22 s | 2026-10-03 |
+| 2038-12-26 | 40.47225° S, 175.23682° E | 3 | 83.9 s | 69.61 s | −14.29 s | 2026-10-03 |
 
 The simulator values below were collected with `collect_simulator.py` directly from the running backend, at Jubier's coordinates and elevation; the ΔT column is the value the backend actually used.
 
@@ -175,10 +175,10 @@ A standalone Besselian-elements script run over the 71,264-event catalogue found
 
 ## How to reproduce
 
-Close Unreal first (it uses the same UDP port), then:
+From the `validation` folder, close Unreal first (it uses the same UDP port), then:
 
-    pip install -r ../Server/requirements.txt
-    python collect_simulator.py --server-dir ../Content/Encoder
+    pip install -r requirements.txt
+    python collect_simulator.py --server-dir Encoder
     python run_validation.py --out summary.md
 
 To regenerate the tables without running the backend, use the saved results:

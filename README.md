@@ -309,8 +309,7 @@ python3 Server.py
 | `Download_Ephemerides/` | Script that fetches DE441 and other ephemerides for Jupiter, Saturn, Neptune and the Moon texture |
 | `Proiect_Eclipsa.uproject` | Unreal Engine project file |
 | `validation/` | Besselian-elements script, comparison data and the validation method (see [Validation](#-validation--accuracy)) |
-| **`Content/Encoder/`** | Lunar limb model weights (67 MB, fp16) and, if included, the training script |
-| **`Content/Encoder`** | `CountryPoints.csv` (city list used by the catalogue **Details** view) |
+| **`Content/Encoder/`** | Lunar limb model weights (67 MB, fp16) and `CountryPoints.csv` (city list used by the catalogue **Details** view)|
 | `docs/` | Images and third-party licences (`docs/THIRD_PARTY.md`) |
 | `LICENSE`, `NOTICE` | Apache 2.0 licence and notices |
 | `CONTRIBUTING.md`, `CITATION.cff` | How to contribute; citation metadata |
@@ -541,7 +540,7 @@ Contact times (C1–C4) were compared with **Xavier Jubier's** interactive eclip
 | **Time range** | 12,000 yr (acceptable accuracy) | 10,000 yr (acceptable accuracy) | Unlimited | 2007–2026 (19 yr, free plan) | 1990–2040 | **13,000 BC – 17,000 AD** |
 | **Rendering mode** | Semi-2D | 3D | 3D | 2D | 2D | **3D** |
 
-TPE = The Photographer's Ephemeris. Comparison are based on my own testing.
+TPE = The Photographer's Ephemeris. Comparisons are based on my own testing.
 
 ---
 

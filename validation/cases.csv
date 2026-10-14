@@ -1,0 +1,5 @@
+case,location,regime,date,utc_hint,lat,lon,alt_m
+1999_bucharest,Bucharest,core,1999-08-11,11:07,44.43522,26.04814,82.0
+2026_zaragoza,Zaragoza,core,2026-08-12,18:30,41.64714,-0.88565,227.0
+2027_luxor,Luxor Bridge,core,2027-08-02,10:05,25.63483,32.59431,77.0
+2038_foxton,Foxton NZ,far_future,2038-12-26,01:23,-40.47225,175.23682,3.0
