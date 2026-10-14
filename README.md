@@ -310,6 +310,7 @@ python3 Server.py
 | `Proiect_Eclipsa.uproject` | Unreal Engine project file |
 | `validation/` | Besselian-elements script, comparison data and the validation method (see [Validation](#-validation--accuracy)) |
 | **`Content/Encoder/`** | Lunar limb model weights (67 MB, fp16) and `CountryPoints.csv` (city list used by the catalogue **Details** view)|
+| `Lunar_AI/` | Training, evaluation and export code for the lunar limb elevation model (see [Lunar limb](#-lunar-limb-a-neural-elevation-model)) |
 | `docs/` | Images and third-party licences (`docs/THIRD_PARTY.md`) |
 | `LICENSE`, `NOTICE` | Apache 2.0 licence and notices |
 | `CONTRIBUTING.md`, `CITATION.cff` | How to contribute; citation metadata |
