@@ -415,7 +415,7 @@ Cylindrical projection with elevations relative to the 1,737.4 km lunar referenc
 network compresses the region that matters into a **67 MB** model that can be queried in
 real time, at any point, with no tiling or loading.
 
-**Model and code in this repository.** The trained weights (67 MB, fp16) are in `Content/Encoder/lunar_altitude_contact_bands_fp16_finetuned.pt`. They are loaded once, when the backend starts, by `load()` in `Server.py` (`torch.load`, CPU), and the network is converted to fp32 for inference. The training script is **[in `Content/Encoder`]**; the LDEM source file is available from the USGS link in [`docs/THIRD_PARTY.md`](docs/THIRD_PARTY.md).
+**Model and code in this repository.** The trained weights (67 MB, fp16) are in `Content/Encoder/lunar_altitude_contact_bands_fp16_finetuned.pt`. They are loaded once, when the backend starts, by `load()` in `Server.py` (`torch.load`, CPU), and the network is converted to fp32 for inference. The training script is in **[`Content/Encoder`]**; the LDEM source file is available from the USGS link in [`docs/THIRD_PARTY.md`](docs/THIRD_PARTY.md).
 
 
 **Architecture**
@@ -541,7 +541,8 @@ Contact times (C1–C4) were compared with **Xavier Jubier's** interactive eclip
 | **Time range** | 12,000 yr (acceptable accuracy) | 10,000 yr (acceptable accuracy) | Unlimited | 2007–2026 (19 yr, free plan) | 1990–2040 | **13,000 BC – 17,000 AD** |
 | **Rendering mode** | Semi-2D | 3D | 3D | 2D | 2D | **3D** |
 
-*TPE = The Photographer's Ephemeris. Comparison are based on my own testing.
+TPE = The Photographer's Ephemeris. Comparison are based on my own testing.
+
 ---
 
 ## ⚠️ Limitations
