@@ -1,0 +1,7 @@
+# Validation scripts (collect_simulator.py, run_validation.py)
+# They use only the Python standard library (Python 3.8+; the project uses 3.13),
+# so nothing extra is needed to compare results or regenerate the tables.
+#
+# collect_simulator.py can also start the backend for you (--server-dir),
+# and the backend needs its own dependencies, so they are included here:
+-r ../Server/requirements.txt

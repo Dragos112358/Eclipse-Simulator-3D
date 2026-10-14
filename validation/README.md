@@ -178,9 +178,15 @@ A standalone Besselian-elements script run over the 71,264-event catalogue found
 From the `validation` folder, close Unreal first (it uses the same UDP port), then:
 
     pip install -r requirements.txt
-    python collect_simulator.py --server-dir Encoder
+    python collect_simulator.py --server-dir ../Content/Encoder
     python run_validation.py --out summary.md
 
-To regenerate the tables without running the backend, use the saved results:
+`requirements.txt` only pulls in the backend's dependencies (`../Server/requirements.txt`);
+the validation scripts themselves use just the Python standard library.
+`--server-dir` must point to the folder that contains `Server.py` and the `_internal`
+runtime. If the backend is already running, omit `--server-dir`.
+
+To regenerate the tables without running the backend, use the saved results
+(no installation needed):
 
     python run_validation.py --sim simulator_results.json --out summary.md
