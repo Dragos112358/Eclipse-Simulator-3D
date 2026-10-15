@@ -8,6 +8,46 @@ This folder contains everything used to check **3D Eclipse Simulator** against i
 
 Everything here is reproducible from the scripts in this folder (Section 11).
 
+---
+
+## 🌍 Visual Case Studies & Simulation Results
+
+> Visual verification of extreme and key cases across the 30,000-year timeline, showing the 3D viewing perspective, global totality paths, and ground shadow projections on Cesium terrain.
+
+<div align="center">
+
+### Case Study 1: Puerto Natales, Chile (July 11, 2010)
+<img src="docs/images/Validation/1.png" width="100%">
+<p><em>Total Solar Eclipse, 49.049° S, 74.516° W — Totality path and ground shadow projection.</em></p>
+
+<br>
+
+### Case Study 2: Luxor, Egypt (August 2, 2027)
+<img src="docs/images/Validation/2.png" width="100%">
+<p><em>Umbra and Penumbra Cone Viewing & Projection onto Earth's Surface — 6 minutes and 20 seconds of recorded totality.</em></p>
+
+<br>
+
+### Case Study 3: Queens, United States (May 1, 2079)
+<img src="docs/images/Validation/3.png" width="100%">
+<p><em>Far-future simulation test at 40.759° N, 73.944° W, 10:09 UTC.</em></p>
+
+<br>
+
+### Case Study 4: Canada (October 10, 13,000 BC)
+<img src="docs/images/Validation/4.png" width="100%">
+<p><em>Deep historical range test at 58.262° N, 136.364° W, 18:55 UTC — calendar-reconciliation stress test.</em></p>
+
+<br>
+
+### Case Study 5: South Hamilton, Australia (July 25, 16,995 AD)
+<img src="docs/images/Validation/5.png" width="100%">
+<p><em>Upper chronological boundary test at 32.9339° S, 151.736° E, 14:30:53 UTC.</em></p>
+
+</div>
+
+---
+
 ## Contents
 
 1. [Summary](#1-summary)
