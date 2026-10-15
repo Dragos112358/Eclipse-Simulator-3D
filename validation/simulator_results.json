@@ -1,10 +1,12 @@
 {
-  "collected_at": "2026-10-14 15:21:54",
+  "collected_at": "2026-10-15 14:31:53",
   "cases": [
     {
       "case": "1999_bucharest",
       "location": "Bucharest",
       "regime": "core",
+      "type": "total",
+      "type_at_location": "total",
       "date": "1999-08-11",
       "utc_hint": "11:07",
       "lat": 44.43522,
@@ -89,12 +91,20 @@
       "delta_t_s": 63.67929768784717,
       "truncated": false,
       "raw_report": "LOCATION: Semănătoarea, Romania\nCOORDS: 44.4352, 26.0481\n\nType: TOTAL | Duration: 2m 20.3s\nLunar Limb Duration: 2m 24.1s\nMagnitude: 1.01351 | Ratio: 1.02932\nObscuration: 100.00%\nUmb. Vel: 0.6787 km/s | Width: 112.4 km\nUmb. Depth: 0.92 (51.7km)\nConstellation: Leo\nSky Objects: Venus 15.4°, Mercury 18.3°, Mars 88.5°\n--------------------------------------------------\nEvent   |   UTC Time   |  Alt   |  Azi   |  P\n--------------------------------------------------\nC1      | 09:41:18.6 | +59.7° | 160.7° | 288°\nC1L     | 09:41:19.9 | +59.7° | 160.7° | 288°\nC2L     | 11:05:42.9 | +59.4° | 201.5° | 114°\nC2      | 11:05:43.7 | +59.4° | 201.5° | 114°\nMAX     | 11:06:53.9 | +59.3° | 202.1° | 020°\nMAXL    | 11:06:55.1 | +59.3° | 202.1° | 031°\nC3      | 11:08:03.9 | +59.2° | 202.6° | 285°\nC3L     | 11:08:07.0 | +59.2° | 202.6° | 285°\nC4L     | 12:28:37.2 | +50.3° | 232.9° | 110°\nC4      | 12:28:40.6 | +50.3° | 233.0° | 110°\n",
+      "expected_contacts": [
+        "C1",
+        "C2",
+        "C3",
+        "C4"
+      ],
       "missing_contacts": []
     },
     {
       "case": "2026_zaragoza",
       "location": "Zaragoza",
       "regime": "core",
+      "type": "total",
+      "type_at_location": "total",
       "date": "2026-08-12",
       "utc_hint": "18:30",
       "lat": 41.64714,
@@ -180,17 +190,25 @@
         "speed_kms": 2.8329,
         "width_km": 291.5,
         "depth_km": 63.0,
-        "location_name": "Centro, Spain"
+        "location_name": "Zaragoza, Spain"
       },
       "delta_t_s": 69.09900887083346,
       "truncated": false,
-      "raw_report": "LOCATION: Centro, Spain\nCOORDS: 41.6471, -0.8857\n\nType: TOTAL | Duration: 1m 22.3s\nLunar Limb Duration: 1m 22.3s\nMagnitude: 1.00736 | Ratio: 1.03314\nObscuration: 100.00%\nUmb. Vel: 2.8329 km/s | Width: 291.5 km\nUmb. Depth: 0.43 (63.0km)\nConstellation: Leo\nSky Objects: Jupiter 10.5°, Venus 45.9°\n--------------------------------------------------\nEvent   |   UTC Time   |  Alt   |  Azi   |  P\n--------------------------------------------------\nC1      | 17:34:42.2 | +16.1° | 275.8° | 298°\nC1L     | 17:34:43.2 | +16.1° | 275.8° | 298°\nC2      | 18:29:04.8 | +06.2° | 284.5° | 082°\nC2L     | 18:29:04.8 | +06.2° | 284.5° | 082°\nMAX     | 18:29:45.9 | +06.0° | 284.6° | 208°\nMAXL    | 18:29:45.9 | +06.0° | 284.6° | 208°\nC3      | 18:30:27.1 | +05.9° | 284.7° | 333°\nC3L     | 18:30:27.1 | +05.9° | 284.7° | 333°\nSunset  | 19:07:35.4 | -00.2° | 290.8° | 117°\nC4L     | 19:21:29.3 | -03.2° | 293.1° | 117°\nC4      | 19:21:30.1 | -03.2° | 293.1° | 117°\n",
+      "raw_report": "LOCATION: Zaragoza, Spain\nCOORDS: 41.6471, -0.8857\n\nType: TOTAL | Duration: 1m 22.3s\nLunar Limb Duration: 1m 22.3s\nMagnitude: 1.00736 | Ratio: 1.03314\nObscuration: 100.00%\nUmb. Vel: 2.8329 km/s | Width: 291.5 km\nUmb. Depth: 0.43 (63.0km)\nConstellation: Leo\nSky Objects: Jupiter 10.5°, Venus 45.9°\n--------------------------------------------------\nEvent   |   UTC Time   |  Alt   |  Azi   |  P\n--------------------------------------------------\nC1      | 17:34:42.2 | +16.1° | 275.8° | 298°\nC1L     | 17:34:43.2 | +16.1° | 275.8° | 298°\nC2      | 18:29:04.8 | +06.2° | 284.5° | 082°\nC2L     | 18:29:04.8 | +06.2° | 284.5° | 082°\nMAX     | 18:29:45.9 | +06.0° | 284.6° | 208°\nMAXL    | 18:29:45.9 | +06.0° | 284.6° | 208°\nC3      | 18:30:27.1 | +05.9° | 284.7° | 333°\nC3L     | 18:30:27.1 | +05.9° | 284.7° | 333°\nSunset  | 19:07:35.4 | -00.2° | 290.8° | 117°\nC4L     | 19:21:29.3 | -03.2° | 293.1° | 117°\nC4      | 19:21:30.1 | -03.2° | 293.1° | 117°\n",
+      "expected_contacts": [
+        "C1",
+        "C2",
+        "C3",
+        "C4"
+      ],
       "missing_contacts": []
     },
     {
       "case": "2027_luxor",
       "location": "Luxor Bridge",
       "regime": "core",
+      "type": "total",
+      "type_at_location": "total",
       "date": "2027-08-02",
       "utc_hint": "10:05",
       "lat": 25.63483,
@@ -275,12 +293,20 @@
       "delta_t_s": 69.0807383562419,
       "truncated": false,
       "raw_report": "LOCATION: Luxor, Egypt\nCOORDS: 25.6348, 32.5943\n\nType: TOTAL | Duration: 6m 15.7s\nLunar Limb Duration: 6m 19.4s\nMagnitude: 1.03316 | Ratio: 1.07985\nObscuration: 100.00%\nUmb. Vel: 0.6663 km/s | Width: 257.5 km\nUmb. Depth: 0.83 (106.8km)\nConstellation: Cancer\nSky Objects: Venus 2.8°, Mercury 10.0°, Jupiter 21.6°, Mars 60.8°\n--------------------------------------------------\nEvent   |   UTC Time   |  Alt   |  Azi   |  P\n--------------------------------------------------\nC1      | 08:40:14.3 | +70.8° | 110.3° | 303°\nC1L     | 08:40:16.6 | +70.8° | 110.3° | 303°\nC2L     | 10:02:08.9 | +82.0° | 190.7° | 134°\nC2      | 10:02:09.9 | +82.0° | 190.7° | 134°\nMAX     | 10:05:17.9 | +81.8° | 195.9° | 035°\nMAXL    | 10:05:18.8 | +81.8° | 195.9° | 036°\nC3      | 10:08:25.5 | +81.6° | 200.8° | 295°\nC3L     | 10:08:28.3 | +81.6° | 200.9° | 295°\nC4L     | 11:26:35.0 | +67.6° | 254.0° | 125°\nC4      | 11:26:37.2 | +67.6° | 254.0° | 125°\n",
+      "expected_contacts": [
+        "C1",
+        "C2",
+        "C3",
+        "C4"
+      ],
       "missing_contacts": []
     },
     {
       "case": "2038_foxton",
       "location": "Foxton NZ",
       "regime": "far_future",
+      "type": "total",
+      "type_at_location": "total",
       "date": "2038-12-26",
       "utc_hint": "01:23",
       "lat": -40.47225,
@@ -365,6 +391,1203 @@
       "delta_t_s": 69.6068327336273,
       "truncated": false,
       "raw_report": "LOCATION: Foxton Beach, New Zealand\nCOORDS: -40.4723, 175.2368\n\nType: TOTAL | Duration: 2m 10.6s\nLunar Limb Duration: 2m 13.3s\nMagnitude: 1.01264 | Ratio: 1.02698\nObscuration: 100.00%\nUmb. Vel: 0.6899 km/s | Width: 93.2 km\nUmb. Depth: 0.94 (43.6km)\nConstellation: Sagittarius\nSky Objects: Mercury 16.4°, Mars 16.8°, Venus 17.0°\n--------------------------------------------------\nEvent   |   UTC Time   |  Alt   |  Azi   |  P\n--------------------------------------------------\nC1      | 23:56:27.9 | +72.2° | 017.4° | 275°\nC1L     | 23:56:29.6 | +72.2° | 017.4° | 275°\nC2L     | 01:21:54.5 | +68.4° | 317.7° | 089°\nC2      | 01:21:54.8 | +68.4° | 317.7° | 089°\nMAX     | 01:22:59.9 | +68.3° | 317.2° | 186°\nMAXL    | 01:23:00.9 | +68.3° | 317.2° | 173°\nC3      | 01:24:05.4 | +68.1° | 316.6° | 276°\nC3L     | 01:24:07.8 | +68.1° | 316.6° | 276°\nC4L     | 02:45:35.7 | +54.9° | 287.9° | 091°\nC4      | 02:45:39.0 | +54.9° | 287.9° | 091°\n",
+      "expected_contacts": [
+        "C1",
+        "C2",
+        "C3",
+        "C4"
+      ],
+      "missing_contacts": []
+    },
+    {
+      "case": "2005_madrid_annular",
+      "location": "Madrid",
+      "regime": "core",
+      "type": "annular",
+      "type_at_location": "annular",
+      "date": "2005-10-03",
+      "utc_hint": "09:00",
+      "lat": 40.4168,
+      "lon": -3.7038,
+      "alt_m": 650.0,
+      "ok": true,
+      "hint_used": "09:00",
+      "events": {
+        "C1": {
+          "utc": "07:40:11.2",
+          "alt": 15.4,
+          "az": 109.2,
+          "p": 307
+        },
+        "C1L": {
+          "utc": "07:40:12.9",
+          "alt": 15.4,
+          "az": 109.2,
+          "p": 307
+        },
+        "C2": {
+          "utc": "08:55:52.2",
+          "alt": 28.2,
+          "az": 124.2,
+          "p": 134
+        },
+        "C2L": {
+          "utc": "08:55:53.7",
+          "alt": 28.2,
+          "az": 124.2,
+          "p": 134
+        },
+        "MAXL": {
+          "utc": "08:57:58.5",
+          "alt": 28.5,
+          "az": 124.6,
+          "p": 39
+        },
+        "MAX": {
+          "utc": "08:57:58.9",
+          "alt": 28.5,
+          "az": 124.6,
+          "p": 42
+        },
+        "C3L": {
+          "utc": "09:00:02.4",
+          "alt": 28.9,
+          "az": 125.1,
+          "p": 305
+        },
+        "C3": {
+          "utc": "09:00:04.8",
+          "alt": 28.9,
+          "az": 125.1,
+          "p": 305
+        },
+        "C4L": {
+          "utc": "10:23:34.8",
+          "alt": 39.9,
+          "az": 146.6,
+          "p": 131
+        },
+        "C4": {
+          "utc": "10:23:37.8",
+          "alt": 39.9,
+          "az": 146.6,
+          "p": 131
+        }
+      },
+      "meta": {
+        "type": "ANNULAR",
+        "duration_s": 252.6,
+        "limb_duration_s": 248.7,
+        "magnitude": 0.97334,
+        "ratio": 0.95065,
+        "obscuration_pct": 90.37,
+        "speed_kms": 1.4729,
+        "width_km": 186.5,
+        "depth_km": 85.9,
+        "location_name": "Centro, Spain"
+      },
+      "delta_t_s": 64.7937528375,
+      "truncated": false,
+      "raw_report": "LOCATION: Centro, Spain\nCOORDS: 40.4168, -3.7038\n\nType: ANNULAR | Duration: 4m 12.6s\nLunar Limb Duration: 4m 8.7s\nMagnitude: 0.97334 | Ratio: 0.95065\nObscuration: 90.37%\nUmb. Vel: 1.4729 km/s | Width: 186.5 km\nUmb. Depth: 0.92 (85.9km)\nConstellation: Virgo\nSky Objects: Mercury 11.3°, Jupiter 14.9°, Saturn 61.1°, Mars 136.9°\n--------------------------------------------------\nEvent   |   UTC Time   |  Alt   |  Azi   |  P\n--------------------------------------------------\nC1      | 07:40:11.2 | +15.4° | 109.2° | 307°\nC1L     | 07:40:12.9 | +15.4° | 109.2° | 307°\nC2      | 08:55:52.2 | +28.2° | 124.2° | 134°\nC2L     | 08:55:53.7 | +28.2° | 124.2° | 134°\nMAXL    | 08:57:58.5 | +28.5° | 124.6° | 039°\nMAX     | 08:57:58.9 | +28.5° | 124.6° | 042°\nC3L     | 09:00:02.4 | +28.9° | 125.1° | 305°\nC3      | 09:00:04.8 | +28.9° | 125.1° | 305°\nC4L     | 10:23:34.8 | +39.9° | 146.6° | 131°\nC4      | 10:23:37.8 | +39.9° | 146.6° | 131°\n",
+      "expected_contacts": [
+        "C1",
+        "C2",
+        "C3",
+        "C4"
+      ],
+      "missing_contacts": []
+    },
+    {
+      "case": "2010_kerala_annular",
+      "location": "Thiruvananthapuram",
+      "regime": "core",
+      "type": "annular",
+      "type_at_location": "annular",
+      "date": "2010-01-15",
+      "utc_hint": "07:10",
+      "lat": 8.5241,
+      "lon": 76.9366,
+      "alt_m": 10.0,
+      "ok": true,
+      "hint_used": "07:10",
+      "events": {
+        "C1": {
+          "utc": "05:34:55.0",
+          "alt": 53.5,
+          "az": 144.6,
+          "p": 238
+        },
+        "C1L": {
+          "utc": "05:34:57.5",
+          "alt": 53.5,
+          "az": 144.7,
+          "p": 238
+        },
+        "C2": {
+          "utc": "07:40:43.6",
+          "alt": 58.8,
+          "az": 197.8,
+          "p": 9
+        },
+        "C2L": {
+          "utc": "07:40:46.1",
+          "alt": 58.8,
+          "az": 197.9,
+          "p": 8
+        },
+        "MAXL": {
+          "utc": "07:44:18.4",
+          "alt": 58.6,
+          "az": 199.4,
+          "p": 146
+        },
+        "MAX": {
+          "utc": "07:44:18.9",
+          "alt": 58.6,
+          "az": 199.4,
+          "p": 146
+        },
+        "C3L": {
+          "utc": "07:47:51.0",
+          "alt": 58.3,
+          "az": 200.8,
+          "p": 283
+        },
+        "C3": {
+          "utc": "07:47:54.6",
+          "alt": 58.3,
+          "az": 200.8,
+          "p": 282
+        },
+        "C4L": {
+          "utc": "09:35:24.5",
+          "alt": 42.0,
+          "az": 231.3,
+          "p": 56
+        },
+        "C4": {
+          "utc": "09:35:26.8",
+          "alt": 42.0,
+          "az": 231.3,
+          "p": 56
+        }
+      },
+      "meta": {
+        "type": "ANNULAR",
+        "duration_s": 430.9,
+        "limb_duration_s": 424.9,
+        "magnitude": 0.92923,
+        "ratio": 0.91869,
+        "obscuration_pct": 84.4,
+        "speed_kms": 0.5491,
+        "width_km": 324.0,
+        "depth_km": 43.3,
+        "location_name": "Kesavadasapuram, India"
+      },
+      "delta_t_s": 66.08081341736106,
+      "truncated": false,
+      "raw_report": "LOCATION: Kesavadasapuram, India\nCOORDS: 8.5241, 76.9366\n\nType: ANNULAR | Duration: 7m 10.9s\nLunar Limb Duration: 7m 4.9s\nMagnitude: 0.92923 | Ratio: 0.91869\nObscuration: 84.40%\nUmb. Vel: 0.5491 km/s | Width: 324.0 km\nUmb. Depth: 0.27 (43.3km)\nConstellation: Sagittarius\nSky Objects: Venus 1.2°, Mercury 19.7°, Jupiter 34.4°\n--------------------------------------------------\nEvent   |   UTC Time   |  Alt   |  Azi   |  P\n--------------------------------------------------\nC1      | 05:34:55.0 | +53.5° | 144.6° | 238°\nC1L     | 05:34:57.5 | +53.5° | 144.7° | 238°\nC2      | 07:40:43.6 | +58.8° | 197.8° | 009°\nC2L     | 07:40:46.1 | +58.8° | 197.9° | 008°\nMAXL    | 07:44:18.4 | +58.6° | 199.4° | 146°\nMAX     | 07:44:18.9 | +58.6° | 199.4° | 146°\nC3L     | 07:47:51.0 | +58.3° | 200.8° | 283°\nC3      | 07:47:54.6 | +58.3° | 200.8° | 282°\nC4L     | 09:35:24.5 | +42.0° | 231.3° | 056°\nC4      | 09:35:26.8 | +42.0° | 231.3° | 056°\n",
+      "expected_contacts": [
+        "C1",
+        "C2",
+        "C3",
+        "C4"
+      ],
+      "missing_contacts": []
+    },
+    {
+      "case": "2012_albuquerque_annular",
+      "location": "Albuquerque",
+      "regime": "core",
+      "type": "annular",
+      "type_at_location": "annular",
+      "date": "2012-05-20",
+      "utc_hint": "23:30",
+      "lat": 35.0844,
+      "lon": -106.6504,
+      "alt_m": 1620.0,
+      "ok": true,
+      "hint_used": "23:30",
+      "events": {
+        "C1": {
+          "utc": "00:28:24.2",
+          "alt": 18.4,
+          "az": 282.2,
+          "p": 272
+        },
+        "C1L": {
+          "utc": "00:28:25.6",
+          "alt": 18.4,
+          "az": 282.3,
+          "p": 272
+        },
+        "C2": {
+          "utc": "01:33:38.8",
+          "alt": 5.7,
+          "az": 290.9,
+          "p": 89
+        },
+        "C2L": {
+          "utc": "01:33:40.1",
+          "alt": 5.7,
+          "az": 290.9,
+          "p": 89
+        },
+        "MAXL": {
+          "utc": "01:35:52.9",
+          "alt": 5.3,
+          "az": 291.2,
+          "p": 179
+        },
+        "MAX": {
+          "utc": "01:35:52.9",
+          "alt": 5.3,
+          "az": 291.2,
+          "p": 178
+        },
+        "C3L": {
+          "utc": "01:38:04.9",
+          "alt": 4.9,
+          "az": 291.5,
+          "p": 275
+        },
+        "C3": {
+          "utc": "01:38:06.3",
+          "alt": 4.9,
+          "az": 291.5,
+          "p": 275
+        },
+        "Sunset": {
+          "utc": "02:07:43.6",
+          "alt": -0.2,
+          "az": 295.7,
+          "p": 92
+        },
+        "C4L": {
+          "utc": "02:36:26.5",
+          "alt": -6.0,
+          "az": 300.0,
+          "p": 92
+        },
+        "C4": {
+          "utc": "02:36:27.9",
+          "alt": -6.0,
+          "az": 300.0,
+          "p": 92
+        }
+      },
+      "meta": {
+        "type": "ANNULAR",
+        "duration_s": 267.5,
+        "limb_duration_s": 264.8,
+        "magnitude": 0.96493,
+        "ratio": 0.93316,
+        "obscuration_pct": 87.08,
+        "speed_kms": 8.2853,
+        "width_km": 316.9,
+        "depth_km": 150.7,
+        "location_name": "Barelas, United States"
+      },
+      "delta_t_s": 66.74938651875016,
+      "truncated": true,
+      "raw_report": "LOCATION: Barelas, United States\nCOORDS: 35.0844, -106.6504\n\nType: ANNULAR | Duration: 4m 27.5s\nLunar Limb Duration: 4m 24.8s\nMagnitude: 0.96493 | Ratio: 0.93316\nObscuration: 87.08%\nUmb. Vel: 8.2853 km/s | Width: 316.9 km\nUmb. Depth: 0.95 (150.7km)\nConstellation: Taurus\nSky Objects: Jupiter 5.5°, Venus 23.2°, Mars 100.3°, Saturn 143.3°\n--------------------------------------------------\nEvent   |   UTC Time   |  Alt   |  Azi   |  P\n--------------------------------------------------\nC1      | 00:28:24.2 | +18.4° | 282.2° | 272°\nC1L     | 00:28:25.6 | +18.4° | 282.3° | 272°\nC2      | 01:33:38.8 | +05.7° | 290.9° | 089°\nC2L     | 01:33:40.1 | +05.7° | 290.9° | 089°\nMAXL    | 01:35:52.9 | +05.3° | 291.2° | 179°\nMAX     | 01:35:52.9 | +05.3° | 291.2° | 178°\nC3L     | 01:38:04.9 | +04.9° | 291.5° | 275°\nC3      | 01:38:06.3 | +04.9° | 291.5° | 275°\nSunset  | 02:07:43.6 | -00.2° | 295.7° | 092°\nC4L     | 02:36:26.5 | -06.0° | 300.0° | 092°\nC4      | 02:36:27.9 | -06.0° | 300.0° | 092°\n",
+      "expected_contacts": [
+        "C1",
+        "C2",
+        "C3",
+        "C4"
+      ],
+      "missing_contacts": []
+    },
+    {
+      "case": "2019_singapore_annular",
+      "location": "Singapore",
+      "regime": "core",
+      "type": "annular",
+      "type_at_location": "annular",
+      "date": "2019-12-26",
+      "utc_hint": "05:30",
+      "lat": 1.3521,
+      "lon": 103.8198,
+      "alt_m": 15.0,
+      "ok": true,
+      "hint_used": "05:30",
+      "events": {
+        "C1": {
+          "utc": "03:26:57.0",
+          "alt": 55.7,
+          "az": 137.6,
+          "p": 280
+        },
+        "C1L": {
+          "utc": "03:26:58.6",
+          "alt": 55.7,
+          "az": 137.6,
+          "p": 280
+        },
+        "C2": {
+          "utc": "05:22:48.5",
+          "alt": 64.9,
+          "az": 189.7,
+          "p": 29
+        },
+        "C2L": {
+          "utc": "05:22:48.5",
+          "alt": 64.9,
+          "az": 189.7,
+          "p": 29
+        },
+        "MAX": {
+          "utc": "05:23:32.9",
+          "alt": 64.9,
+          "az": 190.1,
+          "p": 186
+        },
+        "MAXL": {
+          "utc": "05:23:32.9",
+          "alt": 64.9,
+          "az": 190.1,
+          "p": 186
+        },
+        "C3": {
+          "utc": "05:24:17.1",
+          "alt": 64.8,
+          "az": 190.5,
+          "p": 343
+        },
+        "C3L": {
+          "utc": "05:24:17.1",
+          "alt": 64.8,
+          "az": 190.5,
+          "p": 343
+        },
+        "C4L": {
+          "utc": "07:18:17.2",
+          "alt": 49.3,
+          "az": 230.6,
+          "p": 91
+        },
+        "C4": {
+          "utc": "07:18:21.5",
+          "alt": 49.2,
+          "az": 230.6,
+          "p": 91
+        }
+      },
+      "meta": {
+        "type": "ANNULAR",
+        "duration_s": 88.5,
+        "limb_duration_s": 88.5,
+        "magnitude": 0.97139,
+        "ratio": 0.97067,
+        "obscuration_pct": 94.22,
+        "speed_kms": 0.4898,
+        "width_km": 118.6,
+        "depth_km": 4.4,
+        "location_name": "Central Water Catchment, Singapore"
+      },
+      "delta_t_s": 69.36016075416666,
+      "truncated": true,
+      "raw_report": "LOCATION: Central Water Catchment, Singapore\nCOORDS: 1.3521, 103.8198\n\nType: ANNULAR | Duration: 1m 28.5s\nLunar Limb Duration: 1m 28.5s\nMagnitude: 0.97139 | Ratio: 0.97067\nObscuration: 94.22%\nUmb. Vel: 0.4898 km/s | Width: 118.6 km\nUmb. Depth: 0.07 (4.4km)\nConstellation: Sagittarius\nSky Objects: Jupiter 1.2°, Mercury 8.8°, Saturn 16.6°, Venus 33.2°, Mars 39.6°\n--------------------------------------------------\nEvent   |   UTC Time   |  Alt   |  Azi   |  P\n--------------------------------------------------\nC1      | 03:26:57.0 | +55.7° | 137.6° | 280°\nC1L     | 03:26:58.6 | +55.7° | 137.6° | 280°\nC2      | 05:22:48.5 | +64.9° | 189.7° | 029°\nC2L     | 05:22:48.5 | +64.9° | 189.7° | 029°\nMAX     | 05:23:32.9 | +64.9° | 190.1° | 186°\nMAXL    | 05:23:32.9 | +64.9° | 190.1° | 186°\nC3      | 05:24:17.1 | +64.8° | 190.5° | 343°\nC3L     | 05:24:17.1 | +64.8° | 190.5° | 343°\nC4L     | 07:18:17.2 | +49.3° | 230.6° | 091°\nC4      | 07:18:21.5 | +49.2° | 230.6° | 091°\n",
+      "expected_contacts": [
+        "C1",
+        "C2",
+        "C3",
+        "C4"
+      ],
+      "missing_contacts": []
+    },
+    {
+      "case": "2020_kurukshetra_annular",
+      "location": "Kurukshetra",
+      "regime": "core",
+      "type": "annular",
+      "type_at_location": "annular",
+      "date": "2020-06-21",
+      "utc_hint": "06:30",
+      "lat": 29.9695,
+      "lon": 76.8783,
+      "alt_m": 250.0,
+      "ok": true,
+      "hint_used": "06:30",
+      "events": {
+        "C1": {
+          "utc": "04:51:07.4",
+          "alt": 61.8,
+          "az": 96.0,
+          "p": 256
+        },
+        "C1L": {
+          "utc": "04:51:10.3",
+          "alt": 61.8,
+          "az": 96.0,
+          "p": 256
+        },
+        "C2": {
+          "utc": "06:31:27.4",
+          "alt": 81.7,
+          "az": 140.6,
+          "p": 102
+        },
+        "C2L": {
+          "utc": "06:31:27.4",
+          "alt": 81.7,
+          "az": 140.6,
+          "p": 102
+        },
+        "MAX": {
+          "utc": "06:31:45.9",
+          "alt": 81.8,
+          "az": 141.0,
+          "p": 347
+        },
+        "MAXL": {
+          "utc": "06:31:45.9",
+          "alt": 81.8,
+          "az": 141.0,
+          "p": 347
+        },
+        "C3": {
+          "utc": "06:32:05.0",
+          "alt": 81.8,
+          "az": 141.4,
+          "p": 235
+        },
+        "C3L": {
+          "utc": "06:32:05.0",
+          "alt": 81.8,
+          "az": 141.4,
+          "p": 235
+        },
+        "C4L": {
+          "utc": "08:17:31.0",
+          "alt": 70.4,
+          "az": 255.5,
+          "p": 83
+        },
+        "C4": {
+          "utc": "08:17:36.0",
+          "alt": 70.3,
+          "az": 255.6,
+          "p": 83
+        }
+      },
+      "meta": {
+        "type": "ANNULAR",
+        "duration_s": 37.6,
+        "limb_duration_s": 37.6,
+        "magnitude": 0.99603,
+        "ratio": 0.99462,
+        "obscuration_pct": 98.93,
+        "speed_kms": 0.5519,
+        "width_km": 21.6,
+        "depth_km": 6.3,
+        "location_name": "Kurukshetra, India"
+      },
+      "delta_t_s": 69.43073109375035,
+      "truncated": false,
+      "raw_report": "LOCATION: Kurukshetra, India\nCOORDS: 29.9695, 76.8783\n\nType: ANNULAR | Duration: 0m 37.6s\nLunar Limb Duration: 0m 37.6s\nMagnitude: 0.99603 | Ratio: 0.99462\nObscuration: 98.93%\nUmb. Vel: 0.5519 km/s | Width: 21.6 km\nUmb. Depth: 0.58 (6.3km)\nConstellation: Gemini\nSky Objects: Mercury 14.2°, Venus 24.9°, Mars 94.5°\n--------------------------------------------------\nEvent   |   UTC Time   |  Alt   |  Azi   |  P\n--------------------------------------------------\nC1      | 04:51:07.4 | +61.8° | 096.0° | 256°\nC1L     | 04:51:10.3 | +61.8° | 096.0° | 256°\nC2      | 06:31:27.4 | +81.7° | 140.6° | 102°\nC2L     | 06:31:27.4 | +81.7° | 140.6° | 102°\nMAX     | 06:31:45.9 | +81.8° | 141.0° | 347°\nMAXL    | 06:31:45.9 | +81.8° | 141.0° | 347°\nC3      | 06:32:05.0 | +81.8° | 141.4° | 235°\nC3L     | 06:32:05.0 | +81.8° | 141.4° | 235°\nC4L     | 08:17:31.0 | +70.4° | 255.5° | 083°\nC4      | 08:17:36.0 | +70.3° | 255.6° | 083°\n",
+      "expected_contacts": [
+        "C1",
+        "C2",
+        "C3",
+        "C4"
+      ],
+      "missing_contacts": []
+    },
+    {
+      "case": "2023_corpus_christi_annular",
+      "location": "Corpus Christi",
+      "regime": "core",
+      "type": "annular",
+      "type_at_location": "annular",
+      "date": "2023-10-14",
+      "utc_hint": "17:00",
+      "lat": 27.8006,
+      "lon": -97.3964,
+      "alt_m": 5.0,
+      "ok": true,
+      "hint_used": "17:00",
+      "events": {
+        "C1": {
+          "utc": "15:26:28.2",
+          "alt": 35.6,
+          "az": 125.1,
+          "p": 315
+        },
+        "C1L": {
+          "utc": "15:26:30.9",
+          "alt": 35.6,
+          "az": 125.1,
+          "p": 315
+        },
+        "C2": {
+          "utc": "16:55:47.0",
+          "alt": 49.1,
+          "az": 148.9,
+          "p": 136
+        },
+        "C2L": {
+          "utc": "16:55:48.3",
+          "alt": 49.1,
+          "az": 148.9,
+          "p": 136
+        },
+        "MAXL": {
+          "utc": "16:58:18.6",
+          "alt": 49.4,
+          "az": 149.8,
+          "p": 270
+        },
+        "MAX": {
+          "utc": "16:58:18.9",
+          "alt": 49.4,
+          "az": 149.8,
+          "p": 242
+        },
+        "C3L": {
+          "utc": "17:00:49.2",
+          "alt": 49.7,
+          "az": 150.6,
+          "p": 317
+        },
+        "C3": {
+          "utc": "17:00:51.2",
+          "alt": 49.7,
+          "az": 150.7,
+          "p": 317
+        },
+        "C4L": {
+          "utc": "18:38:13.1",
+          "alt": 53.5,
+          "az": 189.5,
+          "p": 137
+        },
+        "C4": {
+          "utc": "18:38:15.9",
+          "alt": 53.5,
+          "az": 189.5,
+          "p": 137
+        }
+      },
+      "meta": {
+        "type": "ANNULAR",
+        "duration_s": 304.2,
+        "limb_duration_s": 300.8,
+        "magnitude": 0.97485,
+        "ratio": 0.94987,
+        "obscuration_pct": 90.23,
+        "speed_kms": 0.7914,
+        "width_km": 189.9,
+        "depth_km": 94.6,
+        "location_name": "Downtown, United States"
+      },
+      "delta_t_s": 69.1702746499999,
+      "truncated": false,
+      "raw_report": "LOCATION: Downtown, United States\nCOORDS: 27.8006, -97.3964\n\nType: ANNULAR | Duration: 5m 4.2s\nLunar Limb Duration: 5m 0.8s\nMagnitude: 0.97485 | Ratio: 0.94987\nObscuration: 90.23%\nUmb. Vel: 0.7914 km/s | Width: 189.9 km\nUmb. Depth: 1.00 (94.6km)\nConstellation: Virgo\nSky Objects: Mercury 4.2°, Mars 10.6°, Venus 46.1°\n--------------------------------------------------\nEvent   |   UTC Time   |  Alt   |  Azi   |  P\n--------------------------------------------------\nC1      | 15:26:28.2 | +35.6° | 125.1° | 315°\nC1L     | 15:26:30.9 | +35.6° | 125.1° | 315°\nC2      | 16:55:47.0 | +49.1° | 148.9° | 136°\nC2L     | 16:55:48.3 | +49.1° | 148.9° | 136°\nMAXL    | 16:58:18.6 | +49.4° | 149.8° | 270°\nMAX     | 16:58:18.9 | +49.4° | 149.8° | 242°\nC3L     | 17:00:49.2 | +49.7° | 150.6° | 317°\nC3      | 17:00:51.2 | +49.7° | 150.7° | 317°\nC4L     | 18:38:13.1 | +53.5° | 189.5° | 137°\nC4      | 18:38:15.9 | +53.5° | 189.5° | 137°\n",
+      "expected_contacts": [
+        "C1",
+        "C2",
+        "C3",
+        "C4"
+      ],
+      "missing_contacts": []
+    },
+    {
+      "case": "2030_istanbul_annular",
+      "location": "Istanbul",
+      "regime": "core",
+      "type": "annular",
+      "type_at_location": "annular",
+      "date": "2030-06-01",
+      "utc_hint": "05:00",
+      "lat": 41.0082,
+      "lon": 28.9784,
+      "alt_m": 40.0,
+      "ok": true,
+      "hint_used": "05:00",
+      "events": {
+        "C1": {
+          "utc": "03:55:15.7",
+          "alt": 13.1,
+          "az": 72.0,
+          "p": 259
+        },
+        "C1L": {
+          "utc": "03:55:16.6",
+          "alt": 13.1,
+          "az": 72.0,
+          "p": 259
+        },
+        "C2": {
+          "utc": "05:02:03.8",
+          "alt": 25.4,
+          "az": 82.0,
+          "p": 92
+        },
+        "C2L": {
+          "utc": "05:02:05.7",
+          "alt": 25.4,
+          "az": 82.0,
+          "p": 92
+        },
+        "MAX": {
+          "utc": "05:04:19.9",
+          "alt": 25.8,
+          "az": 82.4,
+          "p": 347
+        },
+        "MAXL": {
+          "utc": "05:04:20.4",
+          "alt": 25.8,
+          "az": 82.4,
+          "p": 348
+        },
+        "C3L": {
+          "utc": "05:06:36.0",
+          "alt": 26.2,
+          "az": 82.7,
+          "p": 245
+        },
+        "C3": {
+          "utc": "05:06:37.0",
+          "alt": 26.2,
+          "az": 82.7,
+          "p": 245
+        },
+        "C4L": {
+          "utc": "06:22:50.3",
+          "alt": 40.6,
+          "az": 95.1,
+          "p": 78
+        },
+        "C4": {
+          "utc": "06:22:53.9",
+          "alt": 40.6,
+          "az": 95.1,
+          "p": 78
+        }
+      },
+      "meta": {
+        "type": "ANNULAR",
+        "duration_s": 273.2,
+        "limb_duration_s": 270.3,
+        "magnitude": 0.96228,
+        "ratio": 0.93906,
+        "obscuration_pct": 88.18,
+        "speed_kms": 1.438,
+        "width_km": 308.5,
+        "depth_km": 118.0,
+        "location_name": "Cankurtaran Mahallesi, Turkey"
+      },
+      "delta_t_s": 69.08044782355957,
+      "truncated": false,
+      "raw_report": "LOCATION: Cankurtaran Mahallesi, Turkey\nCOORDS: 41.0082, 28.9784\n\nType: ANNULAR | Duration: 4m 33.2s\nLunar Limb Duration: 4m 30.3s\nMagnitude: 0.96228 | Ratio: 0.93906\nObscuration: 88.18%\nUmb. Vel: 1.4380 km/s | Width: 308.5 km\nUmb. Depth: 0.77 (118.0km)\nConstellation: Taurus\nSky Objects: Mars 1.8°, Saturn 10.9°, Mercury 22.5°, Venus 36.1°\n--------------------------------------------------\nEvent   |   UTC Time   |  Alt   |  Azi   |  P\n--------------------------------------------------\nC1      | 03:55:15.7 | +13.1° | 072.0° | 259°\nC1L     | 03:55:16.6 | +13.1° | 072.0° | 259°\nC2      | 05:02:03.8 | +25.4° | 082.0° | 092°\nC2L     | 05:02:05.7 | +25.4° | 082.0° | 092°\nMAX     | 05:04:19.9 | +25.8° | 082.4° | 347°\nMAXL    | 05:04:20.4 | +25.8° | 082.4° | 348°\nC3L     | 05:06:36.0 | +26.2° | 082.7° | 245°\nC3      | 05:06:37.0 | +26.2° | 082.7° | 245°\nC4L     | 06:22:50.3 | +40.6° | 095.1° | 078°\nC4      | 06:22:53.9 | +40.6° | 095.1° | 078°\n",
+      "expected_contacts": [
+        "C1",
+        "C2",
+        "C3",
+        "C4"
+      ],
+      "missing_contacts": []
+    },
+    {
+      "case": "2005_panama_hybrid",
+      "location": "Panama City",
+      "regime": "core",
+      "type": "hybrid",
+      "type_at_location": "annular",
+      "date": "2005-04-08",
+      "utc_hint": "20:40",
+      "lat": 8.9824,
+      "lon": -79.5199,
+      "alt_m": 20.0,
+      "ok": true,
+      "hint_used": "20:40",
+      "events": {
+        "C1": {
+          "utc": "20:57:58.8",
+          "alt": 36.1,
+          "az": 272.8,
+          "p": 238
+        },
+        "C1L": {
+          "utc": "20:58:00.7",
+          "alt": 36.1,
+          "az": 272.8,
+          "p": 238
+        },
+        "MAX": {
+          "utc": "22:12:57.9",
+          "alt": 17.6,
+          "az": 275.1,
+          "p": 151
+        },
+        "C4L": {
+          "utc": "23:18:39.4",
+          "alt": 1.8,
+          "az": 277.4,
+          "p": 64
+        },
+        "C4": {
+          "utc": "23:18:42.0",
+          "alt": 1.8,
+          "az": 277.4,
+          "p": 64
+        }
+      },
+      "meta": {
+        "type": "PARTIAL",
+        "duration_s": 0.0,
+        "magnitude": 0.98512,
+        "ratio": 0.99667,
+        "obscuration_pct": 98.51,
+        "speed_kms": null,
+        "width_km": null,
+        "depth_km": null,
+        "location_name": "Bella Vista, Panama"
+      },
+      "delta_t_s": 64.76361817499986,
+      "truncated": false,
+      "raw_report": "LOCATION: Bella Vista, Panama\nCOORDS: 8.9824, -79.5199\n\nType: PARTIAL | Duration: 0m 0.0s\nMagnitude: 0.98512 | Ratio: 0.99667\nObscuration: 98.51%\nUmb. Vel: N/A | Width: N/A\nUmb. Depth: N/A\nConstellation: Pisces\nSky Objects: Venus 2.5°, Mercury 16.9°, Saturn 91.5°\n--------------------------------------------------\nEvent   |   UTC Time   |  Alt   |  Azi   |  P\n--------------------------------------------------\nC1      | 20:57:58.8 | +36.1° | 272.8° | 238°\nC1L     | 20:58:00.7 | +36.1° | 272.8° | 238°\nMAX     | 22:12:57.9 | +17.6° | 275.1° | 151°\nC4L     | 23:18:39.4 | +01.8° | 277.4° | 064°\nC4      | 23:18:42.0 | +01.8° | 277.4° | 064°\n",
+      "expected_contacts": [
+        "C1",
+        "C2",
+        "C3",
+        "C4"
+      ],
+      "missing_contacts": [
+        "C2",
+        "C3"
+      ]
+    },
+    {
+      "case": "2023_exmouth_hybrid",
+      "location": "Exmouth",
+      "regime": "core",
+      "type": "hybrid",
+      "type_at_location": "total",
+      "date": "2023-04-20",
+      "utc_hint": "03:30",
+      "lat": -21.9323,
+      "lon": 114.1276,
+      "alt_m": 5.0,
+      "ok": true,
+      "hint_used": "03:30",
+      "events": {
+        "C1": {
+          "utc": "02:04:31.0",
+          "alt": 42.5,
+          "az": 48.9,
+          "p": 226
+        },
+        "C1L": {
+          "utc": "02:04:32.8",
+          "alt": 42.5,
+          "az": 48.9,
+          "p": 226
+        },
+        "C2": {
+          "utc": "03:29:50.2",
+          "alt": 54.3,
+          "az": 22.5,
+          "p": 19
+        },
+        "C2L": {
+          "utc": "03:29:50.2",
+          "alt": 54.3,
+          "az": 22.5,
+          "p": 19
+        },
+        "MAX": {
+          "utc": "03:30:16.9",
+          "alt": 54.3,
+          "az": 22.3,
+          "p": 137
+        },
+        "MAXL": {
+          "utc": "03:30:16.9",
+          "alt": 54.3,
+          "az": 22.3,
+          "p": 137
+        },
+        "C3": {
+          "utc": "03:30:44.5",
+          "alt": 54.3,
+          "az": 22.1,
+          "p": 252
+        },
+        "C3L": {
+          "utc": "03:30:44.5",
+          "alt": 54.3,
+          "az": 22.1,
+          "p": 252
+        },
+        "C4L": {
+          "utc": "05:02:32.8",
+          "alt": 55.2,
+          "az": 342.6,
+          "p": 46
+        },
+        "C4": {
+          "utc": "05:02:34.9",
+          "alt": 55.2,
+          "az": 342.6,
+          "p": 46
+        }
+      },
+      "meta": {
+        "type": "TOTAL",
+        "duration_s": 54.3,
+        "limb_duration_s": 54.3,
+        "magnitude": 1.00368,
+        "ratio": 1.01245,
+        "obscuration_pct": 100.0,
+        "speed_kms": 0.7626,
+        "width_km": 41.5,
+        "depth_km": 11.8,
+        "location_name": "Exmouth, Australia"
+      },
+      "delta_t_s": 69.21744469166647,
+      "truncated": false,
+      "raw_report": "LOCATION: Exmouth, Australia\nCOORDS: -21.9323, 114.1276\n\nType: TOTAL | Duration: 0m 54.3s\nLunar Limb Duration: 0m 54.3s\nMagnitude: 1.00368 | Ratio: 1.01245\nObscuration: 100.00%\nUmb. Vel: 0.7626 km/s | Width: 41.5 km\nUmb. Depth: 0.57 (11.8km)\nConstellation: Pisces\nSky Objects: Jupiter 6.2°, Mercury 16.0°, Venus 40.6°, Saturn 55.3°\n--------------------------------------------------\nEvent   |   UTC Time   |  Alt   |  Azi   |  P\n--------------------------------------------------\nC1      | 02:04:31.0 | +42.5° | 048.9° | 226°\nC1L     | 02:04:32.8 | +42.5° | 048.9° | 226°\nC2      | 03:29:50.2 | +54.3° | 022.5° | 019°\nC2L     | 03:29:50.2 | +54.3° | 022.5° | 019°\nMAX     | 03:30:16.9 | +54.3° | 022.3° | 137°\nMAXL    | 03:30:16.9 | +54.3° | 022.3° | 137°\nC3      | 03:30:44.5 | +54.3° | 022.1° | 252°\nC3L     | 03:30:44.5 | +54.3° | 022.1° | 252°\nC4L     | 05:02:32.8 | +55.2° | 342.6° | 046°\nC4      | 05:02:34.9 | +55.2° | 342.6° | 046°\n",
+      "expected_contacts": [
+        "C1",
+        "C2",
+        "C3",
+        "C4"
+      ],
+      "missing_contacts": []
+    },
+    {
+      "case": "2011_bucharest_partial",
+      "location": "Bucharest",
+      "regime": "core",
+      "type": "partial",
+      "type_at_location": "partial",
+      "date": "2011-01-04",
+      "utc_hint": "09:00",
+      "lat": 44.43522,
+      "lon": 26.04814,
+      "alt_m": 82.0,
+      "ok": true,
+      "hint_used": "09:00",
+      "events": {
+        "C1": {
+          "utc": "07:08:06.6",
+          "alt": 9.8,
+          "az": 135.9,
+          "p": 274
+        },
+        "C1L": {
+          "utc": "07:08:08.2",
+          "alt": 9.8,
+          "az": 135.9,
+          "p": 274
+        },
+        "MAX": {
+          "utc": "08:35:22.9",
+          "alt": 18.7,
+          "az": 154.5,
+          "p": 348
+        },
+        "C4L": {
+          "utc": "10:08:51.8",
+          "alt": 22.8,
+          "az": 177.1,
+          "p": 62
+        },
+        "C4": {
+          "utc": "10:08:54.5",
+          "alt": 22.8,
+          "az": 177.1,
+          "p": 62
+        }
+      },
+      "meta": {
+        "type": "PARTIAL",
+        "duration_s": 0.0,
+        "magnitude": 0.75304,
+        "ratio": 0.94598,
+        "obscuration_pct": 75.3,
+        "speed_kms": null,
+        "width_km": null,
+        "depth_km": null,
+        "location_name": "Semănătoarea, Romania"
+      },
+      "delta_t_s": 66.325210875,
+      "truncated": false,
+      "raw_report": "LOCATION: Semănătoarea, Romania\nCOORDS: 44.4352, 26.0481\n\nType: PARTIAL | Duration: 0m 0.0s\nMagnitude: 0.75304 | Ratio: 0.94598\nObscuration: 75.30%\nUmb. Vel: N/A | Width: N/A\nUmb. Depth: N/A\nConstellation: Sagittarius\nSky Objects: Mars 7.4°, Mercury 22.4°, Venus 46.9°, Saturn 86.8°\n--------------------------------------------------\nEvent   |   UTC Time   |  Alt   |  Azi   |  P\n--------------------------------------------------\nC1      | 07:08:06.6 | +09.8° | 135.9° | 274°\nC1L     | 07:08:08.2 | +09.8° | 135.9° | 274°\nMAX     | 08:35:22.9 | +18.7° | 154.5° | 348°\nC4L     | 10:08:51.8 | +22.8° | 177.1° | 062°\nC4      | 10:08:54.5 | +22.8° | 177.1° | 062°\n",
+      "expected_contacts": [
+        "C1",
+        "C4"
+      ],
+      "missing_contacts": []
+    },
+    {
+      "case": "2015_bucharest_partial",
+      "location": "Bucharest",
+      "regime": "core",
+      "type": "partial",
+      "type_at_location": "partial",
+      "date": "2015-03-20",
+      "utc_hint": "09:30",
+      "lat": 44.43522,
+      "lon": 26.04814,
+      "alt_m": 82.0,
+      "ok": true,
+      "hint_used": "09:30",
+      "events": {
+        "C1": {
+          "utc": "08:48:09.7",
+          "alt": 40.6,
+          "az": 147.9,
+          "p": 273
+        },
+        "C1L": {
+          "utc": "08:48:11.7",
+          "alt": 40.6,
+          "az": 147.9,
+          "p": 273
+        },
+        "MAX": {
+          "utc": "09:55:36.9",
+          "alt": 44.9,
+          "az": 170.2,
+          "p": 334
+        },
+        "C4L": {
+          "utc": "11:04:11.9",
+          "alt": 44.5,
+          "az": 194.4,
+          "p": 35
+        },
+        "C4": {
+          "utc": "11:04:14.8",
+          "alt": 44.5,
+          "az": 194.4,
+          "p": 35
+        }
+      },
+      "meta": {
+        "type": "PARTIAL",
+        "duration_s": 0.0,
+        "magnitude": 0.53318,
+        "ratio": 1.05263,
+        "obscuration_pct": 53.32,
+        "speed_kms": null,
+        "width_km": null,
+        "depth_km": null,
+        "location_name": "Semănătoarea, Romania"
+      },
+      "delta_t_s": 67.73967130208369,
+      "truncated": false,
+      "raw_report": "LOCATION: Semănătoarea, Romania\nCOORDS: 44.4352, 26.0481\n\nType: PARTIAL | Duration: 0m 0.0s\nMagnitude: 0.53318 | Ratio: 1.05263\nObscuration: 53.32%\nUmb. Vel: N/A | Width: N/A\nUmb. Depth: N/A\nConstellation: Pisces\nSky Objects: Mercury 18.3°, Mars 22.1°, Venus 34.1°\n--------------------------------------------------\nEvent   |   UTC Time   |  Alt   |  Azi   |  P\n--------------------------------------------------\nC1      | 08:48:09.7 | +40.6° | 147.9° | 273°\nC1L     | 08:48:11.7 | +40.6° | 147.9° | 273°\nMAX     | 09:55:36.9 | +44.9° | 170.2° | 334°\nC4L     | 11:04:11.9 | +44.5° | 194.4° | 035°\nC4      | 11:04:14.8 | +44.5° | 194.4° | 035°\n",
+      "expected_contacts": [
+        "C1",
+        "C4"
+      ],
+      "missing_contacts": []
+    },
+    {
+      "case": "2022_bucharest_partial",
+      "location": "Bucharest",
+      "regime": "core",
+      "type": "partial",
+      "type_at_location": "partial",
+      "date": "2022-10-25",
+      "utc_hint": "10:45",
+      "lat": 44.43522,
+      "lon": 26.04814,
+      "alt_m": 82.0,
+      "ok": true,
+      "hint_used": "10:45",
+      "events": {
+        "C1": {
+          "utc": "09:26:24.5",
+          "alt": 32.9,
+          "az": 170.2,
+          "p": 338
+        },
+        "C1L": {
+          "utc": "09:26:26.7",
+          "alt": 32.9,
+          "az": 170.3,
+          "p": 338
+        },
+        "MAX": {
+          "utc": "10:38:18.9",
+          "alt": 32.8,
+          "az": 191.2,
+          "p": 37
+        },
+        "C4L": {
+          "utc": "11:49:43.4",
+          "alt": 28.2,
+          "az": 210.7,
+          "p": 95
+        },
+        "C4": {
+          "utc": "11:49:46.3",
+          "alt": 28.2,
+          "az": 210.8,
+          "p": 95
+        }
+      },
+      "meta": {
+        "type": "PARTIAL",
+        "duration_s": 0.0,
+        "magnitude": 0.49397,
+        "ratio": 0.99625,
+        "obscuration_pct": 49.4,
+        "speed_kms": null,
+        "width_km": null,
+        "depth_km": null,
+        "location_name": "Semănătoarea, Romania"
+      },
+      "delta_t_s": 69.1927763739582,
+      "truncated": false,
+      "raw_report": "LOCATION: Semănătoarea, Romania\nCOORDS: 44.4352, 26.0481\n\nType: PARTIAL | Duration: 0m 0.0s\nMagnitude: 0.49397 | Ratio: 0.99625\nObscuration: 49.40%\nUmb. Vel: N/A | Width: N/A\nUmb. Depth: N/A\nConstellation: Virgo\nSky Objects: Venus 1.2°, Mercury 9.5°\n--------------------------------------------------\nEvent   |   UTC Time   |  Alt   |  Azi   |  P\n--------------------------------------------------\nC1      | 09:26:24.5 | +32.9° | 170.2° | 338°\nC1L     | 09:26:26.7 | +32.9° | 170.3° | 338°\nMAX     | 10:38:18.9 | +32.8° | 191.2° | 037°\nC4L     | 11:49:43.4 | +28.2° | 210.7° | 095°\nC4      | 11:49:46.3 | +28.2° | 210.8° | 095°\n",
+      "expected_contacts": [
+        "C1",
+        "C4"
+      ],
+      "missing_contacts": []
+    },
+    {
+      "case": "2025_reykjavik_partial",
+      "location": "Reykjavik",
+      "regime": "core",
+      "type": "partial",
+      "type_at_location": "partial",
+      "date": "2025-03-29",
+      "utc_hint": "10:40",
+      "lat": 64.1466,
+      "lon": -21.9426,
+      "alt_m": 15.0,
+      "ok": true,
+      "hint_used": "10:40",
+      "events": {
+        "C1": {
+          "utc": "10:05:47.4",
+          "alt": 19.1,
+          "az": 124.1,
+          "p": 253
+        },
+        "C1L": {
+          "utc": "10:05:48.1",
+          "alt": 19.1,
+          "az": 124.1,
+          "p": 253
+        },
+        "MAX": {
+          "utc": "11:05:34.9",
+          "alt": 23.9,
+          "az": 139.3,
+          "p": 326
+        },
+        "C4L": {
+          "utc": "12:07:10.4",
+          "alt": 27.5,
+          "az": 155.9,
+          "p": 39
+        },
+        "C4": {
+          "utc": "12:07:12.8",
+          "alt": 27.5,
+          "az": 155.9,
+          "p": 39
+        }
+      },
+      "meta": {
+        "type": "PARTIAL",
+        "duration_s": 0.0,
+        "magnitude": 0.73593,
+        "ratio": 1.04761,
+        "obscuration_pct": 73.59,
+        "speed_kms": null,
+        "width_km": null,
+        "depth_km": null,
+        "location_name": "Miðborg, Iceland"
+      },
+      "delta_t_s": 69.14504126666672,
+      "truncated": false,
+      "raw_report": "LOCATION: Miðborg, Iceland\nCOORDS: 64.1466, -21.9426\n\nType: PARTIAL | Duration: 0m 0.0s\nMagnitude: 0.73593 | Ratio: 1.04761\nObscuration: 73.59%\nUmb. Vel: N/A | Width: N/A\nUmb. Depth: N/A\nConstellation: Pisces\nSky Objects: Mercury 8.8°, Venus 12.7°, Saturn 14.9°, Jupiter 66.6°, Mars 103.8°\n--------------------------------------------------\nEvent   |   UTC Time   |  Alt   |  Azi   |  P\n--------------------------------------------------\nC1      | 10:05:47.4 | +19.1° | 124.1° | 253°\nC1L     | 10:05:48.1 | +19.1° | 124.1° | 253°\nMAX     | 11:05:34.9 | +23.9° | 139.3° | 326°\nC4L     | 12:07:10.4 | +27.5° | 155.9° | 039°\nC4      | 12:07:12.8 | +27.5° | 155.9° | 039°\n",
+      "expected_contacts": [
+        "C1",
+        "C4"
+      ],
+      "missing_contacts": []
+    },
+    {
+      "case": "2029_vancouver_partial",
+      "location": "Vancouver",
+      "regime": "core",
+      "type": "partial",
+      "type_at_location": "partial",
+      "date": "2029-01-14",
+      "utc_hint": "17:30",
+      "lat": 49.2827,
+      "lon": -123.1207,
+      "alt_m": 70.0,
+      "ok": true,
+      "hint_used": "17:30",
+      "events": {
+        "C1": {
+          "utc": "15:26:22.4",
+          "alt": -6.0,
+          "az": 115.8,
+          "p": 269
+        },
+        "C1L": {
+          "utc": "15:26:23.7",
+          "alt": -6.0,
+          "az": 115.8,
+          "p": 269
+        },
+        "Sunrise": {
+          "utc": "16:02:34.2",
+          "alt": -0.2,
+          "az": 122.5,
+          "p": 278
+        },
+        "MAX": {
+          "utc": "16:40:51.9",
+          "alt": 4.4,
+          "az": 129.8,
+          "p": 347
+        },
+        "C4L": {
+          "utc": "18:03:02.5",
+          "alt": 13.2,
+          "az": 147.0,
+          "p": 65
+        },
+        "C4": {
+          "utc": "18:03:04.9",
+          "alt": 13.2,
+          "az": 147.0,
+          "p": 65
+        }
+      },
+      "meta": {
+        "type": "PARTIAL",
+        "duration_s": 0.0,
+        "magnitude": 0.79617,
+        "ratio": 0.94515,
+        "obscuration_pct": 79.62,
+        "speed_kms": null,
+        "width_km": null,
+        "depth_km": null,
+        "location_name": "Downtown, Canada"
+      },
+      "delta_t_s": 69.06976485272607,
+      "truncated": false,
+      "raw_report": "LOCATION: Downtown, Canada\nCOORDS: 49.2827, -123.1207\n\nType: PARTIAL | Duration: 0m 0.0s\nMagnitude: 0.79617 | Ratio: 0.94515\nObscuration: 79.62%\nUmb. Vel: N/A | Width: N/A\nUmb. Depth: N/A\nConstellation: Sagittarius\nSky Objects: Mercury 4.7°, Venus 16.6°, Jupiter 88.5°, Mars 105.8°\n--------------------------------------------------\nEvent   |   UTC Time   |  Alt   |  Azi   |  P\n--------------------------------------------------\nC1      | 15:26:22.4 | -06.0° | 115.8° | 269°\nC1L     | 15:26:23.7 | -06.0° | 115.8° | 269°\nSunrise | 16:02:34.2 | -00.2° | 122.5° | 278°\nMAX     | 16:40:51.9 | +04.4° | 129.8° | 347°\nC4L     | 18:03:02.5 | +13.2° | 147.0° | 065°\nC4      | 18:03:04.9 | +13.2° | 147.0° | 065°\n",
+      "expected_contacts": [
+        "C1",
+        "C4"
+      ],
       "missing_contacts": []
     }
   ]

@@ -1,5 +1,19 @@
-case,location,regime,date,utc_hint,lat,lon,alt_m
-1999_bucharest,Bucharest,core,1999-08-11,11:07,44.43522,26.04814,82.0
-2026_zaragoza,Zaragoza,core,2026-08-12,18:30,41.64714,-0.88565,227.0
-2027_luxor,Luxor Bridge,core,2027-08-02,10:05,25.63483,32.59431,77.0
-2038_foxton,Foxton NZ,far_future,2038-12-26,01:23,-40.47225,175.23682,3.0
+case,location,regime,type,type_at_location,date,utc_hint,lat,lon,alt_m,note
+1999_bucharest,Bucharest,core,total,total,1999-08-11,11:07,44.43522,26.04814,82.0,validated
+2026_zaragoza,Zaragoza,core,total,total,2026-08-12,18:30,41.64714,-0.88565,227.0,validated
+2027_luxor,Luxor Bridge,core,total,total,2027-08-02,10:05,25.63483,32.59431,77.0,validated
+2038_foxton,Foxton NZ,far_future,total,total,2038-12-26,01:23,-40.47225,175.23682,3.0,validated (dT extrapolation)
+2005_madrid_annular,Madrid,core,annular,annular,2005-10-03,09:00,40.4168,-3.7038,650.0,approx: replace with Jubier point
+2010_kerala_annular,Thiruvananthapuram,core,annular,annular,2010-01-15,07:10,8.5241,76.9366,10.0,approx: replace with Jubier point
+2012_albuquerque_annular,Albuquerque,core,annular,annular,2012-05-20,23:30,35.0844,-106.6504,1620.0,approx: max is ~00:35 UTC on 21 May
+2019_singapore_annular,Singapore,core,annular,annular,2019-12-26,05:30,1.3521,103.8198,15.0,approx: replace with Jubier point
+2020_kurukshetra_annular,Kurukshetra,core,annular,annular,2020-06-21,06:30,29.9695,76.8783,250.0,approx: replace with Jubier point
+2023_corpus_christi_annular,Corpus Christi,core,annular,annular,2023-10-14,17:00,27.8006,-97.3964,5.0,approx: replace with Jubier point
+2030_istanbul_annular,Istanbul,core,annular,annular,2030-06-01,05:00,41.0082,28.9784,40.0,approx: check that Istanbul is annular
+2005_panama_hybrid,Panama City,core,hybrid,annular,2005-04-08,20:40,8.9824,-79.5199,20.0,approx: annular end of the hybrid path
+2023_exmouth_hybrid,Exmouth,core,hybrid,total,2023-04-20,03:30,-21.9323,114.1276,5.0,approx: total part of the hybrid path
+2011_bucharest_partial,Bucharest,core,partial,partial,2011-01-04,09:00,44.43522,26.04814,82.0,same point as the 1999 case
+2015_bucharest_partial,Bucharest,core,partial,partial,2015-03-20,09:30,44.43522,26.04814,82.0,same point as the 1999 case
+2022_bucharest_partial,Bucharest,core,partial,partial,2022-10-25,10:45,44.43522,26.04814,82.0,same point as the 1999 case
+2025_reykjavik_partial,Reykjavik,core,partial,partial,2025-03-29,10:40,64.1466,-21.9426,15.0,approx: large partial
+2029_vancouver_partial,Vancouver,core,partial,partial,2029-01-14,17:30,49.2827,-123.1207,70.0,approx: replace with Jubier point

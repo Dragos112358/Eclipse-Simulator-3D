@@ -1,0 +1,19 @@
+case,date,type,expected_type,sim_type,status,dC1_s,dC2_s,dMAX_s,dC3_s,dC4_s,mag_sim,mag_ref,d_mag,obs_sim,obs_ref,d_obs_pct,truncated,issues
+1999_bucharest,1999-08-11,total,total,total,FAIL,-3238.6,,-1202.4,,603.5,1.01351,0.53962,0.47389,100.0,43.83,56.17,False,C2 exista in simulator dar nu in referinta; C3 exista in simulator dar nu in referinta
+2026_zaragoza,2026-08-12,total,total,total,FAIL,3837.6,,4300.9,,4563.4,1.00736,0.45742,0.54994,100.0,34.91,65.09,False,C2 exista in simulator dar nu in referinta; C3 exista in simulator dar nu in referinta
+2027_luxor,2027-08-02,total,total,total,FAIL,-5809.5,,-2335.2,,914.8,1.03316,0.13822,0.89494,100.0,6.15,93.85,False,C2 exista in simulator dar nu in referinta; C3 exista in simulator dar nu in referinta
+2038_foxton,2038-12-26,total,total,total,FAIL,-1578.5,,1032.6,,3409.6,1.01264,0.34154,0.6711,100.0,22.67,77.33,False,C2 exista in simulator dar nu in referinta; C3 exista in simulator dar nu in referinta
+2005_madrid_annular,2005-10-03,annular,annular,annular,FAIL,-4780.1,,-3608.4,,-1963.9,0.97334,0.54588,0.42746,90.37,43.6,46.77,False,C2 exista in simulator dar nu in referinta; C3 exista in simulator dar nu in referinta
+2010_kerala_annular,2010-01-15,annular,annular,annular,FAIL,-10946.5,,-4738.7,,372.8,0.92923,0.07133,0.8579,84.4,2.21,82.19,False,C2 exista in simulator dar nu in referinta; C3 exista in simulator dar nu in referinta
+2012_albuquerque_annular,2012-05-20,annular,annular,annular,FAIL,11132.3,,11348.5,,11151.6,0.96493,0.66704,0.29789,87.08,56.92,30.16,True,C2 exista in simulator dar nu in referinta; C3 exista in simulator dar nu in referinta
+2019_singapore_annular,2019-12-26,annular,annular,annular,FAIL,-9937.3,,-5981.0,,-2133.8,0.97139,0.40427,0.56712,94.22,28.48,65.74,True,C2 exista in simulator dar nu in referinta; C3 exista in simulator dar nu in referinta
+2020_kurukshetra_annular,2020-06-21,annular,annular,annular,FAIL,-9454.4,,-6584.9,,-3402.0,0.99603,0.46954,0.52649,98.93,35.57,63.36,False,C2 exista in simulator dar nu in referinta; C3 exista in simulator dar nu in referinta
+2023_corpus_christi_annular,2023-10-14,annular,annular,annular,FAIL,658.5,,3234.3,,6297.8,0.97485,0.32553,0.64932,90.23,20.78,69.45,False,C2 exista in simulator dar nu in referinta; C3 exista in simulator dar nu in referinta
+2030_istanbul_annular,2030-06-01,annular,annular,annular,FAIL,-8343.0,,-8199.4,,-7485.6,0.96228,0.85359,0.10869,88.18,79.43,8.75,False,C2 exista in simulator dar nu in referinta; C3 exista in simulator dar nu in referinta
+2005_panama_hybrid,2005-04-08,hybrid,annular,partial,FAIL,,,10939.0,,,0.98512,-0.70922,1.69434,98.51,0.0,98.51,False,"C1 exista in simulator dar nu in referinta; C4 exista in simulator dar nu in referinta; tip diferit: simulator=partial, asteptat=annular; contacte lipsa (harness): C2,C3"
+2023_exmouth_hybrid,2023-04-20,hybrid,total,total,FAIL,-8648.8,,-6503.1,,-3966.9,1.00368,0.45596,0.54772,100.0,34.22,65.78,False,C2 exista in simulator dar nu in referinta; C3 exista in simulator dar nu in referinta
+2011_bucharest_partial,2011-01-04,partial,partial,partial,FAIL,-7305.6,,-4363.3,,-1047.3,0.75304,0.19185,0.56119,75.3,9.66,65.64,False,
+2015_bucharest_partial,2015-03-20,partial,partial,partial,FAIL,-4774.8,,-2934.9,,-1024.6,0.53318,0.26045,0.27273,53.32,15.52,37.8,False,
+2022_bucharest_partial,2022-10-25,partial,partial,partial,FAIL,-2762.3,,-1550.2,,-363.5,0.49397,0.49375,0.00022,49.4,38.38,11.02,False,
+2025_reykjavik_partial,2025-03-29,partial,partial,partial,FAIL,-1416.6,,-916.2,,-304.8,0.73593,0.64732,0.08861,73.59,56.82,16.77,False,
+2029_vancouver_partial,2029-01-14,partial,partial,partial,FAIL,-537.1,,301.0,,1600.8,0.79617,0.65987,0.1363,79.62,56.32,23.3,False,
