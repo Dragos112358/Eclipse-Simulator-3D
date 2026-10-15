@@ -365,14 +365,17 @@ python3 Server.py
 
 | Direction | `struct` format | Size | Content |
 |---|---|---|---|
-| **Python → Unreal** | `357d1000s` | **3,856 B** | 8 doubles: Sun & Moon XYZ (ITRS, km), live magnitude, GAST (64 B) · 7 planets (168 B) · 6 moons (144 B) · **path block** (2,408 B): point count + 100 lon/lat pairs + 100 band widths · live shadow lat/lon + ΔT (24 B) · Sun/Moon center-to-center vectors (48 B) · 1,000-byte UTF-8 report text (location names, contact times…) |
+| **Python → Unreal** | `357d1200s` | **4,056 B** | 8 doubles: Sun & Moon XYZ (ITRS, km), live magnitude, GAST (64 B) · 7 planets (168 B) · 6 moons (144 B) · **path block** (2,408 B): point count + 100 lon/lat pairs + 100 band widths · live shadow lat/lon + ΔT (24 B) · Sun/Moon center-to-center vectors (48 B) · 1,000-byte UTF-8 report text (location names, contact times…) |
 | **Unreal → Python** | `10d` | **80 B** | Year, month, day, hour, minute, precise seconds · observer latitude, longitude, altitude (WGS84) · language flag (`0` = Romanian, `1` = English) |
 
 A fixed binary layout (instead of JSON) lets Unreal read every field directly by byte offset: no allocation or parsing, sixty times a second. The path-width array is what lets Unreal render the totality band as a **curved 3D mesh** instead of a fixed-width strip.
 
 ### Time scale & calendars
 
-- **ΔT** uses the **Espenak & Meeus** piecewise polynomials, implemented identically in Python and C++ to avoid round-trip timing errors for ancient dates.
+- **ΔT.** Outside 1900–2100 the server applies the **Espenak & Meeus** polynomials (identically in Python and C++).
+  Inside 1900–2100 it uses Skyfield's built-in ΔT tables (IERS observations plus short-term predictions);
+  past the end of the tabulated data, Skyfield extrapolates from the last values. This is why the 2038
+  validation case differs by ~21 s from Jubier (see [`validation/`](validation/)).
 - **Calendar reconciliation.** Skyfield works internally in the *proleptic Gregorian* calendar, while the
   Irwin catalogue reports ancient dates in the *Julian* calendar, the one actually in use at the time.
   The two drift apart by a growing number of days the further back you go. Left unhandled, an ancient
@@ -505,7 +508,7 @@ Every entry has **View** (jump to the event in 3D), **View Saros Cycle** and **D
 | **10 Oct 13,000 BC** | Canada | 58.262° N, 136.364° W | 18:55 UTC — lower edge of the range; calendar-reconciliation stress test |
 | **25 Jul 16,995 AD** | South Hamilton, Australia | 32.934° S, 151.736° E | 14:30:53 UTC — upper edge of the range |
 
-The same model — same ΔT polynomial, same DE441 propagation, same cone-intersection geometry — is used across the **entire** 30-millennium range, with no special-cased logic at the extremes.
+The same pipeline (DE441 propagation, cone–ellipsoid intersection, ΔT as described above) is used across the **entire** 30-millennium range; only the ΔT source changes with the era.
 
 ---
 
@@ -565,6 +568,9 @@ Documented, quantifiable limitations — not open questions:
 - **Limb model vs. ground truth.** The 12.57 m RMSE is measured against the gridded
   LOLA DEM (118 m/pixel), not against the true lunar surface. Features smaller than the
   DEM resolution, and any interpolated gaps in the DEM, are not represented.
+- **Near-future ΔT.** After the end of the IERS data, ΔT is extrapolated; for 2038 this alone shifts contacts by ~21 s relative to Jubier.
+- **Limb-corrected contacts.** C1L–C4L have not been compared with an independent reference.
+- **Totality duration.** Totality is systematically 1.4–1.9 s shorter than Jubier's; the probable cause is the lunar radius used for the contacts (without the lunar limb) (see `validation/`).
 
 ---
 

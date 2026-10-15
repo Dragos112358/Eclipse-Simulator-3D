@@ -218,7 +218,7 @@ load = Loader(application_path, verbose=False)
 if not load.exists('finals2000A.all'):
     load.download('finals2000A.all')
 
-ts = load.timescale()
+ts = load.timescale(builtin= False)
 planets = load('de441.bsp')
 earth, sun, moon = planets['earth'], planets['sun'], planets['moon']
 
@@ -3101,7 +3101,7 @@ while True:
         mag_live = (r_m + r_s - sep) / (2.0 * r_s) if sep < (r_s + r_m) else 0.0
 
         # 4. Asamblare pachet UDP
-        text_bytes = cached_report_text.encode('utf-8')[:999].ljust(1000, b'\x00')
+        text_bytes = cached_report_text.encode('utf-8')[:1199].ljust(1200, b'\x00')
 
         e_t = earth.at(t_current)
         s_pos = wgs84.geographic_position_of(e_t.observe(sun)).itrs_xyz.km
@@ -3161,7 +3161,7 @@ while True:
                 + [float(live_shadow_lat), float(live_shadow_lon), float(delta_t_val)]
                 + center_to_center_coords
         )
-        response = struct.pack('<357d1000s', *final_floats, text_bytes)
+        response = struct.pack('<357d1200s', *final_floats, text_bytes)
         sock.sendto(response, (HOST, PORT_OUT))
 
     except Exception:
