@@ -326,7 +326,7 @@ python3 Server.py
 │  Unreal Engine 5  (frontend) │ ───────────────────────────────────────▶ │  Python  (computational backend) │
 │  Rendering · UI · Cesium     │                                          │  Skyfield · DE441 · GeoPy        │
 │  Drone camera · VFX · HUD    │ ◀─────────────────────────────────────── │  Multithreaded                   │
-│                              │   :5001  UDP · 3,856 B response / frame  │                                  │
+│                              │   :5001  UDP · 4,056 B response / frame  │                                  │
 │                              │                                          │                                  │
 │  Eclipse Catalog → Details   │ ───────────────────────────────────────▶ │  City visibility solver          │
 │                              │   :5002  UDP · 8 B request (JD TT)       │  (vectorized, ternary search)    │
