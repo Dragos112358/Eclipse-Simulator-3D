@@ -7,7 +7,7 @@
 
 ### See the geometry of an eclipse — not just a shaded band on a map.
 
-A real-time **3D solar eclipse simulator** that renders the **umbra and penumbra as physical cones** sweeping across a geographically accurate Earth.
+A real-time **3D eclipse simulator** that renders the **umbra and penumbra as physical cones** sweeping across a geographically accurate Earth.
 Built with **Unreal Engine 5**, **Cesium World Terrain** and a **Python / Skyfield** backend driven by **JPL DE441** ephemerides.
 
 [![Unreal Engine](https://img.shields.io/badge/Unreal%20Engine-5-black?logo=unrealengine)](https://www.unrealengine.com/)
@@ -101,7 +101,7 @@ It started as my Bachelor's thesis, *"Real Shadow Cones Produced During the Cent
 
 | | |
 |---|---|
-| **Demo 1 — Thriller for 3D Solar Eclipse Simulator using Unreal Engine 5** | [![Demo 1](https://img.youtube.com/vi/sYdvDpyHnCw/hqdefault.jpg)](https://www.youtube.com/watch?v=sYdvDpyHnCw) |
+| **Demo 1 — Thriller for 3D Eclipse Simulator using Unreal Engine 5** | [![Demo 1](https://img.youtube.com/vi/sYdvDpyHnCw/hqdefault.jpg)](https://www.youtube.com/watch?v=sYdvDpyHnCw) |
 | **Demo 2 — 3D Eclipse Simulator Demo** | [![Demo 2](https://img.youtube.com/vi/clGfikjfNSE/hqdefault.jpg)](https://www.youtube.com/watch?v=clGfikjfNSE) |
 
 <details>
@@ -415,7 +415,7 @@ Cylindrical projection with elevations relative to the 1,737.4 km lunar referenc
 network compresses the region that matters into a **67 MB** model that can be queried in
 real time, at any point, with no tiling or loading.
 
-**Model and code in this repository.** The trained weights (67 MB, fp16) are in `Content/Encoder/lunar_altitude_contact_bands_fp16_finetuned.pt`. They are loaded once, when the backend starts, by `load()` in `Server.py` (`torch.load`, CPU), and the network is converted to fp32 for inference. The training script is in **[`Content/Encoder`]**; the LDEM source file is available from the USGS link in [`docs/THIRD_PARTY.md`](docs/THIRD_PARTY.md).
+**Model and code in this repository.** The trained weights (67 MB, fp16) are in `Content/Encoder/lunar_altitude_contact_bands_fp16_finetuned.pt`. They are loaded once, when the backend starts, by `load()` in `Server.py` (`torch.load`, CPU), and the network is converted to fp32 for inference. The training script is in `Lunar_AI`; the LDEM source file is available from the USGS link in [`docs/THIRD_PARTY.md`](docs/THIRD_PARTY.md).
 
 
 **Architecture**
@@ -653,9 +653,13 @@ and `nep097.bsp` are all present and that you have enough free disk space. An in
 ## 🗺️ Roadmap
 
 - [x] All four solar eclipse types, 3D cones on WGS84, contact times C1–C4
+- [X] Accurate models (Skyfield from Python) for Moon and Sun to produce eclipses
+- [x] Integration with Cesium for Unreal
+- [x] Extension to Solar System (all planets and 7 big natural satellites including the Moon)
 - [x] 30,000-year catalogue browser
 - [x] Solar-system expansion (planets & moons)
 - [x] Lunar eclipse support
+- [x] Details about every eclipse 
 - [x] Lunar limb (topographic profile) modeling
 - [x] Shadow cones for solar and lunar eclipses
 - [x] Bookmark system to save different places and times

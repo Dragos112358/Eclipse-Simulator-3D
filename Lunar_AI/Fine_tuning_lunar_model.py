@@ -302,9 +302,9 @@ class LunarAltitudeContactBandsNet(nn.Module):
         self.encoding = MultiResHashEncoding2DNonPeriodic(recommended_lon_cells=recommended_lon_cells)
         in_dim = N_LEVELS * N_FEATURES
         self.mlp = nn.Sequential(
-            nn.Linear(in_dim, hidden), nn.ReLU(inplace=True),
-            nn.Linear(hidden, hidden), nn.ReLU(inplace=True),
-            nn.Linear(hidden, hidden), nn.ReLU(inplace=True),
+            nn.Linear(in_dim, hidden), nn.GELU(),
+            nn.Linear(hidden, hidden), nn.GELU(),
+            nn.Linear(hidden, hidden), nn.GELU(),
             nn.Linear(hidden, 1),
         )
 

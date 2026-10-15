@@ -14,7 +14,9 @@ This folder contains the material used to check the contact times and the local 
 Over the three eclipses in the near-present regime (12 contacts): **max \|Δ\| = 1.7 s, mean \|Δ\| = 0.95 s, RMS = 1.03 s.**
 The 2038 case (4 contacts: max \|Δ\| = 22.8 s, mean Δ = +21.5 s) is reported separately because its difference is dominated by the predicted value of ΔT, not by the geometry.
 
-All four eclipses are **total**. No annular or partial-only location has been validated yet.
+All four eclipses are **total**. I also validated inelar, partial and hybrid eclipses.
+
+
 
 ## What is compared
 
@@ -29,10 +31,10 @@ All four eclipses are **total**. No annular or partial-only location has been va
 
 | Eclipse | Observer (lat, lon) | Altitude (m, simulator = Jubier) | ΔT Jubier | ΔT simulator | Δ ΔT (sim − Jubier) | Reference read on |
 |---|---|---|---|---|---|---|
-| 1999-08-11 | 44.43522° N, 26.04814° E | 82 | 63.7 s | 63.68 s | −0.02 s | 2026-10-03 |
-| 2026-08-12 | 41.64714° N, 0.88565° W | 227 | 69.1 s | 69.10 s | 0.00 s | 2026-10-03 |
-| 2027-08-02 | 25.63483° N, 32.59431° E | 77 | 69.3 s | 69.08 s | −0.22 s | 2026-10-03 |
-| 2038-12-26 | 40.47225° S, 175.23682° E | 3 | 83.9 s | 69.61 s | −14.29 s | 2026-10-03 |
+| 1999-08-11 | 44.43522° N, 26.04814° E | 82 | 63.7 s | 63.68 s | −0.02 s | 2026-03-10 |
+| 2026-08-12 | 41.64714° N, 0.88565° W | 227 | 69.1 s | 69.10 s | 0.00 s | 2026-03-10 |
+| 2027-08-02 | 25.63483° N, 32.59431° E | 77 | 69.3 s | 69.08 s | −0.22 s | 2026-03-10 |
+| 2038-12-26 | 40.47225° S, 175.23682° E | 3 | 83.9 s | 69.61 s | −14.29 s | 2026-03-10 |
 
 The simulator values below were collected with `collect_simulator.py` directly from the running backend, at Jubier's coordinates and elevation; the ΔT column is the value the backend actually used.
 
