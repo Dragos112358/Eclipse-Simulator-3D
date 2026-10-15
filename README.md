@@ -81,16 +81,16 @@ It started as my Bachelor's thesis, *"Real Shadow Cones Produced During the Cent
 
 ## 🖼️ Gallery
 
-| 3D Shadow Cone & Umbra View | Global View & Totality Band |
+| **3D Shadow Cone & Umbra View** | **Eclipse details and city visibility** |
 |---|---|
 | <img src="docs/images/cone-3d.png" width="100%"> | <img src="docs/images/Poza3.png" width="100%"> |
-| **Eclipse Catalog & Search** | **Eclipse Details & City Visibility** |
+| **Eclipse Catalog & Search** | **All types of solar eclipses** |
 | <img src="docs/images/catalogue.png" width="100%"> | <img src="docs/images/All_eclipses.png" width="100%"> |
-| **Night Sky & Constellations** | **Saturn & Titan / Moons** |
+| **Night Sky in Bucharest** | **Saturn and Titan** |
 | <img src="docs/images/night-sky.png" width="100%"> | <img src="docs/images/saturn-io.png" width="100%"> |
-| **Additional Simulation View 1** | **Additional Simulation View 2** |
+| **Eiffel Tower from Cesium** | **Lunar Eclipse Catalogue** |
 | <img src="docs/images/Poza4.png" width="100%"> | <img src="docs/images/Poza8.png" width="100%"> |
-| **Additional Simulation View 4** | **Additional Simulation View 6** |
+| **Time control menu** | **Customisable weather** |
 | <img src="docs/images/Poza10.png" width="100%"> | <img src="docs/images/Poza12.png" width="100%"> |
 
 ## 🎬 Demo videos
