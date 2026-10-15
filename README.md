@@ -79,9 +79,6 @@ It started as my Bachelor's thesis, *"Real Shadow Cones Produced During the Cent
 
 ---
 
-
-## 🖼️ Gallery
-
 ## 🖼️ Gallery
 
 | 3D Shadow Cone & Umbra View | Global View & Totality Band |
@@ -93,12 +90,8 @@ It started as my Bachelor's thesis, *"Real Shadow Cones Produced During the Cent
 | <img src="docs/images/night-sky.png" width="100%"> | <img src="docs/images/saturn-io.png" width="100%"> |
 | **Additional Simulation View 1** | **Additional Simulation View 2** |
 | <img src="docs/images/Poza4.png" width="100%"> | <img src="docs/images/Poza8.png" width="100%"> |
-| **Additional Simulation View 3** | **Additional Simulation View 4** |
-| <img src="docs/images/Poza9.png" width="100%"> | <img src="docs/images/Poza10.png" width="100%"> |
-| **Additional Simulation View 5** | **Additional Simulation View 6** |
-| <img src="docs/images/Poza11.png" width="100%"> | <img src="docs/images/Poza12.png" width="100%"> |
-
----
+| **Additional Simulation View 4** | **Additional Simulation View 6** |
+| <img src="docs/images/Poza10.png" width="100%"> | <img src="docs/images/Poza12.png" width="100%"> |
 
 ## 🎬 Demo videos
 
