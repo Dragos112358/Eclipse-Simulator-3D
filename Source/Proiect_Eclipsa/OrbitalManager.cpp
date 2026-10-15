@@ -2401,7 +2401,7 @@ void AOrbitalManager::SendDataToPython()
 	int32 BytesSent = 0;
 	Socket->SendTo((uint8*)DataToSend, sizeof(DataToSend), BytesSent, *RemoteAddr);
 }
-//aici primesc date de la python, este o functie extrem de lunga, primesc 352 de doubleuri si maximum 900 de caractere pentru locatie si datele pentru tabelul lui xavier jubier
+//aici primesc date de la python, este o functie extrem de lunga, primesc 352 de doubleuri si maximum 1200 de caractere pentru locatie si datele pentru tabelul lui xavier jubier
 //am ales double in loc de float pentru o precizie cat mai buna pe numere mari
 void AOrbitalManager::ReceiveDataFromPython()
 {

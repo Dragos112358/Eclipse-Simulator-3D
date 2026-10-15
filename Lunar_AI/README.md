@@ -18,7 +18,7 @@ The network is fitted on the **NASA LRO / LOLA global lunar DEM** (LDEM, 118 m/p
 |---|---|
 | Input | `(u, v)`: normalized position inside one of two longitude bands, and normalized latitude |
 | Encoding | Multi-resolution **hash grid**, 20 levels × 2 features, table size 2²¹, finest resolution 46,080 cells in latitude (≈118 m, the native DEM resolution) |
-| Decoder | MLP, 3 hidden layers × 256, ReLU (as defined in `Fine_tuning_lunar_model.py`) |
+| Decoder | MLP, 3 hidden layers × 256, GELU (as defined in `Fine_tuning_lunar_model.py`) |
 | Output | Normalized elevation, de-normalized with `alt_mean` / `alt_std` stored in the checkpoint |
 | Storage | fp16 embeddings for deployment (loaded into fp32 for inference), fp32 for training |
 
@@ -33,9 +33,6 @@ The network is fitted on the **NASA LRO / LOLA global lunar DEM** (LDEM, 118 m/p
 Training has two stages.
 
 ### Stage 1: base training (`Antrenare_model_5.py`)
-
-<!-- VERIFY: Antrenare_model_5.py uses GELU and LOG2_HASHMAP_SIZE=22, but the fine-tuned model uses ReLU and 21. The ~13 m checkpoint was probably produced by an earlier script (Antrenare_model_4.py?). Fix the script name and the table below accordingly. -->
-
 
 | Setting | Value |
 |---|---|
