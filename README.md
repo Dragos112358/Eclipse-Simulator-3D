@@ -82,18 +82,21 @@ It started as my Bachelor's thesis, *"Real Shadow Cones Produced During the Cent
 
 ## 🖼️ Gallery
 
-<!-- Put your images in docs/images/ and update the file names below -->
-| Shadow cone in 3D (12 Aug 2026) | Inside the umbra, camera at 30 km altitude (12 Aug 2026) |
-|---|---|
-| <img src="docs/images/cone-3d.png" width="100%"> | <img src="docs/images/inside-umbra.png" width="100%"> |
-| **3D globe with totality band** | **Catalogue browser** |
-| <img src="docs/images/globe-band.png" width="100%"> | <img src="docs/images/catalogue.png" width="100%"> |
-| **Annular "ring of fire" — Istanbul, 2030** | **Night sky over Bucharest** |
-| <img src="docs/images/annular.png" width="100%"> | <img src="docs/images/night-sky.png" width="100%"> |
-| **Saturn & Titan** | **Jupiter & Io** |
-| <img src="docs/images/saturn-titan.png" width="100%"> | <img src="docs/images/jupiter-io.png" width="100%"> |
+## 🖼️ Gallery
 
-> 📷 The real photographs of the **12 August 2026** total eclipse (Zaragoza and Sant Elm, Mallorca) were taken by the author.
+| 3D Shadow Cone & Umbra View | Global View & Totality Band |
+|---|---|
+| <img src="docs/images/cone-3d.png" width="100%"> | <img src="docs/images/Poza3.png" width="100%"> |
+| **Eclipse Catalog & Search** | **Eclipse Details & City Visibility** |
+| <img src="docs/images/catalogue.png" width="100%"> | <img src="docs/images/All_eclipses.png" width="100%"> |
+| **Night Sky & Constellations** | **Saturn & Titan / Moons** |
+| <img src="docs/images/night-sky.png" width="100%"> | <img src="docs/images/saturn-io.png" width="100%"> |
+| **Additional Simulation View 1** | **Additional Simulation View 2** |
+| <img src="docs/images/Poza4.png" width="100%"> | <img src="docs/images/Poza8.png" width="100%"> |
+| **Additional Simulation View 3** | **Additional Simulation View 4** |
+| <img src="docs/images/Poza9.png" width="100%"> | <img src="docs/images/Poza10.png" width="100%"> |
+| **Additional Simulation View 5** | **Additional Simulation View 6** |
+| <img src="docs/images/Poza11.png" width="100%"> | <img src="docs/images/Poza12.png" width="100%"> |
 
 ---
 
