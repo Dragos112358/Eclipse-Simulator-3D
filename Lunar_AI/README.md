@@ -12,7 +12,7 @@ The network is fitted on the **NASA LRO / LOLA global lunar DEM** (LDEM, 118 m/p
 
 ---
 
-## 🧠 Model
+## Model
 
 | Component | Choice |
 |---|---|
@@ -28,7 +28,7 @@ The network is fitted on the **NASA LRO / LOLA global lunar DEM** (LDEM, 118 m/p
 
 ---
 
-## 🏋️ Training recipe
+## Training recipe
 
 Training has two stages.
 
@@ -69,7 +69,7 @@ The final model is the output `lunar_altitude_contact_bands_fp16_finetuned.pt`.
 
 ---
 
-## 🚀 Reproduce
+## Reproduce
 
 ### 1. Install
 
@@ -107,7 +107,7 @@ The script finds the training file whose architecture matches the checkpoint, ev
 
 ---
 
-## 📊 Evaluation
+## Evaluation
 
 `Testare_model_2.py` reports, for both fp32 and fp16 and on a uniform and a curvature-focused test set: RMSE, MAE, bias, percentiles (P50–P99.9), max error, R², the share of points under 1–50 m, per-band results, a slope (gradient) test, and the fp16-vs-fp32 quantization effect. Full numbers: [`eval_out/metrics.json`](eval_out/metrics.json).
 
@@ -124,7 +124,7 @@ The script finds the training file whose architecture matches the checkpoint, ev
 
 ---
 
-## 🔌 Using the model
+## Using the model
 
 ```python
 import numpy as np, torch
@@ -158,11 +158,11 @@ In the simulator, `Server.py` loads the same checkpoint once at startup (`torch.
 
 ---
 
-## ⚠️ Limitations
+## Limitations
 
 - Only two ±10° longitude bands around ±90° are trained. Queries outside them are outside the model's domain.
 - The RMSE is measured against the gridded LOLA DEM (118 m/pixel), not the true lunar surface. Features smaller than the DEM resolution are not represented.
 
-## 📚 Data
+## Data
 
 LRO / LOLA LDEM 118 m, via the USGS Astrogeology Science Center. See [`docs/THIRD_PARTY.md`](../docs/THIRD_PARTY.md).
