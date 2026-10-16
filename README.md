@@ -666,12 +666,12 @@ and `nep097.bsp` are all present and that you have enough free disk space. An in
 - [x] Lunar limb (topographic profile) modeling
 - [x] Shadow cones for solar and lunar eclipses
 - [x] Bookmark system to save different places and times
-- [ ] Optimal route planning for eclipse chasers
-- [ ] VR planetarium mode (OpenXR)
+- [ ] Optimal route planning for eclipse chasers ([#7](https://github.com/Dragos112358/Eclipse-Simulator-3D/issues/7))
+- [ ] VR planetarium mode (OpenXR) ([#5](https://github.com/Dragos112358/Eclipse-Simulator-3D/issues/5))
 - [ ] Planetarium integration
-- [ ] Tutorial: connecting Cesium for Unreal to a Python astronomy backend
-- [ ] Education mode: redesigned interface and guided lessons for classrooms and planetariums
-- [ ] Weather along the path of totality (ERA5-based climatology driving Cesium clouds)
+- [ ] Tutorial: connecting Cesium for Unreal to a Python astronomy backend ([#6](https://github.com/Dragos112358/Eclipse-Simulator-3D/issues/6))
+- [ ] Education mode: redesigned interface and guided lessons for classrooms and planetariums ([#4](https://github.com/Dragos112358/Eclipse-Simulator-3D/issues/2))
+- [ ] Weather along the path of totality (ERA5-based climatology driving Cesium clouds) ([#3](https://github.com/Dragos112358/Eclipse-Simulator-3D/issues/1))
 
 ---
 
@@ -690,7 +690,7 @@ and `nep097.bsp` are all present and that you have enough free disk space. An in
 | **May 2026** | Presented at a student scientific session — **honorable mention** |
 | **Jul 2026** | Bachelor's thesis completed |
 | **12 Aug 2026** | Total eclipse over Iceland & Spain — validated using 3D Eclipse Simulator |
-| **11 Oct 2026** | Open-source release |
+| **16 Oct 2026** | Open-source release |
 | **2 Aug 2027** | Next total eclipse — Luxor, 6 min 20 s 🌑 |
 
 ---
@@ -701,6 +701,7 @@ Bug reports, ideas and pull requests are welcome. Please read [`CONTRIBUTING.md`
 
 ## 🙏 Credits & acknowledgements
 
+<!--
 ### 👤 Development
 
 | Role | Name |
@@ -709,7 +710,7 @@ Bug reports, ideas and pull requests are welcome. Please read [`CONTRIBUTING.md`
 | **Thesis supervisor** | Assoc. Prof. Victor-Iosif Asavei, PhD |
 | **Thesis supervisor** | Lect. Florin-Cătălin Tudose, PhD |
 | **Scientific coordinator** | Astronomer Cătălin Beldea |
-
+-->
 ### 🛠️ Software & astronomy engine
 
 | | Used for |
