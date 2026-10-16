@@ -1,6 +1,5 @@
 <div align="center">
 
-<!-- Replace with your best screenshot / GIF: the shadow cone over Earth -->
 <img src="docs/images/hero.png" alt="3D Eclipse Simulator — umbra and penumbra cones over a WGS84 Earth" width="100%">
 
 # 🌑 3D Eclipse Simulator
@@ -24,7 +23,7 @@ Built with **Unreal Engine 5**, **Cesium World Terrain** and a **Python / Skyfie
 
 <br>
 
-| 🕰️ **30,000 years** | ☀️ **71,264 solar eclipses** | ⏱️ **0.1 - 2 s** vs. reference | ⭐ **5,079 stars** | 🎞️ **~60 FPS** |
+| 🕰️ **30,000 years** | ☀️ **71,264 solar eclipses** | ⏱️ **0.4 - 1.7 s** vs. reference | ⭐ **5,079 stars** | 🎞️ **~60 FPS** |
 |:---:|:---:|:---:|:---:|:---:|
 | 13,000 BC → 17,000 AD | Irwin 2021 catalogue | C1–C4 contact times | HYG 4.2, magnitude < 6 | real-time, with Cesium terrain |
 
@@ -63,6 +62,7 @@ It started as my Bachelor's thesis, *"Real Shadow Cones Produced During the Cent
 - 🔺 **True 3D umbra & penumbra cones**, with the Earth modeled as a **WGS84 ellipsoid** (not a sphere), so the equatorial bulge — which measurably shifts where the shadow meets the surface, especially near the poles — is accounted for.
 - 🛣️ **Path of totality / annularity rendered as a real 3D band** on Cesium terrain, not a flat 2D overlay.
 - ⏱️ **Precise contact times C1–C4** with altitude and azimuth for each, computed by iterative root-finding. Edge cases are handled too, e.g. an extra **"Sunset"** row when the Sun sets before C4.
+- 🏙️ **City visibility lists** — for every eclipse, the **Details** view lists all cities from which any part of it is visible (total, annular or partial, down to a very small magnitude), with magnitude, offset and UTC time, sorted by magnitude and exportable as CSV/TXT. For the 12 Aug 2026 total eclipse it lists **2,341 cities in 73 countries**, of which only those inside the narrow path of totality see the eclipse as total.
 - 📚 **71,264 solar eclipses** and **72,272 lunar eclipses**  (13,000 BC → 17,000 AD) built on the John Irwin 2021 catalogue, with a searchable / filterable / sortable catalogue browser.
 - 🔁 **Saros cycles** — from any catalogue entry, **View Saros Cycle** opens the series of eclipses related to it (a Saros repeats every ~18 years 11 days), so you can follow how the geometry evolves from one eclipse to the next.
 - 🪐 **Beyond Earth–Moon**: planets and major moons (Galilean moons, Titan, Triton) tracked with the same DE441 ephemerides.
@@ -299,13 +299,12 @@ python3 Server.py
 |---|---|
 | `Source/` | Unreal Engine C++ source (frontend, UI, drone camera, rendering) |
 | `Content/` | Unreal assets (and `Encoder/_internal` after step 2) |
-| `Content/Encoder/` | Working folder of the backend: packaged `Server.exe`, `_internal` runtime, data files |
 | `Config/` | Unreal project configuration |
 | `Server/` | Python backend (Skyfield, geometry, UDP server) |
 | `Download_Ephemerides/` | Script that fetches DE441 and other ephemerides for Jupiter, Saturn, Neptune and the Moon texture |
 | `Proiect_Eclipsa.uproject` | Unreal Engine project file |
 | `validation/` | Besselian-elements script, comparison data and the validation method (see [Validation](#-validation--accuracy)) |
-| **`Content/Encoder/`** | Lunar limb model weights (67 MB, fp16) and `CountryPoints.csv` (city list used by the catalogue **Details** view)|
+| `Content/Encoder/` | Working folder of the backend: packaged `Server.exe`, `_internal` runtime, data files, lunar limb model weights (67 MB, fp16) and `CountryPoints.csv` (city list used by the catalogue **Details** view)|
 | `Lunar_AI/` | Training, evaluation and export code for the lunar limb elevation model (see [Lunar limb](#-lunar-limb-a-neural-elevation-model)) |
 | `docs/` | Images and third-party licences (`docs/THIRD_PARTY.md`) |
 | `LICENSE`, `NOTICE` | Apache 2.0 licence and notices |
@@ -488,7 +487,7 @@ Lunar eclipses are catalogued in five classes, each with a magnitude shown in th
 | **Umbral Total** | The whole Moon is inside the umbra | Umag |
 | **Umbral Central** | A total umbral eclipse in which the Moon passes through the central part of the umbra, close to the shadow axis | Umag |
 
-Every entry has **View** (jump to the event in 3D), **View Saros Cycle** and **Details** buttons. In **Details**, you can see all the cities where you can see that eclipse. The list can be exported as CSV or TXT. For solar eclipses, those cities are sorted by **eclipse magnitude**.
+Every entry has **View** (jump to the event in 3D), **View Saros Cycle** and **Details** buttons. In **Details**, you can see all the cities where any phase of that eclipse is visible. The list can be exported as CSV or TXT. For solar eclipses, those cities are sorted by **eclipse magnitude**.
 
 
 ---
@@ -498,8 +497,8 @@ Every entry has **View** (jump to the event in 3D), **View Saros Cycle** and **D
 | Eclipse | Location | Coordinates | Notes |
 |---|---|---|---|
 | **11 Jul 2010** | Puerto Natales, Chile | 49.049° S, 74.516° W | Totality path, ground shadow projection |
-| **12 Aug 2026** | Iceland → northern Spain | 41.649° N, 0.889° W, Zaragoza | Validated against Jubier (≤ 1.5 s); shadow cone viewed in 3D from 30 km altitude (18:33:49 UTC) |
-| **2 Aug 2027** | Luxor, Egypt | 25.635° N, 32.594° E | **6 min 20 s**, which is a very long totality; validated against Jubier (≤ 2 s) |
+| **12 Aug 2026** | Iceland → northern Spain | 41.649° N, 0.889° W, Zaragoza | Validated against Jubier (≤ 1.0 s); shadow cone viewed in 3D from 30 km altitude (18:33:49 UTC) |
+| **2 Aug 2027** | Luxor, Egypt | 25.635° N, 32.594° E | **6 min 20 s**, which is a very long totality; validated against Jubier (≤ 1.3 s) |
 | **1 May 2079** | Queens, USA | 40.759° N, 73.944° W | 10:09 UTC — far-future stability test |
 | **10 Oct 13,000 BC** | Canada | 58.262° N, 136.364° W | 18:55 UTC — lower edge of the range; calendar-reconciliation stress test |
 | **25 Jul 16,995 AD** | South Hamilton, Australia | 32.934° S, 151.736° E | 14:30:53 UTC — upper edge of the range |
@@ -514,16 +513,17 @@ The same pipeline (DE441 propagation, cone–ellipsoid intersection, ΔT as desc
 
 Contact times (C1–C4) were compared with **Xavier Jubier's** interactive eclipse maps, the community's reference for high-accuracy 2D eclipse computation, at the same observer coordinates for each eclipse.
 
-- **Reference data.** Jubier's published contact times for the **12 August 2026** and **2 August 2027** eclipses, read on **10 March 2026** from his [2026](http://xjubier.free.fr/en/site_pages/solar_eclipses/TSE_2026_GoogleMapFull.html) and [2027](http://xjubier.free.fr/en/site_pages/solar_eclipses/TSE_2027_GoogleMapFull.html) interactive maps, using his ΔT of **2026: 69.1 s / 2027: 69.3 s**.
+- **Reference data.** Jubier's published contact times for the **11 August 1999**, **12 August 2026** and **2 August 2027** total eclipses, read on **10 March 2026** from his interactive maps ([1999](http://xjubier.free.fr/en/site_pages/solar_eclipses/xSE_GoogleMap3.php?Ecl=+19990811), [2026](http://xjubier.free.fr/en/site_pages/solar_eclipses/TSE_2026_GoogleMapFull.html), [2027](http://xjubier.free.fr/en/site_pages/solar_eclipses/TSE_2027_GoogleMapFull.html)), using his ΔT of **1999: 63.7 s / 2026: 69.1 s / 2027: 69.3 s**.
 - **Compared quantity.** The geometric contact times C1–C4 in UTC, to the second, with the same ΔT convention on both sides. The limb-corrected C1L–C4L are reported separately.
 - **Reproducibility.** The comparison script, the inputs and the per-contact tables are in [`validation/`](validation/).
 
 | Eclipse | Max. difference on C1–C4 |
 |---|:---:|
-| Total — **12 August 2026** | **≤ 1.5 s** |
-| Total — **2 August 2027** (Luxor) | **≤ 2 s** |
+| Total — **11 August 1999** | **≤ 1.7 s** |
+| Total — **12 August 2026** | **≤ 1.0 s** |
+| Total — **2 August 2027** (Luxor) | **≤ 1.3 s** |
 
-**What 0.1–2 s means.** It is the largest absolute difference between this project's contact times and Jubier's published times, at the locations compared, for eclipses between **1990 and 2040**. Jubier's data cover only that interval, so **outside 1990–2040 there is no independent reference**: for earlier and later eclipses accuracy is supported by consistency checks and the Irwin catalogue, not by a measured error (see [Limitations](#-limitations)).
+**What ≤ 1.7 s means.** It is the largest absolute difference between this project's contact times and Jubier's published times, at the locations compared, for three total solar eclipses (1999, 2026, 2027). The reference covers only a limited range of years around the present, so **outside it there is no independent reference**: for earlier and later eclipses accuracy is supported by consistency checks and the Irwin catalogue, not by a measured error (see [Limitations](#-limitations)).
 
 **Catalogue cross-check.** A standalone Besselian-elements script run over the same 71,264-event catalogue found **719 eclipses** whose umbra/antumbra touched Romania in 30,000 years (plus ~13,000 partial-only), and independently reproduced the documented track of the **11 Aug 1999** eclipse — two different geometric formulations converging on the same result.
 
@@ -533,7 +533,7 @@ Contact times (C1–C4) were compared with **Xavier Jubier's** interactive eclip
 
 | Metric | Stellarium | Celestia | SpaceEngine | TPE | Jubier | **This project** |
 |---|---|---|---|---|---|---|
-| **Temporal accuracy** | 8 min offset for the 2017 US total eclipse | Not designed for eclipse timing | Not designed for eclipse timing | Good | Reference | **0.1–2 s vs. Jubier (1990–2040)** |
+| **Temporal accuracy** | 8 min offset for the 2017 US total eclipse | Not designed for eclipse timing | Not designed for eclipse timing | Good | Reference | **0.4–1.7 s vs. Jubier (1999, 2026 and 2027 total solar eclipses)** |
 | **Real geographic data** | ❌ | ❌ | ❌ | ✅ | ✅ | ✅ |
 | **Umbra & penumbra cones rendered** | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
 | **Free flight** | ❌ | ✅ | ✅ | ❌ | ❌ | ✅ |
@@ -548,7 +548,7 @@ TPE = The Photographer's Ephemeris. Comparisons are based on my own testing.
 
 Documented, quantifiable limitations — not open questions:
 
-- **ΔT extrapolation.** The Espenak & Meeus model is an empirical fit to the past few millennia. Near 13,000 BC or 17,000 AD it is an extrapolation, and the real uncertainty in Earth's rotation is measured in **hours**. Results there are *geometrically consistent*, but not validated to the sub-second precision of the 2026/2027 cases.
+- **ΔT extrapolation.** The Espenak & Meeus model is an empirical fit to the past few millennia. Near 13,000 BC or 17,000 AD it is an extrapolation, and the real uncertainty in Earth's rotation is measured in **hours**. Results there are *geometrically consistent*, but not validated to the ~1 second precision of the 2026/2027 cases.
 - **Validation range.** Independent validation against Jubier covers 1990–2040 only; see [Validation](#-validation--accuracy).
 - **Ephemeris range.** DE441 comfortably covers the whole span, but its own integration uncertainty grows modestly toward both ends.
 - **Limb model coverage.** The elevation model covers only two ±10° longitude bands around ±90° selenographic longitude; a contact that falls outside them (extreme libration) is outside the trained domain.
@@ -567,6 +567,7 @@ Documented, quantifiable limitations — not open questions:
 - **Near-future ΔT.** After the end of the IERS data, ΔT is extrapolated; for 2038 this alone shifts contacts by ~21 s relative to Jubier.
 - **Limb-corrected contacts.** C1L–C4L have not been compared with an independent reference.
 - **Totality duration.** Totality is systematically 1.4–1.9 s shorter than Jubier's; the probable cause is the lunar radius used for the contacts (without the lunar limb) (see `validation/`).
+- **City list.** City visibility is computed for the 8,133 cities in `CountryPoints.csv`, derived from GeoNames `cities5000`. Smaller towns and villages are not included, so a location that is missing from the list may still see the eclipse.
 
 ---
 
@@ -749,7 +750,7 @@ Bug reports, ideas and pull requests are welcome. Please read [`CONTRIBUTING.md`
 
 ### 🔬 Research & inspiration
 
-- ✅ **Xavier Jubier** — eclipse geometry and concepts are inspired by his work; his interactive eclipse maps for [2026](http://xjubier.free.fr/en/site_pages/solar_eclipses/TSE_2026_GoogleMapFull.html) and [2027](http://xjubier.free.fr/en/site_pages/solar_eclipses/TSE_2027_GoogleMapFull.html) were used as the validation reference.
+- ✅ **Xavier Jubier** — eclipse geometry and concepts are inspired by his work; his interactive eclipse maps for [1999](http://xjubier.free.fr/en/site_pages/solar_eclipses/xSE_GoogleMap3.php?Ecl=+19990811), [2026](http://xjubier.free.fr/en/site_pages/solar_eclipses/TSE_2026_GoogleMapFull.html) and [2027](http://xjubier.free.fr/en/site_pages/solar_eclipses/TSE_2027_GoogleMapFull.html) were used as the validation reference.
 - 🔭 Benchmarked against: Stellarium, Celestia, SpaceEngine, The Photographer's Ephemeris.
 
 ### ⚖️ Legal notes

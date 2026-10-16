@@ -84,8 +84,7 @@ Key findings:
 - **Timing agrees with Jubier to about 1 s** for eclipses with a well-known ΔT.
 - **A small systematic pattern exists** (C1 early, C2 late, C3 early, C4 late). It shortens totality by 1.4–1.9 s and leaves the centre of totality unchanged. The likely cause is the lunar radius convention (Section 3.5).
 - **The 2038 offset (~21.5 s) is a ΔT effect.** The two programs use different ΔT forecasts; neither can be called "correct" until the eclipse happens.
-- **An independent Besselian computation (no Skyfield) agrees on C1, C4 and MAX to within 0.9 s** over all 18 cases and all eclipse types (RMS 0.39 s over 54 values). The internal contacts C2/C3 differ by 1.5–7.8 s, in the same direction as the Jubier offsets (Section 5.5).
-- **One reporting bug was found:** for partial (and near-annular partial) eclipses the simulator's obscuration equals 100 × magnitude, which overstates the true obscuration by 6–11 percentage points (Section 5.5.3).
+- **An independent Besselian computation (no Skyfield) agrees on C1, C4 and MAX to within 0.9 s** over all 18 cases and all eclipse types (RMS 0.39 s over 54 values). The internal contacts C2/C3 differ by 0.9–7.8 s, in the same direction as the Jubier offsets (Section 5.5).
 
 ## 2. Scope: what is and is not validated
 
@@ -95,7 +94,7 @@ Key findings:
 | Totality duration, full duration, centre of totality | Jubier (derived) | Validated (Section 3.4) |
 | Magnitude, size ratio, path width, umbral velocity/depth | Jubier | Validated (Section 3.6) |
 | Far-future ΔT behaviour (2038) | Jubier | Compared, **not decidable** (Section 4) |
-| Annular, hybrid and partial eclipses | Besselian cross-check | Cross-checked on 18 cases (Section 5.5): contacts, magnitude OK; partial obscuration has a bug |
+| Annular, hybrid and partial eclipses | Besselian cross-check | Cross-checked on 18 cases (Section 5.5): contacts, magnitude OK |
 | Limb-corrected contacts C1L–C4L | None yet | **Not validated** (Section 7) |
 | Eclipses outside Jubier's map range | None | **No independent reference exists** |
 | Sky objects, constellation, sunrise/sunset | None | Not validated |
@@ -320,7 +319,7 @@ Notable stress cases:
 - **2020 Kurukshetra**: annularity lasting only 37.6 s, path 21.6 km wide, almost a hybrid; tests numerical sensitivity near the annular/total boundary.
 - **2019 Singapore**: umbral depth of only 4.4 km, i.e. an observer almost on the edge of the path.
 - **2012 Albuquerque** and **2029 Vancouver**: the eclipse ends after sunset or starts before sunrise; tests the horizon handling.
-- **2005 Panama City**: labelled annular in `cases.csv`, but both the simulator and the Besselian script find a partial eclipse there (Section 5.5.4).
+- **2005 Panama City**: labelled annular in `cases.csv`, but both the simulator and the Besselian script find a partial eclipse there (Section 5.5.3).
 
 ### 5.5 Results
 
@@ -332,7 +331,7 @@ Run on 2026-10-15. Δ = simulator − Besselian reference, in seconds (magnitude
 | 2026 Zaragoza | total | −0.2 | +1.5 | −0.3 | −1.8 | −0.1 | +0.00014 | 0.00 |
 | 2027 Luxor | total | −0.3 | +2.1 | −0.2 | −2.4 | −0.1 | +0.00015 | 0.00 |
 | 2038 Foxton | total | +0.3 | +2.4 | 0.0 | −1.8 | +0.4 | +0.00014 | 0.00 |
-| 2023 Exmouth | total | 0.0 | +2.4 | −0.5 | −2.5 | 0.0 | +0.00014 | 0.00 |
+| 2023 Exmouth | hybrid | 0.0 | +2.4 | −0.5 | −2.5 | 0.0 | +0.00014 | 0.00 |
 | 2005 Madrid | annular | +0.6 | −1.3 | +0.9 | +2.4 | +0.5 | +0.00013 | +0.05 |
 | 2010 Thiruvananthapuram | annular | −0.1 | −4.2 | −0.7 | +3.8 | −0.3 | +0.00012 | +0.05 |
 | 2012 Albuquerque | annular | +0.6 | −0.9 | +0.9 | +2.0 | +0.5 | +0.00013 | +0.05 |
@@ -340,12 +339,12 @@ Run on 2026-10-15. Δ = simulator − Besselian reference, in seconds (magnitude
 | 2020 Kurukshetra | annular | +0.2 | −2.6 | −0.1 | +3.0 | +0.2 | +0.00014 | +0.06 |
 | 2023 Corpus Christi | annular | −0.1 | −2.3 | −0.3 | +2.1 | −0.2 | +0.00013 | +0.05 |
 | 2030 Istanbul | annular | −0.2 | −1.9 | −0.7 | +1.5 | −0.2 | +0.00013 | +0.05 |
-| 2005 Panama City | partial | +0.5 | - | +0.4 | - | +0.6 | +0.00013 | +0.56 |
-| 2011 Bucharest | partial | +0.1 | - | −0.6 | - | +0.1 | +0.00005 | +7.79 |
-| 2015 Bucharest | partial | +0.4 | - | −0.3 | - | +0.5 | −0.00004 | +9.89 |
-| 2022 Bucharest | partial | 0.0 | - | −0.2 | - | −0.1 | −0.00006 | +11.00 |
-| 2025 Reykjavik | partial | −0.2 | - | −0.3 | - | 0.0 | +0.00004 | +5.88 |
-| 2029 Vancouver | partial | −0.2 | - | −0.4 | - | −0.2 | +0.00007 | +6.96 |
+| 2005 Panama City | partial | +0.5 | - | +0.4 | - | +0.6 | +0.00013 | +0.03 |
+| 2011 Bucharest | partial | +0.1 | - | −0.6 | - | +0.1 | +0.00005 | +0.06 |
+| 2015 Bucharest | partial | +0.4 | - | −0.3 | - | +0.5 | −0.00004 | +0.02 |
+| 2022 Bucharest | partial | 0.0 | - | −0.2 | - | −0.1 | −0.00006 | +0.03 |
+| 2025 Reykjavik | partial | −0.2 | - | −0.3 | - | 0.0 | +0.00004 | +0.04 |
+| 2029 Vancouver | partial | −0.2 | - | −0.4 | - | −0.2 | +0.00007 | +0.03 |
 
 #### 5.5.1 External contacts and maximum: agreement
 
@@ -355,10 +354,12 @@ Over all 18 cases (54 values of ΔC1, ΔMAX, ΔC4): **max |Δ| = 0.9 s, mean Δ 
 
 | Group | ΔC2 range (mean) | ΔC3 range (mean) | Effect on the central phase |
 |---|---|---|---|
-| Total (5 cases) | +1.5 … +2.4 s (+2.0) | −2.7 … −1.8 s (−2.2) | totality **shorter by 3.3–4.9 s** |
+| Total (4 cases) | +1.5 … +2.4 s (+1.9) | −2.7 … −1.8 s (−2.2) | totality **shorter by 3.3–4.5 s** |
 | Annular (7 cases) | −7.7 … −0.9 s (−3.0) | +1.5 … +7.8 s (+3.2) | annularity **longer by 2.9–15.5 s** |
 
-Both groups are explained by one mechanism: **the simulator's internal-contact radius is slightly smaller than the catalogue's.** A smaller Moon shortens totality and lengthens annularity, which is exactly the observed sign change between the two groups. The same effect appears as the constant magnitude bias of +0.00012 to +0.00015 in every central case.
+The 2023 Exmouth case (hybrid eclipse, total at this location) behaves like the total group: ΔC2 = +2.4 s, ΔC3 = −2.5 s, totality shorter by 4.9 s.
+
+All these cases are explained by one mechanism: **the simulator's internal-contact radius is slightly smaller than the catalogue's.** A smaller Moon shortens totality and lengthens annularity, which is exactly the observed sign change between the two groups. The same effect appears as the constant magnitude bias of +0.00012 to +0.00015 in every central case.
 
 The size of the offset depends on how close the observer is to the edge of the central path, because near the edge the contact time changes slowly with distance:
 
@@ -371,13 +372,13 @@ Three-way comparison for totality duration, 1999 Bucharest: simulator 2m 20.2s, 
 
 #### 5.5.3 2005 Panama City: not a classification bug
 
-The Besselian script also finds no C2/C3 at this location, so both programs agree that Panama City sees a **partial** eclipse (magnitude 0.985). The `type_at_location: annular` label in `cases.csv` is wrong, or the coordinates lie just outside the annular path. The case is still useful as a near-annular partial test; the remaining +0.56 pp obscuration difference is the same partial-branch bug as in 5.5.3.
+The Besselian script also finds no C2/C3 at this location, so both programs agree that Panama City sees a **partial** eclipse (magnitude 0.985). The `type_at_location: annular` label in `cases.csv` is wrong, or the coordinates lie just outside the annular path. The case is still useful as a near-annular partial test.
 
 #### 5.5.4 How to read the result
 
 - The simulator reproduces the catalogue's Besselian solution at C1, C4 and MAX to within 1 s for every type of eclipse.
 - The residual error is concentrated in C2/C3 and in the displayed magnitude, and it points to the lunar radius used for the internal contacts (Section 3.5).
-- The obscuration reported for partial eclipses is wrong and should be fixed before the numbers are published.
+- The internal contacts C2/C3 differ from the catalogue by 0.9–7.8 s (largest for observers near the edge of the central path, e.g. Singapore); the offsets are systematic (Section 5.5.2).
 
 ### 5.6 Limitations of this cross-check
 
@@ -429,7 +430,7 @@ To compare them, add `C1L`–`C4L` columns to `jubier_reference.csv` (Jubier's g
 ## 8. Limitations
 
 1. **Few independent cases.** Four eclipses against Jubier; the generalisation to other eclipses relies on the Besselian cross-check.
-2. **One reference per quantity.** Jubier's pop-up is a read-out, not a data file; values were transcribed manually on 2026-10-03.
+2. **One reference per quantity.** Jubier's pop-up is a read-out, not a data file; values were transcribed manually on 2026-03-10.
 3. **0.1 s quantisation** on both sides: differences below about 0.2 s are not meaningful individually.
 4. **ΔT beyond the present is unknowable.** Results after about 2030 depend on the ΔT forecast (Section 4).
 5. **No coverage outside Jubier's maps.** Eclipses in the distant past or future have no independent reference at all.
@@ -440,13 +441,12 @@ To compare them, add `C1L`–`C4L` columns to `jubier_reference.csv` (Jubier's g
 
 | # | Item | Why it matters | How to resolve |
 |---|---|---|---|
-| 1 | **Partial obscuration = 100 × magnitude** | Overstates obscuration by 6–11 pp for partial eclipses (Section 5.5.3) | Fix the partial branch of the backend to use the circle-overlap area; re-run both scripts and check Δ obsc. ≈ 0 |
-| 2 | Lunar radius used for C2/C3 | Explains the C2/C3 offset, the totality/annularity duration bias and the +0.013 % magnitude bias (Sections 3.5, 5.5.2) | Inspect the radii used in the backend; re-run with the catalogue's `l1`/`l2` convention or a single mean radius |
-| 3 | ΔT sensitivity for 2038 | Separates the ΔT effect from geometry | Force the simulator's ΔT to 83.9 s and re-run |
-| 4 | `cases.csv` label for Panama City | Labelled annular, but the location is partial (Section 5.5.4) | Move the observer inside the annular path or relabel the case |
-| 5 | Limb-corrected contacts | Sign and size of `C3L − C3` vs Jubier's `LC` (Section 7) | Section 7 procedure |
-| 6 | Truncated reports | `truncated: true` appears for 2012 Albuquerque and 2019 Singapore in `simulator_results.json` | Confirm no event is lost in the UDP response |
-| 7 | Regenerate Section 3.6 from the latest run | A few values (for example 2026 umbral velocity) differ from the current `simulator_results.json` | `python run_validation.py --out summary.md` |
+| 1 | Lunar radius used for C2/C3 | Explains the C2/C3 offset, the totality/annularity duration bias and the +0.013 % magnitude bias (Sections 3.5, 5.5.2) | Inspect the radii used in the backend; re-run with the catalogue's `l1`/`l2` convention or a single mean radius |
+| 2 | ΔT sensitivity for 2038 | Separates the ΔT effect from geometry | Force the simulator's ΔT to 83.9 s and re-run |
+| 3 | `cases.csv` label for Panama City | Labelled annular, but the location is partial (Section 5.5.3) | Move the observer inside the annular path or relabel the case |
+| 4 | Limb-corrected contacts | Sign and size of `C3L − C3` vs Jubier's `LC` (Section 7) | Section 7 procedure |
+| 5 | Truncated reports | `truncated: true` appears for 2012 Albuquerque and 2019 Singapore in `simulator_results.json` | Confirm no event is lost in the UDP response |
+| 6 | Regenerate Section 3.6 from the latest run | A few values (for example 2026 umbral velocity) differ from the current `simulator_results.json` | `python run_validation.py --out summary.md` |
 
 ---
 
