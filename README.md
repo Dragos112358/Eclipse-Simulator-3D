@@ -81,6 +81,49 @@ It started as my Bachelor's thesis, *"Real Shadow Cones Produced During the Cent
 
 ## 🖼️ Gallery
 
+### 🎬 Interactive previews
+The following short clips show the simulator in motion. GIFs play directly on GitHub, so you can preview the main features without opening an external video.
+<table>
+  <tr>
+    <td width="50%" align="center">
+      <strong>3D Totality Band Across Earth</strong><br>
+      <img src="docs/images/totality-band.gif" alt="Animated 3D totality band across the Earth" width="100%"><br>
+      <sub>The eclipse path rendered as a curved 3D band on the globe.</sub>
+    </td>
+    <td width="50%" align="center">
+      <strong>Total Solar Eclipse over Spain (2026)</strong><br>
+      <img src="docs/images/solar-eclipse-spain-2026.gif" alt="Total solar eclipse simulation over Spain in 2026" width="100%"><br>
+      <sub>A real eclipse event explored in the simulator.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <strong>Cesium Free-Flight over New York</strong><br>
+      <img src="docs/images/cesium-new-york.gif" alt="Cinematic free-flight view over New York using Cesium terrain" width="100%"><br>
+      <sub>Free-flight navigation over streamed real-world terrain.</sub>
+    </td>
+    <td width="50%" align="center">
+      <strong>Atmosphere and Weather</strong><br>
+      <img src="docs/images/weather-conditions.gif" alt="Configurable atmospheric and weather effects" width="100%"><br>
+      <sub>Clouds, fog and other configurable atmospheric effects.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <strong>Constellation Visualization</strong><br>
+      <img src="docs/images/constellations.gif" alt="Constellation lines and artwork in the simulated night sky" width="100%"><br>
+      <sub>Constellation lines, labels and optional artwork.</sub>
+    </td>
+    <td width="50%" align="center">
+      <strong>Night Sky and Star Field</strong><br>
+      <img src="docs/images/night-sky-stars.gif" alt="Star field rendered by the simulator" width="100%"><br>
+      <sub>The simulator's star field, with 5,079 naked-eye stars.</sub>
+    </td>
+  </tr>
+</table>
+
+### 🖼️ Screenshots
+
 | **3D Shadow Cone & Umbra View** | **Eclipse details and city visibility** |
 |---|---|
 | <img src="docs/images/cone-3d.png" width="100%"> | <img src="docs/images/Poza3.png" width="100%"> |
@@ -92,6 +135,8 @@ It started as my Bachelor's thesis, *"Real Shadow Cones Produced During the Cent
 | <img src="docs/images/Poza4.png" width="100%"> | <img src="docs/images/Poza8.png" width="100%"> |
 | **Time control menu** | **Customisable weather** |
 | <img src="docs/images/Poza10.png" width="100%"> | <img src="docs/images/Poza12.png" width="100%"> |
+
+
 
 ## 🎬 Demo videos
 
