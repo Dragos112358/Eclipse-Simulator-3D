@@ -166,14 +166,34 @@ The following short clips show the simulator in motion. GIFs play directly on Gi
 
 
 
+<h2>🎬 Demo videos</h2>
+
+<table>
+  <tr>
+    <td width="50%" align="center">
+      <h3>3D Eclipse Simulator — Trailer</h3>
+      <a href="https://www.youtube.com/watch?v=sYdvDpyHnCw">
+        <img
+          src="https://img.youtube.com/vi/sYdvDpyHnCw/maxresdefault.jpg"
+          alt="3D Eclipse Simulator cinematic trailer"
+          width="100%">
+      </a>
+      <p><sub>A cinematic overview of the simulator and its 3D visualization capabilities.</sub></p>
+    </td>
+    <td width="50%" align="center">
+      <h3>3D Eclipse Simulator — Full Demo</h3>
+      <a href="https://www.youtube.com/watch?v=clGfikjfNSE">
+        <img
+          src="https://img.youtube.com/vi/clGfikjfNSE/maxresdefault.jpg"
+          alt="3D Eclipse Simulator full demonstration"
+          width="100%">
+      </a>
+      <p><sub>A detailed walkthrough of the simulator's features and scientific capabilities.</sub></p>
+    </td>
+  </tr>
+</table>
 
 
-## 🎬 Demo videos
-
-| | |
-|---|---|
-| **Thriller for 3D Eclipse Simulator using Unreal Engine 5** | [![Demo 1](https://img.youtube.com/vi/sYdvDpyHnCw/hqdefault.jpg)](https://www.youtube.com/watch?v=sYdvDpyHnCw) |
-| **3D Eclipse Simulator Demo** | [![Demo 2](https://img.youtube.com/vi/clGfikjfNSE/hqdefault.jpg)](https://www.youtube.com/watch?v=clGfikjfNSE) |
 
 <details>
 <summary><b> What the demos walk through</b></summary>
