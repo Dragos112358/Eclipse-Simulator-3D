@@ -21,7 +21,35 @@ Built with **Unreal Engine 5**, **Cesium World Terrain** and a **Python / Skyfie
 
 </div>
 
+
+<h2 align="center">🌍 Earth from Space</h2>
+
+<p align="center">
+  <img
+    src="docs/images/Earth_Europe.png"
+    alt="Earth viewed from space — Europe and Africa"
+    width="100%">
+</p>
+
+<p align="center">
+  <em>Earth from space — Europe and Africa</em>
+</p>
+
 <br>
+
+<p align="center">
+  <img
+    src="docs/images/Earth_America.png"
+    alt="Earth viewed from space — North America"
+    width="100%">
+</p>
+
+<p align="center">
+  <em>Earth from space — North America</em>
+</p>
+
+<br>
+
 
 | 🕰️ **30,000 years** | ☀️ **71,264 solar eclipses** | ⏱️ **0.4 - 1.7 s** vs. reference | ⭐ **5,079 stars** | 🎞️ **~60 FPS** |
 |:---:|:---:|:---:|:---:|:---:|
@@ -135,9 +163,7 @@ The following short clips show the simulator in motion. GIFs play directly on Gi
 | <img src="docs/images/Poza4.png" width="100%"> | <img src="docs/images/Poza8.png" width="100%"> |
 | **Time control menu** | **Customisable weather** |
 | <img src="docs/images/Poza10.png" width="100%"> | <img src="docs/images/Poza12.png" width="100%"> |
-| **Earth from Space — Europe & Africa** | **Earth from Space — North America** |
-|---|---|
-| <img src="docs/images/Earth_Europe.png" alt="Earth viewed from space showing Europe and Africa" width="100%"> | <img src="docs/images/Earth_America.png" alt="Earth viewed from space showing North America" width="100%"> |
+
 
 
 
