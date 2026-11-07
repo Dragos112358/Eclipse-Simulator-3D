@@ -135,6 +135,10 @@ The following short clips show the simulator in motion. GIFs play directly on Gi
 | <img src="docs/images/Poza4.png" width="100%"> | <img src="docs/images/Poza8.png" width="100%"> |
 | **Time control menu** | **Customisable weather** |
 | <img src="docs/images/Poza10.png" width="100%"> | <img src="docs/images/Poza12.png" width="100%"> |
+| **Earth from Space — Europe & Africa** | **Earth from Space — North America** |
+|---|---|
+| <img src="docs/images/Earth_Europe.png" alt="Earth viewed from space showing Europe and Africa" width="100%"> | <img src="docs/images/Earth_America.png" alt="Earth viewed from space showing North America" width="100%"> |
+
 
 
 
