@@ -17,7 +17,7 @@ Built with **Unreal Engine 5**, **Cesium World Terrain** and a **Python / Skyfie
 [![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?logo=windows)](#-getting-started-build-from-source)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
-[🌐 Official Website](https://dragos112358.github.io/eclipse-simulator/) · [▶ Demo 1](https://www.youtube.com/watch?v=sYdvDpyHnCw) · [▶ Demo 2](https://www.youtube.com/watch?v=clGfikjfNSE) · [⬇ Gumroad](https://gabyboncan.gumroad.com/l/txlkbg) · [🎮 itch.io](https://dragosboncan.itch.io/3d-eclipse-simulator)
+[🌐 Official Website](https://dragos112358.github.io/eclipse-simulator/) · [▶ Trailer](https://www.youtube.com/watch?v=sYdvDpyHnCw) · [▶ Longer Demo](https://www.youtube.com/watch?v=clGfikjfNSE) · [⬇ Gumroad](https://gabyboncan.gumroad.com/l/txlkbg) · [🎮 itch.io](https://dragosboncan.itch.io/3d-eclipse-simulator)
 
 </div>
 
