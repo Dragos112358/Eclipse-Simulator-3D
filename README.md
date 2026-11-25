@@ -75,6 +75,35 @@ If you look at the tools available to researchers, educators and eclipse chasers
 
 It started as my Bachelor's thesis, *"Real Shadow Cones Produced During the Central Solar Eclipse (Total Solar Eclipse and Annular Solar Eclipse)"*, at the **Faculty of Automatic Control and Computers, National University of Science and Technology Politehnica Bucharest**, and is now released as open source.
 
+---
+
+## 💡 From the 3D simulator to EclipseKit — the story behind the library
+
+The **3D Eclipse Simulator** was the project that started this line of work. What began as my Bachelor's thesis, *“Real Shadow Cones Produced During the Central Solar Eclipse (Total Solar Eclipse and Annular Solar Eclipse)”*, grew into a much larger application: a real-time 3D environment built with Unreal Engine 5, Cesium World Terrain and a Python/Skyfield astronomy backend powered by JPL DE441 ephemerides.
+
+Building the simulator meant working through the numerical side of eclipse prediction as well as the visualisation: computing Sun–Moon geometry, solving C1–C4 contact times, constructing umbra and penumbra cones, intersecting the shadow geometry with the WGS84 Earth model, handling time scales and historical dates, and connecting the results to an interactive application.
+
+As the simulator evolved, an important idea became clear: **the astronomical engine should also be useful outside the simulator**. The calculations had value on their own and could support scripts, research workflows, data analysis and other applications without requiring Unreal Engine, Cesium, the simulator's user interface or its real-time UDP integration.
+
+That motivation led to **[EclipseKit](https://github.com/Dragos112358/EclipseKit)** — a separate, modular Python library developed after the simulator. The library extracts and develops the reusable numerical astronomy components into a package with a documented Python API, structured results, explicit ephemeris and time-scale configuration, independent validation tools and optional interfaces for lunar topography.
+
+The two repositories therefore represent related but distinct parts of the same project:
+
+| Project | Main purpose | Technology / interface |
+|---|---|---|
+| **[3D Eclipse Simulator](https://github.com/Dragos112358/Eclipse-Simulator-3D)** | An interactive, real-time 3D experience for exploring eclipses and their geometry over the Earth | Unreal Engine 5, C++, Cesium for Unreal and a Python/Skyfield backend |
+| **[EclipseKit](https://github.com/Dragos112358/EclipseKit)** | A reusable numerical library for calculating, analysing, exporting and validating eclipse circumstances | Python package, Skyfield, JPL BSP/SPK ephemerides, NumPy and optional scientific/data adapters |
+
+**EclipseKit is not a replacement for the simulator.** It is the library that grew out of the work on the simulator, so the astronomical calculations can be reused independently and developed as a standalone Python project. The simulator remains the visual application; EclipseKit makes the computational layer available to Python users and other software.
+
+- **Explore the simulator:** [github.com/Dragos112358/Eclipse-Simulator-3D](https://github.com/Dragos112358/Eclipse-Simulator-3D)
+- **Explore the Python library:** [github.com/Dragos112358/EclipseKit](https://github.com/Dragos112358/EclipseKit)
+- **Install EclipseKit from PyPI:** [pypi.org/project/eclipsekit](https://pypi.org/project/eclipsekit/)
+
+---
+
+
+
 ### Who is it for?
 
 | 🎓 Educators, students, planetariums | 📷 Eclipse chasers & photographers |
